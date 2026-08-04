@@ -1,0 +1,4409 @@
+{
+  "$schema_id": "poe-graft/base-mod-pool@1",
+  "source": {
+    "primary": "RePoE (repoe-fork export)",
+    "primary_url": "https://repoe-fork.github.io/",
+    "primary_repo": "https://github.com/repoe-fork/repoe",
+    "game_version": "3.29.1.2.2",
+    "files_used": [
+      "mods.json",
+      "mods_by_base.json",
+      "base_items.json",
+      "stat_translations.json"
+    ],
+    "captured_at": "2026-08-04",
+    "cross_checked_against": "https://poedb.tw/us/Ghastly_Eye_Jewel (embedded ModsView JSON)",
+    "cross_check_result": "identical: 66 prefixes / 60 suffixes, all mod ids, levels and spawn weights agree"
+  },
+  "base": {
+    "base_id": "Metadata/Items/Jewels/JewelAbyssSummoner",
+    "name": "Ghastly Eye Jewel",
+    "item_class": "AbyssJewel",
+    "item_class_display": "Abyss Jewels",
+    "domain": "abyss_jewel",
+    "tags": [
+      "not_for_sale",
+      "abyss_jewel_summoner",
+      "abyss_jewel",
+      "default"
+    ],
+    "implicits": [],
+    "affix_slots": {
+      "magic": {
+        "max_prefixes": 1,
+        "max_suffixes": 1
+      },
+      "rare": {
+        "max_prefixes": 2,
+        "max_suffixes": 2
+      }
+    }
+  },
+  "affix_count_odds": {
+    "magic": {
+      "1": 1,
+      "2": 1
+    },
+    "rare_jewel": {
+      "3": 65,
+      "4": 35
+    },
+    "_note": "Relative weights for how many affixes a freshly reforged item gets. Not present in GGG data files; taken from the two independent open-source crafting simulators that agree on it (kalandralang src/item.ml, PoeCraftLib StatFactory.cs)."
+  },
+  "matching": {
+    "mod_info_line": "^\\{(?<type>[^\"\u2014]+?)(?:\\s+\"(?<name>[^\"]*)\")?(?:\\s+\\(Tier: (?<tier>\\d+)\\))?(?:\\s+\u2014\\s*(?<tags>[^}]*))?\\s*\\}$",
+    "value_placeholder": "[+-]?\\d+(?:\\.\\d+)?(?:\\((?<lo>[^)-]*)-(?<hi>[^)]+)\\))?",
+    "notes": [
+      "Normalise a rendered stat line by replacing every value_placeholder match with \"#\", then look the result up against match_lines[].match_string.",
+      "stats[].min/max are raw stat units. display_min/display_max are the same bounds after index_handlers, i.e. the units printed in the tooltip. Compare parsed rolls against display_min/display_max.",
+      "A tier can spawn iff item level >= required_ilvl.",
+      "GGG tier numbering: tier 1 is the highest required_ilvl in the group that can spawn on this base, counted regardless of the item's own item level."
+    ]
+  },
+  "pool_totals_by_ilvl": [
+    {
+      "ilvl": 1,
+      "prefix_weight": 10900,
+      "suffix_weight": 13350
+    },
+    {
+      "ilvl": 30,
+      "prefix_weight": 11900,
+      "suffix_weight": 13850
+    },
+    {
+      "ilvl": 32,
+      "prefix_weight": 11900,
+      "suffix_weight": 16250
+    },
+    {
+      "ilvl": 35,
+      "prefix_weight": 14900,
+      "suffix_weight": 16250
+    },
+    {
+      "ilvl": 39,
+      "prefix_weight": 17000,
+      "suffix_weight": 16250
+    },
+    {
+      "ilvl": 40,
+      "prefix_weight": 20400,
+      "suffix_weight": 16250
+    },
+    {
+      "ilvl": 42,
+      "prefix_weight": 21800,
+      "suffix_weight": 16250
+    },
+    {
+      "ilvl": 48,
+      "prefix_weight": 23900,
+      "suffix_weight": 16250
+    },
+    {
+      "ilvl": 50,
+      "prefix_weight": 23900,
+      "suffix_weight": 18800
+    },
+    {
+      "ilvl": 54,
+      "prefix_weight": 25300,
+      "suffix_weight": 18800
+    },
+    {
+      "ilvl": 58,
+      "prefix_weight": 27400,
+      "suffix_weight": 18800
+    },
+    {
+      "ilvl": 60,
+      "prefix_weight": 28400,
+      "suffix_weight": 20000
+    },
+    {
+      "ilvl": 63,
+      "prefix_weight": 29100,
+      "suffix_weight": 20000
+    },
+    {
+      "ilvl": 65,
+      "prefix_weight": 29800,
+      "suffix_weight": 21200
+    },
+    {
+      "ilvl": 70,
+      "prefix_weight": 30850,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 72,
+      "prefix_weight": 31200,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 74,
+      "prefix_weight": 32200,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 75,
+      "prefix_weight": 36100,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 80,
+      "prefix_weight": 36350,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 82,
+      "prefix_weight": 37375,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 83,
+      "prefix_weight": 38950,
+      "suffix_weight": 22100
+    },
+    {
+      "ilvl": 84,
+      "prefix_weight": 39125,
+      "suffix_weight": 24000
+    },
+    {
+      "ilvl": 86,
+      "prefix_weight": 39525,
+      "suffix_weight": 24000
+    },
+    {
+      "ilvl": 100,
+      "prefix_weight": 39525,
+      "suffix_weight": 24000
+    }
+  ],
+  "prefixes": [
+    {
+      "group": "AbyssJewelLife",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "# to maximum Life",
+          "stat_ids": [
+            "base_maximum_life"
+          ],
+          "trade_stat_id": "explicit.stat_3299347043",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to maximum Life",
+      "stat_ids": [
+        "base_maximum_life"
+      ],
+      "trade_stat_id": "explicit.stat_3299347043",
+      "tier_count": 4,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssJewelAddedLife4",
+          "affix_name": "Stalwart",
+          "required_ilvl": 82,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "base_maximum_life",
+              "min": 36,
+              "max": 40,
+              "display_min": 36,
+              "display_max": 40
+            }
+          ],
+          "text": "+(36-40) to maximum Life"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssJewelAddedLife3",
+          "affix_name": "Sanguine",
+          "required_ilvl": 74,
+          "spawn_weight": 1000,
+          "stats": [
+            {
+              "id": "base_maximum_life",
+              "min": 31,
+              "max": 35,
+              "display_min": 31,
+              "display_max": 35
+            }
+          ],
+          "text": "+(31-35) to maximum Life"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssJewelAddedLife2",
+          "affix_name": "Healthy",
+          "required_ilvl": 35,
+          "spawn_weight": 3000,
+          "stats": [
+            {
+              "id": "base_maximum_life",
+              "min": 26,
+              "max": 30,
+              "display_min": 26,
+              "display_max": 30
+            }
+          ],
+          "text": "+(26-30) to maximum Life"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssJewelAddedLife1",
+          "affix_name": "Hale",
+          "required_ilvl": 1,
+          "spawn_weight": 3000,
+          "stats": [
+            {
+              "id": "base_maximum_life",
+              "min": 21,
+              "max": 25,
+              "display_min": 21,
+              "display_max": 25
+            }
+          ],
+          "text": "+(21-25) to maximum Life"
+        }
+      ]
+    },
+    {
+      "group": "AbyssJewelMana",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "# to maximum Mana",
+          "stat_ids": [
+            "base_maximum_mana"
+          ],
+          "trade_stat_id": "explicit.stat_1050105434",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to maximum Mana",
+      "stat_ids": [
+        "base_maximum_mana"
+      ],
+      "trade_stat_id": "explicit.stat_1050105434",
+      "tier_count": 4,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssJewelAddedMana4",
+          "affix_name": "Sapphire",
+          "required_ilvl": 83,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "base_maximum_mana",
+              "min": 32,
+              "max": 34,
+              "display_min": 32,
+              "display_max": 34
+            }
+          ],
+          "text": "+(32-34) to maximum Mana"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssJewelAddedMana3",
+          "affix_name": "Azure",
+          "required_ilvl": 75,
+          "spawn_weight": 1000,
+          "stats": [
+            {
+              "id": "base_maximum_mana",
+              "min": 28,
+              "max": 31,
+              "display_min": 28,
+              "display_max": 31
+            }
+          ],
+          "text": "+(28-31) to maximum Mana"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssJewelAddedMana2",
+          "affix_name": "Cobalt",
+          "required_ilvl": 40,
+          "spawn_weight": 1000,
+          "stats": [
+            {
+              "id": "base_maximum_mana",
+              "min": 24,
+              "max": 27,
+              "display_min": 24,
+              "display_max": 27
+            }
+          ],
+          "text": "+(24-27) to maximum Mana"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssJewelAddedMana1",
+          "affix_name": "Beryl",
+          "required_ilvl": 1,
+          "spawn_weight": 1000,
+          "stats": [
+            {
+              "id": "base_maximum_mana",
+              "min": 20,
+              "max": 23,
+              "display_min": 20,
+              "display_max": 23
+            }
+          ],
+          "text": "+(20-23) to maximum Mana"
+        }
+      ]
+    },
+    {
+      "group": "AddedManaRegeneration",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Regenerate # Mana per second",
+          "stat_ids": [
+            "base_mana_regeneration_rate_per_minute"
+          ],
+          "trade_stat_id": "explicit.stat_4291461939",
+          "index_handlers": [
+            "per_minute_to_per_second"
+          ]
+        }
+      ],
+      "match_string": "Regenerate # Mana per second",
+      "stat_ids": [
+        "base_mana_regeneration_rate_per_minute"
+      ],
+      "trade_stat_id": "explicit.stat_4291461939",
+      "tier_count": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatManaShieldRegenerationJewel3",
+          "affix_name": "Resonating",
+          "required_ilvl": 75,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "base_mana_regeneration_rate_per_minute",
+              "min": 196,
+              "max": 240,
+              "display_min": 3.3,
+              "display_max": 4
+            }
+          ],
+          "text": "Regenerate (3.3-4) Mana per second"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatManaShieldRegenerationJewel2",
+          "affix_name": "Inspirational",
+          "required_ilvl": 40,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "base_mana_regeneration_rate_per_minute",
+              "min": 126,
+              "max": 180,
+              "display_min": 2.1,
+              "display_max": 3
+            }
+          ],
+          "text": "Regenerate (2.1-3) Mana per second"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatManaShieldRegenerationJewel1",
+          "affix_name": "Energising",
+          "required_ilvl": 1,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "base_mana_regeneration_rate_per_minute",
+              "min": 66,
+              "max": 120,
+              "display_min": 1.1,
+              "display_max": 2
+            }
+          ],
+          "text": "Regenerate (1.1-2) Mana per second"
+        }
+      ]
+    },
+    {
+      "group": "EnergyShield",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "# to maximum Energy Shield",
+          "stat_ids": [
+            "base_maximum_energy_shield"
+          ],
+          "trade_stat_id": "explicit.stat_3489782002",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to maximum Energy Shield",
+      "stat_ids": [
+        "base_maximum_energy_shield"
+      ],
+      "trade_stat_id": "explicit.stat_3489782002",
+      "tier_count": 4,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatEnergyShieldJewel4",
+          "affix_name": "Resplendent",
+          "required_ilvl": 83,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_maximum_energy_shield",
+              "min": 36,
+              "max": 40,
+              "display_min": 36,
+              "display_max": 40
+            }
+          ],
+          "text": "+(36-40) to maximum Energy Shield"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatEnergyShieldJewel3",
+          "affix_name": "Incandescent",
+          "required_ilvl": 75,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_maximum_energy_shield",
+              "min": 31,
+              "max": 35,
+              "display_min": 31,
+              "display_max": 35
+            }
+          ],
+          "text": "+(31-35) to maximum Energy Shield"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatEnergyShieldJewel2",
+          "affix_name": "Seething",
+          "required_ilvl": 40,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_maximum_energy_shield",
+              "min": 26,
+              "max": 30,
+              "display_min": 26,
+              "display_max": 30
+            }
+          ],
+          "text": "+(26-30) to maximum Energy Shield"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssFlatEnergyShieldJewel1",
+          "affix_name": "Shining",
+          "required_ilvl": 1,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_maximum_energy_shield",
+              "min": 21,
+              "max": 25,
+              "display_min": 21,
+              "display_max": 25
+            }
+          ],
+          "text": "+(21-25) to maximum Energy Shield"
+        }
+      ]
+    },
+    {
+      "group": "EvasionRating",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "# to Evasion Rating",
+          "stat_ids": [
+            "base_evasion_rating"
+          ],
+          "trade_stat_id": "explicit.stat_2144192055",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Evasion Rating",
+      "stat_ids": [
+        "base_evasion_rating"
+      ],
+      "trade_stat_id": "explicit.stat_2144192055",
+      "tier_count": 4,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatEvasionJewel4_",
+          "affix_name": "Beclouded",
+          "required_ilvl": 83,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_evasion_rating",
+              "min": 181,
+              "max": 250,
+              "display_min": 181,
+              "display_max": 250
+            }
+          ],
+          "text": "+(181-250) to Evasion Rating"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatEvasionJewel3",
+          "affix_name": "Vaporous",
+          "required_ilvl": 75,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_evasion_rating",
+              "min": 101,
+              "max": 180,
+              "display_min": 101,
+              "display_max": 180
+            }
+          ],
+          "text": "+(101-180) to Evasion Rating"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatEvasionJewel2",
+          "affix_name": "Fleet",
+          "required_ilvl": 40,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_evasion_rating",
+              "min": 61,
+              "max": 100,
+              "display_min": 61,
+              "display_max": 100
+            }
+          ],
+          "text": "+(61-100) to Evasion Rating"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssFlatEvasionJewel1",
+          "affix_name": "Agile",
+          "required_ilvl": 1,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_evasion_rating",
+              "min": 36,
+              "max": 60,
+              "display_min": 36,
+              "display_max": 60
+            }
+          ],
+          "text": "+(36-60) to Evasion Rating"
+        }
+      ]
+    },
+    {
+      "group": "FlatEnergyShieldRegeneration",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Regenerate # Energy Shield per second",
+          "stat_ids": [
+            "energy_shield_regeneration_rate_per_second"
+          ],
+          "trade_stat_id": "explicit.stat_1330109706",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Regenerate # Energy Shield per second",
+      "stat_ids": [
+        "energy_shield_regeneration_rate_per_second"
+      ],
+      "trade_stat_id": "explicit.stat_1330109706",
+      "tier_count": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatEnergyShieldRegenerationJewel3",
+          "affix_name": "Breathtaking",
+          "required_ilvl": 60,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "energy_shield_regeneration_rate_per_second",
+              "min": 17,
+              "max": 20,
+              "display_min": 17,
+              "display_max": 20
+            }
+          ],
+          "text": "Regenerate (17-20) Energy Shield per second"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatEnergyShieldRegenerationJewel2",
+          "affix_name": "Beautiful",
+          "required_ilvl": 30,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "energy_shield_regeneration_rate_per_second",
+              "min": 13,
+              "max": 16,
+              "display_min": 13,
+              "display_max": 16
+            }
+          ],
+          "text": "Regenerate (13-16) Energy Shield per second"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatEnergyShieldRegenerationJewel1",
+          "affix_name": "Captivating",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "energy_shield_regeneration_rate_per_second",
+              "min": 9,
+              "max": 12,
+              "display_min": 9,
+              "display_max": 12
+            }
+          ],
+          "text": "Regenerate (9-12) Energy Shield per second"
+        }
+      ]
+    },
+    {
+      "group": "FlatMinionLifeRegeneration",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Minions Regenerate # Life per second",
+          "stat_ids": [
+            "minion_life_regeneration_rate_per_second"
+          ],
+          "trade_stat_id": "explicit.stat_3062329212",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions Regenerate # Life per second",
+      "stat_ids": [
+        "minion_life_regeneration_rate_per_second"
+      ],
+      "trade_stat_id": "explicit.stat_3062329212",
+      "tier_count": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatMinionLifeRegenerationJewel3",
+          "affix_name": "Exuberant",
+          "required_ilvl": 60,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "minion_life_regeneration_rate_per_second",
+              "min": 42,
+              "max": 60,
+              "display_min": 42,
+              "display_max": 60
+            }
+          ],
+          "text": "Minions Regenerate (42-60) Life per second"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatMinionLifeRegenerationJewel2",
+          "affix_name": "Lively",
+          "required_ilvl": 30,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "minion_life_regeneration_rate_per_second",
+              "min": 32,
+              "max": 40,
+              "display_min": 32,
+              "display_max": 40
+            }
+          ],
+          "text": "Minions Regenerate (32-40) Life per second"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatMinionLifeRegenerationJewel1",
+          "affix_name": "Fuelling",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "minion_life_regeneration_rate_per_second",
+              "min": 22,
+              "max": 30,
+              "display_min": 22,
+              "display_max": 30
+            }
+          ],
+          "text": "Minions Regenerate (22-30) Life per second"
+        }
+      ]
+    },
+    {
+      "group": "GlobalCooldownRecovery",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "#% increased Cooldown Recovery Rate",
+          "stat_ids": [
+            "base_cooldown_speed_+%"
+          ],
+          "trade_stat_id": "explicit.stat_1004011302",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% increased Cooldown Recovery Rate",
+      "stat_ids": [
+        "base_cooldown_speed_+%"
+      ],
+      "trade_stat_id": "explicit.stat_1004011302",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssCooldownRecoverySpeed2__",
+          "affix_name": "Expediting",
+          "required_ilvl": 86,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "base_cooldown_speed_+%",
+              "min": 3,
+              "max": 3,
+              "display_min": 3,
+              "display_max": 3
+            }
+          ],
+          "text": "3% increased Cooldown Recovery Rate"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssCooldownRecoverySpeed1_",
+          "affix_name": "Facilitating",
+          "required_ilvl": 75,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "base_cooldown_speed_+%",
+              "min": 2,
+              "max": 2,
+              "display_min": 2,
+              "display_max": 2
+            }
+          ],
+          "text": "2% increased Cooldown Recovery Rate"
+        }
+      ]
+    },
+    {
+      "group": "LifeRegeneration",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Regenerate # Life per second",
+          "stat_ids": [
+            "base_life_regeneration_rate_per_minute"
+          ],
+          "trade_stat_id": "explicit.stat_3325883026",
+          "index_handlers": [
+            "per_minute_to_per_second"
+          ]
+        }
+      ],
+      "match_string": "Regenerate # Life per second",
+      "stat_ids": [
+        "base_life_regeneration_rate_per_minute"
+      ],
+      "trade_stat_id": "explicit.stat_3325883026",
+      "tier_count": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatLifeRegenerationJewel3_",
+          "affix_name": "Vivacious",
+          "required_ilvl": 80,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "base_life_regeneration_rate_per_minute",
+              "min": 1020,
+              "max": 1200,
+              "display_min": 17,
+              "display_max": 20
+            }
+          ],
+          "text": "Regenerate (17-20) Life per second"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatLifeRegenerationJewel2",
+          "affix_name": "Spirited",
+          "required_ilvl": 40,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "base_life_regeneration_rate_per_minute",
+              "min": 780,
+              "max": 960,
+              "display_min": 13,
+              "display_max": 16
+            }
+          ],
+          "text": "Regenerate (13-16) Life per second"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatLifeRegenerationJewel1",
+          "affix_name": "Youthful",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "base_life_regeneration_rate_per_minute",
+              "min": 540,
+              "max": 720,
+              "display_min": 9,
+              "display_max": 12
+            }
+          ],
+          "text": "Regenerate (9-12) Life per second"
+        }
+      ]
+    },
+    {
+      "group": "MinionAddedChaosDamage",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Minions deal # to # additional Chaos Damage",
+          "stat_ids": [
+            "minion_global_minimum_added_chaos_damage",
+            "minion_global_maximum_added_chaos_damage"
+          ],
+          "trade_stat_id": "explicit.stat_2889601781",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions deal # to # additional Chaos Damage",
+      "stat_ids": [
+        "minion_global_minimum_added_chaos_damage",
+        "minion_global_maximum_added_chaos_damage"
+      ],
+      "trade_stat_id": "explicit.stat_2889601781",
+      "tier_count": 6,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAddedChaosDamageJewel6",
+          "affix_name": "Malicious",
+          "required_ilvl": 84,
+          "spawn_weight": 175,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_chaos_damage",
+              "min": 23,
+              "max": 26,
+              "display_min": 23,
+              "display_max": 26
+            },
+            {
+              "id": "minion_global_maximum_added_chaos_damage",
+              "min": 33,
+              "max": 39,
+              "display_min": 33,
+              "display_max": 39
+            }
+          ],
+          "text": "Minions deal (23-26) to (33-39) additional Chaos Damage"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAddedChaosDamageJewel5_",
+          "affix_name": "Vile",
+          "required_ilvl": 75,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_chaos_damage",
+              "min": 18,
+              "max": 21,
+              "display_min": 18,
+              "display_max": 21
+            },
+            {
+              "id": "minion_global_maximum_added_chaos_damage",
+              "min": 24,
+              "max": 27,
+              "display_min": 24,
+              "display_max": 27
+            }
+          ],
+          "text": "Minions deal (18-21) to (24-27) additional Chaos Damage"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssMinionAddedChaosDamageJewel4",
+          "affix_name": "Malignant",
+          "required_ilvl": 65,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_chaos_damage",
+              "min": 14,
+              "max": 17,
+              "display_min": 14,
+              "display_max": 17
+            },
+            {
+              "id": "minion_global_maximum_added_chaos_damage",
+              "min": 20,
+              "max": 23,
+              "display_min": 20,
+              "display_max": 23
+            }
+          ],
+          "text": "Minions deal (14-17) to (20-23) additional Chaos Damage"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssMinionAddedChaosDamageJewel3",
+          "affix_name": "Darkened",
+          "required_ilvl": 54,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_chaos_damage",
+              "min": 9,
+              "max": 12,
+              "display_min": 9,
+              "display_max": 12
+            },
+            {
+              "id": "minion_global_maximum_added_chaos_damage",
+              "min": 15,
+              "max": 18,
+              "display_min": 15,
+              "display_max": 18
+            }
+          ],
+          "text": "Minions deal (9-12) to (15-18) additional Chaos Damage"
+        },
+        {
+          "tier": 5,
+          "mod_id": "AbyssMinionAddedChaosDamageJewel2_",
+          "affix_name": "Clouded",
+          "required_ilvl": 42,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_chaos_damage",
+              "min": 5,
+              "max": 8,
+              "display_min": 5,
+              "display_max": 8
+            },
+            {
+              "id": "minion_global_maximum_added_chaos_damage",
+              "min": 11,
+              "max": 14,
+              "display_min": 11,
+              "display_max": 14
+            }
+          ],
+          "text": "Minions deal (5-8) to (11-14) additional Chaos Damage"
+        },
+        {
+          "tier": 6,
+          "mod_id": "AbyssMinionAddedChaosDamageJewel1",
+          "affix_name": "Tainted",
+          "required_ilvl": 1,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_chaos_damage",
+              "min": 2,
+              "max": 3,
+              "display_min": 2,
+              "display_max": 3
+            },
+            {
+              "id": "minion_global_maximum_added_chaos_damage",
+              "min": 5,
+              "max": 8,
+              "display_min": 5,
+              "display_max": 8
+            }
+          ],
+          "text": "Minions deal (2-3) to (5-8) additional Chaos Damage"
+        }
+      ]
+    },
+    {
+      "group": "MinionAddedColdDamage",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Minions deal # to # additional Cold Damage",
+          "stat_ids": [
+            "minion_global_minimum_added_cold_damage",
+            "minion_global_maximum_added_cold_damage"
+          ],
+          "trade_stat_id": "explicit.stat_3152982863",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions deal # to # additional Cold Damage",
+      "stat_ids": [
+        "minion_global_minimum_added_cold_damage",
+        "minion_global_maximum_added_cold_damage"
+      ],
+      "trade_stat_id": "explicit.stat_3152982863",
+      "tier_count": 6,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAddedColdDamageJewel6_",
+          "affix_name": "Entombing",
+          "required_ilvl": 82,
+          "spawn_weight": 175,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_cold_damage",
+              "min": 29,
+              "max": 35,
+              "display_min": 29,
+              "display_max": 35
+            },
+            {
+              "id": "minion_global_maximum_added_cold_damage",
+              "min": 42,
+              "max": 51,
+              "display_min": 42,
+              "display_max": 51
+            }
+          ],
+          "text": "Minions deal (29-35) to (42-51) additional Cold Damage"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAddedColdDamageJewel5",
+          "affix_name": "Polar",
+          "required_ilvl": 70,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_cold_damage",
+              "min": 24,
+              "max": 27,
+              "display_min": 24,
+              "display_max": 27
+            },
+            {
+              "id": "minion_global_maximum_added_cold_damage",
+              "min": 33,
+              "max": 36,
+              "display_min": 33,
+              "display_max": 36
+            }
+          ],
+          "text": "Minions deal (24-27) to (33-36) additional Cold Damage"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssMinionAddedColdDamageJewel4",
+          "affix_name": "Glaciated",
+          "required_ilvl": 58,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_cold_damage",
+              "min": 20,
+              "max": 23,
+              "display_min": 20,
+              "display_max": 23
+            },
+            {
+              "id": "minion_global_maximum_added_cold_damage",
+              "min": 26,
+              "max": 32,
+              "display_min": 26,
+              "display_max": 32
+            }
+          ],
+          "text": "Minions deal (20-23) to (26-32) additional Cold Damage"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssMinionAddedColdDamageJewel3",
+          "affix_name": "Frozen",
+          "required_ilvl": 48,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_cold_damage",
+              "min": 15,
+              "max": 18,
+              "display_min": 15,
+              "display_max": 18
+            },
+            {
+              "id": "minion_global_maximum_added_cold_damage",
+              "min": 21,
+              "max": 24,
+              "display_min": 21,
+              "display_max": 24
+            }
+          ],
+          "text": "Minions deal (15-18) to (21-24) additional Cold Damage"
+        },
+        {
+          "tier": 5,
+          "mod_id": "AbyssMinionAddedColdDamageJewel2",
+          "affix_name": "Freezing",
+          "required_ilvl": 39,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_cold_damage",
+              "min": 11,
+              "max": 14,
+              "display_min": 11,
+              "display_max": 14
+            },
+            {
+              "id": "minion_global_maximum_added_cold_damage",
+              "min": 17,
+              "max": 20,
+              "display_min": 17,
+              "display_max": 20
+            }
+          ],
+          "text": "Minions deal (11-14) to (17-20) additional Cold Damage"
+        },
+        {
+          "tier": 6,
+          "mod_id": "AbyssMinionAddedColdDamageJewel1",
+          "affix_name": "Frosted",
+          "required_ilvl": 1,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_cold_damage",
+              "min": 3,
+              "max": 6,
+              "display_min": 3,
+              "display_max": 6
+            },
+            {
+              "id": "minion_global_maximum_added_cold_damage",
+              "min": 8,
+              "max": 11,
+              "display_min": 8,
+              "display_max": 11
+            }
+          ],
+          "text": "Minions deal (3-6) to (8-11) additional Cold Damage"
+        }
+      ]
+    },
+    {
+      "group": "MinionAddedFireDamage",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Minions deal # to # additional Fire Damage",
+          "stat_ids": [
+            "minion_global_minimum_added_fire_damage",
+            "minion_global_maximum_added_fire_damage"
+          ],
+          "trade_stat_id": "explicit.stat_3351784991",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions deal # to # additional Fire Damage",
+      "stat_ids": [
+        "minion_global_minimum_added_fire_damage",
+        "minion_global_maximum_added_fire_damage"
+      ],
+      "trade_stat_id": "explicit.stat_3351784991",
+      "tier_count": 6,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAddedFireDamageJewel6_",
+          "affix_name": "Cremating",
+          "required_ilvl": 82,
+          "spawn_weight": 175,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_fire_damage",
+              "min": 29,
+              "max": 35,
+              "display_min": 29,
+              "display_max": 35
+            },
+            {
+              "id": "minion_global_maximum_added_fire_damage",
+              "min": 42,
+              "max": 51,
+              "display_min": 42,
+              "display_max": 51
+            }
+          ],
+          "text": "Minions deal (29-35) to (42-51) additional Fire Damage"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAddedFireDamageJewel5",
+          "affix_name": "Blasting",
+          "required_ilvl": 70,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_fire_damage",
+              "min": 24,
+              "max": 27,
+              "display_min": 24,
+              "display_max": 27
+            },
+            {
+              "id": "minion_global_maximum_added_fire_damage",
+              "min": 33,
+              "max": 36,
+              "display_min": 33,
+              "display_max": 36
+            }
+          ],
+          "text": "Minions deal (24-27) to (33-36) additional Fire Damage"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssMinionAddedFireDamageJewel4_",
+          "affix_name": "Incinerating",
+          "required_ilvl": 58,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_fire_damage",
+              "min": 20,
+              "max": 23,
+              "display_min": 20,
+              "display_max": 23
+            },
+            {
+              "id": "minion_global_maximum_added_fire_damage",
+              "min": 26,
+              "max": 32,
+              "display_min": 26,
+              "display_max": 32
+            }
+          ],
+          "text": "Minions deal (20-23) to (26-32) additional Fire Damage"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssMinionAddedFireDamageJewel3",
+          "affix_name": "Scorching",
+          "required_ilvl": 48,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_fire_damage",
+              "min": 15,
+              "max": 18,
+              "display_min": 15,
+              "display_max": 18
+            },
+            {
+              "id": "minion_global_maximum_added_fire_damage",
+              "min": 21,
+              "max": 24,
+              "display_min": 21,
+              "display_max": 24
+            }
+          ],
+          "text": "Minions deal (15-18) to (21-24) additional Fire Damage"
+        },
+        {
+          "tier": 5,
+          "mod_id": "AbyssMinionAddedFireDamageJewel2",
+          "affix_name": "Flaming",
+          "required_ilvl": 39,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_fire_damage",
+              "min": 11,
+              "max": 14,
+              "display_min": 11,
+              "display_max": 14
+            },
+            {
+              "id": "minion_global_maximum_added_fire_damage",
+              "min": 17,
+              "max": 20,
+              "display_min": 17,
+              "display_max": 20
+            }
+          ],
+          "text": "Minions deal (11-14) to (17-20) additional Fire Damage"
+        },
+        {
+          "tier": 6,
+          "mod_id": "AbyssMinionAddedFireDamageJewel1",
+          "affix_name": "Heated",
+          "required_ilvl": 1,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_fire_damage",
+              "min": 3,
+              "max": 6,
+              "display_min": 3,
+              "display_max": 6
+            },
+            {
+              "id": "minion_global_maximum_added_fire_damage",
+              "min": 8,
+              "max": 11,
+              "display_min": 8,
+              "display_max": 11
+            }
+          ],
+          "text": "Minions deal (3-6) to (8-11) additional Fire Damage"
+        }
+      ]
+    },
+    {
+      "group": "MinionAddedLightningDamage",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Minions deal # to # additional Lightning Damage",
+          "stat_ids": [
+            "minion_global_minimum_added_lightning_damage",
+            "minion_global_maximum_added_lightning_damage"
+          ],
+          "trade_stat_id": "explicit.stat_2930653471",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions deal # to # additional Lightning Damage",
+      "stat_ids": [
+        "minion_global_minimum_added_lightning_damage",
+        "minion_global_maximum_added_lightning_damage"
+      ],
+      "trade_stat_id": "explicit.stat_2930653471",
+      "tier_count": 6,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAddedLightningDamageJewel6",
+          "affix_name": "Electrocuting",
+          "required_ilvl": 82,
+          "spawn_weight": 175,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_lightning_damage",
+              "min": 1,
+              "max": 6,
+              "display_min": 1,
+              "display_max": 6
+            },
+            {
+              "id": "minion_global_maximum_added_lightning_damage",
+              "min": 65,
+              "max": 77,
+              "display_min": 65,
+              "display_max": 77
+            }
+          ],
+          "text": "Minions deal (1-6) to (65-77) additional Lightning Damage"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAddedLightningDamageJewel5",
+          "affix_name": "Discharging",
+          "required_ilvl": 70,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_lightning_damage",
+              "min": 1,
+              "max": 5,
+              "display_min": 1,
+              "display_max": 5
+            },
+            {
+              "id": "minion_global_maximum_added_lightning_damage",
+              "min": 51,
+              "max": 54,
+              "display_min": 51,
+              "display_max": 54
+            }
+          ],
+          "text": "Minions deal (1-5) to (51-54) additional Lightning Damage"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssMinionAddedLightningDamageJewel4",
+          "affix_name": "Shocking",
+          "required_ilvl": 58,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_lightning_damage",
+              "min": 1,
+              "max": 4,
+              "display_min": 1,
+              "display_max": 4
+            },
+            {
+              "id": "minion_global_maximum_added_lightning_damage",
+              "min": 44,
+              "max": 50,
+              "display_min": 44,
+              "display_max": 50
+            }
+          ],
+          "text": "Minions deal (1-4) to (44-50) additional Lightning Damage"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssMinionAddedLightningDamageJewel3_",
+          "affix_name": "Arcing",
+          "required_ilvl": 48,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_lightning_damage",
+              "min": 1,
+              "max": 3,
+              "display_min": 1,
+              "display_max": 3
+            },
+            {
+              "id": "minion_global_maximum_added_lightning_damage",
+              "min": 33,
+              "max": 39,
+              "display_min": 33,
+              "display_max": 39
+            }
+          ],
+          "text": "Minions deal (1-3) to (33-39) additional Lightning Damage"
+        },
+        {
+          "tier": 5,
+          "mod_id": "AbyssMinionAddedLightningDamageJewel2",
+          "affix_name": "Sparking",
+          "required_ilvl": 39,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_lightning_damage",
+              "min": 1,
+              "max": 2,
+              "display_min": 1,
+              "display_max": 2
+            },
+            {
+              "id": "minion_global_maximum_added_lightning_damage",
+              "min": 26,
+              "max": 32,
+              "display_min": 26,
+              "display_max": 32
+            }
+          ],
+          "text": "Minions deal (1-2) to (26-32) additional Lightning Damage"
+        },
+        {
+          "tier": 6,
+          "mod_id": "AbyssMinionAddedLightningDamageJewel1_",
+          "affix_name": "Humming",
+          "required_ilvl": 1,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_lightning_damage",
+              "min": 1,
+              "max": 1,
+              "display_min": 1,
+              "display_max": 1
+            },
+            {
+              "id": "minion_global_maximum_added_lightning_damage",
+              "min": 9,
+              "max": 15,
+              "display_min": 9,
+              "display_max": 15
+            }
+          ],
+          "text": "Minions deal 1 to (9-15) additional Lightning Damage"
+        }
+      ]
+    },
+    {
+      "group": "MinionAddedPhysicalDamage",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "Minions deal # to # additional Physical Damage",
+          "stat_ids": [
+            "minion_global_minimum_added_physical_damage",
+            "minion_global_maximum_added_physical_damage"
+          ],
+          "trade_stat_id": "explicit.stat_1172029298",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions deal # to # additional Physical Damage",
+      "stat_ids": [
+        "minion_global_minimum_added_physical_damage",
+        "minion_global_maximum_added_physical_damage"
+      ],
+      "trade_stat_id": "explicit.stat_1172029298",
+      "tier_count": 6,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAddedPhysicalDamageJewel6",
+          "affix_name": "Flaring",
+          "required_ilvl": 83,
+          "spawn_weight": 175,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_physical_damage",
+              "min": 23,
+              "max": 26,
+              "display_min": 23,
+              "display_max": 26
+            },
+            {
+              "id": "minion_global_maximum_added_physical_damage",
+              "min": 33,
+              "max": 39,
+              "display_min": 33,
+              "display_max": 39
+            }
+          ],
+          "text": "Minions deal (23-26) to (33-39) additional Physical Damage"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAddedPhysicalDamageJewel5",
+          "affix_name": "Tempered",
+          "required_ilvl": 72,
+          "spawn_weight": 350,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_physical_damage",
+              "min": 18,
+              "max": 21,
+              "display_min": 18,
+              "display_max": 21
+            },
+            {
+              "id": "minion_global_maximum_added_physical_damage",
+              "min": 24,
+              "max": 27,
+              "display_min": 24,
+              "display_max": 27
+            }
+          ],
+          "text": "Minions deal (18-21) to (24-27) additional Physical Damage"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssMinionAddedPhysicalDamageJewel4",
+          "affix_name": "Razor-sharp",
+          "required_ilvl": 63,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_physical_damage",
+              "min": 14,
+              "max": 17,
+              "display_min": 14,
+              "display_max": 17
+            },
+            {
+              "id": "minion_global_maximum_added_physical_damage",
+              "min": 20,
+              "max": 23,
+              "display_min": 20,
+              "display_max": 23
+            }
+          ],
+          "text": "Minions deal (14-17) to (20-23) additional Physical Damage"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssMinionAddedPhysicalDamageJewel3",
+          "affix_name": "Annealed",
+          "required_ilvl": 54,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_physical_damage",
+              "min": 9,
+              "max": 12,
+              "display_min": 9,
+              "display_max": 12
+            },
+            {
+              "id": "minion_global_maximum_added_physical_damage",
+              "min": 15,
+              "max": 18,
+              "display_min": 15,
+              "display_max": 18
+            }
+          ],
+          "text": "Minions deal (9-12) to (15-18) additional Physical Damage"
+        },
+        {
+          "tier": 5,
+          "mod_id": "AbyssMinionAddedPhysicalDamageJewel2",
+          "affix_name": "Gleaming",
+          "required_ilvl": 42,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_physical_damage",
+              "min": 5,
+              "max": 8,
+              "display_min": 5,
+              "display_max": 8
+            },
+            {
+              "id": "minion_global_maximum_added_physical_damage",
+              "min": 11,
+              "max": 14,
+              "display_min": 11,
+              "display_max": 14
+            }
+          ],
+          "text": "Minions deal (5-8) to (11-14) additional Physical Damage"
+        },
+        {
+          "tier": 6,
+          "mod_id": "AbyssMinionAddedPhysicalDamageJewel1",
+          "affix_name": "Glinting",
+          "required_ilvl": 1,
+          "spawn_weight": 700,
+          "stats": [
+            {
+              "id": "minion_global_minimum_added_physical_damage",
+              "min": 2,
+              "max": 3,
+              "display_min": 2,
+              "display_max": 3
+            },
+            {
+              "id": "minion_global_maximum_added_physical_damage",
+              "min": 5,
+              "max": 8,
+              "display_min": 5,
+              "display_max": 8
+            }
+          ],
+          "text": "Minions deal (2-3) to (5-8) additional Physical Damage"
+        }
+      ]
+    },
+    {
+      "group": "PercentDamageGoesToMana",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "#% of Damage taken Recouped as Mana",
+          "stat_ids": [
+            "damage_taken_goes_to_mana_%"
+          ],
+          "trade_stat_id": "explicit.stat_472520716",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% of Damage taken Recouped as Mana",
+      "stat_ids": [
+        "damage_taken_goes_to_mana_%"
+      ],
+      "trade_stat_id": "explicit.stat_472520716",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssDamageRecoupedAsMana2",
+          "affix_name": "Motivating",
+          "required_ilvl": 86,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "damage_taken_goes_to_mana_%",
+              "min": 4,
+              "max": 5,
+              "display_min": 4,
+              "display_max": 5
+            }
+          ],
+          "text": "(4-5)% of Damage taken Recouped as Mana"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssDamageRecoupedAsMana1",
+          "affix_name": "Spurring",
+          "required_ilvl": 75,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "damage_taken_goes_to_mana_%",
+              "min": 2,
+              "max": 3,
+              "display_min": 2,
+              "display_max": 3
+            }
+          ],
+          "text": "(2-3)% of Damage taken Recouped as Mana"
+        }
+      ]
+    },
+    {
+      "group": "PhysicalDamageReductionRating",
+      "generation_type": "prefix",
+      "match_lines": [
+        {
+          "match_string": "# to Armour",
+          "stat_ids": [
+            "base_physical_damage_reduction_rating"
+          ],
+          "trade_stat_id": "explicit.stat_809229260",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Armour",
+      "stat_ids": [
+        "base_physical_damage_reduction_rating"
+      ],
+      "trade_stat_id": "explicit.stat_809229260",
+      "tier_count": 4,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFlatArmourJewel4__",
+          "affix_name": "Encased",
+          "required_ilvl": 83,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_physical_damage_reduction_rating",
+              "min": 181,
+              "max": 250,
+              "display_min": 181,
+              "display_max": 250
+            }
+          ],
+          "text": "+(181-250) to Armour"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssFlatArmourJewel3",
+          "affix_name": "Carapaced",
+          "required_ilvl": 75,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_physical_damage_reduction_rating",
+              "min": 101,
+              "max": 180,
+              "display_min": 101,
+              "display_max": 180
+            }
+          ],
+          "text": "+(101-180) to Armour"
+        },
+        {
+          "tier": 3,
+          "mod_id": "AbyssFlatArmourJewel2",
+          "affix_name": "Fortified",
+          "required_ilvl": 40,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_physical_damage_reduction_rating",
+              "min": 61,
+              "max": 100,
+              "display_min": 61,
+              "display_max": 100
+            }
+          ],
+          "text": "+(61-100) to Armour"
+        },
+        {
+          "tier": 4,
+          "mod_id": "AbyssFlatArmourJewel1",
+          "affix_name": "Lacquered",
+          "required_ilvl": 1,
+          "spawn_weight": 600,
+          "stats": [
+            {
+              "id": "base_physical_damage_reduction_rating",
+              "min": 36,
+              "max": 60,
+              "display_min": 36,
+              "display_max": 60
+            }
+          ],
+          "text": "+(36-60) to Armour"
+        }
+      ]
+    }
+  ],
+  "suffixes": [
+    {
+      "group": "AbyssMinionAttacksBleedOnHitChance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% chance to cause Bleeding with Attacks",
+          "stat_ids": [
+            "minion_bleed_on_hit_with_attacks_%"
+          ],
+          "trade_stat_id": "explicit.stat_3998967779",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% chance to cause Bleeding with Attacks",
+      "stat_ids": [
+        "minion_bleed_on_hit_with_attacks_%"
+      ],
+      "trade_stat_id": "explicit.stat_3998967779",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAttacksBleedOnHitChanceJewel1",
+          "affix_name": "of Bloodletting",
+          "required_ilvl": 60,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "minion_bleed_on_hit_with_attacks_%",
+              "min": 10,
+              "max": 15,
+              "display_min": 10,
+              "display_max": 15
+            }
+          ],
+          "text": "Minions have (10-15)% chance to cause Bleeding with Attacks"
+        }
+      ]
+    },
+    {
+      "group": "AbyssMinionIgniteOnHitChance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% chance to Ignite",
+          "stat_ids": [
+            "minion_chance_to_ignite_%"
+          ],
+          "trade_stat_id": "explicit.stat_3945908658",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% chance to Ignite",
+      "stat_ids": [
+        "minion_chance_to_ignite_%"
+      ],
+      "trade_stat_id": "explicit.stat_3945908658",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionIgniteOnHitChanceJewel1",
+          "affix_name": "of Combustion",
+          "required_ilvl": 60,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "minion_chance_to_ignite_%",
+              "min": 10,
+              "max": 15,
+              "display_min": 10,
+              "display_max": 15
+            }
+          ],
+          "text": "Minions have (10-15)% chance to Ignite"
+        }
+      ]
+    },
+    {
+      "group": "AbyssMinionPoisonOnHitChance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% chance to Poison Enemies on Hit",
+          "stat_ids": [
+            "minions_chance_to_poison_on_hit_%"
+          ],
+          "trade_stat_id": "explicit.stat_1974445926",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% chance to Poison Enemies on Hit",
+      "stat_ids": [
+        "minions_chance_to_poison_on_hit_%"
+      ],
+      "trade_stat_id": "explicit.stat_1974445926",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionPoisonOnHitChanceJewel1",
+          "affix_name": "of Venom",
+          "required_ilvl": 60,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "minions_chance_to_poison_on_hit_%",
+              "min": 10,
+              "max": 15,
+              "display_min": 10,
+              "display_max": 15
+            }
+          ],
+          "text": "Minions have (10-15)% chance to Poison Enemies on Hit"
+        }
+      ]
+    },
+    {
+      "group": "AllAttributesForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to all Attributes",
+          "stat_ids": [
+            "additional_all_attributes"
+          ],
+          "trade_stat_id": "explicit.stat_1379411836",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to all Attributes",
+      "stat_ids": [
+        "additional_all_attributes"
+      ],
+      "trade_stat_id": "explicit.stat_1379411836",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAllAttributesJewel1",
+          "affix_name": "of Adaption",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "additional_all_attributes",
+              "min": 6,
+              "max": 8,
+              "display_min": 6,
+              "display_max": 8
+            }
+          ],
+          "text": "+(6-8) to all Attributes"
+        }
+      ]
+    },
+    {
+      "group": "AllResistancesForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to all Elemental Resistances",
+          "stat_ids": [
+            "base_resist_all_elements_%"
+          ],
+          "trade_stat_id": "explicit.stat_2901986750",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to all Elemental Resistances",
+      "stat_ids": [
+        "base_resist_all_elements_%"
+      ],
+      "trade_stat_id": "explicit.stat_2901986750",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAllResistancesJewel1",
+          "affix_name": "of Resistance",
+          "required_ilvl": 1,
+          "spawn_weight": 200,
+          "stats": [
+            {
+              "id": "base_resist_all_elements_%",
+              "min": 8,
+              "max": 10,
+              "display_min": 8,
+              "display_max": 10
+            }
+          ],
+          "text": "+(8-10)% to all Elemental Resistances"
+        }
+      ]
+    },
+    {
+      "group": "AvoidIgnite",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid being Ignited",
+          "stat_ids": [
+            "base_avoid_ignite_%"
+          ],
+          "trade_stat_id": "explicit.stat_1783006896",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid being Ignited",
+      "stat_ids": [
+        "base_avoid_ignite_%"
+      ],
+      "trade_stat_id": "explicit.stat_1783006896",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidIgniteJewel2",
+          "affix_name": "of Fireproofing",
+          "required_ilvl": 70,
+          "spawn_weight": 150,
+          "stats": [
+            {
+              "id": "base_avoid_ignite_%",
+              "min": 41,
+              "max": 50,
+              "display_min": 41,
+              "display_max": 50
+            }
+          ],
+          "text": "(41-50)% chance to Avoid being Ignited"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssAvoidIgniteJewel1_",
+          "affix_name": "of Nonflammability",
+          "required_ilvl": 50,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_avoid_ignite_%",
+              "min": 31,
+              "max": 40,
+              "display_min": 31,
+              "display_max": 40
+            }
+          ],
+          "text": "(31-40)% chance to Avoid being Ignited"
+        }
+      ]
+    },
+    {
+      "group": "AvoidShockForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid being Shocked",
+          "stat_ids": [
+            "base_avoid_shock_%"
+          ],
+          "trade_stat_id": "explicit.stat_1871765599",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid being Shocked",
+      "stat_ids": [
+        "base_avoid_shock_%"
+      ],
+      "trade_stat_id": "explicit.stat_1871765599",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidShockJewel2",
+          "affix_name": "of the Lightning Rod",
+          "required_ilvl": 70,
+          "spawn_weight": 150,
+          "stats": [
+            {
+              "id": "base_avoid_shock_%",
+              "min": 41,
+              "max": 50,
+              "display_min": 41,
+              "display_max": 50
+            }
+          ],
+          "text": "(41-50)% chance to Avoid being Shocked"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssAvoidShockJewel1",
+          "affix_name": "of Insulating",
+          "required_ilvl": 50,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_avoid_shock_%",
+              "min": 31,
+              "max": 40,
+              "display_min": 31,
+              "display_max": 40
+            }
+          ],
+          "text": "(31-40)% chance to Avoid being Shocked"
+        }
+      ]
+    },
+    {
+      "group": "AvoidStun",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid being Stunned",
+          "stat_ids": [
+            "base_avoid_stun_%"
+          ],
+          "trade_stat_id": "explicit.stat_4262448838",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid being Stunned",
+      "stat_ids": [
+        "base_avoid_stun_%"
+      ],
+      "trade_stat_id": "explicit.stat_4262448838",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidStunJewel2",
+          "affix_name": "of Poise",
+          "required_ilvl": 70,
+          "spawn_weight": 150,
+          "stats": [
+            {
+              "id": "base_avoid_stun_%",
+              "min": 25,
+              "max": 30,
+              "display_min": 25,
+              "display_max": 30
+            }
+          ],
+          "text": "(25-30)% chance to Avoid being Stunned"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssAvoidStunJewel1",
+          "affix_name": "of Balance",
+          "required_ilvl": 50,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_avoid_stun_%",
+              "min": 21,
+              "max": 24,
+              "display_min": 21,
+              "display_max": 24
+            }
+          ],
+          "text": "(21-24)% chance to Avoid being Stunned"
+        }
+      ]
+    },
+    {
+      "group": "CastSpeedIfMinionKilledRecently",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% increased Cast Speed if a Minion has been Killed Recently",
+          "stat_ids": [
+            "cast_speed_+%_if_player_minion_has_been_killed_recently"
+          ],
+          "trade_stat_id": "explicit.stat_3110907148",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% increased Cast Speed if a Minion has been Killed Recently",
+      "stat_ids": [
+        "cast_speed_+%_if_player_minion_has_been_killed_recently"
+      ],
+      "trade_stat_id": "explicit.stat_3110907148",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssCastSpeedIfMinionKilledRecentlyJewel1",
+          "affix_name": "of Retaliation",
+          "required_ilvl": 30,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "cast_speed_+%_if_player_minion_has_been_killed_recently",
+              "min": 7,
+              "max": 10,
+              "display_min": 7,
+              "display_max": 10
+            }
+          ],
+          "text": "(7-10)% increased Cast Speed if a Minion has been Killed Recently"
+        }
+      ]
+    },
+    {
+      "group": "ChanceToAvoidBleeding",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid Bleeding",
+          "stat_ids": [
+            "base_avoid_bleed_%"
+          ],
+          "trade_stat_id": "explicit.stat_1618589784",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid Bleeding",
+      "stat_ids": [
+        "base_avoid_bleed_%"
+      ],
+      "trade_stat_id": "explicit.stat_1618589784",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidBleedingJewel2",
+          "affix_name": "of the Tourniquet",
+          "required_ilvl": 70,
+          "spawn_weight": 150,
+          "stats": [
+            {
+              "id": "base_avoid_bleed_%",
+              "min": 41,
+              "max": 50,
+              "display_min": 41,
+              "display_max": 50
+            }
+          ],
+          "text": "(41-50)% chance to Avoid Bleeding"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssAvoidBleedingJewel1",
+          "affix_name": "of Stemming",
+          "required_ilvl": 50,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_avoid_bleed_%",
+              "min": 31,
+              "max": 40,
+              "display_min": 31,
+              "display_max": 40
+            }
+          ],
+          "text": "(31-40)% chance to Avoid Bleeding"
+        }
+      ]
+    },
+    {
+      "group": "ChanceToAvoidFreezeAndChill",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid being Frozen",
+          "stat_ids": [
+            "base_avoid_freeze_%"
+          ],
+          "trade_stat_id": "explicit.stat_1514829491",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid being Frozen",
+      "stat_ids": [
+        "base_avoid_chill_%",
+        "base_avoid_freeze_%"
+      ],
+      "trade_stat_id": "explicit.stat_1514829491",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidFreezeAndChillJewel2",
+          "affix_name": "of Heating",
+          "required_ilvl": 70,
+          "spawn_weight": 150,
+          "stats": [
+            {
+              "id": "base_avoid_chill_%",
+              "min": 0,
+              "max": 0,
+              "display_min": 0,
+              "display_max": 0
+            },
+            {
+              "id": "base_avoid_freeze_%",
+              "min": 41,
+              "max": 50,
+              "display_min": 41,
+              "display_max": 50
+            }
+          ],
+          "text": "(41-50)% chance to Avoid being Frozen"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssAvoidFreezeAndChillJewel1",
+          "affix_name": "of Warming",
+          "required_ilvl": 50,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_avoid_chill_%",
+              "min": 0,
+              "max": 0,
+              "display_min": 0,
+              "display_max": 0
+            },
+            {
+              "id": "base_avoid_freeze_%",
+              "min": 31,
+              "max": 40,
+              "display_min": 31,
+              "display_max": 40
+            }
+          ],
+          "text": "(31-40)% chance to Avoid being Frozen"
+        }
+      ]
+    },
+    {
+      "group": "ChanceToAvoidPoison",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid being Poisoned",
+          "stat_ids": [
+            "base_avoid_poison_%"
+          ],
+          "trade_stat_id": "explicit.stat_4053951709",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid being Poisoned",
+      "stat_ids": [
+        "base_avoid_poison_%"
+      ],
+      "trade_stat_id": "explicit.stat_4053951709",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidPoisonJewel2__",
+          "affix_name": "of Immunity",
+          "required_ilvl": 70,
+          "spawn_weight": 150,
+          "stats": [
+            {
+              "id": "base_avoid_poison_%",
+              "min": 41,
+              "max": 50,
+              "display_min": 41,
+              "display_max": 50
+            }
+          ],
+          "text": "(41-50)% chance to Avoid being Poisoned"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssAvoidPoisonJewel1__",
+          "affix_name": "of Tolerance",
+          "required_ilvl": 50,
+          "spawn_weight": 300,
+          "stats": [
+            {
+              "id": "base_avoid_poison_%",
+              "min": 31,
+              "max": 40,
+              "display_min": 31,
+              "display_max": 40
+            }
+          ],
+          "text": "(31-40)% chance to Avoid being Poisoned"
+        }
+      ]
+    },
+    {
+      "group": "ChanceToBlockIfDamagedRecently",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+          "stat_ids": [
+            "block_chance_on_damage_taken_%"
+          ],
+          "trade_stat_id": "explicit.stat_852195286",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+      "stat_ids": [
+        "block_chance_on_damage_taken_%"
+      ],
+      "trade_stat_id": "explicit.stat_852195286",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssChanceToBlockIfDamagedRecentlyJewel1_",
+          "affix_name": "of Guarding",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "block_chance_on_damage_taken_%",
+              "min": 3,
+              "max": 4,
+              "display_min": 3,
+              "display_max": 4
+            }
+          ],
+          "text": "+(3-4)% Chance to Block Attack Damage if you were Damaged by a Hit Recently"
+        }
+      ]
+    },
+    {
+      "group": "ChaosResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Chaos Resistance",
+          "stat_ids": [
+            "base_chaos_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_2923486259",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Chaos Resistance",
+      "stat_ids": [
+        "base_chaos_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_2923486259",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssChaosResistanceJewel1",
+          "affix_name": "of Order",
+          "required_ilvl": 1,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "base_chaos_damage_resistance_%",
+              "min": 7,
+              "max": 13,
+              "display_min": 7,
+              "display_max": 13
+            }
+          ],
+          "text": "+(7-13)% to Chaos Resistance"
+        }
+      ]
+    },
+    {
+      "group": "ColdLightningResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Cold and Lightning Resistances",
+          "stat_ids": [
+            "cold_and_lightning_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_4277795662",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Cold and Lightning Resistances",
+      "stat_ids": [
+        "cold_and_lightning_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_4277795662",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssColdLightningResistanceJewel1",
+          "affix_name": "of Shelter",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "cold_and_lightning_damage_resistance_%",
+              "min": 10,
+              "max": 12,
+              "display_min": 10,
+              "display_max": 12
+            }
+          ],
+          "text": "+(10-12)% to Cold and Lightning Resistances"
+        }
+      ]
+    },
+    {
+      "group": "ColdResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Cold Resistance",
+          "stat_ids": [
+            "base_cold_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_4220027924",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Cold Resistance",
+      "stat_ids": [
+        "base_cold_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_4220027924",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssColdResistanceJewel1",
+          "affix_name": "of the Beast",
+          "required_ilvl": 1,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "base_cold_damage_resistance_%",
+              "min": 12,
+              "max": 15,
+              "display_min": 12,
+              "display_max": 15
+            }
+          ],
+          "text": "+(12-15)% to Cold Resistance"
+        }
+      ]
+    },
+    {
+      "group": "DexterityForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to Dexterity",
+          "stat_ids": [
+            "additional_dexterity"
+          ],
+          "trade_stat_id": "explicit.stat_3261801346",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Dexterity",
+      "stat_ids": [
+        "additional_dexterity"
+      ],
+      "trade_stat_id": "explicit.stat_3261801346",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssDexterityJewel1_",
+          "affix_name": "of Dexterity",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "additional_dexterity",
+              "min": 12,
+              "max": 16,
+              "display_min": 12,
+              "display_max": 16
+            }
+          ],
+          "text": "+(12-16) to Dexterity"
+        }
+      ]
+    },
+    {
+      "group": "DexterityIntelligenceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to Dexterity and Intelligence",
+          "stat_ids": [
+            "additional_dexterity_and_intelligence"
+          ],
+          "trade_stat_id": "explicit.stat_2300185227",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Dexterity and Intelligence",
+      "stat_ids": [
+        "additional_dexterity_and_intelligence"
+      ],
+      "trade_stat_id": "explicit.stat_2300185227",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssDexterityIntelligenceJewel1",
+          "affix_name": "of Cunning",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "additional_dexterity_and_intelligence",
+              "min": 8,
+              "max": 10,
+              "display_min": 8,
+              "display_max": 10
+            }
+          ],
+          "text": "+(8-10) to Dexterity and Intelligence"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentBlind",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Enemies Blinded by you have #% reduced Critical Strike Chance",
+          "stat_ids": [
+            "enemies_you_blind_have_critical_strike_chance_+%"
+          ],
+          "trade_stat_id": "explicit.stat_4216282855",
+          "index_handlers": [
+            "negate"
+          ]
+        }
+      ],
+      "match_string": "Enemies Blinded by you have #% reduced Critical Strike Chance",
+      "stat_ids": [
+        "enemies_you_blind_have_critical_strike_chance_+%"
+      ],
+      "trade_stat_id": "explicit.stat_4216282855",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssBlindedEnemiesCriticalStrikeChanceJewel1",
+          "affix_name": "of Clouding",
+          "required_ilvl": 84,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "enemies_you_blind_have_critical_strike_chance_+%",
+              "min": -30,
+              "max": -20,
+              "display_min": 30,
+              "display_max": 20
+            }
+          ],
+          "text": "Enemies Blinded by you have (30-20)% reduced Critical Strike Chance"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentConsecratedGround",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% reduced Effect of Curses on you while on Consecrated Ground",
+          "stat_ids": [
+            "curse_effect_on_self_+%_while_on_consecrated_ground"
+          ],
+          "trade_stat_id": "explicit.stat_3444629796",
+          "index_handlers": [
+            "negate"
+          ]
+        }
+      ],
+      "match_string": "#% reduced Effect of Curses on you while on Consecrated Ground",
+      "stat_ids": [
+        "curse_effect_on_self_+%_while_on_consecrated_ground"
+      ],
+      "trade_stat_id": "explicit.stat_3444629796",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssSelfCurseEffectOnConsecratedGroundJewel1__",
+          "affix_name": "of the Sanctum",
+          "required_ilvl": 84,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "curse_effect_on_self_+%_while_on_consecrated_ground",
+              "min": -25,
+              "max": -15,
+              "display_min": 25,
+              "display_max": 15
+            }
+          ],
+          "text": "(25-15)% reduced Effect of Curses on you while on Consecrated Ground"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentElusive",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% chance to Avoid Elemental Ailments while you have Elusive",
+          "stat_ids": [
+            "avoid_elemental_ailments_%_while_affected_by_elusive"
+          ],
+          "trade_stat_id": "explicit.stat_2662268382",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% chance to Avoid Elemental Ailments while you have Elusive",
+      "stat_ids": [
+        "avoid_elemental_ailments_%_while_affected_by_elusive"
+      ],
+      "trade_stat_id": "explicit.stat_2662268382",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssAvoidElementalAilmentsWhileElusiveJewel1",
+          "affix_name": "of Escape",
+          "required_ilvl": 84,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "avoid_elemental_ailments_%_while_affected_by_elusive",
+              "min": 10,
+              "max": 20,
+              "display_min": 10,
+              "display_max": 20
+            }
+          ],
+          "text": "(10-20)% chance to Avoid Elemental Ailments while you have Elusive"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentHinder",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Enemies Hindered by you have #% reduced Life Regeneration rate",
+          "stat_ids": [
+            "enemies_you_hinder_have_life_regeneration_rate_+%"
+          ],
+          "trade_stat_id": "explicit.stat_3709502856",
+          "index_handlers": [
+            "negate"
+          ]
+        }
+      ],
+      "match_string": "Enemies Hindered by you have #% reduced Life Regeneration rate",
+      "stat_ids": [
+        "enemies_you_hinder_have_life_regeneration_rate_+%"
+      ],
+      "trade_stat_id": "explicit.stat_3709502856",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssHinderedEnemiesLifeRegenerationRateJewel1",
+          "affix_name": "of Enervation",
+          "required_ilvl": 84,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "enemies_you_hinder_have_life_regeneration_rate_+%",
+              "min": -35,
+              "max": -25,
+              "display_min": 35,
+              "display_max": 25
+            }
+          ],
+          "text": "Enemies Hindered by you have (35-25)% reduced Life Regeneration rate"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentIntimidate",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Enemies Intimidated by you have #% increased duration of stuns against them",
+          "stat_ids": [
+            "enemies_you_intimidate_have_stun_duration_on_self_+%"
+          ],
+          "trade_stat_id": "explicit.stat_1919892065",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Enemies Intimidated by you have #% increased duration of stuns against them",
+      "stat_ids": [
+        "enemies_you_intimidate_have_stun_duration_on_self_+%"
+      ],
+      "trade_stat_id": "explicit.stat_1919892065",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssIntimidatedEnemiesStunDurationJewel1",
+          "affix_name": "of Daunting",
+          "required_ilvl": 84,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "enemies_you_intimidate_have_stun_duration_on_self_+%",
+              "min": 10,
+              "max": 15,
+              "display_min": 10,
+              "display_max": 15
+            }
+          ],
+          "text": "Enemies Intimidated by you have (10-15)% increased duration of stuns against them"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentMaim",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Enemies Maimed by you take #% increased Damage Over Time",
+          "stat_ids": [
+            "enemies_you_maim_have_damage_taken_over_time_+%"
+          ],
+          "trade_stat_id": "explicit.stat_2745149002",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Enemies Maimed by you take #% increased Damage Over Time",
+      "stat_ids": [
+        "enemies_you_maim_have_damage_taken_over_time_+%"
+      ],
+      "trade_stat_id": "explicit.stat_2745149002",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMaimedEnemiesDamageOverTimeJewel1",
+          "affix_name": "of Mangling",
+          "required_ilvl": 84,
+          "spawn_weight": 100,
+          "stats": [
+            {
+              "id": "enemies_you_maim_have_damage_taken_over_time_+%",
+              "min": 4,
+              "max": 5,
+              "display_min": 4,
+              "display_max": 5
+            }
+          ],
+          "text": "Enemies Maimed by you take (4-5)% increased Damage Over Time"
+        }
+      ]
+    },
+    {
+      "group": "EnchantmentWither",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Enemies Withered by you have #% to all Resistances",
+          "stat_ids": [
+            "enemies_you_wither_have_all_resistances_%"
+          ],
+          "trade_stat_id": "explicit.stat_1032614900",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Enemies Withered by you have #% to all Resistances",
+      "stat_ids": [
+        "enemies_you_wither_have_all_resistances_%"
+      ],
+      "trade_stat_id": "explicit.stat_1032614900",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssWitheredEnemiesAllResistanceJewel1___",
+          "affix_name": "of Languishing",
+          "required_ilvl": 84,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "enemies_you_wither_have_all_resistances_%",
+              "min": -2,
+              "max": -2,
+              "display_min": -2,
+              "display_max": -2
+            }
+          ],
+          "text": "Enemies Withered by you have -2% to all Resistances"
+        }
+      ]
+    },
+    {
+      "group": "EvasionRatingWhileMoving",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% increased Evasion Rating while moving",
+          "stat_ids": [
+            "evasion_rating_+%_while_moving"
+          ],
+          "trade_stat_id": "explicit.stat_734823525",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% increased Evasion Rating while moving",
+      "stat_ids": [
+        "evasion_rating_+%_while_moving"
+      ],
+      "trade_stat_id": "explicit.stat_734823525",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssEvasionRatingWhileMovingJewel1",
+          "affix_name": "of Maneuvering",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "evasion_rating_+%_while_moving",
+              "min": 25,
+              "max": 35,
+              "display_min": 25,
+              "display_max": 35
+            }
+          ],
+          "text": "(25-35)% increased Evasion Rating while moving"
+        }
+      ]
+    },
+    {
+      "group": "FireColdResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Fire and Cold Resistances",
+          "stat_ids": [
+            "fire_and_cold_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_2915988346",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Fire and Cold Resistances",
+      "stat_ids": [
+        "fire_and_cold_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_2915988346",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFireColdResistanceJewel1",
+          "affix_name": "of the Hearth",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "fire_and_cold_damage_resistance_%",
+              "min": 10,
+              "max": 12,
+              "display_min": 10,
+              "display_max": 12
+            }
+          ],
+          "text": "+(10-12)% to Fire and Cold Resistances"
+        }
+      ]
+    },
+    {
+      "group": "FireLightningResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Fire and Lightning Resistances",
+          "stat_ids": [
+            "fire_and_lightning_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_3441501978",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Fire and Lightning Resistances",
+      "stat_ids": [
+        "fire_and_lightning_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_3441501978",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFireLightningResistanceJewel1",
+          "affix_name": "of Insulation",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "fire_and_lightning_damage_resistance_%",
+              "min": 10,
+              "max": 12,
+              "display_min": 10,
+              "display_max": 12
+            }
+          ],
+          "text": "+(10-12)% to Fire and Lightning Resistances"
+        }
+      ]
+    },
+    {
+      "group": "FireResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Fire Resistance",
+          "stat_ids": [
+            "base_fire_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_3372524247",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Fire Resistance",
+      "stat_ids": [
+        "base_fire_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_3372524247",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssFireResistanceJewel1",
+          "affix_name": "of the Dragon",
+          "required_ilvl": 1,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "base_fire_damage_resistance_%",
+              "min": 12,
+              "max": 15,
+              "display_min": 12,
+              "display_max": 15
+            }
+          ],
+          "text": "+(12-15)% to Fire Resistance"
+        }
+      ]
+    },
+    {
+      "group": "IncreasedCastSpeedForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% increased Cast Speed",
+          "stat_ids": [
+            "base_cast_speed_+%"
+          ],
+          "trade_stat_id": "explicit.stat_2891184298",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% increased Cast Speed",
+      "stat_ids": [
+        "base_cast_speed_+%"
+      ],
+      "trade_stat_id": "explicit.stat_2891184298",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssCastSpeedJewel1",
+          "affix_name": "of Enchanting",
+          "required_ilvl": 50,
+          "spawn_weight": 750,
+          "stats": [
+            {
+              "id": "base_cast_speed_+%",
+              "min": 2,
+              "max": 4,
+              "display_min": 2,
+              "display_max": 4
+            }
+          ],
+          "text": "(2-4)% increased Cast Speed"
+        }
+      ]
+    },
+    {
+      "group": "IntelligenceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to Intelligence",
+          "stat_ids": [
+            "additional_intelligence"
+          ],
+          "trade_stat_id": "explicit.stat_328541901",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Intelligence",
+      "stat_ids": [
+        "additional_intelligence"
+      ],
+      "trade_stat_id": "explicit.stat_328541901",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssIntelligenceJewel1",
+          "affix_name": "of Intelligence",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "additional_intelligence",
+              "min": 12,
+              "max": 16,
+              "display_min": 12,
+              "display_max": 16
+            }
+          ],
+          "text": "+(12-16) to Intelligence"
+        }
+      ]
+    },
+    {
+      "group": "LifeRegenerationRateWhileMoving",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Regenerate #% of Life per second while moving",
+          "stat_ids": [
+            "life_regeneration_rate_per_minute_%_while_moving"
+          ],
+          "trade_stat_id": "explicit.stat_908516597",
+          "index_handlers": [
+            "per_minute_to_per_second"
+          ]
+        }
+      ],
+      "match_string": "Regenerate #% of Life per second while moving",
+      "stat_ids": [
+        "life_regeneration_rate_per_minute_%_while_moving"
+      ],
+      "trade_stat_id": "explicit.stat_908516597",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssLifeRegenerationRateWhileMovingJewel1",
+          "affix_name": "of Vivaciousness",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "life_regeneration_rate_per_minute_%_while_moving",
+              "min": 30,
+              "max": 60,
+              "display_min": 0.5,
+              "display_max": 1
+            }
+          ],
+          "text": "Regenerate (0.5-1)% of Life per second while moving"
+        }
+      ]
+    },
+    {
+      "group": "LightningResistanceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% to Lightning Resistance",
+          "stat_ids": [
+            "base_lightning_damage_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_1671376347",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% to Lightning Resistance",
+      "stat_ids": [
+        "base_lightning_damage_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_1671376347",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssLightningResistanceJewel1",
+          "affix_name": "of Grounding",
+          "required_ilvl": 1,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "base_lightning_damage_resistance_%",
+              "min": 12,
+              "max": 15,
+              "display_min": 12,
+              "display_max": 15
+            }
+          ],
+          "text": "+(12-15)% to Lightning Resistance"
+        }
+      ]
+    },
+    {
+      "group": "ManaRegenerationRateWhileMoving",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% increased Mana Regeneration Rate while moving",
+          "stat_ids": [
+            "mana_regeneration_rate_+%_while_moving"
+          ],
+          "trade_stat_id": "explicit.stat_1327522346",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% increased Mana Regeneration Rate while moving",
+      "stat_ids": [
+        "mana_regeneration_rate_+%_while_moving"
+      ],
+      "trade_stat_id": "explicit.stat_1327522346",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssManaRegenerationRateWhileMovingJewel1",
+          "affix_name": "of Praxis",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "mana_regeneration_rate_+%_while_moving",
+              "min": 20,
+              "max": 25,
+              "display_min": 20,
+              "display_max": 25
+            }
+          ],
+          "text": "(20-25)% increased Mana Regeneration Rate while moving"
+        }
+      ]
+    },
+    {
+      "group": "MinionAttackAndCastSpeed",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% increased Attack Speed",
+          "stat_ids": [
+            "minion_attack_speed_+%"
+          ],
+          "trade_stat_id": "explicit.stat_3375935924",
+          "index_handlers": []
+        },
+        {
+          "match_string": "Minions have #% increased Cast Speed",
+          "stat_ids": [
+            "minion_cast_speed_+%"
+          ],
+          "trade_stat_id": "explicit.stat_4000101551",
+          "index_handlers": []
+        }
+      ],
+      "match_string": null,
+      "stat_ids": [
+        "minion_attack_speed_+%",
+        "minion_cast_speed_+%"
+      ],
+      "trade_stat_id": null,
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAttackAndCastSpeedJewel1",
+          "affix_name": "of Training",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_attack_speed_+%",
+              "min": 4,
+              "max": 6,
+              "display_min": 4,
+              "display_max": 6
+            },
+            {
+              "id": "minion_cast_speed_+%",
+              "min": 4,
+              "max": 6,
+              "display_min": 4,
+              "display_max": 6
+            }
+          ],
+          "text": "Minions have (4-6)% increased Attack Speed\nMinions have (4-6)% increased Cast Speed"
+        }
+      ]
+    },
+    {
+      "group": "MinionAttacksBlindOnHitChance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% chance to Blind on Hit with Attacks",
+          "stat_ids": [
+            "minion_attacks_chance_to_blind_on_hit_%"
+          ],
+          "trade_stat_id": "explicit.stat_2431643207",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% chance to Blind on Hit with Attacks",
+      "stat_ids": [
+        "minion_attacks_chance_to_blind_on_hit_%"
+      ],
+      "trade_stat_id": "explicit.stat_2431643207",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAttacksBlindOnHitChanceJewel2",
+          "affix_name": "of Stifling",
+          "required_ilvl": 65,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "minion_attacks_chance_to_blind_on_hit_%",
+              "min": 5,
+              "max": 6,
+              "display_min": 5,
+              "display_max": 6
+            }
+          ],
+          "text": "Minions have (5-6)% chance to Blind on Hit with Attacks"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAttacksBlindOnHitChanceJewel1",
+          "affix_name": "of Stifling",
+          "required_ilvl": 32,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_attacks_chance_to_blind_on_hit_%",
+              "min": 3,
+              "max": 4,
+              "display_min": 3,
+              "display_max": 4
+            }
+          ],
+          "text": "Minions have (3-4)% chance to Blind on Hit with Attacks"
+        }
+      ]
+    },
+    {
+      "group": "MinionAttacksTauntOnHitChance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% chance to Taunt on Hit with Attacks",
+          "stat_ids": [
+            "minion_attacks_chance_to_taunt_on_hit_%"
+          ],
+          "trade_stat_id": "explicit.stat_2911442053",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% chance to Taunt on Hit with Attacks",
+      "stat_ids": [
+        "minion_attacks_chance_to_taunt_on_hit_%"
+      ],
+      "trade_stat_id": "explicit.stat_2911442053",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionAttacksTauntOnHitChanceJewel2_",
+          "affix_name": "of Distraction",
+          "required_ilvl": 65,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "minion_attacks_chance_to_taunt_on_hit_%",
+              "min": 6,
+              "max": 8,
+              "display_min": 6,
+              "display_max": 8
+            }
+          ],
+          "text": "Minions have (6-8)% chance to Taunt on Hit with Attacks"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionAttacksTauntOnHitChanceJewel1",
+          "affix_name": "of Distraction",
+          "required_ilvl": 32,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_attacks_chance_to_taunt_on_hit_%",
+              "min": 3,
+              "max": 5,
+              "display_min": 3,
+              "display_max": 5
+            }
+          ],
+          "text": "Minions have (3-5)% chance to Taunt on Hit with Attacks"
+        }
+      ]
+    },
+    {
+      "group": "MinionChaosResistance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% to Chaos Resistance",
+          "stat_ids": [
+            "minion_chaos_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_3837707023",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% to Chaos Resistance",
+      "stat_ids": [
+        "minion_chaos_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_3837707023",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionChaosResistanceJewel1",
+          "affix_name": "of Righteousness",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_chaos_resistance_%",
+              "min": 7,
+              "max": 11,
+              "display_min": 7,
+              "display_max": 11
+            }
+          ],
+          "text": "Minions have +(7-11)% to Chaos Resistance"
+        }
+      ]
+    },
+    {
+      "group": "MinionDamageIfMinionSkillUsedRecently",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions deal #% increased Damage if you've used a Minion Skill Recently",
+          "stat_ids": [
+            "minion_damage_+%_if_have_used_a_minion_skill_recently"
+          ],
+          "trade_stat_id": "explicit.stat_412745376",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions deal #% increased Damage if you've used a Minion Skill Recently",
+      "stat_ids": [
+        "minion_damage_+%_if_have_used_a_minion_skill_recently"
+      ],
+      "trade_stat_id": "explicit.stat_412745376",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionDamageIfMinionSkillUsedRecentlyJewel1",
+          "affix_name": "of Authority",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "minion_damage_+%_if_have_used_a_minion_skill_recently",
+              "min": 15,
+              "max": 20,
+              "display_min": 15,
+              "display_max": 20
+            }
+          ],
+          "text": "Minions deal (15-20)% increased Damage if you've used a Minion Skill Recently"
+        }
+      ]
+    },
+    {
+      "group": "MinionElementalResistancesForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% to all Elemental Resistances",
+          "stat_ids": [
+            "minion_elemental_resistance_%"
+          ],
+          "trade_stat_id": "explicit.stat_1423639565",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% to all Elemental Resistances",
+      "stat_ids": [
+        "minion_elemental_resistance_%"
+      ],
+      "trade_stat_id": "explicit.stat_1423639565",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionElementalResistancesJewel1",
+          "affix_name": "of Acclimatisation",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_elemental_resistance_%",
+              "min": 6,
+              "max": 10,
+              "display_min": 6,
+              "display_max": 10
+            }
+          ],
+          "text": "Minions have +(6-10)% to all Elemental Resistances"
+        }
+      ]
+    },
+    {
+      "group": "MinionLifeForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% increased maximum Life",
+          "stat_ids": [
+            "minion_maximum_life_+%"
+          ],
+          "trade_stat_id": "explicit.stat_770672621",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% increased maximum Life",
+      "stat_ids": [
+        "minion_maximum_life_+%"
+      ],
+      "trade_stat_id": "explicit.stat_770672621",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionLifeJewel1_",
+          "affix_name": "of Fortitude",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_maximum_life_+%",
+              "min": 8,
+              "max": 12,
+              "display_min": 8,
+              "display_max": 12
+            }
+          ],
+          "text": "Minions have (8-12)% increased maximum Life"
+        }
+      ]
+    },
+    {
+      "group": "MinionLifeLeech",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions Leech #% of Damage as Life",
+          "stat_ids": [
+            "minion_life_leech_from_any_damage_permyriad"
+          ],
+          "trade_stat_id": "explicit.stat_2770782267",
+          "index_handlers": [
+            "divide_by_one_hundred"
+          ]
+        }
+      ],
+      "match_string": "Minions Leech #% of Damage as Life",
+      "stat_ids": [
+        "minion_life_leech_from_any_damage_permyriad"
+      ],
+      "trade_stat_id": "explicit.stat_2770782267",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionLifeLeechJewel1",
+          "affix_name": "of Vampirism",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_life_leech_from_any_damage_permyriad",
+              "min": 30,
+              "max": 50,
+              "display_min": 0.3,
+              "display_max": 0.5
+            }
+          ],
+          "text": "Minions Leech (0.3-0.5)% of Damage as Life"
+        }
+      ]
+    },
+    {
+      "group": "MinionLifeRegeneration",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions Regenerate #% of Life per second",
+          "stat_ids": [
+            "minion_life_regeneration_rate_per_minute_%"
+          ],
+          "trade_stat_id": "explicit.stat_2479683456",
+          "index_handlers": [
+            "per_minute_to_per_second"
+          ]
+        }
+      ],
+      "match_string": "Minions Regenerate #% of Life per second",
+      "stat_ids": [
+        "minion_life_regeneration_rate_per_minute_%"
+      ],
+      "trade_stat_id": "explicit.stat_2479683456",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionLifeRegenerationJewel1",
+          "affix_name": "of Longevity",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_life_regeneration_rate_per_minute_%",
+              "min": 24,
+              "max": 48,
+              "display_min": 0.4,
+              "display_max": 0.8
+            }
+          ],
+          "text": "Minions Regenerate (0.4-0.8)% of Life per second"
+        }
+      ]
+    },
+    {
+      "group": "MinionMovementSpeed",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% increased Movement Speed",
+          "stat_ids": [
+            "minion_movement_speed_+%"
+          ],
+          "trade_stat_id": "explicit.stat_174664100",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% increased Movement Speed",
+      "stat_ids": [
+        "minion_movement_speed_+%"
+      ],
+      "trade_stat_id": "explicit.stat_174664100",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionMovementSpeedJewel1",
+          "affix_name": "of Orchestration",
+          "required_ilvl": 1,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_movement_speed_+%",
+              "min": 10,
+              "max": 15,
+              "display_min": 10,
+              "display_max": 15
+            }
+          ],
+          "text": "Minions have (10-15)% increased Movement Speed"
+        }
+      ]
+    },
+    {
+      "group": "MinionSpellsHinderOnHitChance",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "Minions have #% chance to Hinder Enemies on Hit with Spells",
+          "stat_ids": [
+            "minion_spells_chance_to_hinder_on_hit_%"
+          ],
+          "trade_stat_id": "explicit.stat_2323739383",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "Minions have #% chance to Hinder Enemies on Hit with Spells",
+      "stat_ids": [
+        "minion_spells_chance_to_hinder_on_hit_%"
+      ],
+      "trade_stat_id": "explicit.stat_2323739383",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMinionSpellsHinderOnHitChanceJewel2",
+          "affix_name": "of Delaying",
+          "required_ilvl": 65,
+          "spawn_weight": 400,
+          "stats": [
+            {
+              "id": "minion_spells_chance_to_hinder_on_hit_%",
+              "min": 6,
+              "max": 8,
+              "display_min": 6,
+              "display_max": 8
+            }
+          ],
+          "text": "Minions have (6-8)% chance to Hinder Enemies on Hit with Spells"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssMinionSpellsHinderOnHitChanceJewel1",
+          "affix_name": "of Delaying",
+          "required_ilvl": 32,
+          "spawn_weight": 800,
+          "stats": [
+            {
+              "id": "minion_spells_chance_to_hinder_on_hit_%",
+              "min": 3,
+              "max": 5,
+              "display_min": 3,
+              "display_max": 5
+            }
+          ],
+          "text": "Minions have (3-5)% chance to Hinder Enemies on Hit with Spells"
+        }
+      ]
+    },
+    {
+      "group": "MovementSpeedIfNotDamagedRecently",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% increased Movement Speed if you haven't taken Damage Recently",
+          "stat_ids": [
+            "movement_speed_+%_if_have_not_taken_damage_recently"
+          ],
+          "trade_stat_id": "explicit.stat_3854949926",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% increased Movement Speed if you haven't taken Damage Recently",
+      "stat_ids": [
+        "movement_speed_+%_if_have_not_taken_damage_recently"
+      ],
+      "trade_stat_id": "explicit.stat_3854949926",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssMovementSpeedIfNotDamagedRecentlyJewel1",
+          "affix_name": "of Momentum",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "movement_speed_+%_if_have_not_taken_damage_recently",
+              "min": 3,
+              "max": 4,
+              "display_min": 3,
+              "display_max": 4
+            }
+          ],
+          "text": "(3-4)% increased Movement Speed if you haven't taken Damage Recently"
+        }
+      ]
+    },
+    {
+      "group": "SpellBlockChanceIfHitRecently",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "#% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "stat_ids": [
+            "chance_to_block_spells_%_if_damaged_by_a_hit_recently"
+          ],
+          "trade_stat_id": "explicit.stat_1101206134",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "#% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+      "stat_ids": [
+        "chance_to_block_spells_%_if_damaged_by_a_hit_recently"
+      ],
+      "trade_stat_id": "explicit.stat_1101206134",
+      "tier_count": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssSpellBlockChanceIfHitRecentlyJewel1",
+          "affix_name": "of Instinct",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "chance_to_block_spells_%_if_damaged_by_a_hit_recently",
+              "min": 3,
+              "max": 4,
+              "display_min": 3,
+              "display_max": 4
+            }
+          ],
+          "text": "+(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently"
+        },
+        {
+          "tier": 2,
+          "mod_id": "AbyssSpellDodgeAndDodgeChanceIfHitRecentlyJewel1",
+          "affix_name": "of Readiness",
+          "required_ilvl": 1,
+          "spawn_weight": 250,
+          "stats": [
+            {
+              "id": "chance_to_block_spells_%_if_damaged_by_a_hit_recently",
+              "min": 2,
+              "max": 2,
+              "display_min": 2,
+              "display_max": 2
+            }
+          ],
+          "text": "+2% Chance to Block Spell Damage if you were Damaged by a Hit Recently"
+        }
+      ]
+    },
+    {
+      "group": "StrengthDexterityForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to Strength and Dexterity",
+          "stat_ids": [
+            "additional_strength_and_dexterity"
+          ],
+          "trade_stat_id": "explicit.stat_538848803",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Strength and Dexterity",
+      "stat_ids": [
+        "additional_strength_and_dexterity"
+      ],
+      "trade_stat_id": "explicit.stat_538848803",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssStrengthDexterityJewel1",
+          "affix_name": "of Athletics",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "additional_strength_and_dexterity",
+              "min": 8,
+              "max": 10,
+              "display_min": 8,
+              "display_max": 10
+            }
+          ],
+          "text": "+(8-10) to Strength and Dexterity"
+        }
+      ]
+    },
+    {
+      "group": "StrengthForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to Strength",
+          "stat_ids": [
+            "additional_strength"
+          ],
+          "trade_stat_id": "explicit.stat_4080418644",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Strength",
+      "stat_ids": [
+        "additional_strength"
+      ],
+      "trade_stat_id": "explicit.stat_4080418644",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssStrengthJewel1_",
+          "affix_name": "of Strength",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "additional_strength",
+              "min": 12,
+              "max": 16,
+              "display_min": 12,
+              "display_max": 16
+            }
+          ],
+          "text": "+(12-16) to Strength"
+        }
+      ]
+    },
+    {
+      "group": "StrengthIntelligenceForJewel",
+      "generation_type": "suffix",
+      "match_lines": [
+        {
+          "match_string": "# to Strength and Intelligence",
+          "stat_ids": [
+            "additional_strength_and_intelligence"
+          ],
+          "trade_stat_id": "explicit.stat_1535626285",
+          "index_handlers": []
+        }
+      ],
+      "match_string": "# to Strength and Intelligence",
+      "stat_ids": [
+        "additional_strength_and_intelligence"
+      ],
+      "trade_stat_id": "explicit.stat_1535626285",
+      "tier_count": 1,
+      "tiers": [
+        {
+          "tier": 1,
+          "mod_id": "AbyssStrengthIntelligenceJewel1_",
+          "affix_name": "of Spirit",
+          "required_ilvl": 1,
+          "spawn_weight": 500,
+          "stats": [
+            {
+              "id": "additional_strength_and_intelligence",
+              "min": 8,
+              "max": 10,
+              "display_min": 8,
+              "display_max": 10
+            }
+          ],
+          "text": "+(8-10) to Strength and Intelligence"
+        }
+      ]
+    }
+  ],
+  "non_alteration_pools": {
+    "corrupted": [
+      {
+        "mod_id": "V2IncreasedAreaOfEffectAbyssalJewelCorrupted",
+        "group": "AreaOfEffect",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(4-5)% increased Area of Effect"
+      },
+      {
+        "mod_id": "V2AvoidIgniteAbyssalJewelCorrupted",
+        "group": "AvoidIgnite",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(20-25)% chance to Avoid being Ignited"
+      },
+      {
+        "mod_id": "V2MaimImmunityCorrupted_",
+        "group": "AvoidMaimChance",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 40,
+        "spawn_weight": 1000,
+        "text": "You cannot be Maimed"
+      },
+      {
+        "mod_id": "V2AvoidShockAbyssalJewelCorrupted",
+        "group": "AvoidShock",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(20-25)% chance to Avoid being Shocked"
+      },
+      {
+        "mod_id": "V2AvoidStunAbyssalJewelCorrupted",
+        "group": "AvoidStun",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(20-25)% chance to Avoid being Stunned"
+      },
+      {
+        "mod_id": "V2AvoidBleedAbyssalJewelCorrupted_",
+        "group": "ChanceToAvoidBleeding",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(20-25)% chance to Avoid Bleeding"
+      },
+      {
+        "mod_id": "V2AvoidChillAndFreezeAbyssalJewelCorrupted_",
+        "group": "ChanceToAvoidFreezeAndChill",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(20-25)% chance to Avoid being Frozen"
+      },
+      {
+        "mod_id": "V2AvoidPoisonAbyssalJewelCorrupted",
+        "group": "ChanceToAvoidPoison",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(20-25)% chance to Avoid being Poisoned"
+      },
+      {
+        "mod_id": "V2ArmourPenetrationAbyssalJewelCorrupted",
+        "group": "ChanceToIgnoreEnemyArmour",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Hits have (10-15)% chance to ignore Enemy Physical Damage Reduction"
+      },
+      {
+        "mod_id": "V2ColdPenetrationAbyssalJewelCorrupted",
+        "group": "ColdResistancePenetration",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Cold Resistance"
+      },
+      {
+        "mod_id": "V2CorruptedBloodImmunityAbyssalJewelCorrupted",
+        "group": "CorruptedBloodImmunity",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 33,
+        "spawn_weight": 1000,
+        "text": "Corrupted Blood cannot be inflicted on you"
+      },
+      {
+        "mod_id": "V2IncreasedCriticalStrikeChanceAbyssalJewelCorrupted",
+        "group": "CriticalStrikeChance",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(8-10)% increased Global Critical Strike Chance"
+      },
+      {
+        "mod_id": "V2ElementalPenetrationAbyssalJewelCorrupted_",
+        "group": "ElementalPenetration",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Elemental Resistances"
+      },
+      {
+        "mod_id": "V2FirePenetrationAbyssalJewelCorrupted",
+        "group": "FireResistancePenetration",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Fire Resistance"
+      },
+      {
+        "mod_id": "V2SilenceImmunityJewelCorrupted__",
+        "group": "ImmuneToSilence",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 60,
+        "spawn_weight": 1000,
+        "text": "You cannot be Cursed with Silence"
+      },
+      {
+        "mod_id": "V2IncreasedAilmentEffectOnEnemiesAbyssalJewelCorrupted",
+        "group": "IncreasedAilmentEffectOnEnemies",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(5-7)% increased Effect of Non-Damaging Ailments"
+      },
+      {
+        "mod_id": "V2IncreasedDamageAbyssJewelCorrupted_",
+        "group": "IncreasedDamage",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(4-5)% increased Damage"
+      },
+      {
+        "mod_id": "V2LightningPenetrationAbyssalJewelCorrupted",
+        "group": "LightningResistancePenetration",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Lightning Resistance"
+      },
+      {
+        "mod_id": "V2MinionDamageCorrupted__",
+        "group": "MinionDamage",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Minions deal (4-5)% increased Damage"
+      },
+      {
+        "mod_id": "V2ReducedManaReservationCorruptedEfficiency_____",
+        "group": "ReservationEfficiencyForJewel",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "2% increased Reservation Efficiency of Skills"
+      },
+      {
+        "mod_id": "V2HinderImmunityAbyssalJewelCorrupted",
+        "group": "YouCannotBeHindered",
+        "affix_name": "",
+        "generation_type": "corrupted",
+        "required_ilvl": 40,
+        "spawn_weight": 1000,
+        "text": "You cannot be Hindered"
+      }
+    ],
+    "delve_prefix": [
+      {
+        "mod_id": "DelveJewelGlobalDefences1",
+        "group": "AllDefences",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(4-6)% increased Global Defences"
+      },
+      {
+        "mod_id": "DelveJewelColdPenetration1",
+        "group": "ColdResistancePenetration",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Cold Resistance"
+      },
+      {
+        "mod_id": "DelveJewelElementalPenetration1",
+        "group": "ElementalPenetration",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1600,
+        "text": "Damage Penetrates 1% Elemental Resistances"
+      },
+      {
+        "mod_id": "DelveJewelFirePenetration1",
+        "group": "FireResistancePenetration",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Fire Resistance"
+      },
+      {
+        "mod_id": "DelveJewelLifeRegeneration1",
+        "group": "LifeRegenerationRatePercentage",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Regenerate 0.3% of Life per second"
+      },
+      {
+        "mod_id": "DelveJewelLightningPenetration1",
+        "group": "LightningResistancePenetration",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "Damage Penetrates 1% Lightning Resistance"
+      },
+      {
+        "mod_id": "DelveAbyssJewelMinionDamage1",
+        "group": "MinionDamage",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 2000,
+        "text": "Minions deal (14-16)% increased Damage"
+      },
+      {
+        "mod_id": "DelveJewelPhysicalDamageOverTimeTaken1",
+        "group": "PhysicalDamageOverTimeTaken",
+        "affix_name": "Subterranean",
+        "generation_type": "prefix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(2-1)% reduced Physical Damage taken over time"
+      }
+    ],
+    "delve_suffix": [
+      {
+        "mod_id": "DelveJewelVaalSoulsOnKill1",
+        "group": "AdditionalVaalSoulOnKill",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 2000,
+        "text": "(3-5)% chance to gain an additional Vaal Soul on Kill"
+      },
+      {
+        "mod_id": "DelveJewelAilmentDamage1__",
+        "group": "AilmentDamage",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(15-20)% increased Damage with Ailments"
+      },
+      {
+        "mod_id": "DelveJewelAvoidInterruptionWhileCasting1",
+        "group": "AvoidInterruptionWhileCasting",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(15-20)% chance to Ignore Stuns while Casting"
+      },
+      {
+        "mod_id": "DelveJewelChanceToGainOnslaughtOnFlaskUse1",
+        "group": "ChanceToGainOnslaughtOnFlaskUse",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(5-10)% chance to gain Onslaught when you use a Flask"
+      },
+      {
+        "mod_id": "DelveJewelEnergyShieldRegenIfYouHitRecently1_",
+        "group": "EnergyShieldRegenerationRatePerMinuteIfYouHaveHitAnEnemyRecently",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 300,
+        "text": "Regenerate 0.3% of Energy Shield per second if you've Hit an Enemy Recently"
+      },
+      {
+        "mod_id": "DelveJewelEvasionIfYouHitRecently1",
+        "group": "EvasionRatingIfYouHaveHitAnEnemyRecently",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 300,
+        "text": "+(250-300) to Evasion Rating if Hit an Enemy Recently"
+      },
+      {
+        "mod_id": "DelveJewelChaosDamage1",
+        "group": "IncreasedChaosDamage",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(13-19)% increased Chaos Damage"
+      },
+      {
+        "mod_id": "DelveJewelAttackLeech1",
+        "group": "LifeLeechFromAttacksPermyriad",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "0.3% of Attack Damage Leeched as Life"
+      },
+      {
+        "mod_id": "DelveJewelDamageTakenGainedAsMana1",
+        "group": "PercentDamageGoesToMana",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 1000,
+        "text": "(2-3)% of Damage taken Recouped as Mana"
+      },
+      {
+        "mod_id": "DelveJewelArmourIfYouHitRecently1",
+        "group": "PhysicalDamageReductionRatingIfYouHaveHitAnEnemyRecently",
+        "affix_name": "of the Underground",
+        "generation_type": "suffix",
+        "required_ilvl": 1,
+        "spawn_weight": 300,
+        "text": "+(250-300) to Armour if you've Hit an Enemy Recently"
+      }
+    ]
+  }
+}

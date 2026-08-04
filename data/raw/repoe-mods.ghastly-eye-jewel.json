@@ -1,0 +1,6446 @@
+{
+ "AbyssAllAttributesJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AllAttributes"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Adaption",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 250
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_all_attributes",
+    "max": 8,
+    "min": 6
+   }
+  ],
+  "text": "+(6-8) to all Attributes",
+  "type": "AllAttributesForJewel",
+  "gold_value": null
+ },
+ "AbyssAllResistancesJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AllResistances"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of Resistance",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 200
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_resist_all_elements_%",
+    "max": 10,
+    "min": 8
+   }
+  ],
+  "text": "+(8-10)% to all Elemental Resistances",
+  "type": "AllResistancesForJewel",
+  "gold_value": null
+ },
+ "AbyssAvoidBleedingJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidBleeding"
+  ],
+  "implicit_tags": [
+   "bleed",
+   "physical",
+   "attack",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Stemming",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_bleed_%",
+    "max": 40,
+    "min": 31
+   }
+  ],
+  "text": "(31-40)% chance to Avoid Bleeding",
+  "type": "ChanceToAvoidBleeding",
+  "gold_value": null
+ },
+ "AbyssAvoidBleedingJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidBleeding"
+  ],
+  "implicit_tags": [
+   "bleed",
+   "physical",
+   "attack",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of the Tourniquet",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 150
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_bleed_%",
+    "max": 50,
+    "min": 41
+   }
+  ],
+  "text": "(41-50)% chance to Avoid Bleeding",
+  "type": "ChanceToAvoidBleeding",
+  "gold_value": null
+ },
+ "AbyssAvoidElementalAilmentsWhileElusiveJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "cold",
+   "lightning",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Escape",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 100
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "avoid_elemental_ailments_%_while_affected_by_elusive",
+    "max": 20,
+    "min": 10
+   }
+  ],
+  "text": "(10-20)% chance to Avoid Elemental Ailments while you have Elusive",
+  "type": "EnchantmentElusive",
+  "gold_value": null
+ },
+ "AbyssAvoidFreezeAndChillJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidFreezeAndChill"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "cold",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Warming",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_chill_%",
+    "max": 0,
+    "min": 0
+   },
+   {
+    "id": "base_avoid_freeze_%",
+    "max": 40,
+    "min": 31
+   }
+  ],
+  "text": "(31-40)% chance to Avoid being Frozen",
+  "type": "ChanceToAvoidFreezeAndChill",
+  "gold_value": null
+ },
+ "AbyssAvoidFreezeAndChillJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidFreezeAndChill"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "cold",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Heating",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 150
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_chill_%",
+    "max": 0,
+    "min": 0
+   },
+   {
+    "id": "base_avoid_freeze_%",
+    "max": 50,
+    "min": 41
+   }
+  ],
+  "text": "(41-50)% chance to Avoid being Frozen",
+  "type": "ChanceToAvoidFreezeAndChill",
+  "gold_value": null
+ },
+ "AbyssAvoidIgniteJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidIgnite"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Nonflammability",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_ignite_%",
+    "max": 40,
+    "min": 31
+   }
+  ],
+  "text": "(31-40)% chance to Avoid being Ignited",
+  "type": "AvoidIgnite",
+  "gold_value": null
+ },
+ "AbyssAvoidIgniteJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidIgnite"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Fireproofing",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 150
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_ignite_%",
+    "max": 50,
+    "min": 41
+   }
+  ],
+  "text": "(41-50)% chance to Avoid being Ignited",
+  "type": "AvoidIgnite",
+  "gold_value": null
+ },
+ "AbyssAvoidPoisonJewel1__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidPoison"
+  ],
+  "implicit_tags": [
+   "poison",
+   "chaos",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Tolerance",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_poison_%",
+    "max": 40,
+    "min": 31
+   }
+  ],
+  "text": "(31-40)% chance to Avoid being Poisoned",
+  "type": "ChanceToAvoidPoison",
+  "gold_value": null
+ },
+ "AbyssAvoidPoisonJewel2__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidPoison"
+  ],
+  "implicit_tags": [
+   "poison",
+   "chaos",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Immunity",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 150
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_poison_%",
+    "max": 50,
+    "min": 41
+   }
+  ],
+  "text": "(41-50)% chance to Avoid being Poisoned",
+  "type": "ChanceToAvoidPoison",
+  "gold_value": null
+ },
+ "AbyssAvoidShockJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ReducedShockChance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "lightning",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Insulating",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_shock_%",
+    "max": 40,
+    "min": 31
+   }
+  ],
+  "text": "(31-40)% chance to Avoid being Shocked",
+  "type": "AvoidShockForJewel",
+  "gold_value": null
+ },
+ "AbyssAvoidShockJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ReducedShockChance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "lightning",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of the Lightning Rod",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 150
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_shock_%",
+    "max": 50,
+    "min": 41
+   }
+  ],
+  "text": "(41-50)% chance to Avoid being Shocked",
+  "type": "AvoidShockForJewel",
+  "gold_value": null
+ },
+ "AbyssAvoidStunJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidStun"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "of Balance",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_stun_%",
+    "max": 24,
+    "min": 21
+   }
+  ],
+  "text": "(21-24)% chance to Avoid being Stunned",
+  "type": "AvoidStun",
+  "gold_value": null
+ },
+ "AbyssAvoidStunJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidStun"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "of Poise",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 150
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_stun_%",
+    "max": 30,
+    "min": 25
+   }
+  ],
+  "text": "(25-30)% chance to Avoid being Stunned",
+  "type": "AvoidStun",
+  "gold_value": null
+ },
+ "AbyssBlindedEnemiesCriticalStrikeChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [
+   "critical"
+  ],
+  "is_essence_only": false,
+  "name": "of Clouding",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 100
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "enemies_you_blind_have_critical_strike_chance_+%",
+    "max": -20,
+    "min": -30
+   }
+  ],
+  "text": "Enemies Blinded by you have (30-20)% reduced Critical Strike Chance",
+  "type": "EnchantmentBlind",
+  "gold_value": null
+ },
+ "AbyssCastSpeedIfMinionKilledRecentlyJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "CastSpeedIfMinionKilledRecently"
+  ],
+  "implicit_tags": [
+   "caster",
+   "speed"
+  ],
+  "is_essence_only": false,
+  "name": "of Retaliation",
+  "required_level": 30,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "cast_speed_+%_if_player_minion_has_been_killed_recently",
+    "max": 10,
+    "min": 7
+   }
+  ],
+  "text": "(7-10)% increased Cast Speed if a Minion has been Killed Recently",
+  "type": "CastSpeedIfMinionKilledRecently",
+  "gold_value": null
+ },
+ "AbyssCastSpeedJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedCastSpeed"
+  ],
+  "implicit_tags": [
+   "caster",
+   "speed"
+  ],
+  "is_essence_only": false,
+  "name": "of Enchanting",
+  "required_level": 50,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 750
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 750
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_cast_speed_+%",
+    "max": 4,
+    "min": 2
+   }
+  ],
+  "text": "(2-4)% increased Cast Speed",
+  "type": "IncreasedCastSpeedForJewel",
+  "gold_value": null
+ },
+ "AbyssChanceToBlockIfDamagedRecentlyJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AdditionalBlock"
+  ],
+  "implicit_tags": [
+   "block"
+  ],
+  "is_essence_only": false,
+  "name": "of Guarding",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "block_chance_on_damage_taken_%",
+    "max": 4,
+    "min": 3
+   }
+  ],
+  "text": "+(3-4)% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+  "type": "ChanceToBlockIfDamagedRecently",
+  "gold_value": null
+ },
+ "AbyssChaosResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChaosResistance"
+  ],
+  "implicit_tags": [
+   "chaos",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of Order",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 100
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_chaos_damage_resistance_%",
+    "max": 13,
+    "min": 7
+   }
+  ],
+  "text": "+(7-13)% to Chaos Resistance",
+  "type": "ChaosResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssColdLightningResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ColdAndLightningResistance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "cold",
+   "lightning",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of Shelter",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 250
+   }
+  ],
+  "stats": [
+   {
+    "id": "cold_and_lightning_damage_resistance_%",
+    "max": 12,
+    "min": 10
+   }
+  ],
+  "text": "+(10-12)% to Cold and Lightning Resistances",
+  "type": "ColdLightningResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssColdResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ColdResistance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "cold",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of the Beast",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 400
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_cold_damage_resistance_%",
+    "max": 15,
+    "min": 12
+   }
+  ],
+  "text": "+(12-15)% to Cold Resistance",
+  "type": "ColdResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssCooldownRecoverySpeed1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "CooldownRecovery"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "Facilitating",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 100
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_cooldown_speed_+%",
+    "max": 2,
+    "min": 2
+   }
+  ],
+  "text": "2% increased Cooldown Recovery Rate",
+  "type": "GlobalCooldownRecovery",
+  "gold_value": null
+ },
+ "AbyssCooldownRecoverySpeed2__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "CooldownRecovery"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "Expediting",
+  "required_level": 86,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 100
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_cooldown_speed_+%",
+    "max": 3,
+    "min": 3
+   }
+  ],
+  "text": "3% increased Cooldown Recovery Rate",
+  "type": "GlobalCooldownRecovery",
+  "gold_value": null
+ },
+ "AbyssDamageRecoupedAsMana1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "PercentDamageGoesToMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Spurring",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 300
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "damage_taken_goes_to_mana_%",
+    "max": 3,
+    "min": 2
+   }
+  ],
+  "text": "(2-3)% of Damage taken Recouped as Mana",
+  "type": "PercentDamageGoesToMana",
+  "gold_value": null
+ },
+ "AbyssDamageRecoupedAsMana2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "PercentDamageGoesToMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Motivating",
+  "required_level": 86,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 300
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "damage_taken_goes_to_mana_%",
+    "max": 5,
+    "min": 4
+   }
+  ],
+  "text": "(4-5)% of Damage taken Recouped as Mana",
+  "type": "PercentDamageGoesToMana",
+  "gold_value": null
+ },
+ "AbyssDexterityIntelligenceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "DexterityIntelligence"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Cunning",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_dexterity_and_intelligence",
+    "max": 10,
+    "min": 8
+   }
+  ],
+  "text": "+(8-10) to Dexterity and Intelligence",
+  "type": "DexterityIntelligenceForJewel",
+  "gold_value": null
+ },
+ "AbyssDexterityJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "Dexterity"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Dexterity",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_dexterity",
+    "max": 16,
+    "min": 12
+   }
+  ],
+  "text": "+(12-16) to Dexterity",
+  "type": "DexterityForJewel",
+  "gold_value": null
+ },
+ "AbyssEvasionRatingWhileMovingJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "EvasionRatingWhileMoving"
+  ],
+  "implicit_tags": [
+   "defences",
+   "evasion"
+  ],
+  "is_essence_only": false,
+  "name": "of Maneuvering",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "evasion_rating_+%_while_moving",
+    "max": 35,
+    "min": 25
+   }
+  ],
+  "text": "(25-35)% increased Evasion Rating while moving",
+  "type": "EvasionRatingWhileMoving",
+  "gold_value": null
+ },
+ "AbyssFireColdResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "FireAndColdResistance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "cold",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of the Hearth",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 250
+   }
+  ],
+  "stats": [
+   {
+    "id": "fire_and_cold_damage_resistance_%",
+    "max": 12,
+    "min": 10
+   }
+  ],
+  "text": "+(10-12)% to Fire and Cold Resistances",
+  "type": "FireColdResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssFireLightningResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "FireAndLightningResistance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "lightning",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of Insulation",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 250
+   }
+  ],
+  "stats": [
+   {
+    "id": "fire_and_lightning_damage_resistance_%",
+    "max": 12,
+    "min": 10
+   }
+  ],
+  "text": "+(10-12)% to Fire and Lightning Resistances",
+  "type": "FireLightningResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssFireResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "FireResistance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of the Dragon",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 400
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_fire_damage_resistance_%",
+    "max": 15,
+    "min": 12
+   }
+  ],
+  "text": "+(12-15)% to Fire Resistance",
+  "type": "FireResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssFlatArmourJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedPhysicalDamageReductionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "armour"
+  ],
+  "is_essence_only": false,
+  "name": "Lacquered",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_physical_damage_reduction_rating",
+    "max": 60,
+    "min": 36
+   }
+  ],
+  "text": "+(36-60) to Armour",
+  "type": "PhysicalDamageReductionRating",
+  "gold_value": null
+ },
+ "AbyssFlatArmourJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedPhysicalDamageReductionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "armour"
+  ],
+  "is_essence_only": false,
+  "name": "Fortified",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_physical_damage_reduction_rating",
+    "max": 100,
+    "min": 61
+   }
+  ],
+  "text": "+(61-100) to Armour",
+  "type": "PhysicalDamageReductionRating",
+  "gold_value": null
+ },
+ "AbyssFlatArmourJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedPhysicalDamageReductionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "armour"
+  ],
+  "is_essence_only": false,
+  "name": "Carapaced",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_physical_damage_reduction_rating",
+    "max": 180,
+    "min": 101
+   }
+  ],
+  "text": "+(101-180) to Armour",
+  "type": "PhysicalDamageReductionRating",
+  "gold_value": null
+ },
+ "AbyssFlatArmourJewel4__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedPhysicalDamageReductionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "armour"
+  ],
+  "is_essence_only": false,
+  "name": "Encased",
+  "required_level": 83,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_physical_damage_reduction_rating",
+    "max": 250,
+    "min": 181
+   }
+  ],
+  "text": "+(181-250) to Armour",
+  "type": "PhysicalDamageReductionRating",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEnergyShield"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Shining",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_energy_shield",
+    "max": 25,
+    "min": 21
+   }
+  ],
+  "text": "+(21-25) to maximum Energy Shield",
+  "type": "EnergyShield",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEnergyShield"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Seething",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_energy_shield",
+    "max": 30,
+    "min": 26
+   }
+  ],
+  "text": "+(26-30) to maximum Energy Shield",
+  "type": "EnergyShield",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEnergyShield"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Incandescent",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_energy_shield",
+    "max": 35,
+    "min": 31
+   }
+  ],
+  "text": "+(31-35) to maximum Energy Shield",
+  "type": "EnergyShield",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldJewel4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEnergyShield"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Resplendent",
+  "required_level": 83,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_energy_shield",
+    "max": 40,
+    "min": 36
+   }
+  ],
+  "text": "+(36-40) to maximum Energy Shield",
+  "type": "EnergyShield",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldRegenerationJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "EnergyShieldRegeneration"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Captivating",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "energy_shield_regeneration_rate_per_second",
+    "max": 12,
+    "min": 9
+   }
+  ],
+  "text": "Regenerate (9-12) Energy Shield per second",
+  "type": "FlatEnergyShieldRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldRegenerationJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "EnergyShieldRegeneration"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Beautiful",
+  "required_level": 30,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "energy_shield_regeneration_rate_per_second",
+    "max": 16,
+    "min": 13
+   }
+  ],
+  "text": "Regenerate (13-16) Energy Shield per second",
+  "type": "FlatEnergyShieldRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatEnergyShieldRegenerationJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "EnergyShieldRegeneration"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "Breathtaking",
+  "required_level": 60,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "energy_shield_regeneration_rate_per_second",
+    "max": 20,
+    "min": 17
+   }
+  ],
+  "text": "Regenerate (17-20) Energy Shield per second",
+  "type": "FlatEnergyShieldRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatEvasionJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEvasionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "evasion"
+  ],
+  "is_essence_only": false,
+  "name": "Agile",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_evasion_rating",
+    "max": 60,
+    "min": 36
+   }
+  ],
+  "text": "+(36-60) to Evasion Rating",
+  "type": "EvasionRating",
+  "gold_value": null
+ },
+ "AbyssFlatEvasionJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEvasionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "evasion"
+  ],
+  "is_essence_only": false,
+  "name": "Fleet",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_evasion_rating",
+    "max": 100,
+    "min": 61
+   }
+  ],
+  "text": "+(61-100) to Evasion Rating",
+  "type": "EvasionRating",
+  "gold_value": null
+ },
+ "AbyssFlatEvasionJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEvasionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "evasion"
+  ],
+  "is_essence_only": false,
+  "name": "Vaporous",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 600
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_evasion_rating",
+    "max": 180,
+    "min": 101
+   }
+  ],
+  "text": "+(101-180) to Evasion Rating",
+  "type": "EvasionRating",
+  "gold_value": null
+ },
+ "AbyssFlatEvasionJewel4_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedEvasionRating"
+  ],
+  "implicit_tags": [
+   "defences",
+   "evasion"
+  ],
+  "is_essence_only": false,
+  "name": "Beclouded",
+  "required_level": 83,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 300
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_evasion_rating",
+    "max": 250,
+    "min": 181
+   }
+  ],
+  "text": "+(181-250) to Evasion Rating",
+  "type": "EvasionRating",
+  "gold_value": null
+ },
+ "AbyssFlatLifeRegenerationJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LifeRegeneration"
+  ],
+  "implicit_tags": [
+   "flat_life_regen",
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Youthful",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_life_regeneration_rate_per_minute",
+    "max": 720,
+    "min": 540
+   }
+  ],
+  "text": "Regenerate (9-12) Life per second",
+  "type": "LifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatLifeRegenerationJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LifeRegeneration"
+  ],
+  "implicit_tags": [
+   "flat_life_regen",
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Spirited",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_life_regeneration_rate_per_minute",
+    "max": 960,
+    "min": 780
+   }
+  ],
+  "text": "Regenerate (13-16) Life per second",
+  "type": "LifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatLifeRegenerationJewel3_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LifeRegeneration"
+  ],
+  "implicit_tags": [
+   "flat_life_regen",
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Vivacious",
+  "required_level": 80,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_life_regeneration_rate_per_minute",
+    "max": 1200,
+    "min": 1020
+   }
+  ],
+  "text": "Regenerate (17-20) Life per second",
+  "type": "LifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatManaShieldRegenerationJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ManaRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Energising",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 350
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_mana_regeneration_rate_per_minute",
+    "max": 120,
+    "min": 66
+   }
+  ],
+  "text": "Regenerate (1.1-2) Mana per second",
+  "type": "AddedManaRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatManaShieldRegenerationJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ManaRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Inspirational",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 350
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_mana_regeneration_rate_per_minute",
+    "max": 180,
+    "min": 126
+   }
+  ],
+  "text": "Regenerate (2.1-3) Mana per second",
+  "type": "AddedManaRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatManaShieldRegenerationJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ManaRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Resonating",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 350
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_mana_regeneration_rate_per_minute",
+    "max": 240,
+    "min": 196
+   }
+  ],
+  "text": "Regenerate (3.3-4) Mana per second",
+  "type": "AddedManaRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatMinionLifeRegenerationJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionLifeRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Fuelling",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_life_regeneration_rate_per_second",
+    "max": 30,
+    "min": 22
+   }
+  ],
+  "text": "Minions Regenerate (22-30) Life per second",
+  "type": "FlatMinionLifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatMinionLifeRegenerationJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionLifeRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Lively",
+  "required_level": 30,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_life_regeneration_rate_per_second",
+    "max": 40,
+    "min": 32
+   }
+  ],
+  "text": "Minions Regenerate (32-40) Life per second",
+  "type": "FlatMinionLifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssFlatMinionLifeRegenerationJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionLifeRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Exuberant",
+  "required_level": 60,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_life_regeneration_rate_per_second",
+    "max": 60,
+    "min": 42
+   }
+  ],
+  "text": "Minions Regenerate (42-60) Life per second",
+  "type": "FlatMinionLifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssHinderedEnemiesLifeRegenerationRateJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "of Enervation",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "enemies_you_hinder_have_life_regeneration_rate_+%",
+    "max": -25,
+    "min": -35
+   }
+  ],
+  "text": "Enemies Hindered by you have (35-25)% reduced Life Regeneration rate",
+  "type": "EnchantmentHinder",
+  "gold_value": null
+ },
+ "AbyssIntelligenceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "Intelligence"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Intelligence",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_intelligence",
+    "max": 16,
+    "min": 12
+   }
+  ],
+  "text": "+(12-16) to Intelligence",
+  "type": "IntelligenceForJewel",
+  "gold_value": null
+ },
+ "AbyssIntimidatedEnemiesStunDurationJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "of Daunting",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 100
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "enemies_you_intimidate_have_stun_duration_on_self_+%",
+    "max": 15,
+    "min": 10
+   }
+  ],
+  "text": "Enemies Intimidated by you have (10-15)% increased duration of stuns against them",
+  "type": "EnchantmentIntimidate",
+  "gold_value": null
+ },
+ "AbyssJewelAddedLife1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelLife"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Hale",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 3000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_life",
+    "max": 25,
+    "min": 21
+   }
+  ],
+  "text": "+(21-25) to maximum Life",
+  "type": "AbyssJewelLife",
+  "gold_value": null
+ },
+ "AbyssJewelAddedLife2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelLife"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Healthy",
+  "required_level": 35,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 3000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_life",
+    "max": 30,
+    "min": 26
+   }
+  ],
+  "text": "+(26-30) to maximum Life",
+  "type": "AbyssJewelLife",
+  "gold_value": null
+ },
+ "AbyssJewelAddedLife3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelLife"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Sanguine",
+  "required_level": 74,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_life",
+    "max": 35,
+    "min": 31
+   }
+  ],
+  "text": "+(31-35) to maximum Life",
+  "type": "AbyssJewelLife",
+  "gold_value": null
+ },
+ "AbyssJewelAddedLife4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelLife"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Stalwart",
+  "required_level": 82,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_life",
+    "max": 40,
+    "min": 36
+   }
+  ],
+  "text": "+(36-40) to maximum Life",
+  "type": "AbyssJewelLife",
+  "gold_value": null
+ },
+ "AbyssJewelAddedMana1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Beryl",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_mana",
+    "max": 23,
+    "min": 20
+   }
+  ],
+  "text": "+(20-23) to maximum Mana",
+  "type": "AbyssJewelMana",
+  "gold_value": null
+ },
+ "AbyssJewelAddedMana2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Cobalt",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_mana",
+    "max": 27,
+    "min": 24
+   }
+  ],
+  "text": "+(24-27) to maximum Mana",
+  "type": "AbyssJewelMana",
+  "gold_value": null
+ },
+ "AbyssJewelAddedMana3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Azure",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_mana",
+    "max": 31,
+    "min": 28
+   }
+  ],
+  "text": "+(28-31) to maximum Mana",
+  "type": "AbyssJewelMana",
+  "gold_value": null
+ },
+ "AbyssJewelAddedMana4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssJewelMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "Sapphire",
+  "required_level": 83,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_maximum_mana",
+    "max": 34,
+    "min": 32
+   }
+  ],
+  "text": "+(32-34) to maximum Mana",
+  "type": "AbyssJewelMana",
+  "gold_value": null
+ },
+ "AbyssLifeRegenerationRateWhileMovingJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LifeRegenerationRateWhileMoving"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "of Vivaciousness",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "life_regeneration_rate_per_minute_%_while_moving",
+    "max": 60,
+    "min": 30
+   }
+  ],
+  "text": "Regenerate (0.5-1)% of Life per second while moving",
+  "type": "LifeRegenerationRateWhileMoving",
+  "gold_value": null
+ },
+ "AbyssLightningResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LightningResistance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "lightning",
+   "resistance"
+  ],
+  "is_essence_only": false,
+  "name": "of Grounding",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 400
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_lightning_damage_resistance_%",
+    "max": 15,
+    "min": 12
+   }
+  ],
+  "text": "+(12-15)% to Lightning Resistance",
+  "type": "LightningResistanceForJewel",
+  "gold_value": null
+ },
+ "AbyssMaimedEnemiesDamageOverTimeJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [
+   "damage"
+  ],
+  "is_essence_only": false,
+  "name": "of Mangling",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 100
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "enemies_you_maim_have_damage_taken_over_time_+%",
+    "max": 5,
+    "min": 4
+   }
+  ],
+  "text": "Enemies Maimed by you take (4-5)% increased Damage Over Time",
+  "type": "EnchantmentMaim",
+  "gold_value": null
+ },
+ "AbyssManaRegenerationRateWhileMovingJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ManaRegenerationRateWhileMoving"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "of Praxis",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "mana_regeneration_rate_+%_while_moving",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% increased Mana Regeneration Rate while moving",
+  "type": "ManaRegenerationRateWhileMoving",
+  "gold_value": null
+ },
+ "AbyssMinionAddedChaosDamageJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Tainted",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_chaos_damage",
+    "max": 3,
+    "min": 2
+   },
+   {
+    "id": "minion_global_maximum_added_chaos_damage",
+    "max": 8,
+    "min": 5
+   }
+  ],
+  "text": "Minions deal (2-3) to (5-8) additional Chaos Damage",
+  "type": "MinionAddedChaosDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedChaosDamageJewel2_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Clouded",
+  "required_level": 42,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_chaos_damage",
+    "max": 8,
+    "min": 5
+   },
+   {
+    "id": "minion_global_maximum_added_chaos_damage",
+    "max": 14,
+    "min": 11
+   }
+  ],
+  "text": "Minions deal (5-8) to (11-14) additional Chaos Damage",
+  "type": "MinionAddedChaosDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedChaosDamageJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Darkened",
+  "required_level": 54,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_chaos_damage",
+    "max": 12,
+    "min": 9
+   },
+   {
+    "id": "minion_global_maximum_added_chaos_damage",
+    "max": 18,
+    "min": 15
+   }
+  ],
+  "text": "Minions deal (9-12) to (15-18) additional Chaos Damage",
+  "type": "MinionAddedChaosDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedChaosDamageJewel4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Malignant",
+  "required_level": 65,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_chaos_damage",
+    "max": 17,
+    "min": 14
+   },
+   {
+    "id": "minion_global_maximum_added_chaos_damage",
+    "max": 23,
+    "min": 20
+   }
+  ],
+  "text": "Minions deal (14-17) to (20-23) additional Chaos Damage",
+  "type": "MinionAddedChaosDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedChaosDamageJewel5_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Vile",
+  "required_level": 75,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 350
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_chaos_damage",
+    "max": 21,
+    "min": 18
+   },
+   {
+    "id": "minion_global_maximum_added_chaos_damage",
+    "max": 27,
+    "min": 24
+   }
+  ],
+  "text": "Minions deal (18-21) to (24-27) additional Chaos Damage",
+  "type": "MinionAddedChaosDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedChaosDamageJewel6": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Malicious",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 175
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_chaos_damage",
+    "max": 26,
+    "min": 23
+   },
+   {
+    "id": "minion_global_maximum_added_chaos_damage",
+    "max": 39,
+    "min": 33
+   }
+  ],
+  "text": "Minions deal (23-26) to (33-39) additional Chaos Damage",
+  "type": "MinionAddedChaosDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedColdDamageJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedColdDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Frosted",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_cold_damage",
+    "max": 6,
+    "min": 3
+   },
+   {
+    "id": "minion_global_maximum_added_cold_damage",
+    "max": 11,
+    "min": 8
+   }
+  ],
+  "text": "Minions deal (3-6) to (8-11) additional Cold Damage",
+  "type": "MinionAddedColdDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedColdDamageJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedColdDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Freezing",
+  "required_level": 39,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_cold_damage",
+    "max": 14,
+    "min": 11
+   },
+   {
+    "id": "minion_global_maximum_added_cold_damage",
+    "max": 20,
+    "min": 17
+   }
+  ],
+  "text": "Minions deal (11-14) to (17-20) additional Cold Damage",
+  "type": "MinionAddedColdDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedColdDamageJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedColdDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Frozen",
+  "required_level": 48,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_cold_damage",
+    "max": 18,
+    "min": 15
+   },
+   {
+    "id": "minion_global_maximum_added_cold_damage",
+    "max": 24,
+    "min": 21
+   }
+  ],
+  "text": "Minions deal (15-18) to (21-24) additional Cold Damage",
+  "type": "MinionAddedColdDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedColdDamageJewel4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedColdDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Glaciated",
+  "required_level": 58,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_cold_damage",
+    "max": 23,
+    "min": 20
+   },
+   {
+    "id": "minion_global_maximum_added_cold_damage",
+    "max": 32,
+    "min": 26
+   }
+  ],
+  "text": "Minions deal (20-23) to (26-32) additional Cold Damage",
+  "type": "MinionAddedColdDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedColdDamageJewel5": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedColdDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Polar",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 350
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_cold_damage",
+    "max": 27,
+    "min": 24
+   },
+   {
+    "id": "minion_global_maximum_added_cold_damage",
+    "max": 36,
+    "min": 33
+   }
+  ],
+  "text": "Minions deal (24-27) to (33-36) additional Cold Damage",
+  "type": "MinionAddedColdDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedColdDamageJewel6_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedColdDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Entombing",
+  "required_level": 82,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 175
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_cold_damage",
+    "max": 35,
+    "min": 29
+   },
+   {
+    "id": "minion_global_maximum_added_cold_damage",
+    "max": 51,
+    "min": 42
+   }
+  ],
+  "text": "Minions deal (29-35) to (42-51) additional Cold Damage",
+  "type": "MinionAddedColdDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedFireDamageJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedFireDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Heated",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_fire_damage",
+    "max": 6,
+    "min": 3
+   },
+   {
+    "id": "minion_global_maximum_added_fire_damage",
+    "max": 11,
+    "min": 8
+   }
+  ],
+  "text": "Minions deal (3-6) to (8-11) additional Fire Damage",
+  "type": "MinionAddedFireDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedFireDamageJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedFireDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Flaming",
+  "required_level": 39,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_fire_damage",
+    "max": 14,
+    "min": 11
+   },
+   {
+    "id": "minion_global_maximum_added_fire_damage",
+    "max": 20,
+    "min": 17
+   }
+  ],
+  "text": "Minions deal (11-14) to (17-20) additional Fire Damage",
+  "type": "MinionAddedFireDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedFireDamageJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedFireDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Scorching",
+  "required_level": 48,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_fire_damage",
+    "max": 18,
+    "min": 15
+   },
+   {
+    "id": "minion_global_maximum_added_fire_damage",
+    "max": 24,
+    "min": 21
+   }
+  ],
+  "text": "Minions deal (15-18) to (21-24) additional Fire Damage",
+  "type": "MinionAddedFireDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedFireDamageJewel4_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedFireDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Incinerating",
+  "required_level": 58,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_fire_damage",
+    "max": 23,
+    "min": 20
+   },
+   {
+    "id": "minion_global_maximum_added_fire_damage",
+    "max": 32,
+    "min": 26
+   }
+  ],
+  "text": "Minions deal (20-23) to (26-32) additional Fire Damage",
+  "type": "MinionAddedFireDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedFireDamageJewel5": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedFireDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Blasting",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 350
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_fire_damage",
+    "max": 27,
+    "min": 24
+   },
+   {
+    "id": "minion_global_maximum_added_fire_damage",
+    "max": 36,
+    "min": 33
+   }
+  ],
+  "text": "Minions deal (24-27) to (33-36) additional Fire Damage",
+  "type": "MinionAddedFireDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedFireDamageJewel6_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedFireDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Cremating",
+  "required_level": 82,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 175
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_fire_damage",
+    "max": 35,
+    "min": 29
+   },
+   {
+    "id": "minion_global_maximum_added_fire_damage",
+    "max": 51,
+    "min": 42
+   }
+  ],
+  "text": "Minions deal (29-35) to (42-51) additional Fire Damage",
+  "type": "MinionAddedFireDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedLightningDamageJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedLightningDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Humming",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_lightning_damage",
+    "max": 1,
+    "min": 1
+   },
+   {
+    "id": "minion_global_maximum_added_lightning_damage",
+    "max": 15,
+    "min": 9
+   }
+  ],
+  "text": "Minions deal 1 to (9-15) additional Lightning Damage",
+  "type": "MinionAddedLightningDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedLightningDamageJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedLightningDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Sparking",
+  "required_level": 39,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_lightning_damage",
+    "max": 2,
+    "min": 1
+   },
+   {
+    "id": "minion_global_maximum_added_lightning_damage",
+    "max": 32,
+    "min": 26
+   }
+  ],
+  "text": "Minions deal (1-2) to (26-32) additional Lightning Damage",
+  "type": "MinionAddedLightningDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedLightningDamageJewel3_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedLightningDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Arcing",
+  "required_level": 48,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_lightning_damage",
+    "max": 3,
+    "min": 1
+   },
+   {
+    "id": "minion_global_maximum_added_lightning_damage",
+    "max": 39,
+    "min": 33
+   }
+  ],
+  "text": "Minions deal (1-3) to (33-39) additional Lightning Damage",
+  "type": "MinionAddedLightningDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedLightningDamageJewel4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedLightningDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Shocking",
+  "required_level": 58,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_lightning_damage",
+    "max": 4,
+    "min": 1
+   },
+   {
+    "id": "minion_global_maximum_added_lightning_damage",
+    "max": 50,
+    "min": 44
+   }
+  ],
+  "text": "Minions deal (1-4) to (44-50) additional Lightning Damage",
+  "type": "MinionAddedLightningDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedLightningDamageJewel5": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedLightningDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Discharging",
+  "required_level": 70,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 350
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_lightning_damage",
+    "max": 5,
+    "min": 1
+   },
+   {
+    "id": "minion_global_maximum_added_lightning_damage",
+    "max": 54,
+    "min": 51
+   }
+  ],
+  "text": "Minions deal (1-5) to (51-54) additional Lightning Damage",
+  "type": "MinionAddedLightningDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedLightningDamageJewel6": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedLightningDamage"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Electrocuting",
+  "required_level": 82,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 175
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_lightning_damage",
+    "max": 6,
+    "min": 1
+   },
+   {
+    "id": "minion_global_maximum_added_lightning_damage",
+    "max": 77,
+    "min": 65
+   }
+  ],
+  "text": "Minions deal (1-6) to (65-77) additional Lightning Damage",
+  "type": "MinionAddedLightningDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedPhysicalDamageJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedPhysicalDamage"
+  ],
+  "implicit_tags": [
+   "physical_damage",
+   "damage",
+   "physical",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Glinting",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_physical_damage",
+    "max": 3,
+    "min": 2
+   },
+   {
+    "id": "minion_global_maximum_added_physical_damage",
+    "max": 8,
+    "min": 5
+   }
+  ],
+  "text": "Minions deal (2-3) to (5-8) additional Physical Damage",
+  "type": "MinionAddedPhysicalDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedPhysicalDamageJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedPhysicalDamage"
+  ],
+  "implicit_tags": [
+   "physical_damage",
+   "damage",
+   "physical",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Gleaming",
+  "required_level": 42,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_physical_damage",
+    "max": 8,
+    "min": 5
+   },
+   {
+    "id": "minion_global_maximum_added_physical_damage",
+    "max": 14,
+    "min": 11
+   }
+  ],
+  "text": "Minions deal (5-8) to (11-14) additional Physical Damage",
+  "type": "MinionAddedPhysicalDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedPhysicalDamageJewel3": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedPhysicalDamage"
+  ],
+  "implicit_tags": [
+   "physical_damage",
+   "damage",
+   "physical",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Annealed",
+  "required_level": 54,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_physical_damage",
+    "max": 12,
+    "min": 9
+   },
+   {
+    "id": "minion_global_maximum_added_physical_damage",
+    "max": 18,
+    "min": 15
+   }
+  ],
+  "text": "Minions deal (9-12) to (15-18) additional Physical Damage",
+  "type": "MinionAddedPhysicalDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedPhysicalDamageJewel4": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedPhysicalDamage"
+  ],
+  "implicit_tags": [
+   "physical_damage",
+   "damage",
+   "physical",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Razor-sharp",
+  "required_level": 63,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 700
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_physical_damage",
+    "max": 17,
+    "min": 14
+   },
+   {
+    "id": "minion_global_maximum_added_physical_damage",
+    "max": 23,
+    "min": 20
+   }
+  ],
+  "text": "Minions deal (14-17) to (20-23) additional Physical Damage",
+  "type": "MinionAddedPhysicalDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedPhysicalDamageJewel5": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedPhysicalDamage"
+  ],
+  "implicit_tags": [
+   "physical_damage",
+   "damage",
+   "physical",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Tempered",
+  "required_level": 72,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 350
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_physical_damage",
+    "max": 21,
+    "min": 18
+   },
+   {
+    "id": "minion_global_maximum_added_physical_damage",
+    "max": 27,
+    "min": 24
+   }
+  ],
+  "text": "Minions deal (18-21) to (24-27) additional Physical Damage",
+  "type": "MinionAddedPhysicalDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAddedPhysicalDamageJewel6": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAddedPhysicalDamage"
+  ],
+  "implicit_tags": [
+   "physical_damage",
+   "damage",
+   "physical",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Flaring",
+  "required_level": 83,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 175
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_global_minimum_added_physical_damage",
+    "max": 26,
+    "min": 23
+   },
+   {
+    "id": "minion_global_maximum_added_physical_damage",
+    "max": 39,
+    "min": 33
+   }
+  ],
+  "text": "Minions deal (23-26) to (33-39) additional Physical Damage",
+  "type": "MinionAddedPhysicalDamage",
+  "gold_value": null
+ },
+ "AbyssMinionAttackAndCastSpeedJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionAttackSpeedAndCastSpeed"
+  ],
+  "implicit_tags": [
+   "attack",
+   "caster",
+   "speed",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Training",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_attack_speed_+%",
+    "max": 6,
+    "min": 4
+   },
+   {
+    "id": "minion_cast_speed_+%",
+    "max": 6,
+    "min": 4
+   }
+  ],
+  "text": "Minions have (4-6)% increased Attack Speed\nMinions have (4-6)% increased Cast Speed",
+  "type": "MinionAttackAndCastSpeed",
+  "gold_value": null
+ },
+ "AbyssMinionAttacksBleedOnHitChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssMinionAilmentOnHitChance"
+  ],
+  "implicit_tags": [
+   "bleed",
+   "physical",
+   "minion",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Bloodletting",
+  "required_level": 60,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 400
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_bleed_on_hit_with_attacks_%",
+    "max": 15,
+    "min": 10
+   }
+  ],
+  "text": "Minions have (10-15)% chance to cause Bleeding with Attacks",
+  "type": "AbyssMinionAttacksBleedOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionAttacksBlindOnHitChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BlindOnHit"
+  ],
+  "implicit_tags": [
+   "attack",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Stifling",
+  "required_level": 32,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_attacks_chance_to_blind_on_hit_%",
+    "max": 4,
+    "min": 3
+   }
+  ],
+  "text": "Minions have (3-4)% chance to Blind on Hit with Attacks",
+  "type": "MinionAttacksBlindOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionAttacksBlindOnHitChanceJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BlindOnHit"
+  ],
+  "implicit_tags": [
+   "attack",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Stifling",
+  "required_level": 65,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 400
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_attacks_chance_to_blind_on_hit_%",
+    "max": 6,
+    "min": 5
+   }
+  ],
+  "text": "Minions have (5-6)% chance to Blind on Hit with Attacks",
+  "type": "MinionAttacksBlindOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionAttacksTauntOnHitChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "TauntOnHit"
+  ],
+  "implicit_tags": [
+   "attack",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Distraction",
+  "required_level": 32,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_attacks_chance_to_taunt_on_hit_%",
+    "max": 5,
+    "min": 3
+   }
+  ],
+  "text": "Minions have (3-5)% chance to Taunt on Hit with Attacks",
+  "type": "MinionAttacksTauntOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionAttacksTauntOnHitChanceJewel2_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "TauntOnHit"
+  ],
+  "implicit_tags": [
+   "attack",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Distraction",
+  "required_level": 65,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 400
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_attacks_chance_to_taunt_on_hit_%",
+    "max": 8,
+    "min": 6
+   }
+  ],
+  "text": "Minions have (6-8)% chance to Taunt on Hit with Attacks",
+  "type": "MinionAttacksTauntOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionChaosResistanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionChaosResistance"
+  ],
+  "implicit_tags": [
+   "chaos",
+   "resistance",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Righteousness",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_chaos_resistance_%",
+    "max": 11,
+    "min": 7
+   }
+  ],
+  "text": "Minions have +(7-11)% to Chaos Resistance",
+  "type": "MinionChaosResistance",
+  "gold_value": null
+ },
+ "AbyssMinionDamageIfMinionSkillUsedRecentlyJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionDamageIfMinionSkillUsedRecently"
+  ],
+  "implicit_tags": [
+   "damage",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Authority",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_damage_+%_if_have_used_a_minion_skill_recently",
+    "max": 20,
+    "min": 15
+   }
+  ],
+  "text": "Minions deal (15-20)% increased Damage if you've used a Minion Skill Recently",
+  "type": "MinionDamageIfMinionSkillUsedRecently",
+  "gold_value": null
+ },
+ "AbyssMinionElementalResistancesJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionElementalResistances"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "resistance",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Acclimatisation",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_elemental_resistance_%",
+    "max": 10,
+    "min": 6
+   }
+  ],
+  "text": "Minions have +(6-10)% to all Elemental Resistances",
+  "type": "MinionElementalResistancesForJewel",
+  "gold_value": null
+ },
+ "AbyssMinionIgniteOnHitChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssMinionAilmentOnHitChance"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "minion",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Combustion",
+  "required_level": 60,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 400
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_chance_to_ignite_%",
+    "max": 15,
+    "min": 10
+   }
+  ],
+  "text": "Minions have (10-15)% chance to Ignite",
+  "type": "AbyssMinionIgniteOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionLifeJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionLife"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Fortitude",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_maximum_life_+%",
+    "max": 12,
+    "min": 8
+   }
+  ],
+  "text": "Minions have (8-12)% increased maximum Life",
+  "type": "MinionLifeForJewel",
+  "gold_value": null
+ },
+ "AbyssMinionLifeLeechJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionLifeLeech"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Vampirism",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_life_leech_from_any_damage_permyriad",
+    "max": 50,
+    "min": 30
+   }
+  ],
+  "text": "Minions Leech (0.3-0.5)% of Damage as Life",
+  "type": "MinionLifeLeech",
+  "gold_value": null
+ },
+ "AbyssMinionLifeRegenerationJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionLifeRegeneration"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Longevity",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_life_regeneration_rate_per_minute_%",
+    "max": 48,
+    "min": 24
+   }
+  ],
+  "text": "Minions Regenerate (0.4-0.8)% of Life per second",
+  "type": "MinionLifeRegeneration",
+  "gold_value": null
+ },
+ "AbyssMinionMovementSpeedJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionMovementSpeed"
+  ],
+  "implicit_tags": [
+   "speed",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Orchestration",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_movement_speed_+%",
+    "max": 15,
+    "min": 10
+   }
+  ],
+  "text": "Minions have (10-15)% increased Movement Speed",
+  "type": "MinionMovementSpeed",
+  "gold_value": null
+ },
+ "AbyssMinionPoisonOnHitChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AbyssMinionAilmentOnHitChance"
+  ],
+  "implicit_tags": [
+   "poison",
+   "chaos",
+   "minion",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of Venom",
+  "required_level": 60,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 400
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minions_chance_to_poison_on_hit_%",
+    "max": 15,
+    "min": 10
+   }
+  ],
+  "text": "Minions have (10-15)% chance to Poison Enemies on Hit",
+  "type": "AbyssMinionPoisonOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionSpellsHinderOnHitChanceJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "HinderOnHit"
+  ],
+  "implicit_tags": [
+   "caster",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Delaying",
+  "required_level": 32,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 800
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_spells_chance_to_hinder_on_hit_%",
+    "max": 5,
+    "min": 3
+   }
+  ],
+  "text": "Minions have (3-5)% chance to Hinder Enemies on Hit with Spells",
+  "type": "MinionSpellsHinderOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMinionSpellsHinderOnHitChanceJewel2": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "HinderOnHit"
+  ],
+  "implicit_tags": [
+   "caster",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "of Delaying",
+  "required_level": 65,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 400
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_spells_chance_to_hinder_on_hit_%",
+    "max": 8,
+    "min": 6
+   }
+  ],
+  "text": "Minions have (6-8)% chance to Hinder Enemies on Hit with Spells",
+  "type": "MinionSpellsHinderOnHitChance",
+  "gold_value": null
+ },
+ "AbyssMovementSpeedIfNotDamagedRecentlyJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MovementSpeedIfNotDamagedRecently"
+  ],
+  "implicit_tags": [
+   "speed"
+  ],
+  "is_essence_only": false,
+  "name": "of Momentum",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "movement_speed_+%_if_have_not_taken_damage_recently",
+    "max": 4,
+    "min": 3
+   }
+  ],
+  "text": "(3-4)% increased Movement Speed if you haven't taken Damage Recently",
+  "type": "MovementSpeedIfNotDamagedRecently",
+  "gold_value": null
+ },
+ "AbyssSelfCurseEffectOnConsecratedGroundJewel1__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [
+   "caster",
+   "curse"
+  ],
+  "is_essence_only": false,
+  "name": "of the Sanctum",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "curse_effect_on_self_+%_while_on_consecrated_ground",
+    "max": -15,
+    "min": -25
+   }
+  ],
+  "text": "(25-15)% reduced Effect of Curses on you while on Consecrated Ground",
+  "type": "EnchantmentConsecratedGround",
+  "gold_value": null
+ },
+ "AbyssSpellBlockChanceIfHitRecentlyJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "SpellBlockPercentage"
+  ],
+  "implicit_tags": [
+   "block"
+  ],
+  "is_essence_only": false,
+  "name": "of Instinct",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "chance_to_block_spells_%_if_damaged_by_a_hit_recently",
+    "max": 4,
+    "min": 3
+   }
+  ],
+  "text": "+(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+  "type": "SpellBlockChanceIfHitRecently",
+  "gold_value": null
+ },
+ "AbyssSpellDodgeAndDodgeChanceIfHitRecentlyJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "SpellBlockPercentage"
+  ],
+  "implicit_tags": [
+   "block"
+  ],
+  "is_essence_only": false,
+  "name": "of Readiness",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 250
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 250
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "chance_to_block_spells_%_if_damaged_by_a_hit_recently",
+    "max": 2,
+    "min": 2
+   }
+  ],
+  "text": "+2% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+  "type": "SpellBlockChanceIfHitRecently",
+  "gold_value": null
+ },
+ "AbyssStrengthDexterityJewel1": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "StrengthDexterity"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Athletics",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_strength_and_dexterity",
+    "max": 10,
+    "min": 8
+   }
+  ],
+  "text": "+(8-10) to Strength and Dexterity",
+  "type": "StrengthDexterityForJewel",
+  "gold_value": null
+ },
+ "AbyssStrengthIntelligenceJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "StrengthIntelligence"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Spirit",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_strength_and_intelligence",
+    "max": 10,
+    "min": 8
+   }
+  ],
+  "text": "+(8-10) to Strength and Intelligence",
+  "type": "StrengthIntelligenceForJewel",
+  "gold_value": null
+ },
+ "AbyssStrengthJewel1_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "Strength"
+  ],
+  "implicit_tags": [
+   "attribute"
+  ],
+  "is_essence_only": false,
+  "name": "of Strength",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 500
+   }
+  ],
+  "stats": [
+   {
+    "id": "additional_strength",
+    "max": 16,
+    "min": 12
+   }
+  ],
+  "text": "+(12-16) to Strength",
+  "type": "StrengthForJewel",
+  "gold_value": null
+ },
+ "AbyssWitheredEnemiesAllResistanceJewel1___": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "BuffEnchantment"
+  ],
+  "implicit_tags": [
+   "damage"
+  ],
+  "is_essence_only": false,
+  "name": "of Languishing",
+  "required_level": 84,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel_melee",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_ranged",
+    "weight": 100
+   },
+   {
+    "tag": "abyss_jewel_caster",
+    "weight": 500
+   },
+   {
+    "tag": "abyss_jewel_summoner",
+    "weight": 500
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "enemies_you_wither_have_all_resistances_%",
+    "max": -2,
+    "min": -2
+   }
+  ],
+  "text": "Enemies Withered by you have -2% to all Resistances",
+  "type": "EnchantmentWither",
+  "gold_value": null
+ },
+ "DelveAbyssJewelMinionDamage1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionDamage"
+  ],
+  "implicit_tags": [
+   "damage",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel",
+    "weight": 2000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_damage_+%",
+    "max": 16,
+    "min": 14
+   }
+  ],
+  "text": "Minions deal (14-16)% increased Damage",
+  "type": "MinionDamage",
+  "gold_value": null
+ },
+ "DelveJewelAilmentDamage1__": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AilmentDamage"
+  ],
+  "implicit_tags": [
+   "damage",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_ailment_damage_+%",
+    "max": 20,
+    "min": 15
+   }
+  ],
+  "text": "(15-20)% increased Damage with Ailments",
+  "type": "AilmentDamage",
+  "gold_value": null
+ },
+ "DelveJewelArmourIfYouHitRecently1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "PhysicalDamageReductionRatingIfYouHaveHitAnEnemyRecently"
+  ],
+  "implicit_tags": [
+   "defences",
+   "armour"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 300
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "physical_damage_reduction_rating_if_you_have_hit_an_enemy_recently",
+    "max": 300,
+    "min": 250
+   }
+  ],
+  "text": "+(250-300) to Armour if you've Hit an Enemy Recently",
+  "type": "PhysicalDamageReductionRatingIfYouHaveHitAnEnemyRecently",
+  "gold_value": null
+ },
+ "DelveJewelAttackLeech1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LifeLeech"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life",
+   "attack"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_life_leech_from_attack_damage_permyriad",
+    "max": 30,
+    "min": 30
+   }
+  ],
+  "text": "0.3% of Attack Damage Leeched as Life",
+  "type": "LifeLeechFromAttacksPermyriad",
+  "gold_value": null
+ },
+ "DelveJewelAvoidInterruptionWhileCasting1": {
+  "adds_tags": [
+   "has_caster_mod"
+  ],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidInterruptionWhileCasting"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "avoid_interruption_while_casting_%",
+    "max": 20,
+    "min": 15
+   }
+  ],
+  "text": "(15-20)% chance to Ignore Stuns while Casting",
+  "type": "AvoidInterruptionWhileCasting",
+  "gold_value": null
+ },
+ "DelveJewelChanceToGainOnslaughtOnFlaskUse1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToGainOnslaughtOnFlaskUse"
+  ],
+  "implicit_tags": [
+   "flask"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "chance_to_gain_onslaught_on_flask_use_%",
+    "max": 10,
+    "min": 5
+   }
+  ],
+  "text": "(5-10)% chance to gain Onslaught when you use a Flask",
+  "type": "ChanceToGainOnslaughtOnFlaskUse",
+  "gold_value": null
+ },
+ "DelveJewelChaosDamage1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedChaosDamage"
+  ],
+  "implicit_tags": [
+   "chaos_damage",
+   "damage",
+   "chaos"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "chaos_damage_+%",
+    "max": 19,
+    "min": 13
+   }
+  ],
+  "text": "(13-19)% increased Chaos Damage",
+  "type": "IncreasedChaosDamage",
+  "gold_value": null
+ },
+ "DelveJewelColdPenetration1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ColdResistancePenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reduce_enemy_cold_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Cold Resistance",
+  "type": "ColdResistancePenetration",
+  "gold_value": null
+ },
+ "DelveJewelDamageTakenGainedAsMana1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "PercentDamageGoesToMana"
+  ],
+  "implicit_tags": [
+   "resource",
+   "mana"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "damage_taken_goes_to_mana_%",
+    "max": 3,
+    "min": 2
+   }
+  ],
+  "text": "(2-3)% of Damage taken Recouped as Mana",
+  "type": "PercentDamageGoesToMana",
+  "gold_value": null
+ },
+ "DelveJewelElementalPenetration1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ElementalPenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel",
+    "weight": 1600
+   },
+   {
+    "tag": "jewel",
+    "weight": 1600
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "reduce_enemy_elemental_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Elemental Resistances",
+  "type": "ElementalPenetration",
+  "gold_value": null
+ },
+ "DelveJewelEnergyShieldRegenIfYouHitRecently1_": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "EnergyShieldRegenerationRatePerMinuteIfYouHaveHitAnEnemyRecently"
+  ],
+  "implicit_tags": [
+   "defences",
+   "energy_shield"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 300
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "energy_shield_regeneration_rate_per_minute_%_if_you_have_hit_an_enemy_recently",
+    "max": 18,
+    "min": 18
+   }
+  ],
+  "text": "Regenerate 0.3% of Energy Shield per second if you've Hit an Enemy Recently",
+  "type": "EnergyShieldRegenerationRatePerMinuteIfYouHaveHitAnEnemyRecently",
+  "gold_value": null
+ },
+ "DelveJewelEvasionIfYouHitRecently1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "EvasionRatingIfYouHaveHitAnEnemyRecently"
+  ],
+  "implicit_tags": [
+   "defences",
+   "evasion"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 300
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 300
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "evasion_rating_+_if_you_have_hit_an_enemy_recently",
+    "max": 300,
+    "min": 250
+   }
+  ],
+  "text": "+(250-300) to Evasion Rating if Hit an Enemy Recently",
+  "type": "EvasionRatingIfYouHaveHitAnEnemyRecently",
+  "gold_value": null
+ },
+ "DelveJewelFirePenetration1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "FireResistancePenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reduce_enemy_fire_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Fire Resistance",
+  "type": "FireResistancePenetration",
+  "gold_value": null
+ },
+ "DelveJewelGlobalDefences1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AllDefences"
+  ],
+  "implicit_tags": [
+   "defences"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "global_defences_+%",
+    "max": 6,
+    "min": 4
+   }
+  ],
+  "text": "(4-6)% increased Global Defences",
+  "type": "AllDefences",
+  "gold_value": null
+ },
+ "DelveJewelLifeRegeneration1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LifeRegenerationRatePercentage"
+  ],
+  "implicit_tags": [
+   "resource",
+   "life"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "life_regeneration_rate_per_minute_%",
+    "max": 18,
+    "min": 18
+   }
+  ],
+  "text": "Regenerate 0.3% of Life per second",
+  "type": "LifeRegenerationRatePercentage",
+  "gold_value": null
+ },
+ "DelveJewelLightningPenetration1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LightningResistancePenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reduce_enemy_lightning_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Lightning Resistance",
+  "type": "LightningResistancePenetration",
+  "gold_value": null
+ },
+ "DelveJewelPhysicalDamageOverTimeTaken1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "prefix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "PhysicalDamageOverTimeTaken"
+  ],
+  "implicit_tags": [
+   "physical"
+  ],
+  "is_essence_only": false,
+  "name": "Subterranean",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "abyss_jewel",
+    "weight": 1000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_physical_damage_over_time_taken_+%",
+    "max": -1,
+    "min": -2
+   }
+  ],
+  "text": "(2-1)% reduced Physical Damage taken over time",
+  "type": "PhysicalDamageOverTimeTaken",
+  "gold_value": null
+ },
+ "DelveJewelVaalSoulsOnKill1": {
+  "adds_tags": [],
+  "domain": "delve",
+  "generation_type": "suffix",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AdditionalVaalSoulOnKill"
+  ],
+  "implicit_tags": [
+   "vaal"
+  ],
+  "is_essence_only": false,
+  "name": "of the Underground",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "abyss_jewel",
+    "weight": 2000
+   },
+   {
+    "tag": "jewel",
+    "weight": 2000
+   },
+   {
+    "tag": "default",
+    "weight": 0
+   }
+  ],
+  "stats": [
+   {
+    "id": "chance_to_gain_vaal_soul_on_kill_%",
+    "max": 5,
+    "min": 3
+   }
+  ],
+  "text": "(3-5)% chance to gain an additional Vaal Soul on Kill",
+  "type": "AdditionalVaalSoulOnKill",
+  "gold_value": null
+ },
+ "V2ArmourPenetrationAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ArmourPenetration"
+  ],
+  "implicit_tags": [
+   "physical"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "hits_ignore_enemy_monster_physical_damage_reduction_%_chance",
+    "max": 15,
+    "min": 10
+   }
+  ],
+  "text": "Hits have (10-15)% chance to ignore Enemy Physical Damage Reduction",
+  "type": "ChanceToIgnoreEnemyArmour",
+  "gold_value": null
+ },
+ "V2AvoidBleedAbyssalJewelCorrupted_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidBleeding"
+  ],
+  "implicit_tags": [
+   "bleed",
+   "physical",
+   "attack",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_bleed_%",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% chance to Avoid Bleeding",
+  "type": "ChanceToAvoidBleeding",
+  "gold_value": null
+ },
+ "V2AvoidChillAndFreezeAbyssalJewelCorrupted_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidFreezeAndChill"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "cold",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_chill_%",
+    "max": 0,
+    "min": 0
+   },
+   {
+    "id": "base_avoid_freeze_%",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% chance to Avoid being Frozen",
+  "type": "ChanceToAvoidFreezeAndChill",
+  "gold_value": null
+ },
+ "V2AvoidIgniteAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidIgnite"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "fire",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_ignite_%",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% chance to Avoid being Ignited",
+  "type": "AvoidIgnite",
+  "gold_value": null
+ },
+ "V2AvoidPoisonAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ChanceToAvoidPoison"
+  ],
+  "implicit_tags": [
+   "poison",
+   "chaos",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_poison_%",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% chance to Avoid being Poisoned",
+  "type": "ChanceToAvoidPoison",
+  "gold_value": null
+ },
+ "V2AvoidShockAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidShock"
+  ],
+  "implicit_tags": [
+   "elemental",
+   "lightning",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_shock_%",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% chance to Avoid being Shocked",
+  "type": "AvoidShock",
+  "gold_value": null
+ },
+ "V2AvoidStunAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidStun"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_avoid_stun_%",
+    "max": 25,
+    "min": 20
+   }
+  ],
+  "text": "(20-25)% chance to Avoid being Stunned",
+  "type": "AvoidStun",
+  "gold_value": null
+ },
+ "V2ColdPenetrationAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ColdResistancePenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "cold"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reduce_enemy_cold_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Cold Resistance",
+  "type": "ColdResistancePenetration",
+  "gold_value": null
+ },
+ "V2CorruptedBloodImmunityAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "CorruptedBloodImmunity"
+  ],
+  "implicit_tags": [
+   "bleed",
+   "physical",
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 33,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "cannot_be_inflicted_by_corrupted_blood",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Corrupted Blood cannot be inflicted on you",
+  "type": "CorruptedBloodImmunity",
+  "gold_value": null
+ },
+ "V2ElementalPenetrationAbyssalJewelCorrupted_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ElementalPenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "reduce_enemy_elemental_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Elemental Resistances",
+  "type": "ElementalPenetration",
+  "gold_value": null
+ },
+ "V2FirePenetrationAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "FireResistancePenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "fire"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reduce_enemy_fire_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Fire Resistance",
+  "type": "FireResistancePenetration",
+  "gold_value": null
+ },
+ "V2HinderImmunityAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "YouCannotBeHindered"
+  ],
+  "implicit_tags": [
+   "blue_herring"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "you_cannot_be_hindered",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "You cannot be Hindered",
+  "type": "YouCannotBeHindered",
+  "gold_value": null
+ },
+ "V2IncreasedAilmentEffectOnEnemiesAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedAilmentEffectOnEnemies"
+  ],
+  "implicit_tags": [
+   "ailment"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "non_damaging_ailment_effect_+%",
+    "max": 7,
+    "min": 5
+   }
+  ],
+  "text": "(5-7)% increased Effect of Non-Damaging Ailments",
+  "type": "IncreasedAilmentEffectOnEnemies",
+  "gold_value": null
+ },
+ "V2IncreasedAreaOfEffectAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AreaOfEffect"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_skill_area_of_effect_+%",
+    "max": 5,
+    "min": 4
+   }
+  ],
+  "text": "(4-5)% increased Area of Effect",
+  "type": "AreaOfEffect",
+  "gold_value": null
+ },
+ "V2IncreasedCriticalStrikeChanceAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "CriticalStrikeChanceIncrease"
+  ],
+  "implicit_tags": [
+   "critical"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "critical_strike_chance_+%",
+    "max": 10,
+    "min": 8
+   }
+  ],
+  "text": "(8-10)% increased Global Critical Strike Chance",
+  "type": "CriticalStrikeChance",
+  "gold_value": null
+ },
+ "V2IncreasedDamageAbyssJewelCorrupted_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "IncreasedDamage"
+  ],
+  "implicit_tags": [
+   "damage"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "damage_+%",
+    "max": 5,
+    "min": 4
+   }
+  ],
+  "text": "(4-5)% increased Damage",
+  "type": "IncreasedDamage",
+  "gold_value": null
+ },
+ "V2LightningPenetrationAbyssalJewelCorrupted": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "LightningResistancePenetration"
+  ],
+  "implicit_tags": [
+   "elemental_damage",
+   "damage",
+   "elemental",
+   "lightning"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reduce_enemy_lightning_resistance_%",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "Damage Penetrates 1% Lightning Resistance",
+  "type": "LightningResistancePenetration",
+  "gold_value": null
+ },
+ "V2MaimImmunityCorrupted_": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "AvoidMaimChance"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 40,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "avoid_maim_%_chance",
+    "max": 100,
+    "min": 100
+   }
+  ],
+  "text": "You cannot be Maimed",
+  "type": "AvoidMaimChance",
+  "gold_value": null
+ },
+ "V2MinionDamageCorrupted__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "MinionDamage"
+  ],
+  "implicit_tags": [
+   "damage",
+   "minion"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "minion_damage_+%",
+    "max": 5,
+    "min": 4
+   }
+  ],
+  "text": "Minions deal (4-5)% increased Damage",
+  "type": "MinionDamage",
+  "gold_value": null
+ },
+ "V2ReducedManaReservationCorruptedEfficiency_____": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "ReducedManaReservationsCost"
+  ],
+  "implicit_tags": [],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 1,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "base_reservation_efficiency_+%",
+    "max": 2,
+    "min": 2
+   }
+  ],
+  "text": "2% increased Reservation Efficiency of Skills",
+  "type": "ReservationEfficiencyForJewel",
+  "gold_value": null
+ },
+ "V2SilenceImmunityJewelCorrupted__": {
+  "adds_tags": [],
+  "domain": "abyss_jewel",
+  "generation_type": "corrupted",
+  "generation_weights": [],
+  "grants_effects": [],
+  "groups": [
+   "PlayerCurseImmunity"
+  ],
+  "implicit_tags": [
+   "caster",
+   "curse"
+  ],
+  "is_essence_only": false,
+  "name": "",
+  "required_level": 60,
+  "spawn_weights": [
+   {
+    "tag": "default",
+    "weight": 1000
+   }
+  ],
+  "stats": [
+   {
+    "id": "cannot_be_cursed_with_silence",
+    "max": 1,
+    "min": 1
+   }
+  ],
+  "text": "You cannot be Cursed with Silence",
+  "type": "ImmuneToSilence",
+  "gold_value": null
+ }
+}

@@ -1,0 +1,6447 @@
+[
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to all Attributes",
+    "reminder_text": "(Attributes are Strength, Dexterity, and Intelligence)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_all_attributes"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1379411836",
+    "text": "+# to all Attributes",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1379411836",
+    "text": "+# to all Attributes",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1379411836",
+    "text": "+# to all Attributes",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1379411836",
+    "text": "+# to all Attributes",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Strength",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_strength"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_4080418644",
+    "text": "+# to Strength",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4080418644",
+    "text": "+# to Strength",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4080418644",
+    "text": "+# to Strength",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4080418644",
+    "text": "+# to Strength",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_4080418644",
+    "text": "+# to Strength",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Dexterity",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_dexterity"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3261801346",
+    "text": "+# to Dexterity",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3261801346",
+    "text": "+# to Dexterity",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3261801346",
+    "text": "+# to Dexterity",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3261801346",
+    "text": "+# to Dexterity",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3261801346",
+    "text": "+# to Dexterity",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Intelligence",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_intelligence"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_328541901",
+    "text": "+# to Intelligence",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_328541901",
+    "text": "+# to Intelligence",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_328541901",
+    "text": "+# to Intelligence",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_328541901",
+    "text": "+# to Intelligence",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_328541901",
+    "text": "+# to Intelligence",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Strength and Dexterity",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_strength_and_dexterity"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_538848803",
+    "text": "+# to Strength and Dexterity",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_538848803",
+    "text": "+# to Strength and Dexterity",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_538848803",
+    "text": "+# to Strength and Dexterity",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_538848803",
+    "text": "+# to Strength and Dexterity",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Strength and Intelligence",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_strength_and_intelligence"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1535626285",
+    "text": "+# to Strength and Intelligence",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1535626285",
+    "text": "+# to Strength and Intelligence",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2543977012",
+    "text": "+# to Strength and Intelligence",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1535626285",
+    "text": "+# to Strength and Intelligence",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1535626285",
+    "text": "+# to Strength and Intelligence",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Dexterity and Intelligence",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "additional_dexterity_and_intelligence"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_2300185227",
+    "text": "+# to Dexterity and Intelligence",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2300185227",
+    "text": "+# to Dexterity and Intelligence",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2300185227",
+    "text": "+# to Dexterity and Intelligence",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2300185227",
+    "text": "+# to Dexterity and Intelligence",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Damage",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "damage_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_2154246560",
+    "text": "#% increased Damage",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2154246560",
+    "text": "#% increased Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2154246560",
+    "text": "#% increased Damage",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2154246560",
+    "text": "#% increased Damage",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Chaos Damage",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Chaos Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "chaos_damage_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_736967255",
+    "text": "#% increased Chaos Damage",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_736967255",
+    "text": "#% increased Chaos Damage",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_736967255",
+    "text": "#% increased Chaos Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_736967255",
+    "text": "#% increased Chaos Damage",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_736967255",
+    "text": "#% increased Chaos Damage",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_736967255",
+    "text": "#% increased Chaos Damage",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Cast Speed",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Cast Speed",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_cast_speed_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_2891184298",
+    "text": "#% increased Cast Speed",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_2891184298",
+    "text": "#% increased Cast Speed",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2891184298",
+    "text": "#% increased Cast Speed",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2891184298",
+    "text": "#% increased Cast Speed",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2891184298",
+    "text": "#% increased Cast Speed",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2891184298",
+    "text": "#% increased Cast Speed",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Global Critical Strike Chance",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Global Critical Strike Chance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "critical_strike_chance_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_587431675",
+    "text": "#% increased Global Critical Strike Chance",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_587431675",
+    "text": "#% increased Global Critical Strike Chance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_587431675",
+    "text": "#% increased Global Critical Strike Chance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_587431675",
+    "text": "#% increased Global Critical Strike Chance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_587431675",
+    "text": "#% increased Global Critical Strike Chance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Armour",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_physical_damage_reduction_rating"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_809229260",
+    "text": "+# to Armour",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_809229260",
+    "text": "+# to Armour",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_809229260",
+    "text": "+# to Armour",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Evasion Rating",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_evasion_rating"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_2144192055",
+    "text": "+# to Evasion Rating",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2144192055",
+    "text": "+# to Evasion Rating",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2144192055",
+    "text": "+# to Evasion Rating",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to maximum Energy Shield",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_maximum_energy_shield"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3489782002",
+    "text": "+# to maximum Energy Shield",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3489782002",
+    "text": "+# to maximum Energy Shield",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3489782002",
+    "text": "+# to maximum Energy Shield",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3489782002",
+    "text": "+# to maximum Energy Shield",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to maximum Life",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_maximum_life"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3299347043",
+    "text": "+# to maximum Life",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3299347043",
+    "text": "+# to maximum Life",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3299347043",
+    "text": "+# to maximum Life",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3299347043",
+    "text": "+# to maximum Life",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3299347043",
+    "text": "+# to maximum Life",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second"
+     ]
+    ],
+    "string": "Regenerate {0} Life per second",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_life_regeneration_rate_per_minute"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3325883026",
+    "text": "Regenerate # Life per second",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3325883026",
+    "text": "Regenerate # Life per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3325883026",
+    "text": "Regenerate # Life per second",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3325883026",
+    "text": "Regenerate # Life per second",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3325883026",
+    "text": "Regenerate # Life per second",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to maximum Mana",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_maximum_mana"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1050105434",
+    "text": "+# to maximum Mana",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1050105434",
+    "text": "+# to maximum Mana",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1050105434",
+    "text": "+# to maximum Mana",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1050105434",
+    "text": "+# to maximum Mana",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1050105434",
+    "text": "+# to maximum Mana",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second"
+     ]
+    ],
+    "string": "Regenerate {0} Mana per second",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_mana_regeneration_rate_per_minute"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_4291461939",
+    "text": "Regenerate # Mana per second",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4291461939",
+    "text": "Regenerate # Mana per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4291461939",
+    "text": "Regenerate # Mana per second",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4291461939",
+    "text": "Regenerate # Mana per second",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_4291461939",
+    "text": "Regenerate # Mana per second",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to all Elemental Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_resist_all_elements_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_2901986750",
+    "text": "+#% to all Elemental Resistances",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2901986750",
+    "text": "+#% to all Elemental Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2901986750",
+    "text": "+#% to all Elemental Resistances",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2901986750",
+    "text": "+#% to all Elemental Resistances",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2901986750",
+    "text": "+#% to all Elemental Resistances",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Fire Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_fire_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3372524247",
+    "text": "+#% to Fire Resistance",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3372524247",
+    "text": "+#% to Fire Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3372524247",
+    "text": "+#% to Fire Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3372524247",
+    "text": "+#% to Fire Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3372524247",
+    "text": "+#% to Fire Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Cold Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_cold_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_4220027924",
+    "text": "+#% to Cold Resistance",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4220027924",
+    "text": "+#% to Cold Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4220027924",
+    "text": "+#% to Cold Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4220027924",
+    "text": "+#% to Cold Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_4220027924",
+    "text": "+#% to Cold Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Lightning Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_lightning_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1671376347",
+    "text": "+#% to Lightning Resistance",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1671376347",
+    "text": "+#% to Lightning Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1671376347",
+    "text": "+#% to Lightning Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1671376347",
+    "text": "+#% to Lightning Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1671376347",
+    "text": "+#% to Lightning Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Chaos Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_chaos_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2923486259",
+    "text": "+#% to Chaos Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2923486259",
+    "text": "+#% to Chaos Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2923486259",
+    "text": "+#% to Chaos Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2923486259",
+    "text": "+#% to Chaos Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "divide_by_one_hundred"
+     ]
+    ],
+    "string": "{0}% of Attack Damage Leeched as Life",
+    "reminder_text": "(Leeched Life is recovered over time. Multiple Leeches can occur simultaneously, up to a maximum rate)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_life_leech_from_attack_damage_permyriad"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_141810208",
+    "text": "#% of Attack Damage Leeched as Life",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_141810208",
+    "text": "#% of Attack Damage Leeched as Life",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_141810208",
+    "text": "#% of Attack Damage Leeched as Life",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1828023575",
+    "text": "#% of Attack Damage Leeched as Life",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% increased maximum Life",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Minions have {0}% reduced maximum Life",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_maximum_life_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_770672621",
+    "text": "Minions have #% increased maximum Life",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_770672621",
+    "text": "Minions have #% increased maximum Life",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_770672621",
+    "text": "Minions have #% increased maximum Life",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_770672621",
+    "text": "Minions have #% increased maximum Life",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_770672621",
+    "text": "Minions have #% increased maximum Life",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_770672621",
+    "text": "Minions have #% increased maximum Life",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% increased Movement Speed",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Minions have {0}% reduced Movement Speed",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_movement_speed_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_174664100",
+    "text": "Minions have #% increased Movement Speed",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_174664100",
+    "text": "Minions have #% increased Movement Speed",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_174664100",
+    "text": "Minions have #% increased Movement Speed",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_174664100",
+    "text": "Minions have #% increased Movement Speed",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid being Chilled",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_chill_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3483999943",
+    "text": "#% chance to Avoid being Chilled",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_3483999943",
+    "text": "#% chance to Avoid being Chilled",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3483999943",
+    "text": "#% chance to Avoid being Chilled",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3483999943",
+    "text": "#% chance to Avoid being Chilled",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3483999943",
+    "text": "#% chance to Avoid being Chilled",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3483999943",
+    "text": "#% chance to Avoid being Chilled",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid being Frozen",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_freeze_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1514829491",
+    "text": "#% chance to Avoid being Frozen",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_1514829491",
+    "text": "#% chance to Avoid being Frozen",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1514829491",
+    "text": "#% chance to Avoid being Frozen",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1514829491",
+    "text": "#% chance to Avoid being Frozen",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1514829491",
+    "text": "#% chance to Avoid being Frozen",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1514829491",
+    "text": "#% chance to Avoid being Frozen",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid being Ignited",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_ignite_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1783006896",
+    "text": "#% chance to Avoid being Ignited",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_1783006896",
+    "text": "#% chance to Avoid being Ignited",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1783006896",
+    "text": "#% chance to Avoid being Ignited",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1783006896",
+    "text": "#% chance to Avoid being Ignited",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1783006896",
+    "text": "#% chance to Avoid being Ignited",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1783006896",
+    "text": "#% chance to Avoid being Ignited",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid being Shocked",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_shock_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1871765599",
+    "text": "#% chance to Avoid being Shocked",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_1871765599",
+    "text": "#% chance to Avoid being Shocked",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1871765599",
+    "text": "#% chance to Avoid being Shocked",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1871765599",
+    "text": "#% chance to Avoid being Shocked",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1871765599",
+    "text": "#% chance to Avoid being Shocked",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1871765599",
+    "text": "#% chance to Avoid being Shocked",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid being Poisoned",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_poison_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_4053951709",
+    "text": "#% chance to Avoid being Poisoned",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4053951709",
+    "text": "#% chance to Avoid being Poisoned",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4053951709",
+    "text": "#% chance to Avoid being Poisoned",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4053951709",
+    "text": "#% chance to Avoid being Poisoned",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_4053951709",
+    "text": "#% chance to Avoid being Poisoned",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid being Stunned",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_stun_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_4262448838",
+    "text": "#% chance to Avoid being Stunned",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_4262448838",
+    "text": "#% chance to Avoid being Stunned",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4262448838",
+    "text": "#% chance to Avoid being Stunned",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4262448838",
+    "text": "#% chance to Avoid being Stunned",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4262448838",
+    "text": "#% chance to Avoid being Stunned",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_4262448838",
+    "text": "#% chance to Avoid being Stunned",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Area of Effect",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Area of Effect",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_skill_area_of_effect_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_280731498",
+    "text": "#% increased Area of Effect",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_280731498",
+    "text": "#% increased Area of Effect",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_280731498",
+    "text": "#% increased Area of Effect",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_280731498",
+    "text": "#% increased Area of Effect",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_280731498",
+    "text": "#% increased Area of Effect",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_280731498",
+    "text": "#% increased Area of Effect",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Ignore Stuns while Casting",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Ignore Stuns while Casting",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "avoid_interruption_while_casting_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1916706958",
+    "text": "#% chance to Ignore Stuns while Casting",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1916706958",
+    "text": "#% chance to Ignore Stuns while Casting",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1916706958",
+    "text": "#% chance to Ignore Stuns while Casting",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second_2dp_if_required"
+     ]
+    ],
+    "string": "Regenerate {0}% of Life per second",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second_2dp_if_required"
+     ]
+    ],
+    "string": "Regenerate {0}% of Life per second",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "life_regeneration_rate_per_minute_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_836936635",
+    "text": "Regenerate #% of Life per second",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_836936635",
+    "text": "Regenerate #% of Life per second",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_836936635",
+    "text": "Regenerate #% of Life per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_836936635",
+    "text": "Regenerate #% of Life per second",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_836936635",
+    "text": "Regenerate #% of Life per second",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions deal {0}% increased Damage",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Minions deal {0}% reduced Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_damage_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1589917703",
+    "text": "Minions deal #% increased Damage",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_1589917703",
+    "text": "Minions deal #% increased Damage",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1589917703",
+    "text": "Minions deal #% increased Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1589917703",
+    "text": "Minions deal #% increased Damage",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1589917703",
+    "text": "Minions deal #% increased Damage",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1589917703",
+    "text": "Minions deal #% increased Damage",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions deal {0}% increased Damage if you've used a Minion Skill Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Minions deal {0}% reduced Damage if you've used a Minion Skill Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_damage_+%_if_have_used_a_minion_skill_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_412745376",
+    "text": "Minions deal #% increased Damage if you've used a Minion Skill Recently",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_412745376",
+    "text": "Minions deal #% increased Damage if you've used a Minion Skill Recently",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Reservation Efficiency of Skills",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Reservation Efficiency of Skills",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_reservation_efficiency_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2587176568",
+    "text": "#% increased Reservation Efficiency of Skills",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4202507508",
+    "text": "#% increased Reservation Efficiency of Skills",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2587176568",
+    "text": "#% increased Reservation Efficiency of Skills",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4202507508",
+    "text": "#% increased Reservation Efficiency of Skills",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% of Damage taken Recouped as Mana",
+    "reminder_text": "(Only Damage from Hits can be Recouped, over 4 seconds following the Hit)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% of Damage taken Recouped as Mana",
+    "reminder_text": "(Only Damage from Hits can be Recouped, over 4 seconds following the Hit. Recouping negative amounts will cause loss)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "damage_taken_goes_to_mana_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_472520716",
+    "text": "#% of Damage taken Recouped as Mana",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_472520716",
+    "text": "#% of Damage taken Recouped as Mana",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_472520716",
+    "text": "#% of Damage taken Recouped as Mana",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_472520716",
+    "text": "#% of Damage taken Recouped as Mana",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_472520716",
+    "text": "#% of Damage taken Recouped as Mana",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% chance to cause Bleeding with Attacks",
+    "reminder_text": "(Bleeding deals Physical Damage over time, based on the base Physical Damage of the Skill. Damage is 200% higher while moving)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions cause Bleeding with Attacks",
+    "reminder_text": "(Bleeding deals Physical Damage over time, based on the base Physical Damage of the Skill. Damage is 200% higher while moving)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_bleed_on_hit_with_attacks_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3998967779",
+    "text": "Minions have #% chance to cause Bleeding with Attacks",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3998967779",
+    "text": "Minions have #% chance to cause Bleeding with Attacks",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Fire and Cold Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "fire_and_cold_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_2915988346",
+    "text": "+#% to Fire and Cold Resistances",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2915988346",
+    "text": "+#% to Fire and Cold Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2915988346",
+    "text": "+#% to Fire and Cold Resistances",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2915988346",
+    "text": "+#% to Fire and Cold Resistances",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Fire and Lightning Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "fire_and_lightning_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3441501978",
+    "text": "+#% to Fire and Lightning Resistances",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3441501978",
+    "text": "+#% to Fire and Lightning Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3441501978",
+    "text": "+#% to Fire and Lightning Resistances",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3441501978",
+    "text": "+#% to Fire and Lightning Resistances",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% to Cold and Lightning Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "cold_and_lightning_damage_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_4277795662",
+    "text": "+#% to Cold and Lightning Resistances",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4277795662",
+    "text": "+#% to Cold and Lightning Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4277795662",
+    "text": "+#% to Cold and Lightning Resistances",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4277795662",
+    "text": "+#% to Cold and Lightning Resistances",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Global Defences",
+    "reminder_text": "(Armour, Evasion Rating and Energy Shield are the standard Defences)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Global Defences",
+    "reminder_text": "(Armour, Evasion Rating and Energy Shield are the standard Defences)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "global_defences_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_1389153006",
+    "text": "#% increased Global Defences",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1389153006",
+    "text": "#% increased Global Defences",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1389153006",
+    "text": "#% increased Global Defences",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1389153006",
+    "text": "#% increased Global Defences",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1389153006",
+    "text": "#% increased Global Defences",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% increased Attack Speed",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Minions have {0}% reduced Attack Speed",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_attack_speed_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_3375935924",
+    "text": "Minions have #% increased Attack Speed",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3375935924",
+    "text": "Minions have #% increased Attack Speed",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3375935924",
+    "text": "Minions have #% increased Attack Speed",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3375935924",
+    "text": "Minions have #% increased Attack Speed",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3375935924",
+    "text": "Minions have #% increased Attack Speed",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% increased Cast Speed",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Minions have {0}% reduced Cast Speed",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_cast_speed_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_4000101551",
+    "text": "Minions have #% increased Cast Speed",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4000101551",
+    "text": "Minions have #% increased Cast Speed",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4000101551",
+    "text": "Minions have #% increased Cast Speed",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_4000101551",
+    "text": "Minions have #% increased Cast Speed",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_4000101551",
+    "text": "Minions have #% increased Cast Speed",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "divide_by_one_hundred"
+     ]
+    ],
+    "string": "Minions Leech {0}% of Damage as Life",
+    "reminder_text": "(Leeched Life is recovered over time. Multiple Leeches can occur simultaneously, up to a maximum rate)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_life_leech_from_any_damage_permyriad"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2770782267",
+    "text": "Minions Leech #% of Damage as Life",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2770782267",
+    "text": "Minions Leech #% of Damage as Life",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2770782267",
+    "text": "Minions Leech #% of Damage as Life",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second"
+     ]
+    ],
+    "string": "Minions Regenerate {0}% of Life per second",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_life_regeneration_rate_per_minute_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2479683456",
+    "text": "Minions Regenerate #% of Life per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2479683456",
+    "text": "Minions Regenerate #% of Life per second",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2479683456",
+    "text": "Minions Regenerate #% of Life per second",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2479683456",
+    "text": "Minions Regenerate #% of Life per second",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% to all Elemental Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_elemental_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1423639565",
+    "text": "Minions have +#% to all Elemental Resistances",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1423639565",
+    "text": "Minions have +#% to all Elemental Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1423639565",
+    "text": "Minions have +#% to all Elemental Resistances",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1423639565",
+    "text": "Minions have +#% to all Elemental Resistances",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1423639565",
+    "text": "Minions have +#% to all Elemental Resistances",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% to Chaos Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_chaos_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3837707023",
+    "text": "Minions have +#% to Chaos Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3837707023",
+    "text": "Minions have +#% to Chaos Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3837707023",
+    "text": "Minions have +#% to Chaos Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Damage Penetrates {0}% Elemental Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "reduce_enemy_elemental_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2101383955",
+    "text": "Damage Penetrates #% Elemental Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2101383955",
+    "text": "Damage Penetrates #% Elemental Resistances",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2101383955",
+    "text": "Damage Penetrates #% Elemental Resistances",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Damage Penetrates {0}% Fire Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Your Hits treat Fire Resistance as {0}% higher than actual value",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_reduce_enemy_fire_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_2653955271",
+    "text": "Damage Penetrates #% Fire Resistance",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2653955271",
+    "text": "Damage Penetrates #% Fire Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2653955271",
+    "text": "Damage Penetrates #% Fire Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2653955271",
+    "text": "Damage Penetrates #% Fire Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2653955271",
+    "text": "Damage Penetrates #% Fire Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Damage Penetrates {0}% Cold Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Your Hits treat Cold Resistance as {0}% higher than actual value",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_reduce_enemy_cold_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_3417711605",
+    "text": "Damage Penetrates #% Cold Resistance",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3417711605",
+    "text": "Damage Penetrates #% Cold Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3417711605",
+    "text": "Damage Penetrates #% Cold Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_3417711605",
+    "text": "Damage Penetrates #% Cold Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_3417711605",
+    "text": "Damage Penetrates #% Cold Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Damage Penetrates {0}% Lightning Resistance",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Your Hits treat Lightning Resistance as {0}% higher than actual value",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_reduce_enemy_lightning_resistance_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_818778753",
+    "text": "Damage Penetrates #% Lightning Resistance",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_818778753",
+    "text": "Damage Penetrates #% Lightning Resistance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_818778753",
+    "text": "Damage Penetrates #% Lightning Resistance",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_818778753",
+    "text": "Damage Penetrates #% Lightning Resistance",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_818778753",
+    "text": "Damage Penetrates #% Lightning Resistance",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "You cannot be Cursed with Silence",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "cannot_be_cursed_with_silence"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1654414582",
+    "text": "You cannot be Cursed with Silence",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1654414582",
+    "text": "You cannot be Cursed with Silence",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to gain an additional Vaal Soul on Kill",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "chance_to_gain_vaal_soul_on_kill_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_1962922582",
+    "text": "#% chance to gain an additional Vaal Soul on Kill",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1962922582",
+    "text": "#% chance to gain an additional Vaal Soul on Kill",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1962922582",
+    "text": "#% chance to gain an additional Vaal Soul on Kill",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1962922582",
+    "text": "#% chance to gain an additional Vaal Soul on Kill",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% chance to Poison Enemies on Hit",
+    "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions Poison Enemies on Hit",
+    "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minions_chance_to_poison_on_hit_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1974445926",
+    "text": "Minions have #% chance to Poison Enemies on Hit",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1974445926",
+    "text": "Minions have #% chance to Poison Enemies on Hit",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "block_chance_on_damage_taken_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_852195286",
+    "text": "+#% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_852195286",
+    "text": "+#% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% chance to Taunt on Hit with Attacks",
+    "reminder_text": "(Enemies you Taunt can only target you, and deal 10% less damage to anyone else. Taunt lasts for 3 seconds)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions Taunt on Hit with Attacks",
+    "reminder_text": "(Enemies you Taunt can only target you, and deal 10% less damage to anyone else. Taunt lasts for 3 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_attacks_chance_to_taunt_on_hit_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2911442053",
+    "text": "Minions have #% chance to Taunt on Hit with Attacks",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2911442053",
+    "text": "Minions have #% chance to Taunt on Hit with Attacks",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_2911442053",
+    "text": "Minions have #% chance to Taunt on Hit with Attacks",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     },
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#",
+     "#"
+    ],
+    "index_handlers": [
+     [],
+     []
+    ],
+    "string": "Minions deal {0} to {1} additional Chaos Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_global_minimum_added_chaos_damage",
+   "minion_global_maximum_added_chaos_damage"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2889601781",
+    "text": "Minions deal # to # additional Chaos Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2889601781",
+    "text": "Minions deal # to # additional Chaos Damage",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     },
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#",
+     "#"
+    ],
+    "index_handlers": [
+     [],
+     []
+    ],
+    "string": "Minions deal {0} to {1} additional Cold Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_global_minimum_added_cold_damage",
+   "minion_global_maximum_added_cold_damage"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3152982863",
+    "text": "Minions deal # to # additional Cold Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3152982863",
+    "text": "Minions deal # to # additional Cold Damage",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     },
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#",
+     "#"
+    ],
+    "index_handlers": [
+     [],
+     []
+    ],
+    "string": "Minions deal {0} to {1} additional Fire Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_global_minimum_added_fire_damage",
+   "minion_global_maximum_added_fire_damage"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3351784991",
+    "text": "Minions deal # to # additional Fire Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3351784991",
+    "text": "Minions deal # to # additional Fire Damage",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     },
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#",
+     "#"
+    ],
+    "index_handlers": [
+     [],
+     []
+    ],
+    "string": "Minions deal {0} to {1} additional Lightning Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_global_minimum_added_lightning_damage",
+   "minion_global_maximum_added_lightning_damage"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2930653471",
+    "text": "Minions deal # to # additional Lightning Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2930653471",
+    "text": "Minions deal # to # additional Lightning Damage",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     },
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#",
+     "#"
+    ],
+    "index_handlers": [
+     [],
+     []
+    ],
+    "string": "Minions deal {0} to {1} additional Physical Damage",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_global_minimum_added_physical_damage",
+   "minion_global_maximum_added_physical_damage"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1172029298",
+    "text": "Minions deal # to # additional Physical Damage",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1172029298",
+    "text": "Minions deal # to # additional Physical Damage",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid Bleeding",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_avoid_bleed_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1618589784",
+    "text": "#% chance to Avoid Bleeding",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1618589784",
+    "text": "#% chance to Avoid Bleeding",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1618589784",
+    "text": "#% chance to Avoid Bleeding",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1618589784",
+    "text": "#% chance to Avoid Bleeding",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1618589784",
+    "text": "#% chance to Avoid Bleeding",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to Avoid Elemental Ailments while you have Elusive",
+    "reminder_text": "(Elemental Ailments are Ignited, Scorched, Chilled, Frozen, Brittle, Shocked, and Sapped)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "avoid_elemental_ailments_%_while_affected_by_elusive"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_2662268382",
+    "text": "#% chance to Avoid Elemental Ailments while you have Elusive",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2662268382",
+    "text": "#% chance to Avoid Elemental Ailments while you have Elusive",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2662268382",
+    "text": "#% chance to Avoid Elemental Ailments while you have Elusive",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to avoid Maim",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "You cannot be Maimed",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "avoid_maim_%_chance"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1126826428",
+    "text": "You cannot be Maimed",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1126826428",
+    "text": "You cannot be Maimed",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Damage with Ailments",
+    "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Damage with Ailments",
+    "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_ailment_damage_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_690707482",
+    "text": "#% increased Damage with Ailments",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_690707482",
+    "text": "#% increased Damage with Ailments",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_690707482",
+    "text": "#% increased Damage with Ailments",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Cooldown Recovery Rate",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Cooldown Recovery Rate",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_cooldown_speed_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_1004011302",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_1004011302",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1004011302",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_239144",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1004011302",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1004011302",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_1004011302",
+    "text": "#% increased Cooldown Recovery Rate",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Physical Damage taken over time",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Physical Damage taken over time",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "base_physical_damage_over_time_taken_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_511024200",
+    "text": "#% reduced Physical Damage taken over time",
+    "type": "explicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Corrupted Blood cannot be inflicted on you",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "cannot_be_inflicted_by_corrupted_blood"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1658498488",
+    "text": "Corrupted Blood cannot be inflicted on you",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1658498488",
+    "text": "Corrupted Blood cannot be inflicted on you",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_1658498488",
+    "text": "Corrupted Blood cannot be inflicted on you",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Cast Speed if a Minion has been Killed Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Cast Speed if a Minion has been Killed Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "cast_speed_+%_if_player_minion_has_been_killed_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3110907148",
+    "text": "#% increased Cast Speed if a Minion has been Killed Recently",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3110907148",
+    "text": "#% increased Cast Speed if a Minion has been Killed Recently",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "chance_to_block_spells_%_if_damaged_by_a_hit_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1101206134",
+    "text": "+#% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1101206134",
+    "text": "+#% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% chance to gain Onslaught when you use a Flask",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "chance_to_gain_onslaught_on_flask_use_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1324450398",
+    "text": "#% chance to gain Onslaught when you use a Flask",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1324450398",
+    "text": "#% chance to gain Onslaught when you use a Flask",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Effect of Curses on you while on Consecrated Ground",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Effect of Curses on you while on Consecrated Ground",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "curse_effect_on_self_+%_while_on_consecrated_ground"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_3444629796",
+    "text": "#% increased Effect of Curses on you while on Consecrated Ground",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3444629796",
+    "text": "#% increased Effect of Curses on you while on Consecrated Ground",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3444629796",
+    "text": "#% increased Effect of Curses on you while on Consecrated Ground",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Enemies Blinded by you have {0}% increased Critical Strike Chance",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Enemies Blinded by you have {0}% reduced Critical Strike Chance",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "enemies_you_blind_have_critical_strike_chance_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_4216282855",
+    "text": "Enemies Blinded by you have #% increased Critical Strike Chance",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_4216282855",
+    "text": "Enemies Blinded by you have #% increased Critical Strike Chance",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_4216282855",
+    "text": "Enemies Blinded by you have #% increased Critical Strike Chance",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Enemies Hindered by you have {0}% increased Life Regeneration rate",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Enemies Hindered by you have {0}% reduced Life Regeneration rate",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "enemies_you_hinder_have_life_regeneration_rate_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_3709502856",
+    "text": "Enemies Hindered by you have #% increased Life Regeneration rate",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_3709502856",
+    "text": "Enemies Hindered by you have #% increased Life Regeneration rate",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3709502856",
+    "text": "Enemies Hindered by you have #% increased Life Regeneration rate",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Enemies Intimidated by you have {0}% increased duration of stuns against them",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Enemies Intimidated by you have {0}% reduced duration of stuns against them",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "enemies_you_intimidate_have_stun_duration_on_self_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_1919892065",
+    "text": "Enemies Intimidated by you have #% increased duration of stuns against them",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1919892065",
+    "text": "Enemies Intimidated by you have #% increased duration of stuns against them",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1919892065",
+    "text": "Enemies Intimidated by you have #% increased duration of stuns against them",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Enemies Maimed by you take {0}% increased Damage Over Time",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "Enemies Maimed by you take {0}% reduced Damage Over Time",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "enemies_you_maim_have_damage_taken_over_time_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_2745149002",
+    "text": "Enemies Maimed by you take #% increased Damage Over Time",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2745149002",
+    "text": "Enemies Maimed by you take #% increased Damage Over Time",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2745149002",
+    "text": "Enemies Maimed by you take #% increased Damage Over Time",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Enemies Withered by you have {0}% to all Resistances",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "enemies_you_wither_have_all_resistances_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "enchant.stat_1032614900",
+    "text": "Enemies Withered by you have +#% to all Resistances",
+    "type": "enchant",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_1032614900",
+    "text": "Enemies Withered by you have +#% to all Resistances",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1032614900",
+    "text": "Enemies Withered by you have +#% to all Resistances",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second"
+     ]
+    ],
+    "string": "Regenerate {0}% of Energy Shield per second if you've Hit an Enemy Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "energy_shield_regeneration_rate_per_minute_%_if_you_have_hit_an_enemy_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_588560583",
+    "text": "Regenerate #% of Energy Shield per second if you've Hit an Enemy Recently",
+    "type": "explicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Regenerate {0} Energy Shield per second",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "energy_shield_regeneration_rate_per_second"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1330109706",
+    "text": "Regenerate # Energy Shield per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_2561836520",
+    "text": "Regenerate # Energy Shield per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2561836520",
+    "text": "Regenerate # Energy Shield per second",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Evasion Rating if Hit an Enemy Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "evasion_rating_+_if_you_have_hit_an_enemy_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2935548106",
+    "text": "+# to Evasion Rating if Hit an Enemy Recently",
+    "type": "explicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Evasion Rating while moving",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Evasion Rating while moving",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "evasion_rating_+%_while_moving"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_734823525",
+    "text": "#% increased Evasion Rating while moving",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_734823525",
+    "text": "#% increased Evasion Rating while moving",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Hits have {0}% chance to ignore Enemy Physical Damage Reduction",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Hits ignore Enemy Physical Damage Reduction",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "hits_ignore_enemy_monster_physical_damage_reduction_%_chance"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2839577586",
+    "text": "Hits have #% chance to ignore Enemy Physical Damage Reduction",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_2839577586",
+    "text": "Hits have #% chance to ignore Enemy Physical Damage Reduction",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "enchant.stat_942531362",
+    "text": "Hits ignore Enemy Physical Damage Reduction",
+    "type": "enchant",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "per_minute_to_per_second"
+     ]
+    ],
+    "string": "Regenerate {0}% of Life per second while moving",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "life_regeneration_rate_per_minute_%_while_moving"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_908516597",
+    "text": "Regenerate #% of Life per second while moving",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_908516597",
+    "text": "Regenerate #% of Life per second while moving",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Mana Regeneration Rate while moving",
+    "reminder_text": null,
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Mana Regeneration Rate while moving",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "mana_regeneration_rate_+%_while_moving"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_1327522346",
+    "text": "#% increased Mana Regeneration Rate while moving",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_1327522346",
+    "text": "#% increased Mana Regeneration Rate while moving",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% chance to Blind on Hit with Attacks",
+    "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions Blind on Hit with Attacks",
+    "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_attacks_chance_to_blind_on_hit_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2431643207",
+    "text": "Minions have #% chance to Blind on Hit with Attacks",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2431643207",
+    "text": "Minions have #% chance to Blind on Hit with Attacks",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% chance to Ignite",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_chance_to_ignite_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3945908658",
+    "text": "Minions have #% chance to Ignite",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3945908658",
+    "text": "Minions have #% chance to Ignite",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions Regenerate {0} Life per second",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_life_regeneration_rate_per_second"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3062329212",
+    "text": "Minions Regenerate # Life per second",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3062329212",
+    "text": "Minions Regenerate # Life per second",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": 99,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions have {0}% chance to Hinder Enemies on Hit with Spells",
+    "reminder_text": "(Hinder reduces movement speed by 30% for 4 seconds)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": 100,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "Minions Hinder Enemies on Hit with Spells",
+    "reminder_text": "(Hinder reduces movement speed by 30% for 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "minion_spells_chance_to_hinder_on_hit_%"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2323739383",
+    "text": "Minions have #% chance to Hinder Enemies on Hit with Spells",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_2323739383",
+    "text": "Minions have #% chance to Hinder Enemies on Hit with Spells",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Movement Speed if you haven't taken Damage Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Movement Speed if you haven't taken Damage Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "movement_speed_+%_if_have_not_taken_damage_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_3854949926",
+    "text": "#% increased Movement Speed if you haven't taken Damage Recently",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_3854949926",
+    "text": "#% increased Movement Speed if you haven't taken Damage Recently",
+    "type": "fractured",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": 1,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0}% increased Effect of Non-Damaging Ailments",
+    "reminder_text": "(Ailments that do not deal Damage are Scorched, Chilled, Frozen, Brittle, Shocked, and Sapped)",
+    "is_markup": null
+   },
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": -1,
+      "negated": null
+     }
+    ],
+    "format": [
+     "#"
+    ],
+    "index_handlers": [
+     [
+      "negate"
+     ]
+    ],
+    "string": "{0}% reduced Effect of Non-Damaging Ailments",
+    "reminder_text": "(Ailments that do not deal Damage are Scorched, Chilled, Frozen, Brittle, Shocked, and Sapped)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "non_damaging_ailment_effect_+%"
+  ],
+  "trade_stats": [
+   {
+    "id": "crafted.stat_782230869",
+    "text": "#% increased Effect of Non-Damaging Ailments",
+    "type": "crafted",
+    "option": null
+   },
+   {
+    "id": "explicit.stat_782230869",
+    "text": "#% increased Effect of Non-Damaging Ailments",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "fractured.stat_782230869",
+    "text": "#% increased Effect of Non-Damaging Ailments",
+    "type": "fractured",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_782230869",
+    "text": "#% increased Effect of Non-Damaging Ailments",
+    "type": "implicit",
+    "option": null
+   },
+   {
+    "id": "scourge.stat_782230869",
+    "text": "#% increased Effect of Non-Damaging Ailments",
+    "type": "scourge",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "+#"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "{0} to Armour if you've Hit an Enemy Recently",
+    "reminder_text": "(Recently refers to the past 4 seconds)",
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "physical_damage_reduction_rating_if_you_have_hit_an_enemy_recently"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_2368149582",
+    "text": "+# to Armour if you've Hit an Enemy Recently",
+    "type": "explicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ },
+ {
+  "English": [
+   {
+    "condition": [
+     {
+      "min": null,
+      "max": null,
+      "negated": null
+     }
+    ],
+    "format": [
+     "ignore"
+    ],
+    "index_handlers": [
+     []
+    ],
+    "string": "You cannot be Hindered",
+    "reminder_text": null,
+    "is_markup": null
+   }
+  ],
+  "ids": [
+   "you_cannot_be_hindered"
+  ],
+  "trade_stats": [
+   {
+    "id": "explicit.stat_721014846",
+    "text": "You cannot be Hindered",
+    "type": "explicit",
+    "option": null
+   },
+   {
+    "id": "implicit.stat_721014846",
+    "text": "You cannot be Hindered",
+    "type": "implicit",
+    "option": null
+   }
+  ],
+  "hidden": null,
+  "French": null,
+  "German": null,
+  "Japanese": null,
+  "Korean": null,
+  "Portuguese": null,
+  "Russian": null,
+  "Spanish": null,
+  "Thai": null,
+  "Traditional Chinese": null
+ }
+]
