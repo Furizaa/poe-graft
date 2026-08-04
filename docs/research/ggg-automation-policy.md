@@ -247,15 +247,30 @@ written rule permits — *provided* the human supplies one manual trigger per ro
 
 ## (e) Which keys PoE ignores
 
-**`Num +`, `Num -`, `Num *`, `Num /` cannot be bound in Path of Exile 1** — a bug reported since 2011,
-re-reported in 2022, never fixed. A trigger on one of these needs **no suppression at all**, which
-sidesteps the entire keyboard-hook question. §2.4.
+**Use `F13`–`F24`.** PoE's bindable-key set is a **hand-maintained allowlist** GGG has extended twice in
+fourteen years (0.10.7 patch notes: *"More keys are now available to be bound: insert, home, end, delete
+and the arrow keys"*), and F13–F24 have never been added. A 2024 forum report shows the exact failure —
+attempting to bind F14 *"reverts to the previous state as if I had cancelled the rebind"*, while F11
+binds fine. PoE cannot bind them, so it cannot act on them, so **no suppression is needed**, and unlike
+a merely-unbound key the user cannot later create a conflict. §2.4.
 
-**F13–F24 are unverified** — one low-quality secondary claim, nothing official. Probe item, not a
-finding.
+**Do not use the numpad.** With NumLock **off**, numpad keys emit navigation VKs (`VK_END`, `VK_DOWN`…) —
+and those *are* bindable per 0.10.7. Trigger behaviour would depend on NumLock state. §2.4.
 
-**Whether `WH_KEYBOARD_LL` suppression reaches PoE is unknown**, and issue #13's mouse result is a
-standing warning against assuming symmetry. Do not design anything that needs the answer. §2.4.
+**Correction to the community keybind lists that circulate:** `F2 F3 F4` are **bound** by default
+(drone/Zana slots), as are `F`, `L`, and `Tab`. Free by default: `F5 F6 F7 F9 F10 F11 F12`, `J`, digits
+`8 9 0` — but only F13–F24 are free *structurally*.
+
+**`WH_KEYBOARD_LL` suppression DOES reach PoE — resolved, and it does not generalise from issue #13.**
+Verified in `Lailloken/Exile-UI`, which blocks **Tab** (a PoE default bind) with a non-`~` hotkey and must
+`SendInput` it back for the game's map overlay to fire at all. Keyboard `WM_INPUT` *is* gated by
+`WH_KEYBOARD_LL`; mouse buttons are not. **You can rely on keyboard suppression — but with an F13–F24
+trigger you never need it.** §2.4.
+
+**Two hazards worth designing against** (§2.4b): **Windows Sticky Keys silently breaks Shift-hold
+repeat-apply**, degrading to one-apply-per-click without announcing itself — and an accessibility-motivated
+tool is disproportionately likely to meet it. And **PoE has no "unbind" button**, so "just unbind that
+key" is not usable advice.
 
 ---
 
@@ -566,42 +581,142 @@ Two findings the map wanted:
 
 The three "unknown" rows are all cheap to test in one sitting and all matter for a fail-closed gate.
 
-## 2.4 Which keys PoE ignores — a trigger key needs no suppression
+## 2.4 Which keys PoE ignores — and the suppression question, now answered
 
-**The best-evidenced answer: the numpad operator keys `Num +`, `Num -`, `Num *`, `Num /` cannot be
-bound in Path of Exile 1 at all.** That is precisely what a trigger key wants — PoE will not act on
-them, so nothing needs suppressing.
+### PoE's bindable keys are a hand-maintained allowlist — (A)
 
-[Bug report 3295638](https://www.pathofexile.com/forum/view-thread/3295638), 2022-08-20, Draky#4017 —
-**(d)**:
+This is the mechanism that makes the whole question answerable. GGG has extended the set of bindable
+keys piecemeal, by patch. [**0.10.7 patch notes**](https://www.pathofexile.com/forum/view-thread/340794)
+(official GGG patch notes, forum), verbatim:
 
-> Some numpad keys are not usable for keybinds while others are. The ones I have noticed are num +,
-> num -, num * and num /
+> More keys are now available to be bound: insert, home, end, delete and the arrow keys.
 
-and the reporter notes *"this topic has been brought up since 2011"*. No GGG reply; archived
-unresolved. **Four years of "it's still broken" is unusually good evidence that the game genuinely
-does not see these keys.** Confidence: moderate-high, trivially confirmable on device in ten seconds.
+A full-text search of every PoE patch note for that phrasing returns only 0.10.2 and 0.10.7. Corroborated
+from GGG's own mouth by **Rory (GGG), 2011-11-23** — **(B)**: *"We definitely have plans to make more
+keys bindable — It's a pain on foreign language keyboards!"*
 
-**F13–F24: unverified, do not assume.** I found one secondary claim that PoE recognises F13–F24 when
-entered manually, from a low-quality aggregator, and nothing on the official forums. If they *are*
-bindable they are also *ignorable* (just leave them unbound), which is nearly as good — but "PoE
-ignores them" is not established. **Treat F13–F24 as a probe item, not a finding.**
+So "which keys does PoE ignore" is really "which keys are absent from the allowlist", and absence is
+durable — GGG has extended it twice in fourteen years.
 
-**Other numpad keys and unbound main-row keys:** bindable, therefore only free by convention. Note
-that `AwakenedAlterationSpam` picks `=` and `-` as its start/stop hotkeys — main-row keys that are
-unbound by default but perfectly bindable, so they are safe only for a user who has not bound them.
+### F13–F24 are **not** bindable — upgraded to a finding
 
-**Keyboard suppression via `WH_KEYBOARD_LL` — genuinely unknown, and do not assume symmetry with the
-mouse result.** I found no reliable evidence either way. The AHK ecosystem's PoE scripts do rely on
-default (blocking) hotkeys and `#InstallKeybdHook`, which suggests keyboard suppression *does* reach
-PoE, but I could not find a clean primary report and the mouse probe in issue #13 is a standing warning
-against reasoning by analogy: PoE reads mouse buttons via Raw Input, and if it also registers a Raw
-Input device for the keyboard, low-level keyboard suppression would fail identically. **Evidence class:
-none. This is a probe item.**
+**Correction to an earlier draft of this document, which rated this "unverified — do not assume".** The
+allowlist mechanism plus a specific documented failure mode makes this **high confidence**:
 
-**The design consequence is that you should not need the answer.** If the trigger is a key PoE cannot
-bind (numpad operators), suppression is moot. Designing around a key that needs no suppression removes
-an entire class of soft-lock risk — which is the same lesson issue #13 already paid for once.
+- F13–F24 never appear in any patch note adding bindable keys.
+- Three independent forum reports (2020, 2022, 2024), no GGG reply. The clearest is
+  seigfried_#2264, [2024-01-22](https://www.pathofexile.com/forum/view-thread/3484039) — **(d)**: *"I
+  want to rebind bound skill 2 to F14... but nothing happens. **It reverts to the previous state as if I
+  had cancelled the rebind.**"* — and the same poster notes F11 binds fine, which is the control case.
+
+**F13–F24 are the best trigger keys.** PoE cannot bind them, so it cannot act on them, so nothing needs
+suppressing — and unlike an unbound-but-bindable key, the user cannot accidentally make it conflict later.
+
+### ⚠️ Numpad is a **bad** choice — correction
+
+An earlier draft of this document recommended `Num +` / `Num -` / `Num *` / `Num /`. **That
+recommendation is withdrawn.** Two problems:
+
+1. **Numpad *digits* are bindable** (reports from 2011 and 2021), so only the operators are free —
+   the [2022 bug report 3295638](https://www.pathofexile.com/forum/view-thread/3295638) is specifically
+   about `Num +`, `Num -`, `Num *`, `Num /`, which remains good evidence for those four.
+2. **The NumLock trap, which is disqualifying.** With **NumLock off**, numpad keys emit *navigation*
+   virtual-key codes — `VK_END`, `VK_DOWN`, `VK_HOME`, etc. And those are exactly the keys 0.10.7 made
+   **bindable**. So a numpad trigger's behaviour depends on NumLock state, and in one of the two states
+   it may hit a bound game action. **Do not use a numpad key as the trigger.**
+
+### Corrected free-by-default key set
+
+Derived from a real `production_Config.ini`, which **overrides the 2019-era community keybind lists**
+that circulate (PoELab, defkey) — those lists are wrong on several keys:
+
+| Commonly listed as free | Actually |
+|---|---|
+| F2, F3, F4 | **BOUND** by default — `drone_1/2/3`, `zana_influence_skill_1/2/3` (VK 113/114/115) |
+| `F` | **BOUND** — `enable_key_pickup=70` |
+| `L` | **BOUND** — `open_ladder_panel=76` |
+| Tab | **BOUND** — `open_map=9` |
+
+**Free by default: `F5 F6 F7 F9 F10 F11 F12`, letter `J`, digits `8 9 0`, and all of F13–F24.** Only the
+F13–F24 group is free *structurally*; the rest are free only by convention and the user can bind them.
+
+Note `AwakenedAlterationSpam` picks `=` and `-` — bindable main-row keys, safe only for a user who has
+not bound them.
+
+### 🟢 `WH_KEYBOARD_LL` suppression **does** reach PoE — and does not generalise from the mouse result
+
+**This resolves what an earlier draft listed as unknown, and it is the most important correction in the
+mechanics half.** Verified in the source of
+[`Lailloken/Exile-UI`](https://github.com/Lailloken/Exile-UI) (~1.3k★, AHK v1, PoE 1+2, actively
+maintained), read directly — **(c)**, high confidence:
+
+- `Exile UI.ahk:4-7` installs the hooks: `#InstallKeybdHook`, `#InstallMouseHook`, `#UseHook`.
+- `modules/hotkeys.ahk:60-61` registers **Tab** as a *blocking* hotkey scoped to the PoE window (no `~`
+  prefix). **Tab is a PoE default bind** (`open_map=9`), so this is a suppression test against a live
+  game action, not a free key.
+- `modules/hotkeys.ahk:314-320` is the proof — the tool must **manually re-inject Tab** for PoE's native
+  map overlay to work at all:
+
+```ahk
+If !settings.hotkeys.tabblock && !active
+{
+    SendInput, % "{" vars.hotkeys.tab " DOWN}"   ; hand Tab back to PoE
+    KeyWait,   % vars.hotkeys.tab
+    SendInput, % "{" vars.hotkeys.tab " UP}"
+}
+Else KeyWait, % vars.hotkeys.tab                 ; tabblock=1 → swallow it; PoE never sees Tab
+```
+
+Three things make this dispositive: the re-injection is only necessary *because* the hook suppressed the
+key; line 50 of the same file registers a different hotkey **with** `~` (pass-through) while lines
+42/45/46/61 omit it, so the author distinguishes blocking from non-blocking deliberately; and there is a
+shipped user-facing setting literally named **`"block tab-key's native function"`**
+(`hotkeys.ahk:31`) — a no-op toggle would not survive in a tool this widely used.
+
+Corroborated generally by a published repro: Headkaze,
+[GameDev.net, 2009-10-14](https://gamedev.net/forums/topic/550264-dinput-and-global-key-hooks-vistawin7/)
+— *"WH_KEYBOARD_LL does indeed block Raw Input / WM_INPUT messages."*
+
+> **Architectural takeaway: issue #13's mouse result does not generalise to the keyboard.** Keyboard
+> `WM_INPUT` *is* gated by `WH_KEYBOARD_LL`; mouse buttons are not. Keyboard suppression can be relied
+> on.
+
+**But you should still not need it.** Pick F13–F24 and the question never arises. Designing around a key
+that needs no suppression removes an entire class of soft-lock risk — the same lesson issue #13 already
+paid for once. Still genuinely open: **which API PoE uses to read the keyboard** (`GetRawInputData` vs
+`GetAsyncKeyState` vs window messages). No disassembly, GGG statement, or Wine/Proton report exists. The
+*behaviour* is settled even though the mechanism is not.
+
+**Related, and useful:** PoE **gates input on being the foreground window** — OwnedCore moderator
+Sychotix, 2022-02-08 — **(d)**: *"PoE has internal checks to see if it is in the foreground before
+processing the input."* `ControlSend`/`PostMessage` reportedly reach PoE's **chat box** but not gameplay
+actions. So there is no background-injection path; the game must be focused, which matters for a
+second-monitor app design.
+
+## 2.4b ⚠️ Two hazards specific to this tool
+
+**1. Windows Sticky Keys silently breaks the Shift-hold repeat-apply.** This is the most relevant hazard
+found, because poe-graft is being built partly as an ergonomic aid and **an accessibility tool is
+disproportionately likely to run on a machine with Sticky Keys enabled.**
+[Thread 3189536](https://www.pathofexile.com/forum/view-thread/3189536), 2021-10-23,
+Awkwerdness#6882 — **(d)**:
+
+> Whenever I try to shift click to use multiple of a currency, it removes the currency from my cursor
+> after one click.
+
+Root cause was **Windows Sticky Keys** eating the Shift state; the fix was confirmed by the reporter. The
+failure mode is *silent degradation to one-apply-per-click* — i.e. exactly the non-Shift baseline — so it
+will not announce itself, it will just make every roll cost a re-arm. **Detect this and warn.**
+
+**2. PoE 1 has no "unbind" button, so "just unbind that key" is not advice you can give.**
+[Thread 3817682](https://www.pathofexile.com/forum/view-thread/3817682), 2025-07-23 — **(d)**: binding
+action B to a key silently unbinds action A, and PoE **auto-restores A** if B is later moved away. The
+only durable workaround is deliberate bind-displacement (Sarno#0493: bind Weapon Swap to X, then bind
+Pantheon Panel to X, leaving Weapon Swap unbound). **Consequence: the trigger key must be one PoE never
+binds** — which is F13–F24, and reinforces why the numpad and free-by-convention keys are worse choices.
+
+Minor: **Print Screen cannot be bound** — **(d)**. **CapsLock appears free** — `Exile-UI` hard-defaults
+its primary hotkey to it — **(c)**.
 
 ## 2.5 Right-click on a hit, and picking the item up
 
@@ -699,10 +814,10 @@ To that repo's credit, its own conclusion is honest and matches mine:
 5. **Confirm the stash-tab difference**: arm from a currency stash tab with *no* alterations in
    inventory, hold Shift, click. Does it apply at all? Does it persist? — §2.2. This decides whether
    the app can ever avoid cursor movement in the user's real workflow.
-6. **Confirm `Num +` / `Num -` / `Num *` / `Num /` are unbindable** in the game's Input options — §2.4.
-   Ten seconds. If true, pick one as the trigger and the whole suppression question disappears.
-7. **Test F13–F24**: does the Input options screen accept them? Does the game respond to them when
-   unbound? — §2.4.
+6. **Confirm F13–F24 are rejected by the Input options screen** (the binding should revert as if
+   cancelled) — §2.4. Ten seconds, and it validates the recommended trigger key.
+7. **Confirm Sticky Keys is off** on the gaming PC, and check what Shift-hold does with it on — §2.4b.
+   This is the one hazard that silently degrades the whole design.
 8. **Does `Ctrl+C` while armed disarm?** Strongly implied not to, but confirm directly rather than
    inferring it from a third party's script working — §2.3.
 9. **Does losing window focus, or moving the cursor out of the inventory panel, disarm?** — §2.3. Both
@@ -783,6 +898,14 @@ which is how they were retrieved:
 - Thread 2260861, 2018-12-09, *"Holding 'Shift' for Repeated Currency Use Always Uses Inventory"* — https://www.pathofexile.com/forum/view-thread/2260861/page/1
 - Thread 3295638, 2022-08-20, *"Some numpad keys not usable for keybinds"* — https://www.pathofexile.com/forum/view-thread/3295638
 - Thread 2629014, *"Advanced Mod Description UI option doesn't work if you change the key to Ctrl"* — https://www.pathofexile.com/forum/view-thread/2629014/page/1
+- Thread 3484039, 2024-01-22, F14 rebind reverts as if cancelled — https://www.pathofexile.com/forum/view-thread/3484039
+- Thread 3189536, 2021-10-23, Shift-click repeat-apply broken by Windows Sticky Keys — https://www.pathofexile.com/forum/view-thread/3189536
+- Thread 3817682, 2025-07-23, PoE has no unbind button; binds auto-restore — https://www.pathofexile.com/forum/view-thread/3817682
+
+**Keybind allowlist (official GGG patch notes — (A))**
+
+- 0.10.7 patch notes, *"More keys are now available to be bound: insert, home, end, delete and the arrow
+  keys"* — https://www.pathofexile.com/forum/view-thread/340794
 
 **Open-source tool code read for this document**
 
@@ -792,6 +915,10 @@ which is how they were retrieved:
   no Shift, right-click re-arm + left-click per roll, `Ctrl+Alt+C` read. Files that matter:
   `lib/Stash.ahk` (`CurrencyItem.Use`), `lib/Util.ahk` (`MClick`), `lib/Core.ahk`
   (`GetItemDetailedText`), `lib/AlterationCrafting.ahk` (`ExecuteLoop`)
+- `Lailloken/Exile-UI` — https://github.com/Lailloken/Exile-UI — read for the keyboard-suppression
+  question only. `Exile UI.ahk:4-7` (hook install), `modules/hotkeys.ahk:31` (`"block tab-key's native
+  function"` setting), `:40-61` (blocking vs `~` pass-through registration), `:314-320` (manual Tab
+  re-injection — the proof that suppression worked)
 
 **The replicated tool**
 
