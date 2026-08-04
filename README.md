@@ -61,9 +61,11 @@ minimal — the real diagnostics surface is
 
 | | Path |
 | --- | --- |
-| Log (Windows) | `%APPDATA%\com.furizaa.poegraft\logs\poe-graft.log` |
+| Log (Windows) | `%LOCALAPPDATA%\com.furizaa.poegraft\logs\poe-graft.log` |
 | Log (macOS) | `~/Library/Logs/com.furizaa.poegraft/poe-graft.log` |
-| Install (Windows) | per-user, no UAC — NSIS `currentUser` |
+| Install (Windows) | `%LOCALAPPDATA%\poe-graft` — per-user, no UAC (NSIS `currentUser`) |
+
+Both Windows paths are verified on the gaming PC, not inferred.
 
 ## Compliance
 

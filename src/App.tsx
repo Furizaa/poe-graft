@@ -141,6 +141,11 @@ export default function App() {
       <header>
         <h1>poe-graft</h1>
         <span className="version">{build ? `v${build.version}` : "…"}</span>
+        {build && (
+          <span className="muted small">
+            {build.runNumber ? `run #${build.runNumber}` : "local build"}
+          </span>
+        )}
       </header>
 
       <section>
