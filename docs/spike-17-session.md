@@ -58,21 +58,40 @@ learned rather than guessed.
 1. **Learn a key**, then press the key you want to use. Pick something Path of Exile has no
    binding for and that you will not hit by accident — `Scroll Lock`, `Pause`, `Insert`, a numpad
    key, `` ` ``.
-2. Press **Use \<key\>**. The `trigger` badge should now name it.
+2. Press **Use this key**. The `trigger` badge should now name it.
 
-Key codes are only recorded while *Learn a key* is on.
+**Click away from the poe-graft window before pressing the key.** On this machine the hook only
+reports keys while the app itself is *not* focused, so learning a key with the panel in front will
+appear to do nothing. Not understood yet, and it does not affect real use — the game has focus then
+— but it makes learning confusing. The **Or set the code directly** field sidesteps it entirely.
+
+Key codes are only recorded while *Learn a key* is on; the `keystrokes seen` counter is a count
+only and always runs.
 
 ## 5 · Set the bounds for a first, cheap run
 
 | Field | First run | Why |
 | --- | --- | --- |
-| Settle delay | `40` ms | Between the click and `Ctrl+C`, so the copy reads the *new* roll |
-| Read timeout | `500` ms | AutoHotkey measured 15–32 ms, so this is very generous |
+| Settle delay | **`120`** ms | Between the click and `Ctrl+C`. **40 ms was measured too short** — see below |
+| Read timeout | `500` ms | Our own code reads in 1–5 ms, so this is very generous |
 | Drift tolerance | `24` px | How far the cursor may wander off the jewel before the app refuses |
 | **Roll cap** | **`5`** | Deliberately tiny. Prove the cycle works before spending real currency |
+| Stop after | `5` | Bad reads in a row before it disarms itself |
 
-Leave **Suppress the trigger key** *off* for now, **Require Path of Exile in the foreground** *on*,
-and **Copy mode B** *off*.
+**Turn Suppress the trigger key ON.** Two reasons: it stops the game seeing a stream of trigger
+presses at all, which removes a variable from the timing problem below, and it answers question 5
+as a side effect. Keep **Require Path of Exile in the foreground** *on* and **Copy mode B** *off*.
+
+### On the settle delay
+
+The first on-device session ran at 40 ms and lost **~40% of reads to timeouts** — the clipboard
+never changed at all within 500 ms, meaning the injected `Ctrl+C` produced nothing rather than
+arriving late. The successful reads in the same run came back in **1–5 ms**, so the copy itself is
+not slow; something about firing `Ctrl+C` 40 ms after the click makes the game drop it.
+
+Raising the delay is the cheapest experiment and the first thing to try. Work upward — 120, then
+200 — and watch the timeout rate. Every roll now logs what the clipboard actually held when a read
+fails, so the log will say whether the game never copied or whether the app misread it.
 
 ## 6 · Set up in game
 
@@ -107,8 +126,10 @@ If that all holds, raise the **Roll cap** to `50`, press **Arm** again, and do a
 
 | What you see | What it means |
 | --- | --- |
-| `IDENTICAL to the previous roll`, repeatedly | The settle delay is too short — the copy is reading the item as it was *before* the click. Raise it to 80, then 120 |
-| `TIMED OUT`, repeatedly | Nothing is being copied. Usually the jewel is no longer hovered. The app disarms itself after three in a row |
+| `IDENTICAL to the previous roll`, repeatedly | The settle delay is too short — the copy is reading the item as it was *before* the click. Raise it |
+| `TIMED OUT` with `our sentinel, untouched` | The game never copied. Raise the settle delay. This was the dominant failure at 40 ms |
+| `TIMED OUT` with `item text` in the clipboard | The game *did* copy and the app misread it. Report this — it means the freshness check is wrong, which is a different and more interesting bug |
+| `NO TEXT after …` | The clipboard changed but nothing readable arrived. Usually harmless — the game empties the clipboard before filling it — and the app now retries for 80 ms before giving up |
 | **`spike DISARMED ITSELF`** | Three unreadable reads. Most likely the orb left the cursor and a click picked the jewel *up*. Check the cursor, re-arm, and note it |
 | `refused — Shift is not held` | You let go. The app refuses rather than clicking, because a plain click would pick the jewel up |
 | `refused — cursor … px off the captured` | You drifted off the jewel. Re-hover, or press **Forget position** to recapture |

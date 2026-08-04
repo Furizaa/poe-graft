@@ -46,6 +46,9 @@ pub struct SpikeStatusDto {
     pub copy_delay_ms: u32,
     pub read_timeout_ms: u32,
     pub tolerance_px: i32,
+    /// How many unreadable reads in a row disarm the spike. Was a hard-coded 3, which fired
+    /// constantly on a jewel that was perfectly fine.
+    pub bad_limit: u32,
     /// Physical trigger presses seen while armed, across all arming sessions. Compare against
     /// `rolls`: a growing gap is fail-closed sequencing refusing to queue work.
     pub presses: u32,
@@ -97,6 +100,7 @@ pub struct SpikeConfigDto {
     pub read_timeout_ms: u32,
     pub tolerance_px: i32,
     pub max_rolls: u32,
+    pub bad_limit: u32,
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -129,6 +133,7 @@ mod imp {
             copy_delay_ms: status.copy_delay_ms,
             read_timeout_ms: status.read_timeout_ms,
             tolerance_px: status.tolerance_px,
+            bad_limit: status.bad_limit,
             presses: status.presses,
             shift_down: status.shift_down,
             foreground: status.foreground,
@@ -175,6 +180,7 @@ mod imp {
             config.read_timeout_ms,
             config.tolerance_px,
             config.max_rolls,
+            config.bad_limit,
         );
     }
 

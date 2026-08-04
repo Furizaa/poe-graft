@@ -135,13 +135,24 @@ static CONSECUTIVE_BAD: AtomicU32 = AtomicU32::new(0);
 
 /// How many unreadable rolls in a row before the spike disarms itself.
 ///
-/// A read that times out or comes back stale means the app has **no idea** what state the game is
-/// in, and injecting more clicks blind is the runaway case
+/// A read that tells us nothing means the app has **no idea** what state the game is in, and
+/// injecting more clicks blind is the runaway case
 /// [The safety contract](https://github.com/Furizaa/poe-graft/issues/8) is about. It is also the
 /// signature of the specific accident that matters here: if Shift-persist fails, the orb leaves
 /// the cursor and the next click picks the jewel *up* — after which nothing is hovered, `Ctrl+C`
-/// copies nothing, and every read times out. Stopping after three bounds that to three clicks.
-const BAD_LIMIT: u32 = 3;
+/// copies nothing, and every read times out.
+///
+/// **Configurable, and no longer three.** The first on-device session lost ~40% of reads to a
+/// cause unrelated to anything being wrong with the item, so a limit of three fired constantly on
+/// a jewel that was perfectly fine. Too twitchy a guard gets raised or ignored, which is worse
+/// than a slightly looser one that is trusted. Five is the default; the panel can change it.
+static BAD_LIMIT: AtomicU32 = AtomicU32::new(5);
+
+/// How long to keep retrying the read after the clipboard sequence number moves.
+///
+/// `EmptyClipboard` bumps the sequence number and Path of Exile calls it *before*
+/// `SetClipboardData`, so the text is not necessarily there the instant the number changes.
+const READ_SETTLE_MS: u64 = 80;
 /// Makes each poison string unique, so a stale read can never look like a fresh one.
 static SENTINEL_SEQ: AtomicU32 = AtomicU32::new(0);
 
@@ -226,6 +237,7 @@ pub struct SpikeStatus {
     pub copy_delay_ms: u32,
     pub read_timeout_ms: u32,
     pub tolerance_px: i32,
+    pub bad_limit: u32,
     pub presses: u32,
     pub shift_down: bool,
     pub foreground: String,
@@ -468,6 +480,15 @@ fn on_trigger(dropped: u32) {
         ));
     }
 
+    // Re-check, because the press that got us here was counted while armed but is only being
+    // served now. Without this, a self-disarm still lets one already-counted press through and
+    // injects a click after the app has announced it stopped — which is exactly what happened at
+    // 15:42:26 in the first on-device session: `DISARMED ITSELF`, then roll 4 fired 51 ms later.
+    if !ARMED.load(Ordering::Acquire) {
+        log("spike: press ignored — no longer armed");
+        return;
+    }
+
     let foreground = foreground_window();
 
     // The first press after arming captures where the item is and injects nothing. This is the
@@ -596,8 +617,14 @@ fn run_cycle(roll: u32, shift_down: bool) {
     let copy_ms = copy_started.elapsed().as_millis() as u32;
 
     if timed_out {
+        // Which of the two possible faults is this? Either the game never copied — our sentinel
+        // is still sitting there untouched — or it did and the sequence-number comparison is
+        // wrong, in which case the item text is right there in the clipboard. One read settles it,
+        // and without it a timeout is just a shrug.
         log(&format!(
-            "=== roll {roll}: TIMEOUT after {copy_ms}ms (delay {delay}ms) ==="
+            "=== roll {roll}: TIMEOUT after {copy_ms}ms (delay {delay}ms, seq {poisoned_seq} \
+             never moved, clipboard now holds {}) ===",
+            classify_clipboard(&sentinel)
         ));
         note_bad_read();
         store_roll(RollRecord {
@@ -614,31 +641,69 @@ fn run_cycle(roll: u32, shift_down: bool) {
         return;
     }
 
-    let text = match clipboard_win::get_clipboard::<String, _>(clipboard_win::formats::Unicode) {
-        Ok(text) => text,
-        Err(err) => {
-            log(&format!("=== roll {roll}: READ FAILED after {copy_ms}ms: {err} ==="));
-            note_bad_read();
-            return;
+    // The sequence number moved, but that does **not** mean the text is there yet. `EmptyClipboard`
+    // bumps the counter, and Path of Exile calls it *before* `SetClipboardData` — so reading the
+    // instant the number changes can legitimately find an empty clipboard. Roll 14 of the first
+    // on-device session was exactly this: `OSError(1168): Element not found`, 2 ms after the bump.
+    //
+    // So retry the read for a short window. This injects nothing and presses nothing: it is purely
+    // a read, so it stays inside the one-click-one-copy rule.
+    let mut text = String::new();
+    let settle_deadline = Instant::now() + Duration::from_millis(READ_SETTLE_MS);
+    let mut last_read_error = String::new();
+    loop {
+        match clipboard_win::get_clipboard::<String, _>(clipboard_win::formats::Unicode) {
+            Ok(candidate) if !candidate.is_empty() && candidate != sentinel => {
+                text = candidate;
+                break;
+            }
+            Ok(_) => {}
+            Err(err) => last_read_error = err.to_string(),
         }
-    };
+        if Instant::now() >= settle_deadline {
+            break;
+        }
+        std::hint::spin_loop();
+    }
+
+    if text.is_empty() {
+        log(&format!(
+            "=== roll {roll}: NO TEXT after {copy_ms}ms — the sequence number moved but nothing \
+             readable arrived within {READ_SETTLE_MS}ms. Clipboard holds {}{} ===",
+            classify_clipboard(&sentinel),
+            if last_read_error.is_empty() {
+                String::new()
+            } else {
+                format!(", last error: {last_read_error}")
+            }
+        ));
+        note_bad_read();
+        store_roll(RollRecord {
+            roll,
+            copy_ms,
+            cycle_ms: cycle_started.elapsed().as_millis() as u32,
+            timed_out: false,
+            stale: true,
+            identical_to_previous: false,
+            shift_down,
+            chars: 0,
+            summary: String::new(),
+        });
+        return;
+    }
+
     let cycle_ms = cycle_started.elapsed().as_millis() as u32;
 
-    let stale = text == sentinel;
+    // Reaching here means real text that is not the sentinel, so the read is good by construction
+    // and the run of bad reads is broken.
+    CONSECUTIVE_BAD.store(0, Ordering::Relaxed);
+
     let mut previous = lock(&PREV_TEXT);
     let identical_to_previous = previous.as_deref() == Some(text.as_str());
     *previous = Some(text.clone());
     drop(previous);
 
-    if stale {
-        note_bad_read();
-    } else {
-        CONSECUTIVE_BAD.store(0, Ordering::Relaxed);
-    }
-
-    let outcome = if stale {
-        "STALE (clipboard changed but still held the sentinel)"
-    } else if identical_to_previous {
+    let outcome = if identical_to_previous {
         "OK but IDENTICAL to the previous roll"
     } else {
         "OK"
@@ -657,7 +722,7 @@ fn run_cycle(roll: u32, shift_down: bool) {
         copy_ms,
         cycle_ms,
         timed_out: false,
-        stale,
+        stale: false,
         identical_to_previous,
         shift_down,
         chars: text.chars().count(),
@@ -665,10 +730,26 @@ fn run_cycle(roll: u32, shift_down: bool) {
     });
 }
 
+/// What is actually in the clipboard right now, in words. The decisive diagnostic when a read
+/// goes wrong: "still our sentinel" and "item text" mean completely different faults.
+fn classify_clipboard(sentinel: &str) -> String {
+    match clipboard_win::get_clipboard::<String, _>(clipboard_win::formats::Unicode) {
+        Ok(text) if text == sentinel => "our sentinel, untouched — the game never copied".into(),
+        Ok(text) if text.is_empty() => "no text at all".into(),
+        Ok(text) => format!(
+            "{} chars of something else — {:?}…",
+            text.chars().count(),
+            text.chars().take(40).collect::<String>()
+        ),
+        Err(err) => format!("nothing readable ({err})"),
+    }
+}
+
 /// Count an unreadable roll, and disarm if they are stacking up. See [`BAD_LIMIT`].
 fn note_bad_read() {
     let bad = CONSECUTIVE_BAD.fetch_add(1, Ordering::Relaxed) + 1;
-    if bad >= BAD_LIMIT {
+    let limit = BAD_LIMIT.load(Ordering::Relaxed);
+    if bad >= limit {
         ARMED.store(false, Ordering::Relaxed);
         log(&format!(
             "──── spike DISARMED ITSELF: {bad} reads in a row told us nothing. The app cannot see \
@@ -939,19 +1020,28 @@ pub fn set_guard_foreground(on: bool) {
 }
 
 /// Timings and bounds. Each is clamped to something that cannot brick the session.
-pub fn set_timing(copy_delay_ms: u32, read_timeout_ms: u32, tolerance_px: i32, max_rolls: u32) {
+pub fn set_timing(
+    copy_delay_ms: u32,
+    read_timeout_ms: u32,
+    tolerance_px: i32,
+    max_rolls: u32,
+    bad_limit: u32,
+) {
     let copy_delay_ms = copy_delay_ms.min(2_000);
     let read_timeout_ms = read_timeout_ms.clamp(50, 5_000);
     let tolerance_px = tolerance_px.clamp(0, 400);
     let max_rolls = max_rolls.clamp(1, 1_000);
+    // Never zero: a limit of zero would disarm on the first read and make the spike unusable.
+    let bad_limit = bad_limit.clamp(1, 100);
 
     COPY_DELAY_MS.store(copy_delay_ms, Ordering::Relaxed);
     READ_TIMEOUT_MS.store(read_timeout_ms, Ordering::Relaxed);
     TOLERANCE_PX.store(tolerance_px, Ordering::Relaxed);
     MAX_ROLLS.store(max_rolls, Ordering::Relaxed);
+    BAD_LIMIT.store(bad_limit, Ordering::Relaxed);
     log(&format!(
         "spike: delay {copy_delay_ms}ms · read timeout {read_timeout_ms}ms · \
-         tolerance {tolerance_px}px · cap {max_rolls} rolls"
+         tolerance {tolerance_px}px · cap {max_rolls} rolls · stop after {bad_limit} bad reads"
     ));
 }
 
@@ -979,12 +1069,14 @@ pub fn set_armed(on: bool) -> Result<(), PlatformError> {
         ARMED.store(true, Ordering::Release);
         log(&format!(
             "──── spike armed · trigger {} · delay {}ms · timeout {}ms · tolerance {}px · \
-             cap {} rolls · copy mode {} · suppression {} · foreground guard {} ────",
+             cap {} rolls · stop after {} bad reads · copy mode {} · suppression {} · \
+             foreground guard {} ────",
             describe_vk(TRIGGER_VK.load(Ordering::Relaxed)),
             COPY_DELAY_MS.load(Ordering::Relaxed),
             READ_TIMEOUT_MS.load(Ordering::Relaxed),
             TOLERANCE_PX.load(Ordering::Relaxed),
             MAX_ROLLS.load(Ordering::Relaxed),
+            BAD_LIMIT.load(Ordering::Relaxed),
             if RELEASE_SHIFT.load(Ordering::Relaxed) { "B" } else { "A" },
             onoff(SUPPRESS.load(Ordering::Relaxed)),
             onoff(GUARD_FOREGROUND.load(Ordering::Relaxed)),
@@ -1039,6 +1131,7 @@ pub fn status() -> SpikeStatus {
         copy_delay_ms: COPY_DELAY_MS.load(Ordering::Relaxed),
         read_timeout_ms: READ_TIMEOUT_MS.load(Ordering::Relaxed),
         tolerance_px: TOLERANCE_PX.load(Ordering::Relaxed),
+        bad_limit: BAD_LIMIT.load(Ordering::Relaxed),
         presses: PRESS_SEQ.load(Ordering::Relaxed),
         shift_down: key_down(VK_SHIFT.0 as i32),
         foreground: foreground_window(),

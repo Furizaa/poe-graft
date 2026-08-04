@@ -108,6 +108,8 @@ export type SpikeStatus = {
   copyDelayMs: number;
   readTimeoutMs: number;
   tolerancePx: number;
+  /** Unreadable reads in a row that disarm the spike. */
+  badLimit: number;
   /** Physical presses seen while armed. A growing gap against `rolls` is fail-closed sequencing. */
   presses: number;
   shiftDown: boolean;
@@ -127,6 +129,7 @@ export type SpikeConfig = {
   readTimeoutMs: number;
   tolerancePx: number;
   maxRolls: number;
+  badLimit: number;
 };
 
 export const getSpikeStatus = () => invoke<SpikeStatus>("spike_status");

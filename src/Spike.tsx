@@ -38,6 +38,7 @@ const configOf = (status: SpikeStatus): SpikeConfig => ({
   readTimeoutMs: status.readTimeoutMs,
   tolerancePx: status.tolerancePx,
   maxRolls: status.maxRolls,
+  badLimit: status.badLimit,
 });
 
 function Flag({ label, on, warn }: { label: string; on: boolean; warn?: boolean }) {
@@ -389,6 +390,12 @@ export default function Spike({ refreshLog }: { refreshLog: () => Promise<void> 
           hint="then disarms"
           value={config.maxRolls}
           onChange={(maxRolls) => void push({ ...config, maxRolls })}
+        />
+        <NumberField
+          label="Stop after"
+          hint="bad reads in a row"
+          value={config.badLimit}
+          onChange={(badLimit) => void push({ ...config, badLimit })}
         />
       </div>
       <div className="options">
