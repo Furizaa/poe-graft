@@ -1,0 +1,8 @@
+# Agent worktrees (Claude Code creates these for isolated subagent runs)
+.claude/worktrees/
+
+# Playwright MCP session artifacts (console logs, page snapshots)
+.playwright-mcp/
+
+# OS
+.DS_Store
