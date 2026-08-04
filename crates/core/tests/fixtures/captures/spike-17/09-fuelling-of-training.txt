@@ -1,0 +1,15 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Fuelling Ghastly Eye Jewel of Training
+--------
+Abyss
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Fuelling" (Tier: 3) — Life, Minion }
+Minions Regenerate 29(22-30) Life per second
+{ Suffix Modifier "of Training" (Tier: 1) — Attack, Caster, Speed, Minion }
+Minions have 5(4-6)% increased Attack Speed
+Minions have 4(4-6)% increased Cast Speed
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

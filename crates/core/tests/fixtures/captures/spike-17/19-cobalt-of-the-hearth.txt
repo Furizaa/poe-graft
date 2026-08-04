@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Cobalt Ghastly Eye Jewel of the Hearth
+--------
+Abyss
+--------
+Requirements:
+Level: 32
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Cobalt" (Tier: 3) — Mana }
++25(24-27) to maximum Mana
+{ Suffix Modifier "of the Hearth" (Tier: 1) — Elemental, Fire, Cold, Resistance }
++11(10-12)% to Fire and Cold Resistances
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

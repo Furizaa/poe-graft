@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Polar Ghastly Eye Jewel of Orchestration
+--------
+Abyss
+--------
+Requirements:
+Level: 56
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Polar" (Tier: 2) — Damage, Elemental, Cold, Minion }
+Minions deal 25(24-27) to 35(33-36) additional Cold Damage
+{ Suffix Modifier "of Orchestration" (Tier: 1) — Speed, Minion }
+Minions have 14(10-15)% increased Movement Speed
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

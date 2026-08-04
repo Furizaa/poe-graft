@@ -1,0 +1,12 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Ghastly Eye Jewel of Praxis
+--------
+Abyss
+--------
+Item Level: 83
+--------
+{ Suffix Modifier "of Praxis" (Tier: 1) — Mana }
+23(20-25)% increased Mana Regeneration Rate while moving
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

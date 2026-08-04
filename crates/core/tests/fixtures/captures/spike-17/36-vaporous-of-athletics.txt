@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Vaporous Ghastly Eye Jewel of Athletics
+--------
+Abyss
+--------
+Requirements:
+Level: 60
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Vaporous" (Tier: 2) — Defences, Evasion }
++131(101-180) to Evasion Rating
+{ Suffix Modifier "of Athletics" (Tier: 1) — Attribute }
++10(8-10) to Strength and Dexterity
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

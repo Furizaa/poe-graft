@@ -1,0 +1,18 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Vivacious Ghastly Eye Jewel of Adaption
+--------
+Abyss
+--------
+Requirements:
+Level: 64
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Vivacious" (Tier: 1) — Life }
+Regenerate 18.5(17-20) Life per second
+{ Suffix Modifier "of Adaption" (Tier: 1) — Attribute }
++8(6-8) to all Attributes
+(Attributes are Strength, Dexterity, and Intelligence)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

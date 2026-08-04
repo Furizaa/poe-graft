@@ -1,0 +1,462 @@
+[
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "TIMEOUT after 625ms",
+  "capture": null
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "TIMEOUT after 641ms",
+  "capture": null
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 31ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 32ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 15ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ },
+ {
+  "verdict": "OK in 16ms",
+  "capture": "glaciated-t3-cold-damage.txt"
+ }
+]

@@ -1,0 +1,18 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Fuelling Ghastly Eye Jewel of Retaliation
+--------
+Abyss
+--------
+Requirements:
+Level: 24
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Fuelling" (Tier: 3) — Life, Minion }
+Minions Regenerate 27(22-30) Life per second
+{ Suffix Modifier "of Retaliation" (Tier: 1) — Caster, Speed }
+9(7-10)% increased Cast Speed if a Minion has been Killed Recently
+(Recently refers to the past 4 seconds)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

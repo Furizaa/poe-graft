@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Sanguine Ghastly Eye Jewel of the Beast
+--------
+Abyss
+--------
+Requirements:
+Level: 59
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Sanguine" (Tier: 2) — Life }
++33(31-35) to maximum Life
+{ Suffix Modifier "of the Beast" (Tier: 1) — Elemental, Cold, Resistance }
++15(12-15)% to Cold Resistance
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

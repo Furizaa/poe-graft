@@ -1,0 +1,15 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Freezing Ghastly Eye Jewel
+--------
+Abyss
+--------
+Requirements:
+Level: 31
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Freezing" (Tier: 5) — Damage, Elemental, Cold, Minion }
+Minions deal 11(11-14) to 19(17-20) additional Cold Damage
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

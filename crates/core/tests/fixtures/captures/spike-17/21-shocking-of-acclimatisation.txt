@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Shocking Ghastly Eye Jewel of Acclimatisation
+--------
+Abyss
+--------
+Requirements:
+Level: 46
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Shocking" (Tier: 3) — Damage, Elemental, Lightning, Minion }
+Minions deal 1(1-4) to 45(44-50) additional Lightning Damage
+{ Suffix Modifier "of Acclimatisation" (Tier: 1) — Elemental, Resistance, Minion }
+Minions have +10(6-10)% to all Elemental Resistances
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

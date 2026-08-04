@@ -1,0 +1,15 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Razor-sharp Ghastly Eye Jewel
+--------
+Abyss
+--------
+Requirements:
+Level: 50
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Razor-sharp" (Tier: 3) — Damage, Physical, Minion }
+Minions deal 16(14-17) to 22(20-23) additional Physical Damage
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

@@ -1,0 +1,18 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Sparking Ghastly Eye Jewel of Instinct
+--------
+Abyss
+--------
+Requirements:
+Level: 31
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Sparking" (Tier: 5) — Damage, Elemental, Lightning, Minion }
+Minions deal 1(1-2) to 31(26-32) additional Lightning Damage
+{ Suffix Modifier "of Instinct" (Tier: 1) }
++4(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently
+(Recently refers to the past 4 seconds)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

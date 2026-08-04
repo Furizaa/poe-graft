@@ -8,4 +8,15 @@ repository.workspace = true
 
 # Dependencies here are deliberately near-zero — see docs/adr/0001-stack-and-seam.md.
 # `cargo test -p poe-graft-core` is the macOS development loop and must stay fast.
+#
+# `serde` and `serde_json` are the one deliberate exception to "near-zero", and they cost nothing:
+# both are already in `Cargo.lock` via `src-tauri`, so CI compiles them either way. They read
+# `data/ghastly-eye-jewel.json`, which is the most safety-critical data in the app — hand-rolling a
+# JSON reader for it would be the wrong kind of thrift.
+#
+# Notably NOT here: `regex`. The two patterns the data file documents (`matching.value_placeholder`
+# and `matching.mod_info_line`) are scanned by hand in `text.rs`, which is a few dozen lines and is
+# held to the documented patterns by tests over every real capture.
 [dependencies]
+serde = { workspace = true }
+serde_json = "1"

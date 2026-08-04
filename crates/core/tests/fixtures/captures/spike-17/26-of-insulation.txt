@@ -1,0 +1,12 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Ghastly Eye Jewel of Insulation
+--------
+Abyss
+--------
+Item Level: 83
+--------
+{ Suffix Modifier "of Insulation" (Tier: 1) — Elemental, Fire, Lightning, Resistance }
++12(10-12)% to Fire and Lightning Resistances
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

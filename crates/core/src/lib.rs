@@ -4,11 +4,18 @@
 //! compiler rather than by convention (see `docs/adr/0001-stack-and-seam.md`). Everything
 //! the app needs from the operating system arrives through [`Platform`].
 //!
-//! At bootstrap this crate holds only the seam itself. The roll cycle, the item parser, the
-//! hit test and the mod model all land here later; their names and states are decided by
-//! [Design the roll cycle and the hit latch](https://github.com/Furizaa/poe-graft/issues/7),
-//! so nothing here should be read as pre-empting them.
+//! The vocabulary is [`CONTEXT.md`](../../../CONTEXT.md) and the cycle it serves is
+//! [ADR 0002](../../../docs/adr/0002-roll-cycle-and-hit-latch.md). What is here so far is the
+//! **mod pool**, the **Item Text parser** and the **hit test** — everything needed to turn a Read
+//! into a Verdict. The roll cycle's state machine lands next
+//! ([#20](https://github.com/Furizaa/poe-graft/issues/20)).
 
+pub mod item;
 pub mod platform;
+pub mod pool;
+pub mod verdict;
 
+pub use item::{parse_item_text, Annotation, Item, ItemIdentity, ParsedMod, Rarity, Unreadable};
 pub use platform::{Platform, PlatformError, PlatformInfo, StubPlatform};
+pub use pool::{Band, DataError, Generation, ModGroup, ModPool, ModTier};
+pub use verdict::{assess, Assessment, Diagnostic, Target, Verdict};

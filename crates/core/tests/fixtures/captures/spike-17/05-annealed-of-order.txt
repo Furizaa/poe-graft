@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Annealed Ghastly Eye Jewel of Order
+--------
+Abyss
+--------
+Requirements:
+Level: 43
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Minion }
+Minions deal 12(9-12) to 18(15-18) additional Physical Damage
+{ Suffix Modifier "of Order" (Tier: 1) — Chaos, Resistance }
++8(7-13)% to Chaos Resistance
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

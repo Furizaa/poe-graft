@@ -1,0 +1,15 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Malignant Ghastly Eye Jewel
+--------
+Abyss
+--------
+Requirements:
+Level: 52
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Malignant" (Tier: 3) — Damage, Chaos, Minion }
+Minions deal 14(14-17) to 21(20-23) additional Chaos Damage
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

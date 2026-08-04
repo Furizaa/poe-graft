@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Discharging Ghastly Eye Jewel of Fortitude
+--------
+Abyss
+--------
+Requirements:
+Level: 56
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Discharging" (Tier: 2) — Damage, Elemental, Lightning, Minion }
+Minions deal 3(1-5) to 51(51-54) additional Lightning Damage
+{ Suffix Modifier "of Fortitude" (Tier: 1) — Life, Minion }
+Minions have 8(8-12)% increased maximum Life
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

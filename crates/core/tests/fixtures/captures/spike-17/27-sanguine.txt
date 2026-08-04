@@ -1,0 +1,15 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Sanguine Ghastly Eye Jewel
+--------
+Abyss
+--------
+Requirements:
+Level: 59
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Sanguine" (Tier: 2) — Life }
++33(31-35) to maximum Life
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

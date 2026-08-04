@@ -1,0 +1,4275 @@
+{
+ "baseitem": {
+  "ItemType": "Metadata/Items/Jewels/JewelAbyssSummoner",
+  "Code": "Ghastly Eye Jewel",
+  "ModDomainsID": "13",
+  "ItemVisualIdentityID": "11962",
+  "ItemClassesID": "50",
+  "cn": "AbyssJewel",
+  "IconPath": "<img loading=\"lazy\" src=\"https://web.poecdn.com/image/Art/2DItems/Jewels/GhastlyEye.png?scale=1\" alt=\"GhastlyEye\" />",
+  "link_name": "<a class=\"whiteitem AbyssJewel\" data-hover=\"?s=Data%5CBaseItemTypes%2FMetadata%2FItems%2FJewels%2FJewelAbyssSummoner\" href=\"Ghastly_Eye_Jewel\">Ghastly Eye Jewel</a><span data-tabname=\"Ghastly Eye Jewel Modifiers\"></span>",
+  "attr": [],
+  "tags": null
+ },
+ "gen": {
+  "1": "Prefix",
+  "2": "Suffix"
+ },
+ "opt": {
+  "ModDomainsID": "13",
+  "ids": [
+   33,
+   237,
+   239
+  ],
+  "ItemClassesID": "50",
+  "ItemClassesCode": "AbyssJewel",
+  "tags": null,
+  "BaseItemName": "Ghastly Eye Jewel"
+ },
+ "normal": [
+  {
+   "Name": "Hale",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelLife"
+   ],
+   "DropChance": 3000,
+   "str": "<span class='mod-value'>+(21<span class=\"ndash\">\u2014</span>25)</span> to maximum Life",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedLife1"
+  },
+  {
+   "Name": "Healthy",
+   "Level": "35",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelLife"
+   ],
+   "DropChance": 3000,
+   "str": "<span class='mod-value'>+(26<span class=\"ndash\">\u2014</span>30)</span> to maximum Life",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedLife2"
+  },
+  {
+   "Name": "Sanguine",
+   "Level": "74",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelLife"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>+(31<span class=\"ndash\">\u2014</span>35)</span> to maximum Life",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedLife3"
+  },
+  {
+   "Name": "Stalwart",
+   "Level": "82",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelLife"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(36<span class=\"ndash\">\u2014</span>40)</span> to maximum Life",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedLife4"
+  },
+  {
+   "Name": "Beryl",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelMana"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>+(20<span class=\"ndash\">\u2014</span>23)</span> to maximum Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedMana1"
+  },
+  {
+   "Name": "Cobalt",
+   "Level": "40",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelMana"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>+(24<span class=\"ndash\">\u2014</span>27)</span> to maximum Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedMana2"
+  },
+  {
+   "Name": "Azure",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelMana"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>+(28<span class=\"ndash\">\u2014</span>31)</span> to maximum Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedMana3"
+  },
+  {
+   "Name": "Sapphire",
+   "Level": "83",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AbyssJewelMana"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(32<span class=\"ndash\">\u2014</span>34)</span> to maximum Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssJewelAddedMana4"
+  },
+  {
+   "Name": "of Strength",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "Strength"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(12<span class=\"ndash\">\u2014</span>16)</span> to Strength",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssStrengthJewel1_"
+  },
+  {
+   "Name": "of Dexterity",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "Dexterity"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(12<span class=\"ndash\">\u2014</span>16)</span> to Dexterity",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssDexterityJewel1_"
+  },
+  {
+   "Name": "of Intelligence",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "Intelligence"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(12<span class=\"ndash\">\u2014</span>16)</span> to Intelligence",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssIntelligenceJewel1"
+  },
+  {
+   "Name": "of Athletics",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "StrengthDexterity"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(8<span class=\"ndash\">\u2014</span>10)</span> to Strength and Dexterity",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssStrengthDexterityJewel1"
+  },
+  {
+   "Name": "of Spirit",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "StrengthIntelligence"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(8<span class=\"ndash\">\u2014</span>10)</span> to Strength and Intelligence",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssStrengthIntelligenceJewel1_"
+  },
+  {
+   "Name": "of Cunning",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "DexterityIntelligence"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>+(8<span class=\"ndash\">\u2014</span>10)</span> to Dexterity and Intelligence",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssDexterityIntelligenceJewel1"
+  },
+  {
+   "Name": "of Adaption",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AllAttributes"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+(6<span class=\"ndash\">\u2014</span>8)</span> to all Attributes",
+   "fossil_no": [
+    "attribute"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattribute\" data-tag=\"attribute\">Attribute</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAllAttributesJewel1"
+  },
+  {
+   "Name": "of the Dragon",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "FireResistance"
+   ],
+   "DropChance": 400,
+   "str": "<span class='mod-value'>+(12<span class=\"ndash\">\u2014</span>15)</span>% to Fire Resistance",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFireResistanceJewel1"
+  },
+  {
+   "Name": "of the Beast",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ColdResistance"
+   ],
+   "DropChance": 400,
+   "str": "<span class='mod-value'>+(12<span class=\"ndash\">\u2014</span>15)</span>% to Cold Resistance",
+   "fossil_no": [
+    "elemental",
+    "cold",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssColdResistanceJewel1"
+  },
+  {
+   "Name": "of Grounding",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "LightningResistance"
+   ],
+   "DropChance": 400,
+   "str": "<span class='mod-value'>+(12<span class=\"ndash\">\u2014</span>15)</span>% to Lightning Resistance",
+   "fossil_no": [
+    "elemental",
+    "lightning",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssLightningResistanceJewel1"
+  },
+  {
+   "Name": "of the Hearth",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "FireAndColdResistance"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+(10<span class=\"ndash\">\u2014</span>12)</span>% to Fire and Cold Resistances",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "cold",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFireColdResistanceJewel1"
+  },
+  {
+   "Name": "of Insulation",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "FireAndLightningResistance"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+(10<span class=\"ndash\">\u2014</span>12)</span>% to Fire and Lightning Resistances",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "lightning",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFireLightningResistanceJewel1"
+  },
+  {
+   "Name": "of Shelter",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ColdAndLightningResistance"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+(10<span class=\"ndash\">\u2014</span>12)</span>% to Cold and Lightning Resistances",
+   "fossil_no": [
+    "elemental",
+    "cold",
+    "lightning",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssColdLightningResistanceJewel1"
+  },
+  {
+   "Name": "of Resistance",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AllResistances"
+   ],
+   "DropChance": 200,
+   "str": "<span class='mod-value'>+(8<span class=\"ndash\">\u2014</span>10)</span>% to all Elemental Resistances",
+   "fossil_no": [
+    "elemental",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAllResistancesJewel1"
+  },
+  {
+   "Name": "of Order",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChaosResistance"
+   ],
+   "DropChance": 100,
+   "str": "<span class='mod-value'>+(7<span class=\"ndash\">\u2014</span>13)</span>% to Chaos Resistance",
+   "fossil_no": [
+    "chaos",
+    "resistance"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssChaosResistanceJewel1"
+  },
+  {
+   "Name": "of Enchanting",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "IncreasedCastSpeed"
+   ],
+   "DropChance": 750,
+   "str": "<span class='mod-value'>(2<span class=\"ndash\">\u2014</span>4)</span>% increased Cast Speed",
+   "fossil_no": [
+    "caster",
+    "speed"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingspeed\" data-tag=\"speed\">Speed</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssCastSpeedJewel1"
+  },
+  {
+   "Name": "Heated",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedFireDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(3<span class=\"ndash\">\u2014</span>6)</span> to <span class='mod-value'>(8<span class=\"ndash\">\u2014</span>11)</span> additional Fire Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedFireDamageJewel1"
+  },
+  {
+   "Name": "Flaming",
+   "Level": "39",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedFireDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(11<span class=\"ndash\">\u2014</span>14)</span> to <span class='mod-value'>(17<span class=\"ndash\">\u2014</span>20)</span> additional Fire Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedFireDamageJewel2"
+  },
+  {
+   "Name": "Scorching",
+   "Level": "48",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedFireDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(15<span class=\"ndash\">\u2014</span>18)</span> to <span class='mod-value'>(21<span class=\"ndash\">\u2014</span>24)</span> additional Fire Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedFireDamageJewel3"
+  },
+  {
+   "Name": "Incinerating",
+   "Level": "58",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedFireDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(20<span class=\"ndash\">\u2014</span>23)</span> to <span class='mod-value'>(26<span class=\"ndash\">\u2014</span>32)</span> additional Fire Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedFireDamageJewel4_"
+  },
+  {
+   "Name": "Blasting",
+   "Level": "70",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedFireDamage"
+   ],
+   "DropChance": 350,
+   "str": "Minions deal <span class='mod-value'>(24<span class=\"ndash\">\u2014</span>27)</span> to <span class='mod-value'>(33<span class=\"ndash\">\u2014</span>36)</span> additional Fire Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedFireDamageJewel5"
+  },
+  {
+   "Name": "Cremating",
+   "Level": "82",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedFireDamage"
+   ],
+   "DropChance": 175,
+   "str": "Minions deal <span class='mod-value'>(29<span class=\"ndash\">\u2014</span>35)</span> to <span class='mod-value'>(42<span class=\"ndash\">\u2014</span>51)</span> additional Fire Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedFireDamageJewel6_"
+  },
+  {
+   "Name": "Frosted",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedColdDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(3<span class=\"ndash\">\u2014</span>6)</span> to <span class='mod-value'>(8<span class=\"ndash\">\u2014</span>11)</span> additional Cold Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedColdDamageJewel1"
+  },
+  {
+   "Name": "Freezing",
+   "Level": "39",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedColdDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(11<span class=\"ndash\">\u2014</span>14)</span> to <span class='mod-value'>(17<span class=\"ndash\">\u2014</span>20)</span> additional Cold Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedColdDamageJewel2"
+  },
+  {
+   "Name": "Frozen",
+   "Level": "48",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedColdDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(15<span class=\"ndash\">\u2014</span>18)</span> to <span class='mod-value'>(21<span class=\"ndash\">\u2014</span>24)</span> additional Cold Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedColdDamageJewel3"
+  },
+  {
+   "Name": "Glaciated",
+   "Level": "58",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedColdDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(20<span class=\"ndash\">\u2014</span>23)</span> to <span class='mod-value'>(26<span class=\"ndash\">\u2014</span>32)</span> additional Cold Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedColdDamageJewel4"
+  },
+  {
+   "Name": "Polar",
+   "Level": "70",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedColdDamage"
+   ],
+   "DropChance": 350,
+   "str": "Minions deal <span class='mod-value'>(24<span class=\"ndash\">\u2014</span>27)</span> to <span class='mod-value'>(33<span class=\"ndash\">\u2014</span>36)</span> additional Cold Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedColdDamageJewel5"
+  },
+  {
+   "Name": "Entombing",
+   "Level": "82",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedColdDamage"
+   ],
+   "DropChance": 175,
+   "str": "Minions deal <span class='mod-value'>(29<span class=\"ndash\">\u2014</span>35)</span> to <span class='mod-value'>(42<span class=\"ndash\">\u2014</span>51)</span> additional Cold Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedColdDamageJewel6_"
+  },
+  {
+   "Name": "Humming",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedLightningDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>1</span> to <span class='mod-value'>(9<span class=\"ndash\">\u2014</span>15)</span> additional Lightning Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedLightningDamageJewel1_"
+  },
+  {
+   "Name": "Sparking",
+   "Level": "39",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedLightningDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(1<span class=\"ndash\">\u2014</span>2)</span> to <span class='mod-value'>(26<span class=\"ndash\">\u2014</span>32)</span> additional Lightning Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedLightningDamageJewel2"
+  },
+  {
+   "Name": "Arcing",
+   "Level": "48",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedLightningDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(1<span class=\"ndash\">\u2014</span>3)</span> to <span class='mod-value'>(33<span class=\"ndash\">\u2014</span>39)</span> additional Lightning Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedLightningDamageJewel3_"
+  },
+  {
+   "Name": "Shocking",
+   "Level": "58",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedLightningDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(1<span class=\"ndash\">\u2014</span>4)</span> to <span class='mod-value'>(44<span class=\"ndash\">\u2014</span>50)</span> additional Lightning Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedLightningDamageJewel4"
+  },
+  {
+   "Name": "Discharging",
+   "Level": "70",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedLightningDamage"
+   ],
+   "DropChance": 350,
+   "str": "Minions deal <span class='mod-value'>(1<span class=\"ndash\">\u2014</span>5)</span> to <span class='mod-value'>(51<span class=\"ndash\">\u2014</span>54)</span> additional Lightning Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedLightningDamageJewel5"
+  },
+  {
+   "Name": "Electrocuting",
+   "Level": "82",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedLightningDamage"
+   ],
+   "DropChance": 175,
+   "str": "Minions deal <span class='mod-value'>(1<span class=\"ndash\">\u2014</span>6)</span> to <span class='mod-value'>(65<span class=\"ndash\">\u2014</span>77)</span> additional Lightning Damage",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedLightningDamageJewel6"
+  },
+  {
+   "Name": "Glinting",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedPhysicalDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(2<span class=\"ndash\">\u2014</span>3)</span> to <span class='mod-value'>(5<span class=\"ndash\">\u2014</span>8)</span> additional Physical Damage",
+   "fossil_no": [
+    "physical_damage",
+    "damage",
+    "physical",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedPhysicalDamageJewel1"
+  },
+  {
+   "Name": "Gleaming",
+   "Level": "42",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedPhysicalDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(5<span class=\"ndash\">\u2014</span>8)</span> to <span class='mod-value'>(11<span class=\"ndash\">\u2014</span>14)</span> additional Physical Damage",
+   "fossil_no": [
+    "physical_damage",
+    "damage",
+    "physical",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedPhysicalDamageJewel2"
+  },
+  {
+   "Name": "Annealed",
+   "Level": "54",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedPhysicalDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(9<span class=\"ndash\">\u2014</span>12)</span> to <span class='mod-value'>(15<span class=\"ndash\">\u2014</span>18)</span> additional Physical Damage",
+   "fossil_no": [
+    "physical_damage",
+    "damage",
+    "physical",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedPhysicalDamageJewel3"
+  },
+  {
+   "Name": "Razor-sharp",
+   "Level": "63",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedPhysicalDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(14<span class=\"ndash\">\u2014</span>17)</span> to <span class='mod-value'>(20<span class=\"ndash\">\u2014</span>23)</span> additional Physical Damage",
+   "fossil_no": [
+    "physical_damage",
+    "damage",
+    "physical",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedPhysicalDamageJewel4"
+  },
+  {
+   "Name": "Tempered",
+   "Level": "72",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedPhysicalDamage"
+   ],
+   "DropChance": 350,
+   "str": "Minions deal <span class='mod-value'>(18<span class=\"ndash\">\u2014</span>21)</span> to <span class='mod-value'>(24<span class=\"ndash\">\u2014</span>27)</span> additional Physical Damage",
+   "fossil_no": [
+    "physical_damage",
+    "damage",
+    "physical",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedPhysicalDamageJewel5"
+  },
+  {
+   "Name": "Flaring",
+   "Level": "83",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedPhysicalDamage"
+   ],
+   "DropChance": 175,
+   "str": "Minions deal <span class='mod-value'>(23<span class=\"ndash\">\u2014</span>26)</span> to <span class='mod-value'>(33<span class=\"ndash\">\u2014</span>39)</span> additional Physical Damage",
+   "fossil_no": [
+    "physical_damage",
+    "damage",
+    "physical",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedPhysicalDamageJewel6"
+  },
+  {
+   "Name": "Tainted",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedChaosDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(2<span class=\"ndash\">\u2014</span>3)</span> to <span class='mod-value'>(5<span class=\"ndash\">\u2014</span>8)</span> additional Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedChaosDamageJewel1"
+  },
+  {
+   "Name": "Clouded",
+   "Level": "42",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedChaosDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(5<span class=\"ndash\">\u2014</span>8)</span> to <span class='mod-value'>(11<span class=\"ndash\">\u2014</span>14)</span> additional Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedChaosDamageJewel2_"
+  },
+  {
+   "Name": "Darkened",
+   "Level": "54",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedChaosDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(9<span class=\"ndash\">\u2014</span>12)</span> to <span class='mod-value'>(15<span class=\"ndash\">\u2014</span>18)</span> additional Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedChaosDamageJewel3"
+  },
+  {
+   "Name": "Malignant",
+   "Level": "65",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedChaosDamage"
+   ],
+   "DropChance": 700,
+   "str": "Minions deal <span class='mod-value'>(14<span class=\"ndash\">\u2014</span>17)</span> to <span class='mod-value'>(20<span class=\"ndash\">\u2014</span>23)</span> additional Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedChaosDamageJewel4"
+  },
+  {
+   "Name": "Vile",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedChaosDamage"
+   ],
+   "DropChance": 350,
+   "str": "Minions deal <span class='mod-value'>(18<span class=\"ndash\">\u2014</span>21)</span> to <span class='mod-value'>(24<span class=\"ndash\">\u2014</span>27)</span> additional Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedChaosDamageJewel5_"
+  },
+  {
+   "Name": "Malicious",
+   "Level": "84",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionAddedChaosDamage"
+   ],
+   "DropChance": 175,
+   "str": "Minions deal <span class='mod-value'>(23<span class=\"ndash\">\u2014</span>26)</span> to <span class='mod-value'>(33<span class=\"ndash\">\u2014</span>39)</span> additional Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAddedChaosDamageJewel6"
+  },
+  {
+   "Name": "Fuelling",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionLifeRegeneration"
+   ],
+   "DropChance": 500,
+   "str": "Minions Regenerate <span class='mod-value'>(22<span class=\"ndash\">\u2014</span>30)</span> Life per second",
+   "fossil_no": [
+    "resource",
+    "life",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatMinionLifeRegenerationJewel1"
+  },
+  {
+   "Name": "Lively",
+   "Level": "30",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionLifeRegeneration"
+   ],
+   "DropChance": 500,
+   "str": "Minions Regenerate <span class='mod-value'>(32<span class=\"ndash\">\u2014</span>40)</span> Life per second",
+   "fossil_no": [
+    "resource",
+    "life",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatMinionLifeRegenerationJewel2"
+  },
+  {
+   "Name": "Exuberant",
+   "Level": "60",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionLifeRegeneration"
+   ],
+   "DropChance": 500,
+   "str": "Minions Regenerate <span class='mod-value'>(42<span class=\"ndash\">\u2014</span>60)</span> Life per second",
+   "fossil_no": [
+    "resource",
+    "life",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatMinionLifeRegenerationJewel3"
+  },
+  {
+   "Name": "Captivating",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "EnergyShieldRegeneration"
+   ],
+   "DropChance": 500,
+   "str": "Regenerate <span class='mod-value'>(9<span class=\"ndash\">\u2014</span>12)</span> Energy Shield per second",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldRegenerationJewel1"
+  },
+  {
+   "Name": "Beautiful",
+   "Level": "30",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "EnergyShieldRegeneration"
+   ],
+   "DropChance": 500,
+   "str": "Regenerate <span class='mod-value'>(13<span class=\"ndash\">\u2014</span>16)</span> Energy Shield per second",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldRegenerationJewel2"
+  },
+  {
+   "Name": "Breathtaking",
+   "Level": "60",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "EnergyShieldRegeneration"
+   ],
+   "DropChance": 500,
+   "str": "Regenerate <span class='mod-value'>(17<span class=\"ndash\">\u2014</span>20)</span> Energy Shield per second",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldRegenerationJewel3"
+  },
+  {
+   "Name": "Youthful",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "LifeRegeneration"
+   ],
+   "DropChance": 250,
+   "str": "Regenerate <span class='mod-value'>(9<span class=\"ndash\">\u2014</span>12)</span> Life per second",
+   "fossil_no": [
+    "flat_life_regen",
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatLifeRegenerationJewel1"
+  },
+  {
+   "Name": "Spirited",
+   "Level": "40",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "LifeRegeneration"
+   ],
+   "DropChance": 250,
+   "str": "Regenerate <span class='mod-value'>(13<span class=\"ndash\">\u2014</span>16)</span> Life per second",
+   "fossil_no": [
+    "flat_life_regen",
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatLifeRegenerationJewel2"
+  },
+  {
+   "Name": "Vivacious",
+   "Level": "80",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "LifeRegeneration"
+   ],
+   "DropChance": 250,
+   "str": "Regenerate <span class='mod-value'>(17<span class=\"ndash\">\u2014</span>20)</span> Life per second",
+   "fossil_no": [
+    "flat_life_regen",
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatLifeRegenerationJewel3_"
+  },
+  {
+   "Name": "Energising",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "ManaRegeneration"
+   ],
+   "DropChance": 350,
+   "str": "Regenerate <span class='mod-value'>(1.1<span class=\"ndash\">\u2014</span>2)</span> Mana per second",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatManaShieldRegenerationJewel1"
+  },
+  {
+   "Name": "Inspirational",
+   "Level": "40",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "ManaRegeneration"
+   ],
+   "DropChance": 350,
+   "str": "Regenerate <span class='mod-value'>(2.1<span class=\"ndash\">\u2014</span>3)</span> Mana per second",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatManaShieldRegenerationJewel2"
+  },
+  {
+   "Name": "Resonating",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "ManaRegeneration"
+   ],
+   "DropChance": 350,
+   "str": "Regenerate <span class='mod-value'>(3.3<span class=\"ndash\">\u2014</span>4)</span> Mana per second",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatManaShieldRegenerationJewel3"
+  },
+  {
+   "Name": "of Stifling",
+   "Level": "32",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BlindOnHit"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>(3<span class=\"ndash\">\u2014</span>4)</span>% chance to Blind on Hit with Attacks",
+   "fossil_no": [
+    "attack",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAttacksBlindOnHitChanceJewel1"
+  },
+  {
+   "Name": "of Stifling",
+   "Level": "65",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BlindOnHit"
+   ],
+   "DropChance": 400,
+   "str": "Minions have <span class='mod-value'>(5<span class=\"ndash\">\u2014</span>6)</span>% chance to Blind on Hit with Attacks",
+   "fossil_no": [
+    "attack",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAttacksBlindOnHitChanceJewel2"
+  },
+  {
+   "Name": "of Distraction",
+   "Level": "32",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "TauntOnHit"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>(3<span class=\"ndash\">\u2014</span>5)</span>% chance to Taunt on Hit with Attacks",
+   "fossil_no": [
+    "attack",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAttacksTauntOnHitChanceJewel1"
+  },
+  {
+   "Name": "of Distraction",
+   "Level": "65",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "TauntOnHit"
+   ],
+   "DropChance": 400,
+   "str": "Minions have <span class='mod-value'>(6<span class=\"ndash\">\u2014</span>8)</span>% chance to Taunt on Hit with Attacks",
+   "fossil_no": [
+    "attack",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAttacksTauntOnHitChanceJewel2_"
+  },
+  {
+   "Name": "of Delaying",
+   "Level": "32",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "HinderOnHit"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>(3<span class=\"ndash\">\u2014</span>5)</span>% chance to Hinder Enemies on Hit with Spells",
+   "fossil_no": [
+    "caster",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionSpellsHinderOnHitChanceJewel1"
+  },
+  {
+   "Name": "of Delaying",
+   "Level": "65",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "HinderOnHit"
+   ],
+   "DropChance": 400,
+   "str": "Minions have <span class='mod-value'>(6<span class=\"ndash\">\u2014</span>8)</span>% chance to Hinder Enemies on Hit with Spells",
+   "fossil_no": [
+    "caster",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionSpellsHinderOnHitChanceJewel2"
+  },
+  {
+   "Name": "of Venom",
+   "Level": "60",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AbyssMinionAilmentOnHitChance"
+   ],
+   "DropChance": 400,
+   "str": "Minions have <span class='mod-value'>(10<span class=\"ndash\">\u2014</span>15)</span>% chance to Poison Enemies on Hit",
+   "fossil_no": [
+    "poison",
+    "chaos",
+    "minion",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionPoisonOnHitChanceJewel1"
+  },
+  {
+   "Name": "of Combustion",
+   "Level": "60",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AbyssMinionAilmentOnHitChance"
+   ],
+   "DropChance": 400,
+   "str": "Minions have <span class='mod-value'>(10<span class=\"ndash\">\u2014</span>15)</span>% chance to Ignite",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "minion",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionIgniteOnHitChanceJewel1"
+  },
+  {
+   "Name": "of Bloodletting",
+   "Level": "60",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AbyssMinionAilmentOnHitChance"
+   ],
+   "DropChance": 400,
+   "str": "Minions have <span class='mod-value'>(10<span class=\"ndash\">\u2014</span>15)</span>% chance to cause Bleeding with Attacks",
+   "fossil_no": [
+    "bleed",
+    "physical",
+    "minion",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAttacksBleedOnHitChanceJewel1"
+  },
+  {
+   "Name": "of Nonflammability",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AvoidIgnite"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(31<span class=\"ndash\">\u2014</span>40)</span>% chance to Avoid being Ignited",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidIgniteJewel1_"
+  },
+  {
+   "Name": "of Fireproofing",
+   "Level": "70",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AvoidIgnite"
+   ],
+   "DropChance": 150,
+   "str": "<span class='mod-value'>(41<span class=\"ndash\">\u2014</span>50)</span>% chance to Avoid being Ignited",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidIgniteJewel2"
+  },
+  {
+   "Name": "of Warming",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToAvoidFreezeAndChill"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(31<span class=\"ndash\">\u2014</span>40)</span>% chance to Avoid being Frozen",
+   "fossil_no": [
+    "elemental",
+    "cold",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidFreezeAndChillJewel1"
+  },
+  {
+   "Name": "of Heating",
+   "Level": "70",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToAvoidFreezeAndChill"
+   ],
+   "DropChance": 150,
+   "str": "<span class='mod-value'>(41<span class=\"ndash\">\u2014</span>50)</span>% chance to Avoid being Frozen",
+   "fossil_no": [
+    "elemental",
+    "cold",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidFreezeAndChillJewel2"
+  },
+  {
+   "Name": "of Insulating",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ReducedShockChance"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(31<span class=\"ndash\">\u2014</span>40)</span>% chance to Avoid being Shocked",
+   "fossil_no": [
+    "elemental",
+    "lightning",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidShockJewel1"
+  },
+  {
+   "Name": "of the Lightning Rod",
+   "Level": "70",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ReducedShockChance"
+   ],
+   "DropChance": 150,
+   "str": "<span class='mod-value'>(41<span class=\"ndash\">\u2014</span>50)</span>% chance to Avoid being Shocked",
+   "fossil_no": [
+    "elemental",
+    "lightning",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidShockJewel2"
+  },
+  {
+   "Name": "of Tolerance",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToAvoidPoison"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(31<span class=\"ndash\">\u2014</span>40)</span>% chance to Avoid being Poisoned",
+   "fossil_no": [
+    "poison",
+    "chaos",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidPoisonJewel1__"
+  },
+  {
+   "Name": "of Immunity",
+   "Level": "70",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToAvoidPoison"
+   ],
+   "DropChance": 150,
+   "str": "<span class='mod-value'>(41<span class=\"ndash\">\u2014</span>50)</span>% chance to Avoid being Poisoned",
+   "fossil_no": [
+    "poison",
+    "chaos",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidPoisonJewel2__"
+  },
+  {
+   "Name": "of Stemming",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToAvoidBleeding"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(31<span class=\"ndash\">\u2014</span>40)</span>% chance to Avoid Bleeding",
+   "fossil_no": [
+    "bleed",
+    "physical",
+    "attack",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidBleedingJewel1"
+  },
+  {
+   "Name": "of the Tourniquet",
+   "Level": "70",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToAvoidBleeding"
+   ],
+   "DropChance": 150,
+   "str": "<span class='mod-value'>(41<span class=\"ndash\">\u2014</span>50)</span>% chance to Avoid Bleeding",
+   "fossil_no": [
+    "bleed",
+    "physical",
+    "attack",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidBleedingJewel2"
+  },
+  {
+   "Name": "of Balance",
+   "Level": "50",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AvoidStun"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(21<span class=\"ndash\">\u2014</span>24)</span>% chance to Avoid being Stunned",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidStunJewel1"
+  },
+  {
+   "Name": "of Poise",
+   "Level": "70",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AvoidStun"
+   ],
+   "DropChance": 150,
+   "str": "<span class='mod-value'>(25<span class=\"ndash\">\u2014</span>30)</span>% chance to Avoid being Stunned",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidStunJewel2"
+  },
+  {
+   "Name": "of Training",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionAttackSpeedAndCastSpeed"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>(4<span class=\"ndash\">\u2014</span>6)</span>% increased Attack Speed<br>Minions have <span class='mod-value'>(4<span class=\"ndash\">\u2014</span>6)</span>% increased Cast Speed",
+   "fossil_no": [
+    "attack",
+    "caster",
+    "speed",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingspeed\" data-tag=\"speed\">Speed</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionAttackAndCastSpeedJewel1"
+  },
+  {
+   "Name": "of Longevity",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionLifeRegeneration"
+   ],
+   "DropChance": 800,
+   "str": "Minions Regenerate <span class='mod-value'>(0.4<span class=\"ndash\">\u2014</span>0.8)</span>% of Life per second",
+   "fossil_no": [
+    "resource",
+    "life",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionLifeRegenerationJewel1"
+  },
+  {
+   "Name": "of Vampirism",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionLifeLeech"
+   ],
+   "DropChance": 800,
+   "str": "Minions Leech <span class='mod-value'>(0.3<span class=\"ndash\">\u2014</span>0.5)</span>% of Damage as Life",
+   "fossil_no": [
+    "resource",
+    "life",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionLifeLeechJewel1"
+  },
+  {
+   "Name": "of Orchestration",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionMovementSpeed"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>(10<span class=\"ndash\">\u2014</span>15)</span>% increased Movement Speed",
+   "fossil_no": [
+    "speed",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingspeed\" data-tag=\"speed\">Speed</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionMovementSpeedJewel1"
+  },
+  {
+   "Name": "of Fortitude",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionLife"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>(8<span class=\"ndash\">\u2014</span>12)</span>% increased maximum Life",
+   "fossil_no": [
+    "resource",
+    "life",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionLifeJewel1_"
+  },
+  {
+   "Name": "of Acclimatisation",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionElementalResistances"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>+(6<span class=\"ndash\">\u2014</span>10)</span>% to all Elemental Resistances",
+   "fossil_no": [
+    "elemental",
+    "resistance",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionElementalResistancesJewel1"
+  },
+  {
+   "Name": "of Righteousness",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionChaosResistance"
+   ],
+   "DropChance": 800,
+   "str": "Minions have <span class='mod-value'>+(7<span class=\"ndash\">\u2014</span>11)</span>% to Chaos Resistance",
+   "fossil_no": [
+    "chaos",
+    "resistance",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingresistance\" data-tag=\"resistance\">Resistance</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionChaosResistanceJewel1"
+  },
+  {
+   "Name": "Lacquered",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedPhysicalDamageReductionRating"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(36<span class=\"ndash\">\u2014</span>60)</span> to Armour",
+   "fossil_no": [
+    "defences",
+    "armour"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingarmour\" data-tag=\"armour\">Armour</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatArmourJewel1"
+  },
+  {
+   "Name": "Fortified",
+   "Level": "40",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedPhysicalDamageReductionRating"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(61<span class=\"ndash\">\u2014</span>100)</span> to Armour",
+   "fossil_no": [
+    "defences",
+    "armour"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingarmour\" data-tag=\"armour\">Armour</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatArmourJewel2"
+  },
+  {
+   "Name": "Carapaced",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedPhysicalDamageReductionRating"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(101<span class=\"ndash\">\u2014</span>180)</span> to Armour",
+   "fossil_no": [
+    "defences",
+    "armour"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingarmour\" data-tag=\"armour\">Armour</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatArmourJewel3"
+  },
+  {
+   "Name": "Encased",
+   "Level": "83",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedPhysicalDamageReductionRating"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>+(181<span class=\"ndash\">\u2014</span>250)</span> to Armour",
+   "fossil_no": [
+    "defences",
+    "armour"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingarmour\" data-tag=\"armour\">Armour</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatArmourJewel4__"
+  },
+  {
+   "Name": "Agile",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEvasionRating"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(36<span class=\"ndash\">\u2014</span>60)</span> to Evasion Rating",
+   "fossil_no": [
+    "defences",
+    "evasion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingevasion\" data-tag=\"evasion\">Evasion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEvasionJewel1"
+  },
+  {
+   "Name": "Fleet",
+   "Level": "40",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEvasionRating"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(61<span class=\"ndash\">\u2014</span>100)</span> to Evasion Rating",
+   "fossil_no": [
+    "defences",
+    "evasion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingevasion\" data-tag=\"evasion\">Evasion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEvasionJewel2"
+  },
+  {
+   "Name": "Vaporous",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEvasionRating"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(101<span class=\"ndash\">\u2014</span>180)</span> to Evasion Rating",
+   "fossil_no": [
+    "defences",
+    "evasion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingevasion\" data-tag=\"evasion\">Evasion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEvasionJewel3"
+  },
+  {
+   "Name": "Beclouded",
+   "Level": "83",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEvasionRating"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>+(181<span class=\"ndash\">\u2014</span>250)</span> to Evasion Rating",
+   "fossil_no": [
+    "defences",
+    "evasion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingevasion\" data-tag=\"evasion\">Evasion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEvasionJewel4_"
+  },
+  {
+   "Name": "Shining",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEnergyShield"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(21<span class=\"ndash\">\u2014</span>25)</span> to maximum Energy Shield",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldJewel1"
+  },
+  {
+   "Name": "Seething",
+   "Level": "40",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEnergyShield"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(26<span class=\"ndash\">\u2014</span>30)</span> to maximum Energy Shield",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldJewel2"
+  },
+  {
+   "Name": "Incandescent",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEnergyShield"
+   ],
+   "DropChance": 600,
+   "str": "<span class='mod-value'>+(31<span class=\"ndash\">\u2014</span>35)</span> to maximum Energy Shield",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldJewel3"
+  },
+  {
+   "Name": "Resplendent",
+   "Level": "83",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "IncreasedEnergyShield"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>+(36<span class=\"ndash\">\u2014</span>40)</span> to maximum Energy Shield",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssFlatEnergyShieldJewel4"
+  },
+  {
+   "Name": "Facilitating",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "CooldownRecovery"
+   ],
+   "DropChance": 100,
+   "str": "<span class='mod-value'>2</span>% increased Cooldown Recovery Rate",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssCooldownRecoverySpeed1_"
+  },
+  {
+   "Name": "Expediting",
+   "Level": "86",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "CooldownRecovery"
+   ],
+   "DropChance": 100,
+   "str": "<span class='mod-value'>3</span>% increased Cooldown Recovery Rate",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssCooldownRecoverySpeed2__"
+  },
+  {
+   "Name": "Spurring",
+   "Level": "75",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "PercentDamageGoesToMana"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(2<span class=\"ndash\">\u2014</span>3)</span>% of Damage taken Recouped as Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssDamageRecoupedAsMana1"
+  },
+  {
+   "Name": "Motivating",
+   "Level": "86",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "PercentDamageGoesToMana"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>(4<span class=\"ndash\">\u2014</span>5)</span>% of Damage taken Recouped as Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssDamageRecoupedAsMana2"
+  },
+  {
+   "Name": "of Instinct",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "SpellBlockPercentage"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+(3<span class=\"ndash\">\u2014</span>4)</span>% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+   "fossil_no": [
+    "block"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssSpellBlockChanceIfHitRecentlyJewel1"
+  },
+  {
+   "Name": "of Momentum",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MovementSpeedIfNotDamagedRecently"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>(3<span class=\"ndash\">\u2014</span>4)</span>% increased Movement Speed if you haven't taken Damage Recently",
+   "fossil_no": [
+    "speed"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingspeed\" data-tag=\"speed\">Speed</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMovementSpeedIfNotDamagedRecentlyJewel1"
+  },
+  {
+   "Name": "of Retaliation",
+   "Level": "30",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "CastSpeedIfMinionKilledRecently"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>(7<span class=\"ndash\">\u2014</span>10)</span>% increased Cast Speed if a Minion has been Killed Recently",
+   "fossil_no": [
+    "caster",
+    "speed"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingspeed\" data-tag=\"speed\">Speed</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssCastSpeedIfMinionKilledRecentlyJewel1"
+  },
+  {
+   "Name": "of Authority",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "MinionDamageIfMinionSkillUsedRecently"
+   ],
+   "DropChance": 500,
+   "str": "Minions deal <span class='mod-value'>(15<span class=\"ndash\">\u2014</span>20)</span>% increased Damage if you've used a Minion Skill Recently",
+   "fossil_no": [
+    "damage",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMinionDamageIfMinionSkillUsedRecentlyJewel1"
+  },
+  {
+   "Name": "of Maneuvering",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "EvasionRatingWhileMoving"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>(25<span class=\"ndash\">\u2014</span>35)</span>% increased Evasion Rating while moving",
+   "fossil_no": [
+    "defences",
+    "evasion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingevasion\" data-tag=\"evasion\">Evasion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssEvasionRatingWhileMovingJewel1"
+  },
+  {
+   "Name": "of Praxis",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ManaRegenerationRateWhileMoving"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% increased Mana Regeneration Rate while moving",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssManaRegenerationRateWhileMovingJewel1"
+  },
+  {
+   "Name": "of Vivaciousness",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "LifeRegenerationRateWhileMoving"
+   ],
+   "DropChance": 250,
+   "str": "Regenerate <span class='mod-value'>(0.5<span class=\"ndash\">\u2014</span>1)</span>% of Life per second while moving",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssLifeRegenerationRateWhileMovingJewel1"
+  },
+  {
+   "Name": "of Readiness",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "SpellBlockPercentage"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+2</span>% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+   "fossil_no": [
+    "block"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssSpellDodgeAndDodgeChanceIfHitRecentlyJewel1"
+  },
+  {
+   "Name": "of Guarding",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AdditionalBlock"
+   ],
+   "DropChance": 250,
+   "str": "<span class='mod-value'>+(3<span class=\"ndash\">\u2014</span>4)</span>% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+   "fossil_no": [
+    "block"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssChanceToBlockIfDamagedRecentlyJewel1_"
+  },
+  {
+   "Name": "of the Sanctum",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 500,
+   "str": "<span class='mod-value'>(15<span class=\"ndash\">\u2014</span>25)</span>% reduced Effect of Curses on you while on Consecrated Ground",
+   "fossil_no": [
+    "caster",
+    "curse"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingcurse\" data-tag=\"curse\">Curse</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssSelfCurseEffectOnConsecratedGroundJewel1__"
+  },
+  {
+   "Name": "of Escape",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 100,
+   "str": "<span class='mod-value'>(10<span class=\"ndash\">\u2014</span>20)</span>% chance to Avoid Elemental Ailments while you have Elusive",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "cold",
+    "lightning",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssAvoidElementalAilmentsWhileElusiveJewel1"
+  },
+  {
+   "Name": "of Enervation",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 500,
+   "str": "Enemies Hindered by you have <span class='mod-value'>(25<span class=\"ndash\">\u2014</span>35)</span>% reduced Life Regeneration rate",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssHinderedEnemiesLifeRegenerationRateJewel1"
+  },
+  {
+   "Name": "of Clouding",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 100,
+   "str": "Enemies Blinded by you have <span class='mod-value'>(20<span class=\"ndash\">\u2014</span>30)</span>% reduced Critical Strike Chance",
+   "fossil_no": [
+    "critical"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcritical\" data-tag=\"critical\">Critical</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssBlindedEnemiesCriticalStrikeChanceJewel1"
+  },
+  {
+   "Name": "of Languishing",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 500,
+   "str": "Enemies Withered by you have <span class='mod-value'>-2</span>% to all Resistances",
+   "fossil_no": [
+    "damage"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssWitheredEnemiesAllResistanceJewel1___"
+  },
+  {
+   "Name": "of Mangling",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 100,
+   "str": "Enemies Maimed by you take <span class='mod-value'>(4<span class=\"ndash\">\u2014</span>5)</span>% increased Damage Over Time",
+   "fossil_no": [
+    "damage"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssMaimedEnemiesDamageOverTimeJewel1"
+  },
+  {
+   "Name": "of Daunting",
+   "Level": "84",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "BuffEnchantment"
+   ],
+   "DropChance": 100,
+   "str": "Enemies Intimidated by you have <span class='mod-value'>(10<span class=\"ndash\">\u2014</span>15)</span>% increased duration of stuns against them",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel_melee",
+    "abyss_jewel_ranged",
+    "abyss_jewel_caster",
+    "abyss_jewel_summoner",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FAbyssIntimidatedEnemiesStunDurationJewel1"
+  }
+ ],
+ "corrupted": [
+  {
+   "ModFamilyList": [
+    "AvoidIgnite"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% chance to Avoid being Ignited",
+   "fossil_no": [
+    "elemental",
+    "fire",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2AvoidIgniteAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2AvoidIgniteAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "ChanceToAvoidFreezeAndChill"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% chance to Avoid being Frozen",
+   "fossil_no": [
+    "elemental",
+    "cold",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2AvoidChillAndFreezeAbyssalJewelCorrupted_",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2AvoidChillAndFreezeAbyssalJewelCorrupted_"
+  },
+  {
+   "ModFamilyList": [
+    "AvoidShock"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% chance to Avoid being Shocked",
+   "fossil_no": [
+    "elemental",
+    "lightning",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2AvoidShockAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2AvoidShockAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "ChanceToAvoidPoison"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% chance to Avoid being Poisoned",
+   "fossil_no": [
+    "poison",
+    "chaos",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2AvoidPoisonAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2AvoidPoisonAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "ChanceToAvoidBleeding"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% chance to Avoid Bleeding",
+   "fossil_no": [
+    "bleed",
+    "physical",
+    "attack",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2AvoidBleedAbyssalJewelCorrupted_",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2AvoidBleedAbyssalJewelCorrupted_"
+  },
+  {
+   "ModFamilyList": [
+    "AvoidStun"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(20<span class=\"ndash\">\u2014</span>25)</span>% chance to Avoid being Stunned",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "Name": "V2AvoidStunAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2AvoidStunAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "CorruptedBloodImmunity"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "33",
+   "DropChance": 1000,
+   "str": "Corrupted Blood cannot be inflicted on you",
+   "fossil_no": [
+    "bleed",
+    "physical",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2CorruptedBloodImmunityAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2CorruptedBloodImmunityAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "YouCannotBeHindered"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "40",
+   "DropChance": 1000,
+   "str": "You cannot be Hindered",
+   "fossil_no": [
+    "blue_herring"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "Name": "V2HinderImmunityAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2HinderImmunityAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "IncreasedAilmentEffectOnEnemies"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(5<span class=\"ndash\">\u2014</span>7)</span>% increased Effect of Non-Damaging Ailments",
+   "fossil_no": [
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "Name": "V2IncreasedAilmentEffectOnEnemiesAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2IncreasedAilmentEffectOnEnemiesAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "AreaOfEffect"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(4<span class=\"ndash\">\u2014</span>5)</span>% increased Area of Effect",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "Name": "V2IncreasedAreaOfEffectAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2IncreasedAreaOfEffectAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "CriticalStrikeChanceIncrease"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(8<span class=\"ndash\">\u2014</span>10)</span>% increased Global Critical Strike Chance",
+   "fossil_no": [
+    "critical"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcritical\" data-tag=\"critical\">Critical</span>"
+   ],
+   "Name": "V2IncreasedCriticalStrikeChanceAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2IncreasedCriticalStrikeChanceAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "IncreasedDamage"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(4<span class=\"ndash\">\u2014</span>5)</span>% increased Damage",
+   "fossil_no": [
+    "damage"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>"
+   ],
+   "Name": "V2IncreasedDamageAbyssJewelCorrupted_",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2IncreasedDamageAbyssJewelCorrupted_"
+  },
+  {
+   "ModFamilyList": [
+    "AvoidMaimChance"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "40",
+   "DropChance": 1000,
+   "str": "You cannot be Maimed",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "Name": "V2MaimImmunityCorrupted_",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2MaimImmunityCorrupted_"
+  },
+  {
+   "ModFamilyList": [
+    "MinionDamage"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "Minions deal <span class='mod-value'>(4<span class=\"ndash\">\u2014</span>5)</span>% increased Damage",
+   "fossil_no": [
+    "damage",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "Name": "V2MinionDamageCorrupted__",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2MinionDamageCorrupted__"
+  },
+  {
+   "ModFamilyList": [
+    "ReducedManaReservationsCost"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>2</span>% increased Reservation Efficiency of Skills",
+   "fossil_no": [],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [],
+   "Name": "V2ReducedManaReservationCorruptedEfficiency_____",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2ReducedManaReservationCorruptedEfficiency_____"
+  },
+  {
+   "ModFamilyList": [
+    "PlayerCurseImmunity"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "60",
+   "DropChance": 1000,
+   "str": "You cannot be Cursed with Silence",
+   "fossil_no": [
+    "caster",
+    "curse"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingcaster\" data-tag=\"caster\">Caster</span>",
+    "<span class=\"badge bg-primary craftingcurse\" data-tag=\"curse\">Curse</span>"
+   ],
+   "Name": "V2SilenceImmunityJewelCorrupted__",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2SilenceImmunityJewelCorrupted__"
+  },
+  {
+   "ModFamilyList": [
+    "FireResistancePenetration"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Fire Resistance",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>"
+   ],
+   "Name": "V2FirePenetrationAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2FirePenetrationAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "ColdResistancePenetration"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Cold Resistance",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>"
+   ],
+   "Name": "V2ColdPenetrationAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2ColdPenetrationAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "LightningResistancePenetration"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Lightning Resistance",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>"
+   ],
+   "Name": "V2LightningPenetrationAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2LightningPenetrationAbyssalJewelCorrupted"
+  },
+  {
+   "ModFamilyList": [
+    "ElementalPenetration"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Elemental Resistances",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>"
+   ],
+   "Name": "V2ElementalPenetrationAbyssalJewelCorrupted_",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2ElementalPenetrationAbyssalJewelCorrupted_"
+  },
+  {
+   "ModFamilyList": [
+    "ArmourPenetration"
+   ],
+   "ModGenerationTypeID": "5",
+   "Level": "1",
+   "DropChance": 1000,
+   "str": "Hits have <span class='mod-value'>(10<span class=\"ndash\">\u2014</span>15)</span>% chance to ignore Enemy Physical Damage Reduction",
+   "fossil_no": [
+    "physical"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>"
+   ],
+   "Name": "V2ArmourPenetrationAbyssalJewelCorrupted",
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FV2ArmourPenetrationAbyssalJewelCorrupted"
+  }
+ ],
+ "delve": [
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "FireResistancePenetration"
+   ],
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Fire Resistance",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "fire"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingfire\" data-tag=\"fire\">Fire</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelFirePenetration1"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "ColdResistancePenetration"
+   ],
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Cold Resistance",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "cold"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftingcold\" data-tag=\"cold\">Cold</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelColdPenetration1"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "LightningResistancePenetration"
+   ],
+   "DropChance": 1000,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Lightning Resistance",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental",
+    "lightning"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>",
+    "<span class=\"badge bg-primary craftinglightning\" data-tag=\"lightning\">Lightning</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelLightningPenetration1"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "PhysicalDamageOverTimeTaken"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(1<span class=\"ndash\">\u2014</span>2)</span>% reduced Physical Damage taken over time",
+   "fossil_no": [
+    "physical"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingphysical\" data-tag=\"physical\">Physical</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelPhysicalDamageOverTimeTaken1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "IncreasedChaosDamage"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(13<span class=\"ndash\">\u2014</span>19)</span>% increased Chaos Damage",
+   "fossil_no": [
+    "chaos_damage",
+    "damage",
+    "chaos"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingchaos\" data-tag=\"chaos\">Chaos</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelChaosDamage1"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "LifeRegenerationRatePercentage"
+   ],
+   "DropChance": 1000,
+   "str": "Regenerate <span class='mod-value'>0.3</span>% of Life per second",
+   "fossil_no": [
+    "resource",
+    "life"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelLifeRegeneration1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "PhysicalDamageReductionRatingIfYouHaveHitAnEnemyRecently"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>+(250<span class=\"ndash\">\u2014</span>300)</span> to Armour if you've Hit an Enemy Recently",
+   "fossil_no": [
+    "defences",
+    "armour"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingarmour\" data-tag=\"armour\">Armour</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelArmourIfYouHitRecently1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "EvasionRatingIfYouHaveHitAnEnemyRecently"
+   ],
+   "DropChance": 300,
+   "str": "<span class='mod-value'>+(250<span class=\"ndash\">\u2014</span>300)</span> to Evasion Rating if Hit an Enemy Recently",
+   "fossil_no": [
+    "defences",
+    "evasion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingevasion\" data-tag=\"evasion\">Evasion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelEvasionIfYouHitRecently1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "EnergyShieldRegenerationRatePerMinuteIfYouHaveHitAnEnemyRecently"
+   ],
+   "DropChance": 300,
+   "str": "Regenerate <span class='mod-value'>0.3</span>% of Energy Shield per second if you've Hit an Enemy Recently",
+   "fossil_no": [
+    "defences",
+    "energy_shield"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>",
+    "<span class=\"badge bg-primary craftingenergy_shield\" data-tag=\"energy_shield\">Energy Shield</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelEnergyShieldRegenIfYouHitRecently1_"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "AllDefences"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(4<span class=\"ndash\">\u2014</span>6)</span>% increased Global Defences",
+   "fossil_no": [
+    "defences"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdefences\" data-tag=\"defences\">Defences</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelGlobalDefences1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AilmentDamage"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(15<span class=\"ndash\">\u2014</span>20)</span>% increased Damage with Ailments",
+   "fossil_no": [
+    "damage",
+    "ailment"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingailment\" data-tag=\"ailment\">Ailment</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelAilmentDamage1__"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "ElementalPenetration"
+   ],
+   "DropChance": 1600,
+   "str": "Damage Penetrates <span class='mod-value'>1</span>% Elemental Resistances",
+   "fossil_no": [
+    "elemental_damage",
+    "damage",
+    "elemental"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel",
+    "jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingelemental\" data-tag=\"elemental\">Elemental</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelElementalPenetration1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AvoidInterruptionWhileCasting"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(15<span class=\"ndash\">\u2014</span>20)</span>% chance to Ignore Stuns while Casting",
+   "fossil_no": [],
+   "adds_no": [
+    "has_caster_mod"
+   ],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelAvoidInterruptionWhileCasting1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "LifeLeech"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>0.3</span>% of Attack Damage Leeched as Life",
+   "fossil_no": [
+    "resource",
+    "life",
+    "attack"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftinglife\" data-tag=\"life\">Life</span>",
+    "<span class=\"badge bg-primary craftingattack\" data-tag=\"attack\">Attack</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelAttackLeech1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "PercentDamageGoesToMana"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(2<span class=\"ndash\">\u2014</span>3)</span>% of Damage taken Recouped as Mana",
+   "fossil_no": [
+    "resource",
+    "mana"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingmana\" data-tag=\"mana\">Mana</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelDamageTakenGainedAsMana1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "ChanceToGainOnslaughtOnFlaskUse"
+   ],
+   "DropChance": 1000,
+   "str": "<span class='mod-value'>(5<span class=\"ndash\">\u2014</span>10)</span>% chance to gain Onslaught when you use a Flask",
+   "fossil_no": [
+    "flask"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "jewel",
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveJewelChanceToGainOnslaughtOnFlaskUse1"
+  },
+  {
+   "Name": "Subterranean",
+   "Level": "1",
+   "ModGenerationTypeID": "1",
+   "ModFamilyList": [
+    "MinionDamage"
+   ],
+   "DropChance": 2000,
+   "str": "Minions deal <span class='mod-value'>(14<span class=\"ndash\">\u2014</span>16)</span>% increased Damage",
+   "fossil_no": [
+    "damage",
+    "minion"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel",
+    "default"
+   ],
+   "mod_no": [
+    "<span class=\"badge bg-primary craftingdamage\" data-tag=\"damage\">Damage</span>",
+    "<span class=\"badge bg-primary craftingminion\" data-tag=\"minion\">Minion</span>"
+   ],
+   "mod_fossil_item": [],
+   "hover": "?s=Data%5CMods%2FDelveAbyssJewelMinionDamage1"
+  },
+  {
+   "Name": "of the Underground",
+   "Level": "1",
+   "ModGenerationTypeID": "2",
+   "ModFamilyList": [
+    "AdditionalVaalSoulOnKill"
+   ],
+   "DropChance": 2000,
+   "str": "<span class='mod-value'>(3<span class=\"ndash\">\u2014</span>5)</span>% chance to gain an additional Vaal Soul on Kill",
+   "fossil_no": [
+    "vaal"
+   ],
+   "adds_no": [],
+   "spawn_no": [
+    "abyss_jewel",
+    "jewel",
+    "default"
+   ],
+   "mod_no": [],
+   "mod_fossil_item": [
+    "Tangled Fossil"
+   ],
+   "hover": "?s=Data%5CMods%2FDelveJewelVaalSoulsOnKill1"
+  }
+ ]
+}

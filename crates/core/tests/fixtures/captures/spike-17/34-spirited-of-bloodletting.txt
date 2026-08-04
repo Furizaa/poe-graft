@@ -1,0 +1,18 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Spirited Ghastly Eye Jewel of Bloodletting
+--------
+Abyss
+--------
+Requirements:
+Level: 48
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Spirited" (Tier: 2) — Life }
+Regenerate 13.4(13-16) Life per second
+{ Suffix Modifier "of Bloodletting" (Tier: 1) — Physical, Minion, Ailment }
+Minions have 14(10-15)% chance to cause Bleeding with Attacks
+(Bleeding deals Physical Damage over time, based on the base Physical Damage of the Skill. Damage is 200% higher while moving)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

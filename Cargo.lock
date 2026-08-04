@@ -2614,6 +2614,10 @@ dependencies = [
 [[package]]
 name = "poe-graft-core"
 version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+]
 
 [[package]]
 name = "poe-graft-win32"

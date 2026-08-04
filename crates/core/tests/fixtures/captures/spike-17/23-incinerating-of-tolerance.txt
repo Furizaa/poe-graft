@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Incinerating Ghastly Eye Jewel of Tolerance
+--------
+Abyss
+--------
+Requirements:
+Level: 46
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Incinerating" (Tier: 3) — Damage, Elemental, Fire, Minion }
+Minions deal 23(20-23) to 29(26-32) additional Fire Damage
+{ Suffix Modifier "of Tolerance" (Tier: 2) — Chaos, Ailment }
+34(31-40)% chance to Avoid being Poisoned
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

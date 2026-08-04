@@ -96,12 +96,23 @@ allocation, no locks, no I/O, no third-party code.
 - **Mac tests are fast and real.** `cargo test -p poe-graft-core` runs in seconds and never builds Tauri's
   dependency tree, replaying the 113 captured clipboard fixtures through the actual parser and hit test.
 
-  > **Correction, 2026-08-04** — this was aspirational, not true. **The fixtures are not in the repo**: the
-  > 113 exist only as raw text on [#16](https://github.com/Furizaa/poe-graft/issues/16), and the 47 captured
-  > by our own code during [#17](https://github.com/Furizaa/poe-graft/issues/17) only in session logs.
-  > Landing both, and the parser that replays them, is
-  > [#19](https://github.com/Furizaa/poe-graft/issues/19). Since
-  > [ADR 0002](./0002-roll-cycle-and-hit-latch.md) they replay through the whole cycle, not only the parser.
+  > **Correction, 2026-08-04** — this was aspirational when written, and is now true, but the count was
+  > wrong in a way worth recording.
+  >
+  > The fixtures landed with [#19](https://github.com/Furizaa/poe-graft/issues/19), in
+  > `crates/core/tests/fixtures/captures/`, and `cargo test -p poe-graft-core` replays every one of them
+  > through the parser and the hit test in ~1s.
+  >
+  > **The "113 captures" are one distinct Item Text repeated 113 times.** The AutoHotkey probe on
+  > [#16](https://github.com/Furizaa/poe-graft/issues/16) copied the same jewel without ever rolling it, so
+  > as fixtures the set is worth one file. The diversity comes from the 47 captured by our own code during
+  > [#17](https://github.com/Furizaa/poe-graft/issues/17) — 41 distinct texts over 33 Mod Groups and every
+  > tier from 1 to 6. Anyone sizing test confidence by "113 real captures" is off by two orders of
+  > magnitude; `crates/core/tests/fixtures/README.md` states what each set does and does not cover.
+  >
+  > Since [ADR 0002](./0002-roll-cycle-and-hit-latch.md) they replay through the whole cycle, not only the
+  > parser — the sequence needed for that is `captures/spike-17/manifest.json`, and spending it is
+  > [#20](https://github.com/Furizaa/poe-graft/issues/20).
 - **Tauri's one weakness is largely defused by the layout.** The 12–20 min cold build fires on `Cargo.lock`
   churn; `core` has near-zero dependencies, so most logic edits never touch the lock file and most iteration
   never reaches CI at all.

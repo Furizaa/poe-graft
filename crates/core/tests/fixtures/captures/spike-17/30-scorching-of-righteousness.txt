@@ -1,0 +1,17 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Scorching Ghastly Eye Jewel of Righteousness
+--------
+Abyss
+--------
+Requirements:
+Level: 38
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Scorching" (Tier: 4) — Damage, Elemental, Fire, Minion }
+Minions deal 15(15-18) to 22(21-24) additional Fire Damage
+{ Suffix Modifier "of Righteousness" (Tier: 1) — Chaos, Resistance, Minion }
+Minions have +8(7-11)% to Chaos Resistance
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

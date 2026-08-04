@@ -1,0 +1,16 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Ghastly Eye Jewel of Delaying
+--------
+Abyss
+--------
+Requirements:
+Level: 25
+--------
+Item Level: 83
+--------
+{ Suffix Modifier "of Delaying" (Tier: 2) — Caster, Minion }
+Minions have 5(3-5)% chance to Hinder Enemies on Hit with Spells
+(Hinder reduces movement speed by 30% for 4 seconds)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

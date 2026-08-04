@@ -1,0 +1,12 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Beryl Ghastly Eye Jewel
+--------
+Abyss
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Beryl" (Tier: 4) — Mana }
++20(20-23) to maximum Mana
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

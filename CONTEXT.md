@@ -105,6 +105,13 @@ not be parsed, or the text is byte-identical to the previous Roll's and so is pr
 taken before the game finished applying the orb.
 _Avoid_: failed read, timeout, bad read
 
+**Diagnostic**:
+Something a Read establishes *besides* its Verdict — the game's tier annotation disagreeing with the
+derived tier, an annotation being absent, values matching no tier, a line the mod pool does not
+recognise, the item not being the Base. Every Diagnostic is logged; some of them are what make the
+app **Halt**. A Diagnostic never changes a Verdict.
+_Avoid_: warning, error, note
+
 **Resync**:
 A Trigger Press that performs a Read and no Roll, taken when the app's Verdict is Unknown. Its
 result is authoritative because no Roll intervened, and it costs a press rather than an orb.

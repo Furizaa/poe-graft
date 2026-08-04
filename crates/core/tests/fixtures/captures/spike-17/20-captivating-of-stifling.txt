@@ -1,0 +1,18 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Captivating Ghastly Eye Jewel of Stifling
+--------
+Abyss
+--------
+Requirements:
+Level: 52
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Captivating" (Tier: 3) — Defences, Energy Shield }
+Regenerate 12(9-12) Energy Shield per second
+{ Suffix Modifier "of Stifling" (Tier: 1) — Attack, Minion }
+Minions have 6(5-6)% chance to Blind on Hit with Attacks
+(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

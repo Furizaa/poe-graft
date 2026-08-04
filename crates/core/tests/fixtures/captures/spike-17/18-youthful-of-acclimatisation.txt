@@ -1,0 +1,14 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Youthful Ghastly Eye Jewel of Acclimatisation
+--------
+Abyss
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Youthful" (Tier: 3) — Life }
+Regenerate 11.6(9-12) Life per second
+{ Suffix Modifier "of Acclimatisation" (Tier: 1) — Elemental, Resistance, Minion }
+Minions have +8(6-10)% to all Elemental Resistances
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

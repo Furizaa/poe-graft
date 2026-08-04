@@ -1,0 +1,488 @@
+[
+ {
+  "session": 1,
+  "roll": 1,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 1,
+  "roll": 2,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 1,
+  "roll": 3,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 1,
+  "roll": 4,
+  "verdict": "OK in 5ms (cycle 50ms, delay 40ms, 597 chars, shift down)",
+  "capture": "01-fuelling-of-retaliation.txt"
+ },
+ {
+  "session": 2,
+  "roll": 1,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 2,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 3,
+  "verdict": "OK in 5ms (cycle 50ms, delay 40ms, 444 chars, shift down)",
+  "capture": "02-freezing.txt"
+ },
+ {
+  "session": 2,
+  "roll": 4,
+  "verdict": "OK in 5ms (cycle 48ms, delay 40ms, 383 chars, shift down)",
+  "capture": "03-healthy.txt"
+ },
+ {
+  "session": 2,
+  "roll": 5,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 6,
+  "verdict": "OK in 1ms (cycle 45ms, delay 40ms, 413 chars, shift down)",
+  "capture": "04-exuberant.txt"
+ },
+ {
+  "session": 2,
+  "roll": 7,
+  "verdict": "OK in 2ms (cycle 50ms, delay 40ms, 541 chars, shift down)",
+  "capture": "05-annealed-of-order.txt"
+ },
+ {
+  "session": 2,
+  "roll": 8,
+  "verdict": "OK in 2ms (cycle 45ms, delay 40ms, 384 chars, shift down)",
+  "capture": "06-of-fortitude.txt"
+ },
+ {
+  "session": 2,
+  "roll": 9,
+  "verdict": "OK but IDENTICAL to the previous roll in 2ms (cycle 46ms, delay 40ms, 384 chars, shift down)",
+  "capture": "06-of-fortitude.txt"
+ },
+ {
+  "session": 2,
+  "roll": 10,
+  "verdict": "OK in 3ms (cycle 49ms, delay 40ms, 570 chars, shift down)",
+  "capture": "07-polar-of-orchestration.txt"
+ },
+ {
+  "session": 2,
+  "roll": 11,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 12,
+  "verdict": "OK in 2ms (cycle 47ms, delay 40ms, 475 chars, shift down)",
+  "capture": "08-healthy-of-strength.txt"
+ },
+ {
+  "session": 2,
+  "roll": 13,
+  "verdict": "OK in 4ms (cycle 51ms, delay 40ms, 384 chars, shift down)",
+  "capture": "06-of-fortitude.txt"
+ },
+ {
+  "session": 2,
+  "roll": 14,
+  "verdict": "READ FAILED after 2ms: OSError(1168): Element not found.",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 15,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 16,
+  "verdict": "TIMEOUT after 500ms (delay 40ms)",
+  "capture": null
+ },
+ {
+  "session": 2,
+  "roll": 17,
+  "verdict": "OK in 4ms (cycle 49ms, delay 40ms, 550 chars, shift down)",
+  "capture": "09-fuelling-of-training.txt"
+ },
+ {
+  "session": 3,
+  "roll": 1,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2697 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 2,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2702 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 3,
+  "verdict": "OK in 7ms (cycle 53ms, delay 40ms, 517 chars, shift down)",
+  "capture": "10-resonating-of-praxis.txt"
+ },
+ {
+  "session": 3,
+  "roll": 4,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2717 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 5,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2722 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 6,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2727 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 7,
+  "verdict": "OK in 2ms (cycle 46ms, delay 40ms, 505 chars, shift down)",
+  "capture": "11-sanguine-of-the-beast.txt"
+ },
+ {
+  "session": 3,
+  "roll": 8,
+  "verdict": "OK in 3ms (cycle 47ms, delay 40ms, 437 chars, shift down)",
+  "capture": "12-of-combustion.txt"
+ },
+ {
+  "session": 3,
+  "roll": 9,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2752 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 10,
+  "verdict": "OK in 6ms (cycle 51ms, delay 40ms, 571 chars, shift down)",
+  "capture": "13-resonating-of-instinct.txt"
+ },
+ {
+  "session": 3,
+  "roll": 11,
+  "verdict": "OK in 2ms (cycle 46ms, delay 40ms, 402 chars, shift down)",
+  "capture": "14-of-the-hearth.txt"
+ },
+ {
+  "session": 3,
+  "roll": 12,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2777 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 13,
+  "verdict": "OK in 6ms (cycle 50ms, delay 40ms, 447 chars, shift down)",
+  "capture": "15-razor-sharp.txt"
+ },
+ {
+  "session": 3,
+  "roll": 14,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2792 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 15,
+  "verdict": "OK in 6ms (cycle 51ms, delay 40ms, 437 chars, shift down)",
+  "capture": "16-malignant.txt"
+ },
+ {
+  "session": 3,
+  "roll": 16,
+  "verdict": "OK but IDENTICAL to the previous roll in 6ms (cycle 53ms, delay 40ms, 437 chars, shift down)",
+  "capture": "16-malignant.txt"
+ },
+ {
+  "session": 3,
+  "roll": 17,
+  "verdict": "OK in 2ms (cycle 46ms, delay 40ms, 485 chars, shift down)",
+  "capture": "17-cobalt-of-intelligence.txt"
+ },
+ {
+  "session": 3,
+  "roll": 18,
+  "verdict": "OK in 8ms (cycle 51ms, delay 40ms, 515 chars, shift down)",
+  "capture": "18-youthful-of-acclimatisation.txt"
+ },
+ {
+  "session": 3,
+  "roll": 19,
+  "verdict": "OK in 3ms (cycle 50ms, delay 40ms, 519 chars, shift down)",
+  "capture": "19-cobalt-of-the-hearth.txt"
+ },
+ {
+  "session": 3,
+  "roll": 20,
+  "verdict": "OK but IDENTICAL to the previous roll in 3ms (cycle 50ms, delay 40ms, 519 chars, shift down)",
+  "capture": "19-cobalt-of-the-hearth.txt"
+ },
+ {
+  "session": 3,
+  "roll": 21,
+  "verdict": "OK in 7ms (cycle 54ms, delay 40ms, 641 chars, shift down)",
+  "capture": "20-captivating-of-stifling.txt"
+ },
+ {
+  "session": 3,
+  "roll": 22,
+  "verdict": "OK but IDENTICAL to the previous roll in 3ms (cycle 51ms, delay 40ms, 641 chars, shift down)",
+  "capture": "20-captivating-of-stifling.txt"
+ },
+ {
+  "session": 3,
+  "roll": 23,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2877 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 24,
+  "verdict": "OK in 4ms (cycle 50ms, delay 40ms, 607 chars, shift down)",
+  "capture": "21-shocking-of-acclimatisation.txt"
+ },
+ {
+  "session": 3,
+  "roll": 25,
+  "verdict": "OK in 1ms (cycle 49ms, delay 40ms, 398 chars, shift down)",
+  "capture": "22-resonating.txt"
+ },
+ {
+  "session": 3,
+  "roll": 26,
+  "verdict": "OK but IDENTICAL to the previous roll in 7ms (cycle 53ms, delay 40ms, 398 chars, shift down)",
+  "capture": "22-resonating.txt"
+ },
+ {
+  "session": 3,
+  "roll": 27,
+  "verdict": "OK in 5ms (cycle 48ms, delay 40ms, 570 chars, shift down)",
+  "capture": "23-incinerating-of-tolerance.txt"
+ },
+ {
+  "session": 3,
+  "roll": 28,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2922 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 29,
+  "verdict": "OK in 2ms (cycle 47ms, delay 40ms, 477 chars, shift down)",
+  "capture": "24-sanguine-of-strength.txt"
+ },
+ {
+  "session": 3,
+  "roll": 30,
+  "verdict": "OK in 4ms (cycle 48ms, delay 40ms, 492 chars, shift down)",
+  "capture": "25-of-delaying.txt"
+ },
+ {
+  "session": 3,
+  "roll": 31,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2947 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 32,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2952 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 33,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2957 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 34,
+  "verdict": "OK in 2ms (cycle 46ms, delay 40ms, 412 chars, shift down)",
+  "capture": "26-of-insulation.txt"
+ },
+ {
+  "session": 3,
+  "roll": 35,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2972 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 36,
+  "verdict": "OK in 2ms (cycle 46ms, delay 40ms, 385 chars, shift down)",
+  "capture": "27-sanguine.txt"
+ },
+ {
+  "session": 3,
+  "roll": 37,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 2987 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 38,
+  "verdict": "OK in 3ms (cycle 48ms, delay 40ms, 446 chars, shift down)",
+  "capture": "28-glaciated.txt"
+ },
+ {
+  "session": 3,
+  "roll": 39,
+  "verdict": "OK in 5ms (cycle 48ms, delay 40ms, 430 chars, shift down)",
+  "capture": "29-clouded.txt"
+ },
+ {
+  "session": 3,
+  "roll": 40,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3012 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 41,
+  "verdict": "OK in 2ms (cycle 46ms, delay 40ms, 584 chars, shift down)",
+  "capture": "30-scorching-of-righteousness.txt"
+ },
+ {
+  "session": 3,
+  "roll": 42,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3027 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 43,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3032 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 44,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3037 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 45,
+  "verdict": "OK in 3ms (cycle 47ms, delay 40ms, 549 chars, shift down)",
+  "capture": "31-vivacious-of-adaption.txt"
+ },
+ {
+  "session": 3,
+  "roll": 46,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3052 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 47,
+  "verdict": "OK in 4ms (cycle 49ms, delay 40ms, 573 chars, shift down)",
+  "capture": "32-heated-of-combustion.txt"
+ },
+ {
+  "session": 3,
+  "roll": 48,
+  "verdict": "OK in 2ms (cycle 47ms, delay 40ms, 343 chars, shift down)",
+  "capture": "33-beryl.txt"
+ },
+ {
+  "session": 3,
+  "roll": 49,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3077 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 50,
+  "verdict": "OK in 5ms (cycle 51ms, delay 40ms, 679 chars, shift down)",
+  "capture": "34-spirited-of-bloodletting.txt"
+ },
+ {
+  "session": 3,
+  "roll": 51,
+  "verdict": "OK in 1ms (cycle 48ms, delay 40ms, 437 chars, shift down)",
+  "capture": "35-malignant-2.txt"
+ },
+ {
+  "session": 3,
+  "roll": 52,
+  "verdict": "OK in 5ms (cycle 51ms, delay 40ms, 510 chars, shift down)",
+  "capture": "36-vaporous-of-athletics.txt"
+ },
+ {
+  "session": 3,
+  "roll": 53,
+  "verdict": "OK in 8ms (cycle 55ms, delay 40ms, 375 chars, shift down)",
+  "capture": "37-fuelling.txt"
+ },
+ {
+  "session": 3,
+  "roll": 54,
+  "verdict": "OK in 2ms (cycle 49ms, delay 40ms, 381 chars, shift down)",
+  "capture": "38-of-praxis.txt"
+ },
+ {
+  "session": 3,
+  "roll": 55,
+  "verdict": "OK in 6ms (cycle 51ms, delay 40ms, 624 chars, shift down)",
+  "capture": "39-sparking-of-instinct.txt"
+ },
+ {
+  "session": 3,
+  "roll": 56,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3142 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 57,
+  "verdict": "OK in 3ms (cycle 47ms, delay 40ms, 431 chars, shift down)",
+  "capture": "40-breathtaking.txt"
+ },
+ {
+  "session": 3,
+  "roll": 58,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3157 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ },
+ {
+  "session": 3,
+  "roll": 59,
+  "verdict": "OK in 6ms (cycle 51ms, delay 40ms, 576 chars, shift down)",
+  "capture": "41-discharging-of-fortitude.txt"
+ },
+ {
+  "session": 3,
+  "roll": 60,
+  "verdict": "TIMEOUT after 500ms (delay 40ms, seq 3172 never moved, clipboard now holds our sentinel, untouched — the game never copied)",
+  "capture": null
+ }
+]

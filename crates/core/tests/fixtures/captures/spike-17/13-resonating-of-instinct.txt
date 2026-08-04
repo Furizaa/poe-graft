@@ -1,0 +1,18 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Resonating Ghastly Eye Jewel of Instinct
+--------
+Abyss
+--------
+Requirements:
+Level: 60
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Resonating" (Tier: 1) — Mana }
+Regenerate 4(3.3-4) Mana per second
+{ Suffix Modifier "of Instinct" (Tier: 1) }
++4(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently
+(Recently refers to the past 4 seconds)
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.

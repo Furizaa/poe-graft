@@ -1,0 +1,15 @@
+Item Class: Abyss Jewels
+Rarity: Magic
+Clouded Ghastly Eye Jewel
+--------
+Abyss
+--------
+Requirements:
+Level: 33
+--------
+Item Level: 83
+--------
+{ Prefix Modifier "Clouded" (Tier: 5) — Damage, Chaos, Minion }
+Minions deal 5(5-8) to 14(11-14) additional Chaos Damage
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.
