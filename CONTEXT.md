@@ -150,7 +150,10 @@ not Roll.
 Holding a fresh Miss. The next Trigger Press Rolls and Reads.
 
 **Rolling**:
-A Roll and its Read are in flight. Further Trigger Presses are counted and dropped, never queued.
+A Roll and its Read are in flight. Further Trigger Presses are counted and dropped rather than
+queued — with one piece of small print: the newest press to arrive during the cycle is served once the
+cycle ends, so two quick taps are two actions rather than one. It cannot over-roll, because a press is
+judged when it is served and Rolling is not Ready: it still takes a fresh Miss to Click.
 
 **Resyncing**:
 Holding an Unknown Verdict. The next Trigger Press Resyncs.

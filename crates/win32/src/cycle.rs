@@ -372,13 +372,24 @@ pub fn start(session: CraftSession) -> Result<(), PlatformError> {
     KEYS_SEEN.store(0, Ordering::Relaxed);
 
     WORKER_RUN.store(true, Ordering::Release);
-    let worker = std::thread::Builder::new()
+    let worker = match std::thread::Builder::new()
         .name("poe-graft-cycle".into())
         .spawn(worker_loop)
-        .map_err(|err| PlatformError::Os {
-            capability: "spawn worker thread",
-            detail: err.to_string(),
-        })?;
+    {
+        Ok(worker) => worker,
+        Err(err) => {
+            // The hook is already in. Returning here without taking it down again would leave a
+            // global `WH_KEYBOARD_LL` installed that nothing holds a handle to — unremovable for the
+            // life of the process — while `src-tauri` logs that the hook could not be installed. The
+            // one state worse than no hook is a hook nobody knows about.
+            WORKER_RUN.store(false, Ordering::Release);
+            unwind_hook(hook_thread_id, hook_thread);
+            return Err(PlatformError::Os {
+                capability: "spawn worker thread",
+                detail: err.to_string(),
+            });
+        }
+    };
 
     *slot = Some(Installed {
         hook_thread_id,
@@ -406,17 +417,20 @@ pub fn stop() -> Result<(), PlatformError> {
     ARMED.store(false, Ordering::Release);
     WORKER_RUN.store(false, Ordering::Release);
 
-    // SAFETY: posting a message to a thread id is safe; a dead thread just makes it fail.
-    if let Err(err) =
-        unsafe { PostThreadMessageW(installed.hook_thread_id, WM_QUIT, WPARAM(0), LPARAM(0)) }
-    {
-        log(&format!("cycle: could not post WM_QUIT: {}", err.message()));
-    }
-
-    let _ = installed.hook_thread.join();
+    unwind_hook(installed.hook_thread_id, installed.hook_thread);
     let _ = installed.worker.join();
     log("cycle: WH_KEYBOARD_LL removed");
     Ok(())
+}
+
+/// End the hook thread's message loop and wait for it, which is what makes it call
+/// `UnhookWindowsHookEx`. The only way the hook comes out.
+fn unwind_hook(thread_id: u32, thread: JoinHandle<()>) {
+    // SAFETY: posting a message to a thread id is safe; a dead thread just makes it fail.
+    if let Err(err) = unsafe { PostThreadMessageW(thread_id, WM_QUIT, WPARAM(0), LPARAM(0)) } {
+        log(&format!("cycle: could not post WM_QUIT: {}", err.message()));
+    }
+    let _ = thread.join();
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -555,7 +569,16 @@ fn worker_loop() {
         }
 
         // Everything between `handled` and `seq` beyond the one about to be served arrived while the
-        // previous cycle was in flight, and was deliberately dropped rather than queued.
+        // previous cycle was in flight and is deliberately dropped rather than queued.
+        //
+        // **The newest one is not dropped**, and that is the whole of the "never queued" rule's small
+        // print: press twice in quick succession and the second is served once the first cycle ends,
+        // up to a cycle late. It is not a second orb for one press — it is one action for each of two
+        // presses — and it cannot over-roll, because it is judged from scratch when it is served:
+        // `CraftSession` still requires a fresh Miss to Click, so a held-over press meets a Latch, a
+        // Halt or an Unknown exactly as a fresh one would. What it does mean is that a press made
+        // before the human could see the previous Verdict still spends an orb once the Verdict is a
+        // Miss, which is what they asked for by pressing twice.
         let dropped = seq - handled - 1;
         handled = seq;
         serve(dropped);
@@ -695,8 +718,9 @@ fn execute(plan: &[Command]) -> CycleReport {
                 settle_ms,
             } => {
                 let from = copy_started.unwrap_or_else(Instant::now);
-                read = await_read(&sentinel, poisoned_seq, *timeout_ms, *settle_ms, from);
-                copy_ms = from.elapsed().as_millis() as u32;
+                let outcome = await_read(&sentinel, poisoned_seq, *timeout_ms, *settle_ms, from);
+                read = outcome.read;
+                copy_ms = outcome.copy_ms;
             }
         }
     }
@@ -709,6 +733,18 @@ fn execute(plan: &[Command]) -> CycleReport {
     CycleReport { rolled, read }
 }
 
+/// A Read, and how long the game took to touch the clipboard at all.
+struct Read {
+    read: ReadOutcome,
+    /// `Ctrl+C` → the clipboard sequence number moved, and **only** that.
+    ///
+    /// Deliberately not "until text was in hand": the retry window past the bump is up to
+    /// `read_settle_ms` long and a timeout is a further `read_timeout_ms`, so folding either in turns
+    /// the one number that says whether the settle delay is long enough into a number that mostly
+    /// reports which way the Read failed. This is the 1–8 ms the spike measured.
+    copy_ms: u32,
+}
+
 /// Wait for the game to replace the Sentinel, then read what it left.
 fn await_read(
     sentinel: &str,
@@ -716,7 +752,7 @@ fn await_read(
     timeout_ms: u32,
     settle_ms: u32,
     copy_started: Instant,
-) -> ReadOutcome {
+) -> Read {
     // Poll the sequence number rather than the contents: `GetClipboardSequenceNumber` needs no open
     // clipboard handle, so this never contends with the game for the clipboard lock. Busy waiting,
     // because the answer is expected in single-digit milliseconds and `sleep` on Windows rounds to
@@ -730,6 +766,7 @@ fn await_read(
         }
         std::hint::spin_loop();
     }
+    let copy_ms = copy_started.elapsed().as_millis() as u32;
 
     if !moved {
         // Which of the two possible faults is this? Either the game never copied — our Sentinel is
@@ -740,7 +777,10 @@ fn await_read(
             "cycle: the clipboard sequence number never moved in {timeout_ms}ms; it now holds {}",
             classify_clipboard(sentinel)
         ));
-        return ReadOutcome::NothingCopied;
+        return Read {
+            read: ReadOutcome::NothingCopied,
+            copy_ms,
+        };
     }
 
     // The sequence number moved, but that does **not** mean the text is there yet. `EmptyClipboard`
@@ -755,7 +795,12 @@ fn await_read(
     let mut last_error = String::new();
     loop {
         match clipboard_win::get_clipboard::<String, _>(clipboard_win::formats::Unicode) {
-            Ok(text) if !text.is_empty() && text != sentinel => return ReadOutcome::Text(text),
+            Ok(text) if !text.is_empty() && text != sentinel => {
+                return Read {
+                    read: ReadOutcome::Text(text),
+                    copy_ms,
+                }
+            }
             Ok(_) => {}
             Err(err) => last_error = err.to_string(),
         }
@@ -775,7 +820,10 @@ fn await_read(
             format!(", last error: {last_error}")
         }
     ));
-    ReadOutcome::NothingReadable
+    Read {
+        read: ReadOutcome::NothingReadable,
+        copy_ms,
+    }
 }
 
 /// What is actually in the clipboard right now, in words. The decisive diagnostic when a Read goes

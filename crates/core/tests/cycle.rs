@@ -735,6 +735,18 @@ fn a_resync_needs_the_cursor_on_the_anchor_so_it_reads_the_right_item() {
 
 // ── Dropped presses, and suppression ───────────────────────────────────────────────────────────
 
+/// What this does and does not cover.
+///
+/// It covers the session's own answer to a press arriving in `Rolling`: no plan, counted, never a
+/// second orb. In production that branch is close to unreachable — `win32`'s worker is single-threaded
+/// and busy inside the plan, so it feeds no press at all while a cycle is in flight and reports the
+/// batch afterwards as `PressesDropped`, which is the second half below.
+///
+/// It does **not** cover which presses `win32` decides to drop, because that lives in the worker loop
+/// and cannot run here. The newest press of a mid-cycle batch is *not* dropped: it is served once the
+/// cycle ends. Safe, and for the reason the whole crate is shaped this way — it is judged from scratch
+/// when it is served, so it still needs a fresh Miss to Click. See `worker_loop` in
+/// `crates/win32/src/cycle.rs`.
 #[test]
 fn presses_arriving_during_a_cycle_are_counted_and_dropped_rather_than_queued() {
     let mut s = ready_session(4);

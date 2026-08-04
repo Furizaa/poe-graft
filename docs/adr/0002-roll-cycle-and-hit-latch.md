@@ -79,6 +79,27 @@ state the human cannot act on correctly is worse than an extra state name.
 `Rolling` exists to drop presses rather than queue them. It lasts ~130–210 ms and is imperceptible;
 nobody will ever experience it as being blocked.
 
+> **Correction, 2026-08-04** — reviewing what [#20](https://github.com/Furizaa/poe-graft/issues/20)
+> built, before it ran on the device. "Drop presses rather than queue them" has small print, and the
+> code has always had it — the spike did too, and this sentence never said so.
+>
+> **The newest press to arrive during a cycle is served, not dropped.** `win32`'s worker drops
+> `seq - handled - 1` of a mid-cycle batch and serves the last one when the cycle ends. So two quick
+> taps produce two actions, the second up to a cycle late — which is one action per press, not a second
+> orb for one press.
+>
+> **It cannot over-roll**, and for the reason the state machine exists: a held-over press is judged from
+> scratch when it is served. `Rolling` is not `Ready`, so it still takes a fresh Miss to Click, and a
+> press held over from a cycle that ended in a Hit meets the Latch. The same goes for the Refusal
+> preconditions — Shift, the foreground and the cursor are sampled at *serve* time, so a press made
+> over the jewel and served after the mouse moved away is Refused rather than acted on. That is the
+> safe direction, but it is a different claim from the one the body makes, and `Press` in
+> `crates/core/src/cycle.rs` now says so where it will be read.
+>
+> Not changed, deliberately. Dropping the newest press too would make a deliberate second tap vanish
+> with nothing to show for it, and the counter that would explain it is labelled "dropped mid-cycle" —
+> which is the shape of bug the gaming PC is worst at diagnosing.
+
 ### Halt versus Refusal
 
 Two kinds of not-acting, deliberately not conflated:

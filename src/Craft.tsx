@@ -60,6 +60,20 @@ const bands = (group: ModGroup, tier: number) => {
   return found.bands.map(([min, max]) => (min === max ? `${min}` : `${min}–${max}`)).join(" to ");
 };
 
+/**
+ * The Tier Threshold to carry across a change of Mod Group.
+ *
+ * Groups do not all have the same number of tiers — **40 of this Base's 66 have only a Tier 1** — and
+ * Rust rejects a Target Mod naming a tier its group does not have. Sending the old threshold
+ * unchanged therefore makes most group changes fail outright: the select snaps back on the next poll
+ * and the human is told "no Tier 5", which reads like a data fault rather than the picker's own.
+ *
+ * Clamping to the worst tier the new group has preserves the intent, because the threshold means
+ * "this tier or better": on a group whose only tier is 1, "Tier 1 or better" *is* "any tier of it".
+ */
+const carryThreshold = (group: ModGroup, threshold: number) =>
+  Math.min(threshold, Math.max(...group.tiers.map((t) => t.tier)));
+
 export default function Craft({ refreshLog }: { refreshLog: () => Promise<void> }) {
   const [pool, setPool] = useState<ModPool | null>(null);
   const [poolError, setPoolError] = useState<string | null>(null);
@@ -222,9 +236,13 @@ export default function Craft({ refreshLog }: { refreshLog: () => Promise<void> 
           <select
             disabled={armed}
             value={status.targetGroup}
-            onChange={(event) =>
-              void act(() => setTarget(event.target.value, status.tierThreshold))
-            }
+            onChange={(event) => {
+              const id = event.target.value;
+              const next = pool.groups.find((g) => g.id === id);
+              void act(() =>
+                setTarget(id, next ? carryThreshold(next, status.tierThreshold) : 1),
+              );
+            }}
           >
             <optgroup label="Prefixes">
               {prefixes.map((g) => (
@@ -326,16 +344,19 @@ export default function Craft({ refreshLog }: { refreshLog: () => Promise<void> 
           <span className="muted small">Trigger Key code</span>
           <input
             type="number"
+            min={0}
+            max={255}
             disabled={armed}
             value={triggerDraft ?? status.triggerVk}
             onChange={(event) => {
               const next = Number(event.target.value);
               if (!Number.isFinite(next)) return;
               setTriggerDraft(next);
-              void act(async () => {
-                await setTrigger(next);
-                setTriggerDraft(null);
-              });
+              // The draft is cleared whether or not Rust accepted it. `act` swallows the rejection
+              // into the error line, so clearing it *after* the await left a rejected code — a typed
+              // 300, or a stray minus sign — sitting in the field for the rest of the session, with
+              // the badge above still showing the key that is really installed.
+              void act(() => setTrigger(next)).finally(() => setTriggerDraft(null));
             }}
           />
         </label>

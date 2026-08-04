@@ -144,10 +144,18 @@ pub enum Command {
     },
 }
 
-/// One physical, non-repeating press of the Trigger Key, with what the world looked like when it
-/// arrived.
+/// One physical, non-repeating press of the Trigger Key, with what the world looked like when the
+/// worker picked it up.
 ///
-/// The three facts are read by `win32` in the worker — never in the hook callback — and judged here.
+/// The three facts are read by `win32` in the worker — never in the hook callback, which may not call
+/// `GetForegroundWindow` — and judged here.
+///
+/// **Sampled at serve time, not at press time.** Normally those are a millisecond apart. They are not
+/// for the one press that arrives while a cycle is in flight and is still the newest when the cycle
+/// ends: `win32`'s worker serves that one, up to a whole cycle late, and reads Shift, the foreground
+/// and the cursor as they are *then*. That is the safe direction — the guard asks whether a Roll is
+/// permissible now rather than whether it was permissible when the key went down — and it is why a
+/// press held over from a cycle that ended in a Hit is Refused by the Latch rather than acted on.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Press {
     /// Was Shift physically held? Without it a click picks the jewel up instead of applying the orb.
@@ -648,7 +656,11 @@ impl CraftSession {
 
         match self.state {
             State::Idle => {
-                // The hook only counts presses while armed, so this is defensive.
+                // Not defensive — load-bearing. A press is counted by the hook while armed and served
+                // by the worker later, so a Disarm in between arrives first and this is the check that
+                // catches it. The spike had the same check for the same reason, and learned it the hard
+                // way: without it a self-disarm still let one already-counted press through and
+                // injected a click 51 ms after the app had announced it stopped.
                 out.say("Trigger Press ignored — no Craft Session is armed.");
                 return out;
             }
