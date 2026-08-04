@@ -102,6 +102,26 @@ allocation, no locks, no I/O, no third-party code.
 - **Cold CI builds are 12–20 min** whenever `Cargo.lock` changes. Mitigation: batch dependency changes rather
   than interleaving them with feature work you want to test on Windows; `swatinem/rust-cache` keyed on
   `Cargo.lock` handles the rest. Warm builds are 5–7 min, level with Electron.
+
+  > **Correction, 2026-08-04** — measured while resolving
+  > [#17](https://github.com/Furizaa/poe-graft/issues/17), and this consequence was wrong twice over.
+  >
+  > **Both numbers are too high.** The first build ever, with no cache at all, was **6m38s**, not
+  > 12–20 min. Typical builds are **~3m**, not 5–7. The public runner is 4 vCPU / 16 GB and the
+  > dependency tree is small.
+  >
+  > **More importantly, the trigger is wrong.** A `Cargo.lock` change does *not* cause a cold build.
+  > `swatinem/rust-cache` falls back to a **prefix restore-key** that excludes the lockfile hash, so a
+  > lockfile change misses the exact key, restores the previous cache regardless (`full match: false`),
+  > and recompiles only what actually changed. Adding two crates cost **2m55s** — faster than the
+  > measured no-change build, i.e. inside the noise.
+  >
+  > What genuinely goes cold is losing the *prefix*: the first build, a cache eviction after 7 unused
+  > days, or a **Rust toolchain bump**, since the toolchain hash is part of the restore-key.
+  >
+  > This does not change the decision — Tauri was chosen with a cost that turns out not to exist — but
+  > it does retire "batch your dependency changes" as a real constraint. It is tidy practice, nothing
+  > more. Anyone sequencing commits around the cliff is paying for a cliff that is not there.
 - **Roughly 150 lines of `unsafe` Rust are owned outright**, in the one place where mistakes are least
   forgiving. This is deliberate — see the alternatives below, where every option still leaves you owning a
   fork or a patch, just in a worse language for the job.

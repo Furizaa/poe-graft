@@ -44,12 +44,28 @@ itself` is the inner loop**, not release plumbing. Merging to `main` is the only
 `.github/workflows/build-windows.yml` derives the version from `github.run_number`, builds an NSIS
 installer, and publishes a signed release with `latest.json`.
 
-Measured on the real loop, not estimated: **merge → release is 3m14s warm and 6m38s cold**, and the
-full round trip to a new version running on the gaming PC is under 4 minutes. Any change to
-`Cargo.lock` busts the Rust cache and buys the cold figure, so **batch dependency changes** rather
-than interleaving them with work you want to see on Windows. The cliff is real but roughly half
-what [ADR 0001](docs/adr/0001-stack-and-seam.md) budgeted — the public runner is 4 vCPU and the
-dependency tree is small.
+Measured on the real loop, not estimated. **Merge → release is about 3 minutes**, and the full round
+trip to a new version running on the gaming PC is under 4 minutes.
+
+| Run | `Cargo.lock` | Merge → release |
+| --- | --- | --- |
+| First build ever, no cache at all | — | **6m38s** |
+| Typical | unchanged | **3m14s** |
+| Added two dependencies | **changed** | **2m55s** |
+
+**A `Cargo.lock` change does not cost a cold build**, which is the opposite of what this project
+assumed for its first three sessions. `swatinem/rust-cache` keys the exact cache on the lockfile
+hash *and* falls back to a **prefix restore-key** that ignores it, so a lockfile change misses the
+exact key, restores the previous cache anyway (`full match: false`), and recompiles only the crates
+that genuinely changed. Adding `clipboard-win` and `error-code` cost nothing measurable.
+
+What *is* genuinely cold is losing the prefix too: the first build, a cache eviction (GitHub expires
+entries after 7 days unused), or a **Rust toolchain change** — the toolchain hash is part of the
+restore-key, so a new `stable` release does buy the full rebuild.
+
+Batching dependency changes is still tidy, but it is **not** load-bearing — do not contort a commit
+sequence around it. See the dated correction in
+[ADR 0001](docs/adr/0001-stack-and-seam.md#consequences).
 
 The workflow file's header comment lists the specific things that silently break the updater. Read
 it before editing that file. Background and the empirical work behind it:
