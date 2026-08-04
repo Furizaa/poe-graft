@@ -450,6 +450,14 @@ impl CraftSession {
         &self.target
     }
 
+    /// The timings and bounds this session runs on.
+    ///
+    /// Read-only on purpose: these are measured defaults that ship in code, and a window that lets
+    /// the human retune the settle delay is a window that lets them retune it *wrong* mid-craft.
+    pub fn config(&self) -> &CycleConfig {
+        &self.config
+    }
+
     /// Choose a different Target Mod. Only possible while `Idle` — changing it mid-session would
     /// invalidate the Verdict the session is holding.
     pub fn set_target(&mut self, target: Target) -> bool {
@@ -556,8 +564,10 @@ impl CraftSession {
         // deaf while our window has focus ([#18](https://github.com/Furizaa/poe-graft/issues/18)).
         // A human who arms and presses without clicking into the game sees nothing happen at all.
         self.message = format!(
-            "Armed for {} at Tier {} or better. Click into Path of Exile, hover the jewel, and tap \
-             the Trigger Key once — the first press Reads the jewel and spends no Alteration.",
+            "Armed for {} at Tier {} or better. Click into Path of Exile with Shift NOT held — a \
+             Shift-click while an orb is on the cursor would apply it to whatever you clicked. Then \
+             hold Shift, hover the jewel, and tap the Trigger Key once: the first press Reads the \
+             jewel and spends no Alteration.",
             self.target.group_id(),
             self.target.tier_threshold(),
         );
@@ -606,8 +616,8 @@ impl CraftSession {
         self.reset();
         self.state = State::Sighting;
         self.message = format!(
-            "New Craft Session for {} at Tier {} or better. Click into Path of Exile, hover the \
-             next jewel, and tap the Trigger Key once.",
+            "New Craft Session for {} at Tier {} or better. Click into Path of Exile with Shift NOT \
+             held, hover the next jewel, then hold Shift and tap the Trigger Key once.",
             self.target.group_id(),
             self.target.tier_threshold(),
         );

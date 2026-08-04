@@ -58,7 +58,11 @@ impl Journal {
             Err(poisoned) => poisoned.into_inner(),
         };
 
-        if let Ok(mut file) = OpenOptions::new().create(true).append(true).open(&self.path) {
+        if let Ok(mut file) = OpenOptions::new()
+            .create(true)
+            .append(true)
+            .open(&self.path)
+        {
             let _ = file.write_all(stamped.as_bytes());
         }
     }

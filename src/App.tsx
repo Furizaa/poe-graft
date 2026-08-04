@@ -11,7 +11,7 @@ import {
   type BuildInfo,
   type PlatformInfo,
 } from "./api";
-import Spike from "./Spike";
+import Craft from "./Craft";
 
 /**
  * Where the update check has got to.
@@ -175,10 +175,10 @@ export default function App() {
         )}
       </section>
 
-      {/* The reason this build exists. It sits high because during a session it is the only
-          panel that matters, and it takes `refreshLog` so a landed roll pulls the log forward
-          without the human reaching for Refresh mid-craft. */}
-      <Spike refreshLog={refreshLog} />
+      {/* The app. It sits high because during a Craft Session it is the only panel that matters, and
+          it takes `refreshLog` so a landed Roll pulls the log forward without the human reaching for
+          Refresh mid-craft. */}
+      <Craft refreshLog={refreshLog} />
 
       <section>
         <h2>Updates</h2>

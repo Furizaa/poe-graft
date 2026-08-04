@@ -1,23 +1,23 @@
-//! Windows plumbing for poe-graft: the real implementation of `poe-graft-core`'s `Platform`.
+//! Windows plumbing for poe-graft: the real implementation of `poe-graft-core`'s `Platform`, and the
+//! executor for the roll cycle.
 //!
-//! The whole crate is gated on Windows, so on macOS it compiles to nothing. That is deliberate
-//! — it is the compile-time half of the seam.
+//! The whole crate is gated on Windows, so on macOS it compiles to nothing. That is deliberate — it
+//! is the compile-time half of the seam.
 //!
-//! The `Platform` impl here is still one real Win32 read and no more — the hook, `SendInput` and
-//! the clipboard belong to the roll cycle, and the cycle is not designed yet.
-//!
-//! [`spike`] is the exception, and it is quarantined on purpose: a throwaway payload for
-//! [#17](https://github.com/Furizaa/poe-graft/issues/17) that exercises all three mechanisms once
-//! per physical keypress so the cycle can be designed against facts instead of assumptions. It
-//! deliberately sits beside the seam rather than inside it — nothing in `poe-graft-core` knows it
-//! exists, so it can be deleted whole.
+//! [`cycle`] is where the `unsafe` lives: the `WH_KEYBOARD_LL` hook, `SendInput`, and the
+//! poison-and-poll clipboard protocol. It decides nothing. Every judgement — whether to Roll, whether
+//! to Refuse, whether to Halt — belongs to `poe_graft_core::CraftSession`, which this crate feeds
+//! events and takes commands from. That is what makes the cycle testable on a machine with no game on
+//! it ([ADR 0002](../../../docs/adr/0002-roll-cycle-and-hit-latch.md)).
 #![cfg(windows)]
 
-pub mod spike;
+pub mod cycle;
 
 use poe_graft_core::{Platform, PlatformError, PlatformInfo};
 use windows::Win32::Foundation::POINT;
-use windows::Win32::UI::WindowsAndMessaging::{GetCursorPos, GetSystemMetrics, SM_CXSCREEN, SM_CYSCREEN};
+use windows::Win32::UI::WindowsAndMessaging::{
+    GetCursorPos, GetSystemMetrics, SM_CXSCREEN, SM_CYSCREEN,
+};
 
 /// The Windows platform.
 #[derive(Debug, Default, Clone, Copy)]
@@ -39,7 +39,8 @@ impl Platform for WindowsPlatform {
         // SAFETY: both calls are pure reads of global desktop state. `GetSystemMetrics` takes a
         // value and returns a value. `GetCursorPos` writes two `i32`s into a `POINT` we own and
         // keep alive across the call; it cannot write anywhere else.
-        let (width, height) = unsafe { (GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN)) };
+        let (width, height) =
+            unsafe { (GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN)) };
 
         let mut point = POINT::default();
         unsafe { GetCursorPos(&mut point) }.map_err(|e| PlatformError::Os {

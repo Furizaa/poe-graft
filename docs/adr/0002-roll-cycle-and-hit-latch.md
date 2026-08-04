@@ -150,6 +150,20 @@ the callback's rules forbid; armed-or-not is a relaxed atomic load, which they p
 therefore leaves the key alone system-wide. The foreground guard stays where the spike put it — on the
 *action*, in the worker.
 
+> **Correction, 2026-08-04** — [#20](https://github.com/Furizaa/poe-graft/issues/20) built this, and
+> moved half of the last sentence.
+>
+> **The three Refusal preconditions are *read* in the worker and *judged* in `crates/core`.** They
+> arrive as fields on a `Press` — `shift_down`, `foreground_class`, `cursor` — and `CraftSession`
+> decides between a plan and a Refusal. The rule that mattered is untouched: the hook callback still
+> does nothing but relaxed atomic loads, and `GetForegroundWindow` is still called on the worker
+> thread. What changed is that every Refusal path is now a test on the development machine instead of
+> something only the gaming PC could exercise.
+>
+> **"Armed" resolves to `state != Idle`**, which includes `Latched` and `Halted`. A Halt is not
+> something the human notices instantly, and their next few reflex presses would otherwise leak `[`
+> straight into the game mid-craft. `Idle` is still the only state that lets the key through.
+
 ### Feedback: three sounds, distinct in kind
 
 **Hit** (loud and unmistakable), **Halt** (a warning), **Resync and Refusal** (a quiet blip meaning
@@ -173,6 +187,23 @@ pure version makes the *whole* cycle testable on the Mac, which is exactly what 
 for: replaying captured rolls through the cycle rather than only the parser. Every path — Resync, the
 wrong-item Halt, the identical-text case, the Latch — becomes a sequence of `ReadResult` events in
 `cargo test -p poe-graft-core`.
+
+> **Correction, 2026-08-04** — built by
+> [#20](https://github.com/Furizaa/poe-graft/issues/20) in `crates/core/src/cycle.rs`, and the sketched
+> command list is one command shorter than it appears above.
+>
+> **There is no `CountRoll` command.** `win32` reports whether the click actually landed
+> (`CycleReport { rolled, read }`) and core counts the Roll from that, so the count is what was really
+> spent rather than what was asked for. The rule it exists to protect is unchanged: the Roll count
+> advances because the click landed, never because a Read succeeded. The real plan for a press in
+> `Ready` is `[Poison(sentinel), Click, Settle(130), SendCopy, AwaitRead(150, 80)]`, and for `Sighting`
+> or `Resyncing` it is the same list without `Click` and `Settle`.
+>
+> One thing this ADR did not anticipate, found by the exhaustive invariant walk rather than by a test
+> anyone thought to write: **a `CycleReport` arriving with no plan in flight has to be discarded.**
+> Otherwise a duplicated report counts one Alteration twice, and one arriving after a `Disarm` drags a
+> closed session back to life — which is the same shape as the spike's `DISARMED ITSELF`, then rolled
+> 51 ms later.
 
 ### Settled defaults, in code
 

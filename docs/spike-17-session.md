@@ -1,5 +1,14 @@
 # Spike session checklist — issue #17
 
+> **Historical record, 2026-08-04.** The spike this checklist drives was deleted whole by
+> [#20](https://github.com/Furizaa/poe-graft/issues/20), which replaced it with the real roll cycle
+> (`crates/core/src/cycle.rs` and `crates/win32/src/cycle.rs`). Nothing here runs any more. It is kept
+> because it is the procedure that produced the measurements every later decision rests on — the
+> 130 ms item-update floor, the 1–8 ms reads, the confirmation that keyboard suppression reaches the
+> client — and because the *shape* of an on-device session has not changed. For the current one, see
+> "Running a session on the gaming PC" in [`README.md`](../README.md).
+
+
 Ordered script for the one session that has to happen at the gaming PC, in Path of Exile. It
 settles the five questions in
 [Spike on device: verify Shift-persist, Ctrl+C under Shift, and the trigger hook](https://github.com/Furizaa/poe-graft/issues/17),

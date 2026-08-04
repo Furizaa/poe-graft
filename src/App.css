@@ -122,7 +122,8 @@ a {
 }
 
 /* ---------------------------------------------------------------------------------------------
-   The spike panel. Goes away with the spike — see src/Spike.tsx.
+   The Craft Session panel. Layout and feel belong to
+   https://github.com/Furizaa/poe-graft/issues/9; what is here is legibility, not design.
    --------------------------------------------------------------------------------------------- */
 
 h3 {
@@ -140,6 +141,48 @@ h3:first-of-type {
 
 section p {
   margin: 0.45rem 0 0;
+}
+
+/* The state badge. Bigger than everything else on the panel because it is the one thing worth
+   reading at a glance from a second monitor, mid-craft, with the cursor parked on a jewel. */
+.state {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #100e0b;
+  color: var(--muted);
+}
+
+.state.good {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.state.bad {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+select {
+  font: inherit;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  max-width: 100%;
+}
+
+select:disabled {
+  opacity: 0.55;
+}
+
+.field.grow {
+  flex: 1;
+  min-width: 14rem;
 }
 
 /* A status readout, never a control: nothing here is clickable, so nothing invites a click

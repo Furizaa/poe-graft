@@ -86,18 +86,47 @@ minimal — the real diagnostics surface is
 
 Both Windows paths are verified on the gaming PC, not inferred.
 
-## The on-device spike
+## The roll cycle
 
-`crates/win32/src/spike.rs`, `src-tauri/src/spike.rs` and `src/Spike.tsx` are a **throwaway
-payload** for
-[Spike on device: verify Shift-persist, Ctrl+C under Shift, and the trigger hook](https://github.com/Furizaa/poe-graft/issues/17),
-not the app. They exercise the hook, the injected click and the clipboard read once per physical
-keypress so the roll cycle can be designed against measurements instead of assumptions. Delete them
-whole once [#7](https://github.com/Furizaa/poe-graft/issues/7) has what it needs — nothing in
-`crates/core` knows they exist.
+The whole cycle is a **pure state machine** in `crates/core/src/cycle.rs`: events in, commands out,
+no clock and no Win32. `crates/win32/src/cycle.rs` executes the commands — the `WH_KEYBOARD_LL`
+hook, `SendInput`, poison-and-poll — and reports what happened. It decides nothing.
 
-Running the session needs a human in-game: **[docs/spike-17-session.md](docs/spike-17-session.md)**
-is the ordered checklist.
+That split is what makes the cycle testable on a machine with no game on it. `cargo test -p
+poe-graft-core` replays the wrong-item `Halt`, a run of `Unknown` Verdicts, the stale Read that
+parses perfectly and lies, the Latch, and all 81 roll records the on-device spike produced — in
+under a tenth of a second. It also walks the reachable state space breadth-first to assert the one
+invariant that matters: **no reachable path spends an Alteration without a fresh Miss for the item
+in front of it.**
+
+The design is [ADR 0002](docs/adr/0002-roll-cycle-and-hit-latch.md) and the vocabulary is
+[`CONTEXT.md`](CONTEXT.md). Read both before changing either file; every capitalised term in them is
+load-bearing in code, log lines and UI copy.
+
+### The tier data is a bundled resource
+
+`crates/core` embeds no data. `data/ghastly-eye-jewel.json` reaches the installed app through
+`bundle.resources` in `src-tauri/tauri.conf.json` and is read once at startup. **If it fails to load
+the app says so and refuses to arm** — there is no fallback tier table and there must never be one,
+because guessing at the numbers is exactly how an over-roll gets through. The window shows which
+file it actually read.
+
+### Running a session on the gaming PC
+
+1. Check the environment panel: Sticky Keys **off**, and `keystrokes seen` climbing when you press
+   any key. Zero while the hook is installed means the hook is deaf
+   ([#18](https://github.com/Furizaa/poe-graft/issues/18)), not that the window is wrong.
+2. Pick the Target Mod and the Tier Threshold. Neither can change once armed.
+3. Click **Arm**, then **click into Path of Exile** — arming is a mouse click in poe-graft's window,
+   and the hook cannot hear the trigger while that window has focus.
+4. Hold Shift with Orbs of Alteration in your **inventory**, hover the jewel, and tap `[`. The first
+   press captures the Anchor and Reads; it does not Roll.
+5. Keep tapping. A quiet blip means that press did not Roll — a Resync or a Refusal, and the window
+   says which. On a Hit the app plays a loud sound and **refuses every further press** until you
+   acknowledge it with the mouse.
+
+The spike this replaced is gone; [docs/spike-17-session.md](docs/spike-17-session.md) is kept as the
+record of the session that produced the measurements.
 
 ## Compliance
 
