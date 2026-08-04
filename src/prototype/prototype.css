@@ -1,0 +1,880 @@
+/* PROTOTYPE — throwaway. See src/prototype/README.md.
+
+   Every class is prefixed `pv-` (variant) or `pb-` (prototype chrome) so nothing here can collide with
+   App.css, and deleting this file plus src/prototype/ removes the prototype completely.
+
+   The palette is App.css's own custom properties, deliberately: a variant that wins by introducing new
+   colours has not been compared fairly against the window it is replacing. Only structure varies. */
+
+.pv-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 8rem;
+}
+
+/* The driver is fixed to the right edge and would sit on top of the variant it is driving. Give it
+   its own gutter when there is room, and rely on its hide button when there is not. */
+@media (min-width: 1180px) {
+  .pv-main-shifted {
+    margin-right: 30rem;
+  }
+}
+
+.pv-muted {
+  color: var(--muted);
+}
+.pv-small {
+  font-size: 0.8rem;
+}
+.pv-mono {
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+}
+.pv-warn {
+  color: var(--error);
+}
+.pv-ok {
+  color: var(--accent);
+}
+.pv-bad {
+  color: var(--error);
+}
+
+/* Shared tone, because "how loud is this state" is a settled semantic (ADR 0002) rather than something
+   each variant should get to disagree about. */
+.pv-tone-good {
+  --pv-edge: var(--accent);
+}
+.pv-tone-bad {
+  --pv-edge: var(--error);
+}
+.pv-tone-hit {
+  --pv-edge: #7fd67f;
+}
+.pv-tone-flat {
+  --pv-edge: var(--line);
+}
+
+.pv-btn {
+  font: inherit;
+  color: var(--text);
+  background: #2a251e;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+}
+.pv-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.pv-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.pv-btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1508;
+  font-weight: 600;
+}
+.pv-btn-hit {
+  background: #7fd67f;
+  border-color: #7fd67f;
+  color: #0d1a0d;
+  font-weight: 700;
+}
+.pv-btn-big {
+  font-size: 1.05rem;
+  padding: 0.7rem 1.6rem;
+}
+
+/* ── A · Cockpit ─────────────────────────────────────────────────────────────────────────────── */
+
+.pv-a-band {
+  border: 1px solid var(--pv-edge);
+  border-left-width: 4px;
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 1rem 1.1rem;
+}
+.pv-a-state {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--pv-edge);
+  line-height: 1;
+}
+.pv-a-message {
+  margin: 0.6rem 0 0;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+.pv-a-act {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.pv-a-numbers {
+  display: flex;
+  gap: 1.25rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.pv-a-numbers strong {
+  color: var(--text);
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.3rem;
+}
+.pv-a-target {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.pv-a-target p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+.pv-a-picker {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.pv-a-picker label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.pv-a-picker label:first-child {
+  flex: 1;
+  min-width: 16rem;
+}
+.pv-a-picker select,
+.pv-a-picker input {
+  font: inherit;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  max-width: 100%;
+}
+.pv-a-fold {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.6rem;
+}
+.pv-a-fold summary {
+  cursor: pointer;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+.pv-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--error);
+  margin-left: 0.45rem;
+  vertical-align: middle;
+}
+.pv-a-diag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.pv-a-fold pre {
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  max-height: 16rem;
+  overflow: auto;
+}
+
+/* ── B · Two-phase ───────────────────────────────────────────────────────────────────────────── */
+
+.pv-b-session {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-left: 4px solid var(--pv-edge);
+  padding-left: 1.5rem;
+}
+.pv-b-headline {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--pv-edge);
+}
+.pv-b-sub {
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  color: var(--text);
+  max-width: 46ch;
+}
+.pv-b-steps {
+  margin: 1.25rem 0 0;
+  padding-left: 1.3rem;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+.pv-b-steps li {
+  margin-bottom: 0.3rem;
+}
+.pv-b-count {
+  display: flex;
+  gap: 2.5rem;
+  margin: 1.75rem 0 0;
+}
+.pv-b-count div {
+  display: flex;
+  flex-direction: column;
+}
+.pv-b-count strong {
+  font-size: 2rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.pv-b-count span {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.pv-b-controls {
+  margin-top: 1.75rem;
+}
+.pv-b-verbatim {
+  margin-top: 2rem;
+  max-width: 60ch;
+}
+.pv-b-verbatim summary {
+  cursor: pointer;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+.pv-b-verbatim p {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.pv-b-h {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.pv-b-filter {
+  font: inherit;
+  width: 100%;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+}
+.pv-b-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.pv-b-col h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+.pv-b-col h3 span {
+  color: var(--line);
+}
+.pv-b-list {
+  max-height: 15rem;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #100e0b;
+}
+.pv-b-row {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--text);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 0.4rem 0.55rem;
+  cursor: pointer;
+}
+.pv-b-row:hover {
+  background: #1d1a16;
+}
+.pv-b-row-on {
+  background: var(--accent);
+  color: #1a1508;
+  font-weight: 600;
+}
+.pv-b-tier {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.pv-b-tier-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+.pv-b-tier-head span {
+  color: var(--muted);
+}
+.pv-b-tier input[type="range"] {
+  width: 100%;
+  margin: 0.75rem 0 0.4rem;
+  accent-color: var(--accent);
+}
+.pv-b-tier-live {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.pv-b-tier-live strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.pv-b-ilvl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.pv-b-ilvl input {
+  font: inherit;
+  width: 5rem;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.3rem 0.45rem;
+}
+.pv-b-preflight {
+  margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pv-b-check {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  border-left: 3px solid var(--error);
+  padding: 0.35rem 0 0.35rem 0.7rem;
+}
+.pv-b-check span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ── C · Glanceable ──────────────────────────────────────────────────────────────────────────── */
+
+.pv-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 2rem;
+}
+.pv-c-card {
+  width: 100%;
+  border: 2px solid var(--pv-edge);
+  border-radius: 12px;
+  background: var(--panel);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+}
+.pv-c-word {
+  font-size: 2.9rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--pv-edge);
+}
+.pv-c-sub {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.pv-c-two {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1.75rem;
+}
+.pv-c-two div {
+  display: flex;
+  flex-direction: column;
+}
+.pv-c-two strong {
+  font-size: 2.6rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.pv-c-two span {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+.pv-c-checks {
+  list-style: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  max-width: 34ch;
+  text-align: left;
+}
+.pv-c-checks li {
+  padding: 0.35rem 0 0.35rem 1.4rem;
+  position: relative;
+  font-size: 0.92rem;
+}
+.pv-c-checks li::before {
+  content: "?";
+  position: absolute;
+  left: 0.25rem;
+  color: var(--error);
+  font-weight: 700;
+}
+.pv-c-act {
+  margin-top: 1.75rem;
+}
+.pv-c-setup {
+  width: 100%;
+  text-align: center;
+}
+.pv-c-group {
+  font: inherit;
+  width: 100%;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+.pv-c-min {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  color: var(--muted);
+}
+.pv-c-min input {
+  font: inherit;
+  font-size: 1.6rem;
+  font-variant-numeric: tabular-nums;
+  width: 6rem;
+  text-align: center;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.3rem;
+}
+.pv-c-resolve {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+}
+.pv-c-caveat {
+  margin: 0.5rem auto 0;
+  max-width: 52ch;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.pv-c-more {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.pv-c-more summary {
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+.pv-c-grid {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+}
+.pv-c-grid > span:nth-child(odd) {
+  color: var(--muted);
+  text-transform: lowercase;
+}
+.pv-c-more pre {
+  margin-top: 0.85rem;
+  padding: 0.6rem;
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  white-space: pre-wrap;
+  max-height: 14rem;
+  overflow: auto;
+}
+
+/* ── D · Ledger ──────────────────────────────────────────────────────────────────────────────── */
+
+.pv-d-strip {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.6rem 0.9rem;
+  background: #100e0b;
+  border: 1px solid var(--pv-edge);
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+.pv-d-state {
+  font-weight: 700;
+  color: var(--pv-edge);
+  letter-spacing: 0.03em;
+}
+.pv-d-num {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.pv-d-num strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.pv-d-spacer {
+  flex: 1;
+}
+.pv-d-setup {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.pv-d-groupsel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.pv-d-groupsel select {
+  font: inherit;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem;
+}
+.pv-d-tiers {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
+}
+.pv-d-tiers th {
+  text-align: left;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0 0.4rem 0.3rem;
+  border-bottom: 1px solid var(--line);
+}
+.pv-d-tiers td {
+  padding: 0.35rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+.pv-d-tiers tbody tr:hover {
+  background: #1d1a16;
+}
+.pv-d-tier-on {
+  background: #241f16;
+}
+.pv-d-tier-on td {
+  color: var(--accent);
+}
+.pv-d-tiers input[type="radio"] {
+  accent-color: var(--accent);
+}
+.pv-d-ilvl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.pv-d-ilvl input {
+  font: inherit;
+  width: 5rem;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.3rem 0.45rem;
+}
+.pv-d-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.pv-d-ledger {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #100e0b;
+  overflow: hidden;
+}
+.pv-d-line {
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 0.25rem 0.7rem;
+  border-bottom: 1px solid #1a1712;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+}
+.pv-d-hit {
+  color: #7fd67f;
+  background: #14210f;
+  font-weight: 700;
+}
+.pv-d-halt {
+  color: var(--error);
+  background: #241310;
+  font-weight: 600;
+}
+.pv-d-unknown {
+  color: #d8a657;
+}
+.pv-d-refused {
+  color: #8c8378;
+  font-style: italic;
+}
+.pv-d-diag {
+  color: #d8a657;
+}
+.pv-d-miss {
+  color: #7d766a;
+}
+.pv-d-roll {
+  color: var(--text);
+}
+.pv-d-rule {
+  color: var(--accent);
+  background: #17140f;
+}
+
+/* ── Prototype chrome. Deliberately not pretty: it must never read as part of a design. ──────── */
+
+.pb-bar {
+  position: fixed;
+  bottom: 0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  background: #f2ecdd;
+  color: #14120f;
+  border-radius: 999px;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 55%);
+  font-size: 0.8rem;
+  max-width: min(92vw, 44rem);
+}
+.pb-bar button {
+  font: inherit;
+  background: #14120f;
+  color: #f2ecdd;
+  border: 0;
+  border-radius: 999px;
+  width: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.pb-bar-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pb-bar-keys {
+  font-family: ui-monospace, Menlo, monospace;
+  opacity: 0.45;
+  flex: 0 0 auto;
+}
+
+.pb-tab {
+  position: fixed;
+  bottom: 0.9rem;
+  right: 0.9rem;
+  z-index: 100;
+  font: inherit;
+  font-size: 0.72rem;
+  background: #e06c5a;
+  color: #1a0f0c;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.pb-driver {
+  position: fixed;
+  right: 0.9rem;
+  bottom: 3.6rem;
+  z-index: 99;
+  width: min(27rem, 94vw);
+  max-height: 82vh;
+  overflow: auto;
+  background: #0b0a08;
+  border: 2px dashed #e06c5a;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 0.75rem;
+}
+.pb-driver-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+.pb-driver-head strong {
+  color: #e06c5a;
+  letter-spacing: 0.08em;
+  flex: 0 0 auto;
+}
+.pb-driver-head span {
+  color: var(--muted);
+  line-height: 1.4;
+}
+.pb-driver-head button {
+  font: inherit;
+  flex: 0 0 auto;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+}
+.pb-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.pb-label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.62rem;
+  margin-right: 0.2rem;
+}
+.pb-group button,
+.pb-bench-buttons button {
+  font: inherit;
+  font-size: 0.72rem;
+  background: #1d1a16;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.2rem 0.45rem;
+  cursor: pointer;
+}
+.pb-group button.pb-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1508;
+  font-weight: 700;
+}
+.pb-bench {
+  margin-top: 0.8rem;
+  border-top: 1px dashed var(--line);
+  padding-top: 0.7rem;
+}
+.pb-bench-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-top: 0.6rem;
+}
+.pb-bench-name {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.pb-bench-name span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+.pb-bench-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 0 0 auto;
+}
+.pb-bench-buttons .pb-hit {
+  background: #7fd67f;
+  border-color: #7fd67f;
+  color: #0d1a0d;
+  font-weight: 700;
+}
+.pb-bench-note {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
