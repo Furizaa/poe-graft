@@ -1,0 +1,199 @@
+# Sketch only — see docs/research/ci-and-auto-update.md for the reasoning.
+#
+# Recommended pipeline for poe-graft: Tauri v2, Windows-only, auto-versioned
+# from github.run_number so that MERGING TO main IS THE ONLY MANUAL STEP.
+#
+# Prerequisite decision: make the repo PUBLIC, or publish artifacts to a
+# separate public `poe-graft-releases` repo (see the commented owner/repo
+# inputs at the bottom). The Tauri updater's endpoint is a static URL, and a
+# private repo has no stable, token-fetchable release-asset URL — verified.
+#
+# Target file: .github/workflows/build-windows.yml
+
+name: build-windows
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+  workflow_dispatch:
+
+concurrency:
+  # A newer merge supersedes an in-flight build — keeps the loop tight and
+  # stops two runs racing for the same run_number-derived version.
+  group: build-windows
+  cancel-in-progress: true
+
+permissions:
+  contents: write # required to create the release and upload assets
+
+jobs:
+  build:
+    runs-on: windows-latest # 4 vCPU/16 GB public, 2 vCPU/8 GB private
+    steps:
+      - uses: actions/checkout@v4
+
+      # Derive a monotonically increasing version and write it into the
+      # manifest IN CI ONLY. No commit back to main, no bot noise, no push
+      # loop. github.run_number is monotonic, so the updater always sees a
+      # strictly higher semver — which removes the single most confusing
+      # failure mode in this loop ("it says up to date").
+      - name: Set version from run number
+        id: version
+        shell: bash
+        run: |
+          VERSION="0.1.${{ github.run_number }}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          node -e "
+            const fs = require('fs');
+            const p = 'src-tauri/tauri.conf.json';
+            const c = JSON.parse(fs.readFileSync(p, 'utf8'));
+            c.version = '$VERSION';
+            fs.writeFileSync(p, JSON.stringify(c, null, 2));
+          "
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      # The single most important step for round-trip latency: cold ~12-18 min
+      # vs warm ~4-6 min. Caches registry + git db + DEPENDENCY build
+      # artifacts; it deliberately evicts your own crates, so src-tauri always
+      # recompiles and relinks (~1.5-3.5 min floor on 2 vCPU).
+      #
+      # Keyed on Cargo.lock: any dependency change forces a cold build.
+      # Batch dependency work; don't interleave it with Windows testing.
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: './src-tauri -> target'
+
+      - run: pnpm install --frozen-lockfile
+
+      - uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Minisign keypair from `pnpm tauri signer generate`. Free, no CA.
+          # The updater REFUSES unsigned updates and this cannot be disabled.
+          # Losing this key means never shipping another update to an
+          # already-installed app — back it up outside the repo.
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          tagName: v__VERSION__
+          releaseName: 'poe-graft v__VERSION__'
+          # Inject provenance so the app can show which run built it — on a
+          # machine with no dev environment this is how you answer
+          # "is this actually the build I just merged?"
+          releaseBody: |
+            Automated build of ${{ github.sha }}.
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          # BOTH must be false. `releases/latest/download/latest.json` skips
+          # drafts AND prereleases, so the official tauri-action example
+          # (releaseDraft: true) silently breaks the updater.
+          releaseDraft: false
+          prerelease: false
+          # latest.json points at setup.exe rather than the .msi; MSI updates
+          # are clunkier and more likely to want elevation.
+          updaterJsonPreferNsis: true
+          # Default true — generates and uploads latest.json.
+          uploadUpdaterJson: true
+          args: '--target x86_64-pc-windows-msvc'
+          # --- Keep source private, releases public: publish to a separate
+          # --- public repo with a PAT that has contents:write on it.
+          # owner: Furizaa
+          # repo: poe-graft-releases
+          # env GITHUB_TOKEN: ${{ secrets.RELEASES_REPO_TOKEN }}
+
+# ---------------------------------------------------------------------------
+# Companion tauri.conf.json settings (not part of this workflow, but the
+# workflow is useless without them):
+#
+#   "bundle": {
+#     "createUpdaterArtifacts": true      // no .sig files => no latest.json
+#   },
+#   "plugins": {
+#     "updater": {
+#       "pubkey": "<contents of ~/.tauri/poe-graft.key.pub>",
+#       "endpoints": [
+#         "https://github.com/Furizaa/poe-graft/releases/latest/download/latest.json"
+#       ],
+#       "windows": { "installMode": "passive" }
+#     }
+#   }
+#
+# Leave bundle.windows.nsis.installMode at its "currentUser" default so
+# updates install per-user with NO UAC prompt.
+#
+# Capabilities: "updater:default" plus the process plugin for relaunch().
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# ELECTRON VARIANT (the private-repo-friendly fallback) — replaces the Rust
+# and tauri-action steps above:
+#
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: lts/*
+#           cache: 'npm'
+#
+#       - name: Cache Electron binaries
+#         uses: actions/cache@v4
+#         with:
+#           path: ~\AppData\Local\electron
+#           key: electron-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+#
+#       # npm ci, not npm install — native modules (the global input hook)
+#       # must rebuild against this Electron ABI.
+#       - run: npm ci
+#
+#       - run: npm version --no-git-tag-version 0.1.${{ github.run_number }}
+#
+#       - run: npx electron-builder --win --publish always
+#         env:
+#           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
+# with electron-builder.yml:
+#
+#   win:
+#     target: nsis          # required; Squirrel.Windows is NOT supported
+#   publish:
+#     provider: github
+#     private: true         # -> PrivateGitHubProvider (API + octet-stream)
+#     releaseType: release  # NOT draft
+#
+# The client then needs a token on the Windows machine (GH_TOKEN env var or
+# autoUpdater.setFeedURL({ token })). Use a FINE-GRAINED PAT scoped to
+# contents:read on this one repo — not a classic repo-scope token.
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# VELOPACK / .NET VARIANT (fastest CI, worst fit for the Mac dev loop):
+#
+#       - uses: actions/setup-dotnet@v4
+#         with:
+#           dotnet-version: 9.0.x
+#
+#       - run: dotnet publish src/PoeGraft/PoeGraft.csproj -r win-x64 --self-contained -o publish
+#
+#       - name: Pack and publish
+#         shell: bash
+#         run: |
+#           dotnet tool install -g vpk
+#           V=0.1.${{ github.run_number }}
+#           # download the previous release so vpk can build a delta package
+#           vpk download github --repoUrl https://github.com/${{ github.repository }} --token ${{ secrets.GITHUB_TOKEN }}
+#           vpk pack -u PoeGraft -v "$V" -p publish
+#           vpk upload github --repoUrl https://github.com/${{ github.repository }} --token ${{ secrets.GITHUB_TOKEN }} \
+#             --publish --releaseName "poe-graft $V" --tag "v$V"
+#
+# Client: new UpdateManager(new GithubSource(url, accessToken, false))
+# ---------------------------------------------------------------------------
