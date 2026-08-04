@@ -72,26 +72,33 @@ only and always runs.
 
 | Field | First run | Why |
 | --- | --- | --- |
-| Settle delay | **`120`** ms | Between the click and `Ctrl+C`. **40 ms was measured too short** — see below |
-| Read timeout | `500` ms | Our own code reads in 1–5 ms, so this is very generous |
+| Settle delay | `130` ms | Between the click and `Ctrl+C`. Now the default — **40 ms was measured too short**, see below |
+| Read timeout | `150` ms | Now the default. Our own code reads in 1–8 ms, so this is still generous |
 | Drift tolerance | `24` px | How far the cursor may wander off the jewel before the app refuses |
 | **Roll cap** | **`5`** | Deliberately tiny. Prove the cycle works before spending real currency |
 | Stop after | `5` | Bad reads in a row before it disarms itself |
 
-**Turn Suppress the trigger key ON.** Two reasons: it stops the game seeing a stream of trigger
-presses at all, which removes a variable from the timing problem below, and it answers question 5
-as a side effect. Keep **Require Path of Exile in the foreground** *on* and **Copy mode B** *off*.
+**Suppress the trigger key is now ON by default** — there is no reason for the game to see a key you
+are hammering purely to talk to this app, and it answers question 5 as a side effect. Keep
+**Require Path of Exile in the foreground** *on* and **Copy mode B** *off*.
 
-### On the settle delay
+### Why the delay is 130 ms and the timeout is 150 ms
 
-The first on-device session ran at 40 ms and lost **~40% of reads to timeouts** — the clipboard
-never changed at all within 500 ms, meaning the injected `Ctrl+C` produced nothing rather than
-arriving late. The successful reads in the same run came back in **1–5 ms**, so the copy itself is
-not slow; something about firing `Ctrl+C` 40 ms after the click makes the game drop it.
+Both were retuned from measurement rather than guessed, after two sessions at 40 ms / 500 ms lost
+**33 reads to timeouts**.
 
-Raising the delay is the cheapest experiment and the first thing to try. Work upward — 120, then
-200 — and watch the timeout rate. Every roll now logs what the clipboard actually held when a read
-fails, so the log will say whether the game never copied or whether the app misread it.
+Every one of those timeouts logged `our sentinel, untouched — the game never copied`, and the roll
+immediately after each one succeeded ~48 ms later. So the game was never *slow* to copy — it was not
+*ready* to. Applying an alteration is server-authoritative, so at 40 ms the `Ctrl+C` arrives while
+the item is still mid-update and is dropped outright. **That makes the game's item-update round-trip
+the floor on the roll rate, not our read**, which is a finding the roll cycle in
+[#7](https://github.com/Furizaa/poe-graft/issues/7) has to be built around.
+
+The 500 ms timeout was worse than useless: reads land in 1–8 ms, so it was 60× the observed worst
+case, and every miss stalled the cycle for half a second — long enough to swallow the next two or
+three presses. That was the whole of the "three out of four presses do nothing" feeling.
+
+If timeouts still appear at 130 ms, raise it further — 200, then 300 — and watch the rate.
 
 ## 6 · Set up in game
 

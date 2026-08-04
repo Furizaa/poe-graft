@@ -84,7 +84,11 @@ fn log(line: &str) {
 /// Virtual-key code of the trigger. `0` means no trigger chosen, and the hook does nothing.
 static TRIGGER_VK: AtomicU32 = AtomicU32::new(0);
 /// Whether to swallow the trigger key so it never reaches the game.
-static SUPPRESS: AtomicBool = AtomicBool::new(false);
+///
+/// **On by default.** The trigger is a key the human is hammering several times a second purely to
+/// talk to this app; there is no reason for the game to see any of it, and letting it through adds
+/// a variable to every timing question the spike is trying to answer.
+static SUPPRESS: AtomicBool = AtomicBool::new(true);
 /// Whether a trigger press should start a cycle.
 static ARMED: AtomicBool = AtomicBool::new(false);
 /// Whether to record key codes for the "which key is this?" readout.
@@ -111,9 +115,20 @@ static PRESS_SEQ: AtomicU32 = AtomicU32::new(0);
 // ---------------------------------------------------------------------------------------------
 
 /// Settle time between the injected click and `Ctrl+C`, so the copy reads the *new* roll.
-static COPY_DELAY_MS: AtomicU32 = AtomicU32::new(40);
+///
+/// **130 ms, measured, not guessed.** At 40 ms roughly a third of reads came back
+/// `our sentinel, untouched — the game never copied`, and the roll immediately after each one
+/// succeeded ~48 ms later. So the game was not slow to copy, it was not *ready* to: applying an
+/// alteration is server-authoritative, and `Ctrl+C` lands while the item is still mid-update and is
+/// dropped outright. This is the floor on the roll rate, and it is the game's, not ours.
+static COPY_DELAY_MS: AtomicU32 = AtomicU32::new(130);
 /// How long to wait for the clipboard to change before calling the read a timeout.
-static READ_TIMEOUT_MS: AtomicU32 = AtomicU32::new(500);
+///
+/// **150 ms, down from 500.** The original figure came from believing reads took 15–32 ms; our own
+/// code does them in 1–8 ms, so 500 ms was 60× the observed worst case and made every miss cost
+/// half a second — long enough to swallow the next two or three presses. A read that has not landed
+/// in 150 ms is not going to.
+static READ_TIMEOUT_MS: AtomicU32 = AtomicU32::new(150);
 /// How far the cursor may drift from the captured item position before the spike refuses.
 static TOLERANCE_PX: AtomicI32 = AtomicI32::new(24);
 /// Hard ceiling on rolls per arming. Currency is real; a runaway loop is the risk this bounds.
@@ -593,8 +608,11 @@ fn run_cycle(roll: u32, shift_down: bool) {
     // a run of failed reads.
     ROLLS.store(roll, Ordering::Relaxed);
 
-    // Let the client process the click and rebuild the item's tooltip before copying it.
-    spin_for(Duration::from_millis(delay as u64));
+    // Let the client apply the orb and rebuild the tooltip before copying it. `sleep`, not a busy
+    // wait: this is the longest part of the cycle, it needs no sub-millisecond accuracy — the real
+    // elapsed time is measured and logged either way — and spinning here would burn most of a core
+    // next to a running game for no benefit.
+    std::thread::sleep(Duration::from_millis(delay as u64));
 
     let copy_started = Instant::now();
     if let Err(err) = send_copy(release_shift) {
@@ -1142,19 +1160,6 @@ pub fn status() -> SpikeStatus {
 // ---------------------------------------------------------------------------------------------
 // Small helpers
 // ---------------------------------------------------------------------------------------------
-
-/// Busy-wait for `duration`. Used instead of `sleep` wherever the number is measured or matters:
-/// Windows rounds `sleep` up to the scheduler tick, which is ~15 ms — the same order as the
-/// clipboard latency being measured.
-fn spin_for(duration: Duration) {
-    if duration.is_zero() {
-        return;
-    }
-    let started = Instant::now();
-    while started.elapsed() < duration {
-        std::hint::spin_loop();
-    }
-}
 
 /// Take a lock, ignoring poisoning. A panic elsewhere must not make the spike unusable on the one
 /// machine that can run it.
