@@ -91,6 +91,14 @@ static ARMED: AtomicBool = AtomicBool::new(false);
 static LEARNING: AtomicBool = AtomicBool::new(false);
 /// Last physical key code seen while [`LEARNING`].
 static LAST_KEY_VK: AtomicU32 = AtomicU32::new(0);
+/// How many physical key-down events the callback has observed since the hook went in.
+///
+/// A **count only** — never which keys, unless [`LEARNING`] is on. It exists because
+/// `SetWindowsHookExW` returning a valid handle proves only that Windows accepted the hook, not
+/// that it is delivering anything: a hook that installs cleanly and then hears nothing looks
+/// identical, from the app, to a panel that is failing to render what it heard. This number tells
+/// those two apart in one glance, which is the difference between a diagnosis and a guess.
+static KEYS_SEEN: AtomicU32 = AtomicU32::new(0);
 /// Tracks the trigger key's own up/down state so auto-repeat is not mistaken for a new press.
 static TRIGGER_DOWN: AtomicBool = AtomicBool::new(false);
 /// Monotonic count of fresh physical trigger presses seen while armed. The worker compares this
@@ -209,6 +217,9 @@ pub struct SpikeStatus {
     pub trigger_name: String,
     pub last_key_vk: u32,
     pub last_key_name: String,
+    /// Physical key-downs the callback has observed. Zero while the hook is installed means the
+    /// hook is deaf, which is a different fault from anything the panel could be getting wrong.
+    pub keys_seen: u32,
     pub position: Option<(i32, i32)>,
     pub rolls: u32,
     pub max_rolls: u32,
@@ -245,8 +256,11 @@ unsafe extern "system" fn keyboard_hook(code: i32, wparam: WPARAM, lparam: LPARA
     // action per *physical* press" a property of the code rather than a hope.
     let injected = event.flags.contains(LLKHF_INJECTED);
 
-    if LEARNING.load(Ordering::Relaxed) && is_down && !injected {
-        LAST_KEY_VK.store(event.vkCode, Ordering::Relaxed);
+    if is_down && !injected {
+        KEYS_SEEN.fetch_add(1, Ordering::Relaxed);
+        if LEARNING.load(Ordering::Relaxed) {
+            LAST_KEY_VK.store(event.vkCode, Ordering::Relaxed);
+        }
     }
 
     let trigger = TRIGGER_VK.load(Ordering::Relaxed);
@@ -360,6 +374,11 @@ pub fn install() -> Result<(), PlatformError> {
         }
     };
 
+    // Reset both so "installed, and it has seen 0 keys" is unambiguous rather than a leftover
+    // from a previous install in the same session.
+    KEYS_SEEN.store(0, Ordering::Relaxed);
+    LAST_KEY_VK.store(0, Ordering::Relaxed);
+
     WORKER_RUN.store(true, Ordering::Release);
     let worker = std::thread::Builder::new()
         .name("poe-graft-spike".into())
@@ -410,8 +429,21 @@ pub fn uninstall() -> Result<(), PlatformError> {
 
 fn worker_loop() {
     let mut handled = PRESS_SEQ.load(Ordering::Relaxed);
+    let mut reported_key = LAST_KEY_VK.load(Ordering::Relaxed);
 
     while WORKER_RUN.load(Ordering::Acquire) {
+        // The callback cannot log — it has a 300 ms budget and must not allocate — so the durable
+        // record of a learned key is written from here. It doubles as proof this worker is alive,
+        // which every roll also depends on: if keys are being seen but nothing appears here, the
+        // fault is the worker, not the hook.
+        let key = LAST_KEY_VK.load(Ordering::Relaxed);
+        if key != reported_key {
+            reported_key = key;
+            if key != 0 {
+                log(&format!("spike: saw key {}", describe_vk(key)));
+            }
+        }
+
         let seq = PRESS_SEQ.load(Ordering::Relaxed);
         if seq == handled {
             // Idle. Sleep granularity is coarse on Windows and it does not matter here — this
@@ -995,6 +1027,7 @@ pub fn status() -> SpikeStatus {
         trigger_name: describe_vk(trigger_vk),
         last_key_vk,
         last_key_name: describe_vk(last_key_vk),
+        keys_seen: KEYS_SEEN.load(Ordering::Relaxed),
         position: POS_SET.load(Ordering::Acquire).then(|| {
             (
                 POS_X.load(Ordering::Relaxed),

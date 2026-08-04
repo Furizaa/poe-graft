@@ -93,6 +93,15 @@ export type SpikeStatus = {
   triggerName: string;
   lastKeyVk: number;
   lastKeyName: string;
+  /**
+   * Physical key-downs the hook callback has observed since install. A count only — never which
+   * keys, unless learning is on.
+   *
+   * This is the decisive diagnostic: `SetWindowsHookExW` returning a handle proves Windows
+   * accepted the hook, not that it delivers anything. Installed with `keysSeen` stuck at 0 means
+   * the hook is deaf, which is a different fault from the panel failing to render what it heard.
+   */
+  keysSeen: number;
   position: [number, number] | null;
   rolls: number;
   maxRolls: number;

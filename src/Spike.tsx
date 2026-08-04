@@ -282,7 +282,33 @@ export default function Spike({ refreshLog }: { refreshLog: () => Promise<void> 
         <span className="badge">
           WH_KEYBOARD_LL {status.hookInstalled ? "installed" : "not installed"}
         </span>
+        {/* The decisive diagnostic. Installing only proves Windows accepted the hook; this proves
+            it is delivering. Press any key and watch it climb. */}
+        <span
+          className={
+            status.hookInstalled
+              ? status.keysSeen > 0
+                ? "badge good"
+                : "badge bad"
+              : "badge"
+          }
+        >
+          {status.keysSeen} keystrokes seen
+        </span>
       </div>
+      {status.hookInstalled && status.keysSeen === 0 && (
+        <p className="error">
+          The hook is installed but has not seen a single keystroke. Press any key now — this
+          should climb immediately. If it stays at 0, the hook is deaf rather than the panel being
+          wrong, and no amount of pressing keys will help: report it and stop here.
+        </p>
+      )}
+      {status.hookInstalled && status.keysSeen > 0 && (
+        <p className="muted small">
+          The hook is delivering. This counts key-downs only, and never records which keys unless
+          you turn learning on below.
+        </p>
+      )}
 
       {/* Step 3. The trigger is learned rather than guessed: this keyboard has no F-row, so the
           F13–F24 keys PoE ignores are not available and the right key is whatever is spare. */}
@@ -300,15 +326,43 @@ export default function Spike({ refreshLog }: { refreshLog: () => Promise<void> 
             void push({ ...config, triggerVk: status.lastKeyVk, learning: false })
           }
         >
-          Use {status.lastKeyName}
+          Use this key
         </button>
-        <span className="badge">trigger {status.triggerName}</span>
+        <span className={status.lastKeyVk ? "badge good" : "badge"}>
+          last key {status.lastKeyName}
+        </span>
+        <span className={status.triggerVk ? "badge good" : "badge"}>
+          trigger {status.triggerName}
+        </span>
       </div>
       {status.learning && (
         <p className="muted small">
-          Press the key you want to use. Key codes are only recorded while this is on.
+          Press the key you want to use — <strong>last key</strong> above should change. Key codes
+          are only recorded while this is on.
         </p>
       )}
+
+      {/* A way through that does not depend on learning working. Learning is the nicer path, but
+          it is not the only one, and the whole session would otherwise be gated on it. */}
+      <div className="row">
+        <NumberField
+          label="Or set the code directly"
+          hint="decimal virtual-key code"
+          value={config.triggerVk}
+          onChange={(triggerVk) => void push({ ...config, triggerVk })}
+        />
+        <span className="muted small">
+          Scroll Lock <span className="mono">145</span> · Pause <span className="mono">19</span> ·
+          Insert <span className="mono">45</span> · Home <span className="mono">36</span> · End{" "}
+          <span className="mono">35</span> · Page Up <span className="mono">33</span> · Page Down{" "}
+          <span className="mono">34</span> · Numpad 0 <span className="mono">96</span> · <span
+            className="mono"
+          >
+            `
+          </span>{" "}
+          <span className="mono">192</span>
+        </span>
+      </div>
 
       <h3>4 · Bounds</h3>
       <div className="row">

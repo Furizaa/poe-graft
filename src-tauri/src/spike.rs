@@ -36,6 +36,9 @@ pub struct SpikeStatusDto {
     pub trigger_name: String,
     pub last_key_vk: u32,
     pub last_key_name: String,
+    /// Physical key-downs the hook callback has observed since it was installed. The one number
+    /// that separates "the hook is deaf" from "the panel is not showing what it heard".
+    pub keys_seen: u32,
     /// The captured item position, absent until the first press after arming.
     pub position: Option<[i32; 2]>,
     pub rolls: u32,
@@ -119,6 +122,7 @@ mod imp {
             trigger_name: status.trigger_name,
             last_key_vk: status.last_key_vk,
             last_key_name: status.last_key_name,
+            keys_seen: status.keys_seen,
             position: status.position.map(|(x, y)| [x, y]),
             rolls: status.rolls,
             max_rolls: status.max_rolls,
