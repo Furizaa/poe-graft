@@ -66,6 +66,13 @@ trivial (`generation == "prefix" && tier <= N`, read straight off the annotated 
 because it sits immediately next to the parser. Moving it up would split the domain model across two
 languages to save writing about a hundred lines of the easiest Rust in the project.
 
+> **Correction, 2026-08-04** — [ADR 0002](./0002-roll-cycle-and-hit-latch.md) supersedes the details here,
+> though not the decision. **The hit test is not `generation == "prefix" && tier <= N`**: the annotated
+> format it reads that off is a client setting, and its mod name varies per tier, so tier is derived from
+> the rolled numbers instead and the annotation is only logged as a cross-check. **`itemPosition` is not in
+> the TS → Rust payload** either — the app captures the Anchor itself, from the cursor, on the first press
+> of a session. The seam's position and the "TypeScript holds no domain logic" rule are unchanged.
+
 ### Fail-closed on sequencing
 
 This is what makes the seam safe regardless of where it sits: **the native side refuses to inject until a
@@ -88,6 +95,13 @@ allocation, no locks, no I/O, no third-party code.
   decision logic cannot drift into platform code without the compiler objecting.
 - **Mac tests are fast and real.** `cargo test -p poe-graft-core` runs in seconds and never builds Tauri's
   dependency tree, replaying the 113 captured clipboard fixtures through the actual parser and hit test.
+
+  > **Correction, 2026-08-04** — this was aspirational, not true. **The fixtures are not in the repo**: the
+  > 113 exist only as raw text on [#16](https://github.com/Furizaa/poe-graft/issues/16), and the 47 captured
+  > by our own code during [#17](https://github.com/Furizaa/poe-graft/issues/17) only in session logs.
+  > Landing both, and the parser that replays them, is
+  > [#19](https://github.com/Furizaa/poe-graft/issues/19). Since
+  > [ADR 0002](./0002-roll-cycle-and-hit-latch.md) they replay through the whole cycle, not only the parser.
 - **Tauri's one weakness is largely defused by the layout.** The 12–20 min cold build fires on `Cargo.lock`
   churn; `core` has near-zero dependencies, so most logic edits never touch the lock file and most iteration
   never reaches CI at all.
