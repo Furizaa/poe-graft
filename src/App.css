@@ -121,6 +121,101 @@ a {
   margin: 0.7rem 0 0;
 }
 
+/* ---------------------------------------------------------------------------------------------
+   The spike panel. Goes away with the spike — see src/Spike.tsx.
+   --------------------------------------------------------------------------------------------- */
+
+h3 {
+  margin: 1.1rem 0 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+h3:first-of-type {
+  margin-top: 0;
+}
+
+section p {
+  margin: 0.45rem 0 0;
+}
+
+/* A status readout, never a control: nothing here is clickable, so nothing invites a click
+   mid-craft when the cursor has to stay on the item. */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #100e0b;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.badge.good {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.badge.bad {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.row {
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+input {
+  font: inherit;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+}
+
+input[type="number"] {
+  width: 6.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+input:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 1px;
+}
+
+input.grow {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.toggle input {
+  accent-color: var(--accent);
+}
+
 .muted {
   color: var(--muted);
 }

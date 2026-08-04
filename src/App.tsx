@@ -11,6 +11,7 @@ import {
   type BuildInfo,
   type PlatformInfo,
 } from "./api";
+import Spike from "./Spike";
 
 /**
  * Where the update check has got to.
@@ -173,6 +174,11 @@ export default function App() {
           <p className="muted">Loading…</p>
         )}
       </section>
+
+      {/* The reason this build exists. It sits high because during a session it is the only
+          panel that matters, and it takes `refreshLog` so a landed roll pulls the log forward
+          without the human reaching for Refresh mid-craft. */}
+      <Spike refreshLog={refreshLog} />
 
       <section>
         <h2>Updates</h2>

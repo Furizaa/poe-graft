@@ -44,9 +44,12 @@ itself` is the inner loop**, not release plumbing. Merging to `main` is the only
 `.github/workflows/build-windows.yml` derives the version from `github.run_number`, builds an NSIS
 installer, and publishes a signed release with `latest.json`.
 
-Warm round trip is roughly 5–7 minutes. Any change to `Cargo.lock` busts the Rust cache and costs
-12–20 minutes instead, so **batch dependency changes** rather than interleaving them with work you
-want to see on Windows.
+Measured on the real loop, not estimated: **merge → release is 3m14s warm and 6m38s cold**, and the
+full round trip to a new version running on the gaming PC is under 4 minutes. Any change to
+`Cargo.lock` busts the Rust cache and buys the cold figure, so **batch dependency changes** rather
+than interleaving them with work you want to see on Windows. The cliff is real but roughly half
+what [ADR 0001](docs/adr/0001-stack-and-seam.md) budgeted — the public runner is 4 vCPU and the
+dependency tree is small.
 
 The workflow file's header comment lists the specific things that silently break the updater. Read
 it before editing that file. Background and the empirical work behind it:
@@ -66,6 +69,19 @@ minimal — the real diagnostics surface is
 | Install (Windows) | `%LOCALAPPDATA%\poe-graft` — per-user, no UAC (NSIS `currentUser`) |
 
 Both Windows paths are verified on the gaming PC, not inferred.
+
+## The on-device spike
+
+`crates/win32/src/spike.rs`, `src-tauri/src/spike.rs` and `src/Spike.tsx` are a **throwaway
+payload** for
+[Spike on device: verify Shift-persist, Ctrl+C under Shift, and the trigger hook](https://github.com/Furizaa/poe-graft/issues/17),
+not the app. They exercise the hook, the injected click and the clipboard read once per physical
+keypress so the roll cycle can be designed against measurements instead of assumptions. Delete them
+whole once [#7](https://github.com/Furizaa/poe-graft/issues/7) has what it needs — nothing in
+`crates/core` knows they exist.
+
+Running the session needs a human in-game: **[docs/spike-17-session.md](docs/spike-17-session.md)**
+is the ordered checklist.
 
 ## Compliance
 

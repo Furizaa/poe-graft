@@ -3,17 +3,19 @@
 
 mod build_info;
 mod journal;
+mod spike;
 
 use build_info::BuildInfo;
 use journal::Journal;
 use poe_graft_core::Platform;
 use serde::Serialize;
+use std::sync::Arc;
 use tauri::{Manager, State};
 
 /// Everything the commands need, resolved once at startup.
 struct AppState {
     build: BuildInfo,
-    journal: Journal,
+    journal: Arc<Journal>,
     platform: Box<dyn Platform>,
 }
 
@@ -99,7 +101,7 @@ pub fn run() {
         .plugin(tauri_plugin_process::init())
         .plugin(tauri_plugin_updater::Builder::new().build())
         .setup(|app| {
-            let journal = Journal::new(app.path().app_log_dir()?.join("poe-graft.log"));
+            let journal = Arc::new(Journal::new(app.path().app_log_dir()?.join("poe-graft.log")));
             let platform = platform();
             let build = BuildInfo::new(app.package_info().version.to_string(), platform.name());
 
@@ -107,6 +109,15 @@ pub fn run() {
             journal.append(&build.summary());
             if let Some(url) = &build.run_url {
                 journal.append(&format!("built by {url}"));
+            }
+
+            // The spike's hook and worker threads have no access to Tauri state, and what they
+            // learn has to outlive the window: the updater force-exits the app, and a panicking
+            // hook takes the window with it. So they get a direct line to the same file.
+            #[cfg(windows)]
+            {
+                let sink = Arc::clone(&journal);
+                poe_graft_win32::spike::set_log_sink(Box::new(move |line| sink.append(line)));
             }
 
             app.manage(AppState {
@@ -121,7 +132,13 @@ pub fn run() {
             platform_info,
             log_path,
             log_tail,
-            log_append
+            log_append,
+            spike::spike_status,
+            spike::spike_hook,
+            spike::spike_arm,
+            spike::spike_configure,
+            spike::spike_forget_position,
+            spike::spike_note
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

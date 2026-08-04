@@ -9,9 +9,30 @@ repository.workspace = true
 # Both the crate body and its dependencies are gated on Windows, so on macOS this builds as an
 # empty library with nothing to download. That is what keeps `cargo test --workspace` fast on
 # the development machine.
+#
+# EVERY dependency change here costs one cold CI build (~6m40s against ~3m15s warm), because
+# `Cargo.lock` is `rust-cache`'s key. Batch them into a single commit and then iterate on logic,
+# which stays warm — see docs/adr/0001-stack-and-seam.md.
 [target.'cfg(windows)'.dependencies]
 poe-graft-core = { workspace = true }
 
+# Poison-and-poll needs `GetClipboardSequenceNumber`, which this exposes as `seq_num()` — and it
+# needs no open clipboard handle, so polling for freshness never contends with the game for the
+# clipboard lock. That answers ADR 0001's open question in favour of a wrapper over raw Win32:
+# the wrapper does not hide the one primitive the protocol actually depends on.
+clipboard-win = "5.4.1"
+
 [target.'cfg(windows)'.dependencies.windows]
 version = "0.62"
-features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"]
+features = [
+  "Win32_Foundation",
+  "Win32_UI_WindowsAndMessaging",
+  # SendInput and GetAsyncKeyState: the injected click and Ctrl+C, and reading whether the human
+  # is still physically holding Shift.
+  "Win32_UI_Input_KeyboardAndMouse",
+  # STICKYKEYS / FILTERKEYS / TOGGLEKEYS. Sticky Keys silently breaks Shift-persist with no
+  # error, so the app reads the setting rather than asking anyone to remember to check it.
+  "Win32_UI_Accessibility",
+  # GetCurrentThreadId, so the hook's own thread can be sent a WM_QUIT to shut it down.
+  "Win32_System_Threading",
+]

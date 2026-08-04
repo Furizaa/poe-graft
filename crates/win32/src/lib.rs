@@ -3,12 +3,17 @@
 //! The whole crate is gated on Windows, so on macOS it compiles to nothing. That is deliberate
 //! — it is the compile-time half of the seam.
 //!
-//! At bootstrap this crate is one real Win32 read and no more. The `WH_KEYBOARD_LL` hook,
-//! `SendInput` and the clipboard poison-and-poll all land here later; what exists now is the
-//! smallest thing that proves the `windows` crate compiles, links and runs inside a release
-//! bundle on the gaming PC — the riskiest unproven part of the toolchain, and the one that is
-//! most expensive to discover is broken on a machine with no debugger.
+//! The `Platform` impl here is still one real Win32 read and no more — the hook, `SendInput` and
+//! the clipboard belong to the roll cycle, and the cycle is not designed yet.
+//!
+//! [`spike`] is the exception, and it is quarantined on purpose: a throwaway payload for
+//! [#17](https://github.com/Furizaa/poe-graft/issues/17) that exercises all three mechanisms once
+//! per physical keypress so the cycle can be designed against facts instead of assumptions. It
+//! deliberately sits beside the seam rather than inside it — nothing in `poe-graft-core` knows it
+//! exists, so it can be deleted whole.
 #![cfg(windows)]
+
+pub mod spike;
 
 use poe_graft_core::{Platform, PlatformError, PlatformInfo};
 use windows::Win32::Foundation::POINT;
