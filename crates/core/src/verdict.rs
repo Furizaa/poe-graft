@@ -110,6 +110,55 @@ pub enum Diagnostic {
     },
 }
 
+impl std::fmt::Display for Diagnostic {
+    /// The line the log gets, and the line the window shows after a `Halt`.
+    ///
+    /// The copy lives on the type rather than in the frontend so that the file and the window cannot
+    /// disagree about what went wrong — on a machine with no dev environment the file is all there
+    /// is.
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::AnnotationDisagrees {
+                line,
+                derived,
+                annotated,
+            } => write!(
+                f,
+                "the rolled numbers say Tier {derived} but the game annotated Tier {annotated} on \
+                 {line:?} — data/ghastly-eye-jewel.json has a wrong row."
+            ),
+            Self::AnnotationAbsent { line } => write!(
+                f,
+                "{line:?} carried no tier annotation, so no cross-check was possible. Expected \
+                 whenever Advanced Mod Descriptions is off."
+            ),
+            Self::NoTierMatched { line, values } => write!(
+                f,
+                "{values:?} from {line:?} fall inside no tier of the Target Mod's group. Failing \
+                 closed to a Hit."
+            ),
+            Self::ManyTiersMatched { line, tiers } => write!(
+                f,
+                "{line:?} matches tiers {tiers:?} at once, which this Base should make impossible. \
+                 Failing closed to a Hit."
+            ),
+            Self::UnrecognisedLine { line } => write!(
+                f,
+                "{line:?} is in the explicit-mod section and the mod pool does not recognise it — \
+                 either the game's wording changed or the pool is missing a mod."
+            ),
+            Self::NotTheBase { found } => write!(
+                f,
+                "the item is a {found}, which is not the Base the mod pool describes."
+            ),
+            Self::UnknownTarget { group_id } => write!(
+                f,
+                "the Target Mod names the Mod Group {group_id:?}, which this mod pool does not have."
+            ),
+        }
+    }
+}
+
 /// A Verdict, the tier behind it, and everything else worth reporting.
 #[derive(Debug, Clone, PartialEq)]
 pub struct Assessment {

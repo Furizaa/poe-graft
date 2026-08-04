@@ -73,6 +73,18 @@ pub enum Rarity {
     Unique,
 }
 
+impl std::fmt::Display for Rarity {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        // The game's own word, so a log line reads back as the text it came from.
+        f.write_str(match self {
+            Self::Normal => "Normal",
+            Self::Magic => "Magic",
+            Self::Rare => "Rare",
+            Self::Unique => "Unique",
+        })
+    }
+}
+
 impl Rarity {
     fn parse(word: &str) -> Option<Self> {
         match word {

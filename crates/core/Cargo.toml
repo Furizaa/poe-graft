@@ -15,7 +15,7 @@ repository.workspace = true
 # JSON reader for it would be the wrong kind of thrift.
 #
 # Notably NOT here: `regex`. The two patterns the data file documents (`matching.value_placeholder`
-# and `matching.mod_info_line`) are scanned by hand in `text.rs`, which is a few dozen lines and is
+# and `matching.mod_info_line`) are scanned by hand in `item.rs`, which is a few dozen lines and is
 # held to the documented patterns by tests over every real capture.
 [dependencies]
 serde = { workspace = true }

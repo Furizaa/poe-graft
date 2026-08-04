@@ -5,16 +5,21 @@
 //! the app needs from the operating system arrives through [`Platform`].
 //!
 //! The vocabulary is [`CONTEXT.md`](../../../CONTEXT.md) and the cycle it serves is
-//! [ADR 0002](../../../docs/adr/0002-roll-cycle-and-hit-latch.md). What is here so far is the
-//! **mod pool**, the **Item Text parser** and the **hit test** — everything needed to turn a Read
-//! into a Verdict. The roll cycle's state machine lands next
-//! ([#20](https://github.com/Furizaa/poe-graft/issues/20)).
+//! [ADR 0002](../../../docs/adr/0002-roll-cycle-and-hit-latch.md). Four pieces, in the order a roll
+//! passes through them: the **mod pool** ([`pool`]), the **Item Text parser** ([`item`]), the
+//! **hit test** ([`verdict`]), and the **roll cycle** itself ([`cycle`]) — a state machine with no
+//! clock and no I/O, so the whole thing replays on the development machine.
 
+pub mod cycle;
 pub mod item;
 pub mod platform;
 pub mod pool;
 pub mod verdict;
 
+pub use cycle::{
+    Command, CraftSession, CycleConfig, CycleReport, Event, Feedback, HaltReason, Outcome, Press,
+    ReadOutcome, RefusalReason, State,
+};
 pub use item::{parse_item_text, Annotation, Item, ItemIdentity, ParsedMod, Rarity, Unreadable};
 pub use platform::{Platform, PlatformError, PlatformInfo, StubPlatform};
 pub use pool::{Band, DataError, Generation, ModGroup, ModPool, ModTier};
