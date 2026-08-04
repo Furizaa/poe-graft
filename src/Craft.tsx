@@ -209,7 +209,15 @@ export default function Craft({ refreshLog }: { refreshLog: () => Promise<void> 
 
       {status.state === "Latched" && (
         <div className="row">
-          <button className="primary" onClick={() => void act(acknowledge)}>
+          <button
+            className="primary"
+            onClick={() => {
+              // Every button that can start or continue a craft re-enables sound, not just Arm: a
+              // gesture is the only thing guaranteed to resume a context the webview suspended.
+              enableSounds();
+              void act(acknowledge);
+            }}
+          >
             Acknowledge the Hit
           </button>
           <span className="muted small">
@@ -221,7 +229,13 @@ export default function Craft({ refreshLog }: { refreshLog: () => Promise<void> 
 
       {status.state === "Halted" && (
         <div className="row">
-          <button className="primary" onClick={() => void act(() => setArmed(true))}>
+          <button
+            className="primary"
+            onClick={() => {
+              enableSounds();
+              void act(() => setArmed(true));
+            }}
+          >
             Re-arm
           </button>
         </div>

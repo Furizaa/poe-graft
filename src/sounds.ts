@@ -30,6 +30,23 @@ export function enableSounds(): void {
   }
 }
 
+/**
+ * Resume a context the webview suspended out from under us.
+ *
+ * This is a bug fix, not polish. `enableSounds()` used to be called from exactly one place — the Arm
+ * button — and a webview is free to suspend an `AudioContext` whenever it likes, including while the
+ * game has focus and our window is in the background, which is *every* long Craft Session. Nothing
+ * else resumed it, so the Hit sound could go silent mid-craft with no way to get it back short of
+ * disarming and re-arming. The Hit sound is the primary signal; the window is only where the human
+ * looks afterwards.
+ *
+ * Called before every sound rather than on a gesture, because by the time a Hit lands there is no
+ * gesture to hang it on. A suspended context that was already unlocked once resumes without one.
+ */
+function wake(): void {
+  if (context && context.state === "suspended") void context.resume();
+}
+
 type Note = {
   /** Hz. */
   freq: number;
@@ -44,6 +61,7 @@ type Note = {
 
 function play(notes: Note[]): void {
   if (!context) return;
+  wake();
   const now = context.currentTime;
   for (const note of notes) {
     const oscillator = context.createOscillator();
