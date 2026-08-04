@@ -60,10 +60,17 @@ learned rather than guessed.
    key, `` ` ``.
 2. Press **Use this key**. The `trigger` badge should now name it.
 
-**Click away from the poe-graft window before pressing the key.** On this machine the hook only
-reports keys while the app itself is *not* focused, so learning a key with the panel in front will
-appear to do nothing. Not understood yet, and it does not affect real use — the game has focus then
-— but it makes learning confusing. The **Or set the code directly** field sidesteps it entirely.
+**Click away from the poe-graft window before pressing the key.** The hook observes *no keystrokes at
+all* while poe-graft's own window is the foreground window — confirmed on device with the
+`keystrokes seen` counter, which stays frozen while the app is focused and climbs the moment focus
+moves elsewhere. So learning a key with the panel in front appears to do nothing.
+
+Cause not yet identified; it is
+[#18](https://github.com/Furizaa/poe-graft/issues/18), deliberately deferred. It does **not** block
+this session — the game has focus while you craft — but it is not cosmetic either: the trigger key is
+dead whenever the app's own window is focused, which the real app has to account for.
+
+The **Or set the code directly** field sidesteps it entirely.
 
 Key codes are only recorded while *Learn a key* is on; the `keystrokes seen` counter is a count
 only and always runs.
