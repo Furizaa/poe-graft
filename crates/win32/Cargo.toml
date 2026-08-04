@@ -1,0 +1,17 @@
+[package]
+name = "poe-graft-win32"
+description = "Windows implementation of poe-graft-core's Platform seam."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+# Both the crate body and its dependencies are gated on Windows, so on macOS this builds as an
+# empty library with nothing to download. That is what keeps `cargo test --workspace` fast on
+# the development machine.
+[target.'cfg(windows)'.dependencies]
+poe-graft-core = { workspace = true }
+
+[target.'cfg(windows)'.dependencies.windows]
+version = "0.62"
+features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"]

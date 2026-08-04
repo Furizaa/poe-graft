@@ -1,0 +1,11 @@
+[package]
+name = "poe-graft-core"
+description = "Platform-independent core: no Win32, no Tauri, near-zero dependencies."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+# Dependencies here are deliberately near-zero — see docs/adr/0001-stack-and-seam.md.
+# `cargo test -p poe-graft-core` is the macOS development loop and must stay fast.
+[dependencies]

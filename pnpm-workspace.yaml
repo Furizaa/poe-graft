@@ -1,0 +1,7 @@
+# pnpm 10+ keeps its settings here rather than in package.json.
+#
+# esbuild ships a platform-specific binary via a postinstall script. Without this allowlist
+# pnpm refuses to run it, `vite build` fails, and CI fails in a way that looks like a Vite
+# problem rather than an install problem.
+allowBuilds:
+  esbuild: true

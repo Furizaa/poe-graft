@@ -1,0 +1,14 @@
+[workspace]
+members = ["crates/core", "crates/win32", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/Furizaa/poe-graft"
+
+[workspace.dependencies]
+poe-graft-core = { path = "crates/core" }
+poe-graft-win32 = { path = "crates/win32" }
+serde = { version = "1", features = ["derive"] }

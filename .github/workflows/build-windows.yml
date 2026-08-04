@@ -1,0 +1,116 @@
+# The Windows test loop. There is no dev environment on the gaming PC, so
+# `merge → this workflow → the installed app updates itself` is the project's inner loop, not
+# release plumbing. Reasoning and the traps this file is shaped around:
+# docs/research/ci-and-auto-update.md on the research/ci-and-auto-update branch.
+#
+# Things later sessions must not break:
+#   * releaseDraft and prerelease must both stay false — `releases/latest/download/` skips both,
+#     and the official tauri-action example (releaseDraft: true) silently breaks the updater.
+#   * createUpdaterArtifacts must stay true in tauri.conf.json or no .sig is emitted and
+#     latest.json is never built, with no obvious error.
+#   * The version comes from github.run_number and is written into tauri.conf.json ONLY. Do not
+#     bump Cargo.toml in CI: that rewrites Cargo.lock, which is rust-cache's key, which turns
+#     every single build cold (12–20 min instead of 5–7).
+name: build-windows
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+  workflow_dispatch:
+
+concurrency:
+  # A newer merge supersedes an in-flight build: keeps the loop tight, and stops two runs racing
+  # for the same run_number-derived version.
+  group: build-windows
+  cancel-in-progress: true
+
+permissions:
+  contents: write # create the release and upload assets
+
+jobs:
+  # Runs in parallel with the Windows build and gates nothing — the point of the seam is that the
+  # decision logic is testable without Windows, and this is where that claim gets checked.
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: swatinem/rust-cache@v2
+      - run: cargo test -p poe-graft-core
+      - name: Check the seam holds
+        # poe-graft-core must build with no Win32 and no Tauri in the tree. If this ever needs a
+        # Windows runner, the seam has leaked.
+        run: cargo build -p poe-graft-core
+
+  build:
+    runs-on: windows-latest # public repo: 4 vCPU / 16 GB, free minutes
+    steps:
+      - uses: actions/checkout@v4
+
+      # Derive a monotonically increasing version and write it into the manifest in CI only. No
+      # commit back to main, no bot noise, no push loop. run_number is monotonic, so the updater
+      # always sees a strictly higher semver — which removes the most confusing failure mode in
+      # this loop ("it says up to date").
+      - name: Set version from run number
+        id: version
+        shell: bash
+        run: |
+          VERSION="0.1.${{ github.run_number }}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          node -e "
+            const fs = require('fs');
+            const p = 'src-tauri/tauri.conf.json';
+            const c = JSON.parse(fs.readFileSync(p, 'utf8'));
+            c.version = '$VERSION';
+            fs.writeFileSync(p, JSON.stringify(c, null, 2) + '\n');
+          "
+          echo "building $VERSION"
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      # The single biggest lever on round-trip latency: cold ~12–20 min, warm ~5–7 min. Caches
+      # the registry, the git db and dependency build artifacts; it deliberately evicts this
+      # workspace's own crates, so src-tauri always recompiles and relinks.
+      #
+      # No `workspaces:` input on purpose. The default (`. -> target`) is correct here because
+      # Cargo.toml at the repo root makes this one workspace with a single shared target dir —
+      # unlike the vanilla `create-tauri-app` layout, where the target dir sits under src-tauri.
+      - uses: swatinem/rust-cache@v2
+
+      - run: pnpm install --frozen-lockfile
+
+      - uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Minisign keypair, generated once on the Mac. The updater refuses unsigned updates and
+          # that cannot be disabled. The key has no passphrase, so the password variable is set
+          # empty rather than omitted — the signer expects it to exist.
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
+          # Baked into the binary by build.rs so the app can prove which run produced it.
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        with:
+          tagName: v__VERSION__
+          releaseName: 'poe-graft v__VERSION__'
+          releaseBody: |
+            Automated build of ${{ github.sha }}.
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          releaseDraft: false
+          prerelease: false
+          updaterJsonPreferNsis: true
+          args: '--target x86_64-pc-windows-msvc'
