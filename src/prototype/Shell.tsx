@@ -57,12 +57,37 @@ const usePool = (): ModPool => {
   return pool;
 };
 
+/**
+ * Duplicate the pool to test the picker at the size that motivated it.
+ *
+ * The searchable modal exists because a Base with the full mod set behind it has several hundred groups
+ * rather than 66, and that claim is worth testing rather than asserting. ×5 is 330 groups — the number
+ * the owner named. Copies are labelled so nothing synthetic can be mistaken for real tier data.
+ */
+const inflate = (base: ModPool, factor: number): ModPool =>
+  factor <= 1
+    ? base
+    : {
+        ...base,
+        groups: Array.from({ length: factor }).flatMap((_, copy) =>
+          copy === 0
+            ? base.groups
+            : base.groups.map((group) => ({
+                ...group,
+                id: `${group.id}__stress${copy}`,
+                lines: group.lines.map((line) => `[stress ${copy + 1}] ${line}`),
+              })),
+        ),
+      };
+
 export default function Shell() {
   const [variant, setVariant] = useState<VariantKey>(readVariant);
   const [knobs, setKnobs] = useState<Knobs>(defaultKnobs);
   const [driverOpen, setDriverOpen] = useState(true);
   const [ilvl, setIlvl] = useState(83);
-  const pool = usePool();
+  const [stress, setStress] = useState(1);
+  const realPool = usePool();
+  const pool = useMemo(() => inflate(realPool, stress), [realPool, stress]);
 
   const status = useMemo(() => mockStatus(knobs), [knobs]);
   const logLines = useMemo(() => mockLog(knobs), [knobs]);
@@ -119,7 +144,15 @@ export default function Shell() {
       )}
 
       {variant !== "live" && (
-        <Driver knobs={knobs} setKnobs={setKnobs} open={driverOpen} setOpen={setDriverOpen} />
+        <Driver
+          knobs={knobs}
+          setKnobs={setKnobs}
+          open={driverOpen}
+          setOpen={setDriverOpen}
+          stress={stress}
+          setStress={setStress}
+          poolSize={pool.groups.length}
+        />
       )}
       <Switcher current={variant} labels={labels} onChange={setVariant} />
     </>

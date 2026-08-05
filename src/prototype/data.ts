@@ -34,12 +34,23 @@ type RawGroup = {
   tiers: RawTier[];
 };
 
+/** A mod from a pool an Orb of Alteration cannot reach. Flat — no tiers, no bands. */
+type RawFlatMod = {
+  mod_id: string;
+  group: string;
+  affix_name: string;
+  generation_type: string;
+  required_ilvl: number;
+  text: string;
+};
+
 type RawFile = {
   base: { name: string; item_class_display: string };
   pool_totals_by_ilvl: { ilvl: number; prefix_weight: number; suffix_weight: number }[];
   affix_count_odds: { magic: Record<string, number> };
   prefixes: RawGroup[];
   suffixes: RawGroup[];
+  non_alteration_pools: Record<string, RawFlatMod[]>;
 };
 
 const file = JSON.parse(raw) as RawFile;
@@ -77,6 +88,54 @@ export const localPool: ModPool = {
  * parser already reads `Item Level:` off the Item Text.
  */
 export const ilvlBreakpoints = file.pool_totals_by_ilvl.map((r) => r.ilvl);
+
+/**
+ * Mods this Base can carry that **an Orb of Alteration can never produce.**
+ *
+ * The picker needs these for a reason that is not cosmetic. Grouping mods by type is only half a
+ * feature; the other half is that a target an alteration cannot roll is a craft that can never hit, and
+ * a human who cannot find `increased Area of Effect` in the list has no way to tell whether the search
+ * is broken or the mod is unreachable. So they are listed, grouped, and **not selectable** — the absence
+ * explains itself.
+ *
+ * Two wrinkles the data forced:
+ *
+ * - These entries are **flat** — a `mod_id`, one `text`, no tiers and no bands — so they can never be a
+ *   `Target { group_id, tier_threshold }` even in principle.
+ * - Some group ids appear in **both** pools: `AvoidIgnite`, `AvoidStun`, `ChanceToAvoidBleeding`,
+ *   `ChanceToAvoidFreezeAndChill`, `ChanceToAvoidPoison` and `PercentDamageGoesToMana` are alteration
+ *   mods *and* corrupted/delve mods. Listing those as unreachable would be a lie, so anything present in
+ *   the alteration pool is filtered out here and stays selectable.
+ */
+const CATEGORY_NAMES: Record<string, string> = {
+  corrupted: "Corrupted — Vaal Orb only",
+  delve_prefix: "Delve prefix — fossil only",
+  delve_suffix: "Delve suffix — fossil only",
+};
+
+export type UnreachableMod = {
+  id: string;
+  /** Which pool it came from, in words. */
+  category: string;
+  /** The rendered line, values intact — there is no `#` form for these. */
+  line: string;
+  requiredIlvl: number;
+};
+
+const alterationIds = new Set(rawGroups.map((g) => g.group));
+
+export const unreachableMods: UnreachableMod[] = Object.entries(file.non_alteration_pools)
+  .flatMap(([pool, mods]) =>
+    mods
+      .filter((mod) => !alterationIds.has(mod.group))
+      .map((mod) => ({
+        id: `${pool}:${mod.mod_id}`,
+        category: CATEGORY_NAMES[pool] ?? pool,
+        line: mod.text,
+        requiredIlvl: mod.required_ilvl,
+      })),
+  )
+  .sort((a, b) => a.category.localeCompare(b.category) || a.line.localeCompare(b.line));
 
 const totalsFor = (ilvl: number) => {
   let best = file.pool_totals_by_ilvl[0];

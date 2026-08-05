@@ -17,10 +17,12 @@
  * Threshold control: the **tier dropdown**, unchanged from the shipped panel — so A holds that
  * variable still while B, C and D each move it.
  */
-import { bands, cumulative, label, odds, percent } from "../data";
+import { useState } from "react";
+import { bands, carryThreshold, cumulative, label, odds, percent } from "../data";
+import { ModPicker } from "../ModPicker";
 import type { VariantProps } from "./types";
 
-export const name = "Cockpit — same information, re-ranked";
+export const name = "Cockpit — re-ranked, with a searchable mod picker";
 
 export default function VariantA({
   status,
@@ -33,10 +35,9 @@ export default function VariantA({
   setArmed,
   acknowledge,
 }: VariantProps) {
+  const [picking, setPicking] = useState(false);
   const armed = status.state !== "Idle";
   const chance = group ? odds(group, status.tierThreshold, ilvl) : null;
-  const prefixes = pool.groups.filter((g) => g.generation === "prefix");
-  const suffixes = pool.groups.filter((g) => g.generation === "suffix");
   const accessibility = status.accessibility;
 
   return (
@@ -105,28 +106,21 @@ export default function VariantA({
         )}
 
         <div className="pv-a-picker">
+          {/* A button, not a `<select>`: 66 groups is already a scroll and the full mod set is several
+              hundred. The threshold stays a dropdown — it has at most six options and they are ordered,
+              which is the one case a native select is genuinely good at. */}
           <label>
             <span>Mod group</span>
-            <select
+            <button
+              className="pv-a-pickbtn"
               disabled={armed}
-              value={status.targetGroup}
-              onChange={(event) => setTarget(event.target.value, status.tierThreshold)}
+              onClick={() => setPicking(true)}
             >
-              <optgroup label={`Prefixes (${prefixes.length})`}>
-                {prefixes.map((g) => (
-                  <option key={g.id} value={g.id}>
-                    {label(g)}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label={`Suffixes (${suffixes.length})`}>
-                {suffixes.map((g) => (
-                  <option key={g.id} value={g.id}>
-                    {label(g)}
-                  </option>
-                ))}
-              </optgroup>
-            </select>
+              <span>{group ? label(group) : "Choose a mod group…"}</span>
+              <span className="pv-a-pickbtn-hint">
+                {group?.generation ?? ""} · search {pool.groups.length}
+              </span>
+            </button>
           </label>
           <label>
             <span>Tier threshold</span>
@@ -155,6 +149,20 @@ export default function VariantA({
           </label>
         </div>
       </div>
+
+      {picking && (
+        <ModPicker
+          pool={pool}
+          current={status.targetGroup}
+          onClose={() => setPicking(false)}
+          // The threshold has to be clamped on the way through: 40 of this Base's 66 groups have only a
+          // Tier 1, and Rust rejects a Target Mod naming a tier its group does not have.
+          onPick={(groupId) => {
+            const next = pool.groups.find((g) => g.id === groupId);
+            setTarget(groupId, next ? carryThreshold(next, status.tierThreshold) : 1);
+          }}
+        />
+      )}
 
       {lastRead && (
         <details className="pv-a-fold">

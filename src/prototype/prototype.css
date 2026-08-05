@@ -205,6 +205,202 @@
   overflow: auto;
 }
 
+.pv-a-pickbtn {
+  font: inherit;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.4rem 0.55rem;
+  cursor: pointer;
+}
+.pv-a-pickbtn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.pv-a-pickbtn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.pv-a-pickbtn-hint {
+  color: var(--muted);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+/* ── The searchable Mod Group modal ──────────────────────────────────────────────────────────── */
+
+.pk-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgb(6 5 4 / 72%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 1rem 1rem;
+}
+.pk-modal {
+  width: min(46rem, 100%);
+  max-height: min(38rem, 82vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgb(0 0 0 / 60%);
+  overflow: hidden;
+}
+.pk-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+.pk-search {
+  font: inherit;
+  flex: 1;
+  color: var(--text);
+  background: #100e0b;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+}
+.pk-search:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 1px;
+}
+.pk-count {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.pk-close {
+  font: inherit;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+.pk-list {
+  flex: 1;
+  overflow: auto;
+  /* `overflow-anchor` off: the cursor moving with scrollIntoView otherwise fights the browser's own
+     scroll anchoring on a long list and produces a visible jitter. */
+  overflow-anchor: none;
+}
+.pk-section {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.35rem 0.8rem;
+  background: #17140f;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.pk-section-off {
+  color: #7d766a;
+  background: #120f0c;
+}
+.pk-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: var(--text);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #1a1712;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+.pk-row-active {
+  background: #241f16;
+}
+.pk-row-current {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.pk-row-off {
+  cursor: default;
+  opacity: 0.5;
+}
+.pk-row-line {
+  flex: 1;
+  min-width: 0;
+}
+.pk-row-meta {
+  display: flex;
+  gap: 0.35rem;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 22rem;
+}
+.pk-chip {
+  font-size: 0.68rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.pk-chip-name {
+  border-color: #4a5f3a;
+  color: #9bc37f;
+}
+.pk-mark {
+  background: rgb(201 162 39 / 28%);
+  color: var(--text);
+  border-radius: 2px;
+}
+.pk-empty {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.pk-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.pk-foot kbd {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0 0.25rem;
+  margin-right: 0.15rem;
+}
+.pk-foot-note {
+  color: #7d766a;
+}
+
 /* ── B · Two-phase ───────────────────────────────────────────────────────────────────────────── */
 
 .pv-b-session {

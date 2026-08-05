@@ -17,11 +17,18 @@ export function Driver({
   setKnobs,
   open,
   setOpen,
+  stress,
+  setStress,
+  poolSize,
 }: {
   knobs: Knobs;
   setKnobs: (next: Knobs) => void;
   open: boolean;
   setOpen: (open: boolean) => void;
+  /** Pool duplication factor, for testing the picker at 300+ groups. */
+  stress: number;
+  setStress: (factor: number) => void;
+  poolSize: number;
 }) {
   const set = <K extends keyof Knobs>(key: K, value: Knobs[K]) =>
     setKnobs({ ...knobs, [key]: value });
@@ -99,6 +106,22 @@ export function Driver({
         <button className={!knobs.inGame ? "pb-on" : ""} onClick={() => set("inGame", !knobs.inGame)}>
           game not foreground
         </button>
+      </div>
+
+      {/* The picker is a modal because the full mod set is several hundred groups, not 66. This makes
+          that testable instead of assumed. */}
+      <div className="pb-group">
+        <span className="pb-label">Mod pool ×</span>
+        {[1, 3, 5, 10].map((factor) => (
+          <button
+            key={factor}
+            className={stress === factor ? "pb-on" : ""}
+            onClick={() => setStress(factor)}
+          >
+            ×{factor}
+          </button>
+        ))}
+        <span className="pb-label">{poolSize} groups</span>
       </div>
 
       <div className="pb-group">
