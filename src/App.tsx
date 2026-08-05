@@ -1,3 +1,18 @@
+/**
+ * The window.
+ *
+ * The Craft Session panel **is** the app, and everything else here is support: which build is running,
+ * whether an update is waiting, one real Win32 read, and the log tail. Those used to sit around the craft
+ * panel as four full-width sections — a "This build" definition list above it, then Updates, then a
+ * "Platform seam" panel with a *Read platform* button, then a raw `<pre>` of the log. Together they were
+ * most of what [#9](https://github.com/Furizaa/poe-graft/issues/9)'s verdict called "walls of text and
+ * debug stuff", so they are now behind one fold at the bottom.
+ *
+ * **Nothing was deleted.** On a machine with no dev environment this is the only diagnostic surface there
+ * is, and the log is the only artifact that survives a relaunch. Two things are therefore still promoted
+ * out of the fold, because they are not diagnostics — a waiting update, and a failed update — since both
+ * need a decision from the human rather than merely being available to read.
+ */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { revealItemInDir } from "@tauri-apps/plugin-opener";
 import { relaunch } from "@tauri-apps/plugin-process";
@@ -137,6 +152,13 @@ export default function App() {
     })();
   }, [checkForUpdates, refreshLog]);
 
+  /** An update needs a decision; a check that failed needs to be seen. Everything else can wait. */
+  const updateNeedsAttention =
+    status.kind === "available" ||
+    status.kind === "downloading" ||
+    status.kind === "installing" ||
+    status.kind === "error";
+
   return (
     <main>
       <header>
@@ -149,8 +171,41 @@ export default function App() {
         )}
       </header>
 
-      <section>
-        <h2>This build</h2>
+      {/* Promoted out of the fold: this is a decision, not a diagnostic. */}
+      {updateNeedsAttention && (
+        <div className={`notice${status.kind === "error" ? " bad" : ""}`}>
+          {status.kind === "available" && (
+            <>
+              <span>
+                Version <strong>{status.update.version}</strong> is available.
+              </span>
+              <button className="primary" onClick={() => install(status.update)}>
+                Install and restart
+              </button>
+            </>
+          )}
+          {status.kind === "downloading" && (
+            <span>
+              Downloading {status.version}… {Math.round(status.received / 1024)} KB
+              {status.total ? ` of ${Math.round(status.total / 1024)} KB` : ""}
+            </span>
+          )}
+          {status.kind === "installing" && (
+            <span>Installing {status.version}. The app will close and come back.</span>
+          )}
+          {status.kind === "error" && (
+            <span className="error">Update check failed: {status.message}</span>
+          )}
+        </div>
+      )}
+
+      {/* The app. Everything above is a header and everything below is support. */}
+      <Craft refreshLog={refreshLog} />
+
+      <details className="app-fold">
+        <summary>This build, updates and log</summary>
+
+        <h3>Build</h3>
         {build ? (
           <dl>
             <dt>Version</dt>
@@ -173,72 +228,46 @@ export default function App() {
         ) : (
           <p className="muted">Loading…</p>
         )}
-      </section>
 
-      {/* The app. It sits high because during a Craft Session it is the only panel that matters, and
-          it takes `refreshLog` so a landed Roll pulls the log forward without the human reaching for
-          Refresh mid-craft. */}
-      <Craft refreshLog={refreshLog} />
-
-      <section>
-        <h2>Updates</h2>
+        <h3>Updates</h3>
         <div className="row">
           <button onClick={checkForUpdates} disabled={status.kind === "checking"}>
             Check for updates
           </button>
-          {status.kind === "available" && (
-            <button className="primary" onClick={() => install(status.update)}>
-              Install {status.update.version} and restart
-            </button>
-          )}
+          {status.kind === "idle" && <span className="muted small">Not checked yet.</span>}
+          {status.kind === "checking" && <span className="muted small">Checking…</span>}
+          {status.kind === "current" && <span className="muted small">Up to date.</span>}
+          {lastCheck && <span className="muted small">Last checked at {lastCheck}.</span>}
         </div>
-        <p className="status">
-          {status.kind === "idle" && <span className="muted">Not checked yet.</span>}
-          {status.kind === "checking" && "Checking…"}
-          {status.kind === "current" && "Up to date."}
-          {status.kind === "available" && `Version ${status.update.version} is available.`}
-          {status.kind === "downloading" &&
-            `Downloading ${status.version}… ${Math.round(status.received / 1024)} KB${
-              status.total ? ` of ${Math.round(status.total / 1024)} KB` : ""
-            }`}
-          {status.kind === "installing" &&
-            `Installing ${status.version}. The app will close and come back.`}
-          {status.kind === "error" && <span className="error">{status.message}</span>}
-        </p>
-        {lastCheck && <p className="muted small">Last checked at {lastCheck}.</p>}
-      </section>
 
-      <section>
-        <h2>Platform seam</h2>
+        <h3>Platform seam</h3>
         <div className="row">
           <button onClick={readPlatform}>Read platform</button>
+          {platform && (
+            <span className="muted small mono">
+              screen {platform.screenWidth}×{platform.screenHeight} · cursor {platform.cursorX},
+              {platform.cursorY}
+            </span>
+          )}
+          {!platform && !platformError && (
+            <span className="muted small">
+              One real Win32 read. On macOS this reports “not supported”, which is the stub doing its
+              job.
+            </span>
+          )}
         </div>
-        {platform && (
-          <p className="mono">
-            screen {platform.screenWidth}×{platform.screenHeight} · cursor {platform.cursorX},
-            {platform.cursorY}
-          </p>
-        )}
         {platformError && <p className="error">{platformError}</p>}
-        {!platform && !platformError && (
-          <p className="muted small">
-            One real Win32 read. On macOS this reports “not supported”, which is the stub doing
-            its job.
-          </p>
-        )}
-      </section>
 
-      <section>
-        <h2>Log</h2>
+        <h3>Log</h3>
         <div className="row">
           <button onClick={refreshLog}>Refresh</button>
           <button onClick={() => revealItemInDir(logPath)} disabled={!logPath}>
             Open folder
           </button>
+          <span className="muted small mono">{logPath}</span>
         </div>
-        <p className="muted small mono">{logPath}</p>
         <pre>{logLines.length ? logLines.join("\n") : "(empty)"}</pre>
-      </section>
+      </details>
     </main>
   );
 }

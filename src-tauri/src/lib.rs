@@ -12,7 +12,7 @@ use journal::Journal;
 #[cfg(windows)]
 use poe_graft_core::{CraftSession, CycleConfig};
 use poe_graft_core::{ModPool, Platform, Target};
-use pool::ModPoolDto;
+use pool::{ModPoolDto, OddsDto};
 use serde::Serialize;
 use std::sync::Arc;
 use tauri::{Manager, State};
@@ -110,6 +110,30 @@ fn mod_pool(state: State<'_, AppState>) -> Result<ModPoolDto, String> {
 #[tauri::command]
 fn mod_pool_source(state: State<'_, AppState>) -> String {
     state.pool_source.clone()
+}
+
+/// What a Target Mod costs, in Alterations, on a jewel of this item level.
+///
+/// Informational only — nothing here reaches a Verdict. It exists because
+/// [#9](https://github.com/Furizaa/poe-graft/issues/9) asks the window to show the roll count and
+/// cumulative probability in place of the roll cap ADR 0002 removed.
+///
+/// `Ok(None)` rather than an error when the pool carries no spawn weights: "cannot say" is a real answer
+/// and the window renders it differently from "impossible". An unknown group id is the same case — the
+/// picker cannot produce one, and a typo must not read as a craft that can never finish.
+#[tauri::command]
+fn mod_odds(
+    state: State<'_, AppState>,
+    group_id: String,
+    tier_threshold: u8,
+    ilvl: u32,
+) -> Option<OddsDto> {
+    state
+        .pool
+        .as_ref()?
+        .odds(&group_id, tier_threshold, ilvl)
+        .as_ref()
+        .map(OddsDto::of)
 }
 
 /// The log file's absolute path, so the UI can show it and reveal it in Explorer.
@@ -224,6 +248,7 @@ pub fn run() {
             platform_info,
             mod_pool,
             mod_pool_source,
+            mod_odds,
             log_path,
             log_tail,
             log_append,

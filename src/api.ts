@@ -90,6 +90,49 @@ export const getModPool = () => invoke<ModPool>("mod_pool");
 /** Which file the tier data came from — unanswerable any other way on the gaming PC. */
 export const getModPoolSource = () => invoke<string>("mod_pool_source");
 
+/**
+ * What a Tier Threshold costs, in Alterations.
+ *
+ * Every number here is Rust's. ADR 0001 keeps domain logic behind the seam, and this arithmetic in
+ * particular is pinned to `docs/research/mod-tier-data.md` by `crates/core/tests/odds.rs` — the frontend
+ * formats it and must not re-derive it. Informational: nothing here reaches a Verdict, and a Hit is a Hit
+ * whether it lands on roll 1 or roll 900.
+ */
+export type Odds = {
+  /** Summed spawn weight at or better than the threshold, reachable at this item level. */
+  weight: number;
+  /** The chance *given* the roll produced an affix of this generation — the `0.443%` on #9. */
+  conditional: number;
+  /** The real per-click hit rate: what a human experiences per Alteration. */
+  perClick: number;
+  /** `1 in N` rolls. Null when nothing that good can spawn. */
+  oneIn: number | null;
+  /** The fewest Rolls at which a Hit is more likely than not. */
+  medianRolls: number | null;
+  /** Nothing at or better than the threshold can spawn at this item level. */
+  impossible: boolean;
+};
+
+/**
+ * Odds for a Target Mod on a jewel of this item level.
+ *
+ * Resolves to `null` when the tier data carries no spawn weights — "cannot say", which the window shows
+ * differently from "impossible".
+ */
+export const getModOdds = (groupId: string, tierThreshold: number, ilvl: number) =>
+  invoke<Odds | null>("mod_odds", { groupId, tierThreshold, ilvl });
+
+/**
+ * The chance of having hit at least once by roll `n` — `1-(1-p)^n`.
+ *
+ * The one piece of arithmetic the frontend does, and a deliberate exception to "no domain logic here":
+ * it changes with every Roll, so computing it behind the seam would mean an `invoke` per poll. It derives
+ * nothing — `perClick` is already Rust's answer, and this only compounds it. `Odds::cumulative` in
+ * `crates/core` is the same formula and is what the tests pin.
+ */
+export const cumulative = (odds: Odds, rolls: number) =>
+  odds.perClick > 0 ? 1 - Math.pow(1 - odds.perClick, rolls) : 0;
+
 // -----------------------------------------------------------------------------------------------
 // The roll cycle
 // -----------------------------------------------------------------------------------------------

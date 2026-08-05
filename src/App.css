@@ -7,6 +7,8 @@
   --muted: #968d7c;
   --accent: #c9a227;
   --error: #e06c5a;
+  /* A Hit is the one event this app exists for, and it is the only thing allowed to be green. */
+  --hit: #7fd67f;
 
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 14px;
@@ -122,9 +124,307 @@ a {
 }
 
 /* ---------------------------------------------------------------------------------------------
-   The Craft Session panel. Layout and feel belong to
-   https://github.com/Furizaa/poe-graft/issues/9; what is here is legibility, not design.
+   The Craft Session panel, as #9 settled it: one thing is the biggest thing on screen, the primary
+   control sits next to the sentence that asks for it, and every diagnostic is in one fold at the
+   bottom.
    --------------------------------------------------------------------------------------------- */
+
+/* A decision the human has to make — an update waiting, or one that failed. Never a diagnostic. */
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-left-width: 4px;
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.notice.bad {
+  border-color: var(--error);
+}
+
+/* The support panels. Present, reachable, and out of the way. */
+.app-fold > summary,
+.craft-diag > summary {
+  cursor: pointer;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 600;
+  list-style: none;
+}
+
+.app-fold > summary::before,
+.craft-diag > summary::before {
+  content: "▸ ";
+}
+
+.app-fold[open] > summary::before,
+.craft-diag[open] > summary::before {
+  content: "▾ ";
+}
+
+.app-fold {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.section-gap > * + * {
+  margin-top: 0.5rem;
+}
+
+/* The state, and core's own sentence. The band's left edge carries the tone so the state is readable
+   from a second monitor without reading the word. */
+.craft-band {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line);
+  border-radius: 8px;
+  background: #100e0b;
+  padding: 0.9rem 1rem;
+}
+
+.craft-band.good {
+  border-color: var(--accent);
+}
+
+.craft-band.bad {
+  border-color: var(--error);
+}
+
+.craft-band.hit {
+  border-color: var(--hit);
+}
+
+.craft-state {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+.craft-band.good .craft-state {
+  color: var(--accent);
+}
+
+.craft-band.bad .craft-state {
+  color: var(--error);
+}
+
+.craft-band.hit .craft-state {
+  color: var(--hit);
+}
+
+.craft-message {
+  margin: 0.55rem 0 0;
+  line-height: 1.5;
+  max-width: 62ch;
+}
+
+.craft-act {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.craft-numbers {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.craft-numbers strong {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.25rem;
+}
+
+.craft-target {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.craft-target > p:first-child {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.craft-note {
+  margin-top: 1.25rem;
+}
+
+.craft-diag {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.7rem;
+}
+
+.craft-diag > *:not(summary) {
+  margin-top: 0.6rem;
+}
+
+/* On the summary, not in the fold: it says "there is something in here" without opening it. */
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--error);
+  margin-left: 0.45rem;
+  vertical-align: middle;
+}
+
+button.hit {
+  background: var(--hit);
+  border-color: var(--hit);
+  color: #0d1a0d;
+}
+
+/* The Mod Group control: a button that opens the picker, showing what is chosen. */
+.pick-open {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  background: #100e0b;
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.5rem;
+}
+
+.pick-open-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pick-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgb(6 5 4 / 74%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3.5rem 1rem 1rem;
+}
+
+.pick-modal {
+  width: min(46rem, 100%);
+  max-height: min(36rem, 82vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgb(0 0 0 / 60%);
+  overflow: hidden;
+}
+
+.pick-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.pick-list {
+  flex: 1;
+  overflow: auto;
+  /* The cursor moving with scrollIntoView otherwise fights the browser's own scroll anchoring. */
+  overflow-anchor: none;
+}
+
+.pick-section {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.35rem 0.8rem;
+  background: #17140f;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.pick-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #1a1712;
+  border-radius: 0;
+  padding: 0.45rem 0.8rem;
+}
+
+.pick-row:hover:not(:disabled) {
+  border-color: #1a1712;
+}
+
+.pick-row-active {
+  background: #241f16;
+}
+
+/* An inset bar rather than a border, so marking the current row cannot shift the layout. */
+.pick-row-current {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.pick-row-line {
+  flex: 1;
+  min-width: 0;
+}
+
+.pick-row-meta {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  max-width: 21rem;
+}
+
+.pick-row mark {
+  background: rgb(201 162 39 / 28%);
+  color: var(--text);
+  border-radius: 2px;
+}
+
+.pick-empty {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.pick-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.8rem;
+  border-top: 1px solid var(--line);
+}
 
 h3 {
   margin: 1.1rem 0 0.5rem;

@@ -12,7 +12,7 @@
 
 use std::sync::Arc;
 
-use poe_graft_core::{Generation, ModPool};
+use poe_graft_core::{Generation, ModPool, Odds};
 use serde::Serialize;
 use tauri::path::BaseDirectory;
 use tauri::Manager;
@@ -105,6 +105,44 @@ pub struct ModTierDto {
     pub required_ilvl: u32,
     /// The bands, in the order the values appear in the rendered line.
     pub bands: Vec<[f64; 2]>,
+}
+
+/// What a Tier Threshold costs, for the window.
+///
+/// Computed in Rust rather than in the frontend on purpose: ADR 0001 keeps domain logic on this side of
+/// the seam, and the arithmetic is pinned to `docs/research/mod-tier-data.md` by
+/// `crates/core/tests/odds.rs`. The window formats these numbers and does not derive them — with one
+/// stated exception, `cumulative`, which the frontend recomputes per render because it changes with every
+/// Roll; it is `1-(1-perClick)^n` over a probability this side already established.
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct OddsDto {
+    /// Summed spawn weight at or better than the threshold, reachable at this item level.
+    pub weight: u32,
+    /// The chance **given** the roll produced an affix of this generation — #9's `0.443%`.
+    pub conditional: f64,
+    /// The real per-click hit rate.
+    pub per_click: f64,
+    /// `1 in N` rolls. Absent when nothing that good can spawn.
+    pub one_in: Option<u32>,
+    /// The fewest Rolls at which a Hit is more likely than not.
+    pub median_rolls: Option<u32>,
+    /// Nothing at or better than the threshold can spawn at this item level.
+    pub impossible: bool,
+}
+
+impl OddsDto {
+    /// Put an [`Odds`] on the wire.
+    pub fn of(odds: &Odds) -> Self {
+        Self {
+            weight: odds.weight,
+            conditional: odds.conditional,
+            per_click: odds.per_click,
+            one_in: odds.one_in(),
+            median_rolls: odds.median_rolls(),
+            impossible: odds.is_impossible(),
+        }
+    }
 }
 
 impl ModPoolDto {

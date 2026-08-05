@@ -220,6 +220,12 @@ the same figure is 0.449% (per-click 0.368%).
 | 84–85 | 39125 | 24000 | 0.4473% | 0.3623% | 276 | 191 |
 | ≥ 86 | 39525 | 24000 | 0.4428% | 0.3591% | 278 | 193 |
 
+**One-off correction to the ilvl 83 median.** This table rounds it to 188; the exact figure is 188.01, and
+at 188 Rolls the cumulative chance is 49.997% — just under the half. The smallest count that is genuinely
+more likely than not is therefore **189**, which is what `Odds::median_rolls` returns and what
+`crates/core/tests/odds.rs` asserts. The 84–85 and ≥ 86 rows are unaffected: 191 and 193 are correct either
+way. Nothing downstream depended on the 188.
+
 At ilvl 86: P(at least one hit) is 30% by 100 alts, 51% by 200, 66% by 300, 84% by 500, 97% by
 1000. The map's "hundreds of clicks are normal" is accurate.
 

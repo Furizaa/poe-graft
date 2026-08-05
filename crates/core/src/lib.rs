@@ -22,5 +22,5 @@ pub use cycle::{
 };
 pub use item::{parse_item_text, Annotation, Item, ItemIdentity, ParsedMod, Rarity, Unreadable};
 pub use platform::{Platform, PlatformError, PlatformInfo, StubPlatform};
-pub use pool::{Band, DataError, Generation, ModGroup, ModPool, ModTier};
+pub use pool::{Band, DataError, Generation, ModGroup, ModPool, ModTier, Odds, PoolTotals};
 pub use verdict::{assess, Assessment, Diagnostic, Target, Verdict};
