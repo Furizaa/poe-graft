@@ -7,8 +7,31 @@ press** rather than acting on your behalf.
 
 Planning lives on the issue tracker:
 [Map: poe-graft — over-roll protection for PoE 1 crafting](https://github.com/Furizaa/poe-graft/issues/1).
-The stack and the Rust/TypeScript seam are settled in
-[ADR 0001](docs/adr/0001-stack-and-seam.md); read it before moving anything across the boundary.
+The map is the route actually walked, with dated corrections where later tickets overturned earlier
+findings — read it before trusting any single ticket in isolation.
+
+## Where the decisions are written down
+
+Start here rather than with the code. Every one of these is load-bearing, and several exist to record
+a trap that cost a session to find.
+
+| | |
+| --- | --- |
+| [`CONTEXT.md`](CONTEXT.md) | **The ubiquitous language.** Read first. Every capitalised term is used verbatim in code, tests, log lines, UI copy and tickets. |
+| [ADR 0001](docs/adr/0001-stack-and-seam.md) | Tauri + Rust core; the compile-time seam. Read before moving anything across the TS/Rust boundary. |
+| [ADR 0002](docs/adr/0002-roll-cycle-and-hit-latch.md) | The roll cycle, the seven states, the Latch, the Halt. **An Unknown Verdict costs a press, not an orb.** |
+| [ADR 0003](docs/adr/0003-the-craft-window.md) | What the window looks like, the Mod Group picker, and the odds. |
+| [`docs/spike-17-session.md`](docs/spike-17-session.md) | The on-device session that measured the mechanism. |
+
+Research, one file per question, all with primary sources:
+
+| | |
+| --- | --- |
+| [Windows click suppression](docs/research/windows-click-suppression.md) | Why a physical mouse click cannot be blocked in PoE — the finding that forced the pivot. |
+| [The clipboard contract](docs/research/poe-clipboard-contract.md) | Poison-with-a-Sentinel, and why content can never prove freshness. |
+| [GGG's automation line](docs/research/ggg-automation-policy.md) | The written "one action per keypress" rule this app is shaped around. |
+| [Mod and tier data](docs/research/mod-tier-data.md) | RePoE provenance, and the real per-click hit rate. |
+| [CI and auto-update](docs/research/ci-and-auto-update.md) | The Windows test loop, and the things that silently break the updater. |
 
 ## Layout
 
@@ -69,7 +92,7 @@ sequence around it. See the dated correction in
 
 The workflow file's header comment lists the specific things that silently break the updater. Read
 it before editing that file. Background and the empirical work behind it:
-`docs/research/ci-and-auto-update.md` on the `research/ci-and-auto-update` branch.
+[`docs/research/ci-and-auto-update.md`](docs/research/ci-and-auto-update.md).
 
 ## Diagnostics
 
@@ -102,6 +125,16 @@ in front of it.**
 The design is [ADR 0002](docs/adr/0002-roll-cycle-and-hit-latch.md) and the vocabulary is
 [`CONTEXT.md`](CONTEXT.md). Read both before changing either file; every capitalised term in them is
 load-bearing in code, log lines and UI copy.
+
+### The window
+
+[ADR 0003](docs/adr/0003-the-craft-window.md) settles what the window looks like: one dominant state
+with core's own sentence under it, the primary control beside the sentence that asks for it, and every
+diagnostic in a single fold that opens itself on a Halt. It also covers the searchable Mod Group
+picker — **a group is chosen, never an affix name**, because a group's name is per tier — and the odds
+display, which is computed in `crates/core` and pinned to the research by
+`crates/core/tests/odds.rs`. Read it before adding anything to the craft panel; the whole point of the
+layout is what it refuses to show.
 
 ### The tier data is a bundled resource
 
