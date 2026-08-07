@@ -35,8 +35,9 @@ T1 — so a group is never identified by a single name.
 _Avoid_: mod family, affix group
 
 **Tier**:
-A mod group's power band, numbered from 1 (best) downwards, each with its own numeric ranges. Derived
-from the numbers a mod rolled, never read from the game's own tier annotation.
+A Mod Group's power band, numbered from 1 (best) downwards, each with its own numeric ranges. How a
+**Threshold** is chosen and how the window names one — never something the hit test reasons about, and
+never read from the game's own tier annotation.
 
 **Item Text**:
 What the game puts on the clipboard for the hovered item. Divided into sections; only the
@@ -46,9 +47,16 @@ _Avoid_: tooltip, clipboard text, item info
 
 ## The craft
 
+**Threshold**:
+The numbers a rolled mod must reach to count as a success — one bound per number the mod renders.
+Resolved from a **Tier** once, when the craft is set up, and stored as numbers thereafter, so
+renumbering a ladder can never move it.
+_Avoid_: Tier Threshold, floor, band, cutoff
+
 **Target Mod**:
-The mod group the human is crafting for, together with a **Tier Threshold** — the worst tier that
-still counts as success. Both are chosen before a **Craft Session** starts.
+The Mod Group the human is crafting for, together with its **Threshold**. Both are chosen before a
+**Craft Session** starts — the Threshold by picking the worst **Tier** that still counts as success,
+which is resolved to numbers there and then.
 
 **Craft Session**:
 One item, one Target Mod, one continuous attempt. It ends when the item **Latches**, when the app
@@ -92,8 +100,9 @@ What a Read establishes about the item currently under the Anchor: a **Hit**, a 
 **Unknown**.
 
 **Hit**:
-The explicit-mod section contains the Target Mod at or better than the Tier Threshold. Ambiguity
-resolves to a Hit — the safe direction is always to stop.
+The explicit-mod section contains the Target Mod with every number it renders reaching the
+**Threshold**. Comparing numbers leaves almost no ambiguity to resolve; what remains — a mod rendering
+a different count of numbers than the Threshold has bounds — **Halt**s rather than resolving either way.
 
 **Miss**:
 A Read that positively establishes the Target Mod is absent or out of tier. Only a fresh Miss
@@ -106,10 +115,11 @@ taken before the game finished applying the orb.
 _Avoid_: failed read, timeout, bad read
 
 **Diagnostic**:
-Something a Read establishes *besides* its Verdict — the game's tier annotation disagreeing with the
-derived tier, an annotation being absent, values matching no tier, a line the mod pool does not
-recognise, the item not being the Base. Every Diagnostic is logged; some of them are what make the
-app **Halt**. A Diagnostic never changes a Verdict.
+Something a Read establishes *besides* its Verdict — the game's annotation naming an affix that no
+matching tier carries, the game numbering a tier differently than the mod pool does, an annotation being
+absent, values matching no tier, a line the mod pool does not recognise, the item not being the Base.
+Every Diagnostic is logged; some of them are what make the app **Halt**. A Diagnostic never changes a
+Verdict.
 _Avoid_: warning, error, note
 
 **Resync**:
